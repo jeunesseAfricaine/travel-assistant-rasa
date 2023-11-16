@@ -1,5 +1,5 @@
+---
 version: "3.1"
-
 intents:
   - start
   - goodbye
@@ -11,77 +11,75 @@ intents:
   - book_flight
   - date
   - destination
-
+  - chitchat
+  - thankyou
 entities:
- - city
- - date
- - flight_type
-
+  - city
+  - date
+  - flight_type
 slots:
   departure_city:
     type: text
     mappings:
-    - type: from_entity
-      entity: city
-      role: from
-    - type: from_entity
-      entity: city
+      - type: from_entity
+        entity: city
   destination:
     type: text
     mappings:
-    - type: from_entity
-      entity: city
-      role: to
-    - type: from_entity
-      entity: city
+      - type: from_entity
+        entity: city
   date:
     type: any
     mappings:
-    - type: from_entity
-      entity: date
+      - type: from_entity
+        entity: date
   flight_type:
-   type: text
-   mappings:
-   - type: from_entity
-     entity: flight_type
-     
-     
+    type: text
+    mappings:
+      - type: from_entity
+        entity: flight_type
 forms:
   travel_form:
     required_slots:
-    - departure_city
-    - destination
-    - date
-    - flight_type
-
-
+      - departure_city
+      - destination
+      - date
+      - flight_type
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-  
+    - text: Hi! I'm your flight-booking companion. Let's find the best flight options
+        together. What are you searching for?
+    - text: Hello! I'm here to simplify your flight bookings. How can I assist you
+        today?
+    - text: Hello and welcome aboard! I'm here to simplify your flight search. How may
+        I assist you today?
   utter_departure_city:
-  - text: "From which city are you departing?"
-  
+    - text: Which city/town are you departing from?
   utter_destination:
-  - text: "Where would you like to fly?"
-  
+    - text: Where would you like to fly?
   utter_date:
-  - text: "When would you like to travel?"
-  
+    - text: When would you like to travel?
   utter_confirm:
-  - text: "Would that be all?"
-  - text: "Is there anything else?"
-  
-  
+    - text: Do you need help with anything else?
   utter_flight_type:
-  - text: "What type of flight would you like to book?"
-
+    - text: What type of flight would you like to book?
   utter_goodbye:
-  - text: "Bye"
-
+    - text: Thank you for using our services! Should you need assistance in the
+        future, I'll be here. Take care!
+    - text: Your travel plans matter! If there's anything else I can do, I'm just a
+        message away. Goodbye for now!
+    - text: It's been great helping you today! If there's anything else you need, just
+        ask. Bye for now!
+    - text: Goodbye :(
+    - text: Tuongee baadaye.
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+    - text: I am a bot, powered by Rasa.
+  utter_default:
+    - text: Could you please provide more details?
+    - text: I'd love to understand better. Can you elaborate?
+  utter_youarewelcome:
+    - text: You're very welcome.
+    - text: Karibu!
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

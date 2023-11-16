@@ -1,0 +1,32 @@
+---
+version: "3.1"
+stories:
+  - story: user booking a flight
+    steps:
+      - intent: book_flight
+      - action: utter_destination
+      - intent: destination
+      - action: utter_departure_city
+      - intent: departure_city
+      - action: utter_date
+      - intent: date
+      - action: utter_flight_type
+      - intent: flight_type
+      - action: utter_confirm
+  - story: greet
+    steps:
+      - intent: start
+      - action: utter_greet
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+  - story: courtesy + feedback
+    steps:
+      - intent: thankyou
+      - action: utter_youarewelcome
+      - action: utter_ask_feedback
+  - story: chitchat
+    steps:
+      - intent: chitchat
+      - action: utter_chitchat

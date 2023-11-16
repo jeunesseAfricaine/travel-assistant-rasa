@@ -1,0 +1,23 @@
+---
+version: "3.1"
+rules:
+  - rule: Say greeting
+    steps:
+      - intent: start
+      - action: utter_greeting
+  - rule: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+  - rule: courtesy
+    steps:
+      - intent: thankyou
+      - action: utter_youarewelcome
+  - rule: chitchat
+    steps:
+      - intent: chitchat
+      - action: utter_chitchat
+  - rule: book_flight
+    steps:
+      - intent: book_flight
+      - action: utter_destination

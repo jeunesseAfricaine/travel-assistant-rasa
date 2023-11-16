@@ -1,0 +1,249 @@
+---
+version: "3.1"
+nlu:
+  - intent: start
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - niaje 
+      - sema
+      - vipi?
+      - ola
+      - oya
+      - yo
+      - yoh
+      - rada buda?
+      - rada?
+      - how do I get started
+      - what can I do
+      - start
+      - nianzie wapi
+      - naeza anza na wapi
+      - msee akidai kuanza?
+      - nadai kuanza
+      - nishow vile naanza
+      - msee anaanzia api
+      - anza
+      - hebu tuanze
+      - tuanze sasa
+      - hebu start
+      - hebu lets start
+      - btw unaanza aje
+      - kuanza niaje
+      - tustart
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+      - Kwa heri
+      - okay bye
+      - good bye
+      - shinda fiti
+      - sawa safi
+      - bye
+      - fiti
+      - hadi morgan
+      - shinda best
+      - have a good one
+      - baadae
+      - talk later
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - iende ikiendaga
+      - We jua ivo
+      - Hata Mimi
+      - Nataka
+      - Ooh.
+      - Chezea tu hapo
+      - isorait
+      - Ata yako ni kali
+      - Ntaicheck out Leo
+      - hmm. Okay
+      - Mimi sina shida
+      - ooooh io iko fity...
+      - hii ni ngori
+      - maze
+      - sawa
+      - banaa
+      - Aaah kumbe
+      - Safiii..
+      - Sasawa
+      - hio ni fityyy
+      - Yeah nliona
+      - Vizii...
+      - Eeeeh nmekua naiona...
+      - Yea
+      - Haina nomA
+      - katambe
+      - accept basi
+      - ni sawa
+      - Issaplan
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - zii
+      - hapana
+      - nope
+      - neyy
+      - wacha
+      - nimekataa
+      - apana
+      - sivyo
+      - sijakubali
+      - not quite
+      - leave it
+      - nooooo
+      - nooooo
+      - cheza chini
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - we ni?
+      - unaitwa?
+      - what is you name?
+      - are you a robot?
+      - unajiita?
+      - we ni morio?
+      - nishow your name
+      - who are you?
+      - what are you?
+      - do you have a name?
+      - jitambulishe.
+      - we ni Mkenya?
+      - are you chatGPT?
+      - are you siri?
+      - are you alexa?
+  - intent: departure_city
+    examples: |
+      - I want to fly from [New York](city).
+      - My departure city is [Chicago](city).
+      - I'm flying out of [Los Angeles](city).
+      - I want to fly from [New York](city).
+      - Book me a flight from [London](city).
+      - I want to fly from [Berlin](city) to [San Francisco](city).
+      - Nasafiri kutoka [Nairobi](city) hadi [Mombasa](city)
+      - I need a flight from [Delware](city)
+      - Nimetoka [Mumbai](city)
+      - Airlines from [Kigali](city)
+      - Airlines from [Johannesburg](city)
+      - Airlines from [Kampala](city)
+      - Airlines from [Dubai](city)
+      - Airlines from [Manchester](city)
+      - Airlines from [Barcelona](city)
+      - Airlines from [Bujumbura](city)
+      - Airlines from [Lagos](city)
+  - intent: destination
+    examples: |
+      - I'm going to [London](city).
+      - My destination is [Paris](city).
+      - I need a flight to [Tokyo](city).
+      - I want to fly to [Paris](city).
+      - airlines to [Amboseli](city).
+      - Airlines to [Angama Mara](city).
+      - Airlines to [Eldoret](city).
+      - Airlines to [Garissa](city).
+      - Airlines to [Kichwa Tembo](city).
+      - Airlines to [Kikambala](city).
+      - Airlines to [Kilaguni](city).
+      - Airlines to [Kisumu](city).
+      - Airlines to [Kitale](city).
+      - Airlines to [Lamu](city).
+      - Airlines to [Lodwar](city).
+      - Airlines to [Maasai Mara](city).
+  - intent: date
+    examples: >
+      - I plan to depart on [June 15th](date).
+
+      - My departure date is [July 20th](date).
+
+      - I want to leave on the [5th of September](date).
+
+      - I want to do the activity on the [17th October](date).
+
+      - Plan the flight for [June 7th](date)
+
+      - I want to fly in early [Wednesday 8 July](date)
+
+      - Book a flight on late [Thursday 3 March](date)
+
+      - I want to check in [June](date)
+
+      - i want to check out [14 February](date)
+
+      - check me out on [December 4th](date)
+
+      - I want to fly from [New York](city) to [Los Angeles](city) on [March 10th](date)
+
+      - Flying from [San Francisco](city) to [Chicago](city) on [April 15th](date)
+
+      - I need a [one-way](type) ticket from [London](city) to [Paris](city) on [June 5th](date)
+  - intent: flight_type
+    examples: |
+      - I prefer [round trip](flight_type).
+      - [One way](flight_type) is fine.
+      - I want a [one-way](flight_type) flight.
+      - Book a [round trip](flight_type) flight.
+      - i prefer [one-way](flight_type) flight
+      - [round trip](flight_type) please
+      - nataka moja [one-way](flight_type)
+  - intent: book_flight
+    examples: >
+      - Book a flight for me.
+
+      - I'd like to make a reservation.
+
+      - Can you help me book a flight?
+
+      - I would like to book a fligt.
+
+      - Book a flight from [Los Angeles](city).
+
+      - I am departing from [Nairobi](city).
+
+      - Departing from [Dubai](city).
+
+      - I am leaving [Diani](city).
+
+      - From [Kitale](city).
+
+      - coming from [Wajir](city).
+
+      - My departure town is [Eldoret](city).
+
+      - leaving [Zanzibar](city).
+
+      - Book a [round-trip](flight_type) flight from [Nairobi](city) to [Diani](city) for tomorrow with a preference for morning departures.
