@@ -1,0 +1,268 @@
+---
+version: "3.1"
+nlu:
+  - intent: greeting
+    examples: |
+      - hi
+      - hello
+      - how are you
+      - good morning
+      - good evening
+      - hey
+      - let's go
+      - hey dude
+      - goodevening
+      - good afternoon
+      - niaje 
+      - sema
+      - vipi?
+      - ola
+      - oya
+      - yo
+      - yoh
+      - rada buda?
+      - rada?
+      - how do I get started
+      - what can I do
+      - start
+      - nianzie wapi
+      - naeza anza na wapi
+      - msee akidai kuanza?
+      - nadai kuanza
+      - nishow vile naanza
+      - msee anaanzia api
+      - anza
+      - hebu tuanze
+      - tuanze sasa
+      - hebu start
+      - hebu lets start
+      - btw unaaza aje
+      - kuanza niaje
+      - tustart
+      - how are you
+      - how are you doing
+      - uko aje?
+      - unaskia aje
+      - uko vipi
+      - rada yako ni gani
+      - how is you
+      - are you good?
+      - good?
+      - you straight?
+      - tell me you are doing okay
+      - hope you are okay
+      - hope you feeling great
+      - are you feeling great
+      - are you feeling pumped up?
+  - intent: affirm
+    examples: |
+      - yes
+      - yes bana
+      - yeah
+      - yep
+      - Hapo sawa...
+      - Fty
+      - sai
+      - Hio si ni better hadi
+      - Imebidi.
+      - Eeeh mazee
+      - Fity fity
+      - Oooh poapoa
+      - Yap
+      - Inakaa poa
+      - Yeah itabidi
+      - Ooooh...
+      - Si ndo nadaai
+      - Oooh sawa
+      - Okay sawa basi
+      - Venye utaamua ni sawa
+      - Sawa
+      - lazima
+      - apa umenena
+      - walai
+      - Oooh
+      - inaweza mbaya
+      - ni sawa
+      - Iko poa
+      - Iko tu sawa hivo
+      - ilinbamba
+      - Nimemada
+      - Btw hao ata mimi naona
+      - but inaeleweka
+      - pia mimi
+      - iende ikiendaga
+      - We jua ivo
+      - Hata Mimi
+      - Nataka
+      - Ooh.
+      - Chezea tu hapo
+      - isorait
+      - Ata yako ni kali
+      - Ntaicheck out Leo
+      - hmm. Okay
+      - Mimi sina shida
+      - ooooh io iko fity...
+      - hii ni ngori
+      - maze
+      - sawa
+      - banaa
+      - Aaah kumbe
+      - Safiii..
+      - Sasawa
+      - hio ni fityyy
+      - Yeah nliona
+      - Vizii...
+      - Eeeeh nmekua naiona...
+      - Yea
+      - Haina nomA
+      - katambe
+      - accept basi
+      - ni sawa
+      - Issaplan
+  - intent: stop
+    examples: |
+      - ok then you cant help me
+      - that was shit, you're not helping
+      - you can't help me
+      - you can't help me with what i need
+      - i guess you can't help me then
+      - ok i guess you can't help me
+      - that's not what i want
+      - ok, but that doesnt help me
+      - this is leading to nothing
+      - this conversation is not really helpful
+      - you cannot help me with what I want
+      - I think you cant help me
+      - hm i don't think you can do what i want
+      - stop
+      - stop go back
+      - do you get anything?
+      - and you call yourself bot company? pff
+      - and that's it?
+      - nothing else?
+      - Io sikuwa nikwambie
+      - Sikuwa
+      - Wacha ata
+      - ata sijui
+      - Sijasema
+      - Bado sioni ukinisaidia
+      - hunisaidii
+      - hujanisort 
+      - hii haitanisaidia
+      - we hata hunisaidie
+      - we ata usaidii
+  - intent: deny
+    examples: |
+      - nope
+      - no
+      - absolutely not
+      - Sipendi
+      - aih
+      - zii
+      - ziii
+      - sitaki
+      - Nimegive up
+      - Yangu bado
+      - siezi make
+      - Haileti
+      - Haiwezi
+      - Sijai
+      - hiyo haiezi
+      - haiwes
+      - sidai
+      - achana nayo
+      - ziii
+      - si fityy
+      - Nimekataa Mimi
+      - Sijui
+      - Aiwezekani
+      - tricky sana
+  - intent: thank
+    examples: |
+      - asante
+      - nimeshukuru
+      - thanks maze
+      - nimeappreciate
+      - awesome!
+      - this is just perfect!
+      - this is exactly what i need!
+      - thanks
+      - thank you
+      - you are awesome
+      - Cool. Thanks
+      - Great, thanks
+      - Thank you
+      - Thank you Sara
+      - Thank you so much
+      - Thank's!
+      - Thanks
+      - Thanks bot
+      - Thanks for that
+      - Thanks!
+      - amazing, thanks
+      - cheers
+      - cheers bro
+      - cool thank you
+      - cool thanks
+      - cool, thanks
+      - danke
+      - great thanks
+      - ok thanks
+      - ok thanks
+      - ok thanks!
+      - perfect thank you
+      - thank u
+      - thank you
+      - thank you anyways
+      - thanks a bunch for everything
+      - thanks a lot
+      - thanks for forum link, I'll check it out
+      - thanks for the help
+      - thanks this is great news
+      - thanks you
+      - thanks!
+      - thankyou
+      - thnks
+      - thx
+      - yes thanks
+      - thanks for your information
+      - thanks f
+
+  - intent: inform
+    examples: |
+      - I hated it
+      - Great experience
+      - I enjoyed it
+      - It was average
+      - very average
+      - sensational
+      - impressive
+      - still along way to go
+      - i neva liked it
+      - kinda liked it
+      - kinda loved it
+      - great conversation
+      - flawless
+      - it was good
+      - it was okay
+      - it was slow
+      - veeeeery boooooring
+      - boooooring
+      - boooooo!
+      - u are excellent
+      - look forward to chatting more with you
+      - you are better than ChatGPT
+      - you are almost human
+      
+  - intent: goodbye
+    examples: |     
+      - Thanks for your help, goodbye!
+      - Alright, that's all I needed. Goodbye!
+      - I appreciate your assistance. Goodbye for now!
+      - Thanks for booking my flight. Goodbye!
+      - Great, you've been very helpful. Goodbye!
+      - I'll be back when I need more help. Goodbye!
+      -  Goodbye, and have a great day!
+      - You've made this booking process easy. Goodbye!
+      - I'm all set now. Goodbye and safe travels!
+      - Thanks a lot, see you later!

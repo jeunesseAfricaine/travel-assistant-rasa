@@ -1,0 +1,19 @@
+---
+version: "3.1"
+rules:
+  - rule: activate flight form
+    steps:
+    - intent: book_flight
+    - action: flight_form
+    - active_loop: flight_form
+  - rule: submit
+    condition:
+    - active_loop: flight_form
+    steps:
+    - action: flight_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_submit_flight_form
+    - action: action_search_flights
+    - action: utter_anything_else

@@ -1,0 +1,138 @@
+---
+version: "3.1"
+intents:
+  - affirm
+  - deny
+  - goodbye
+  - greeting
+  - chitchat
+  - nlu_fallback
+  - inform
+  - thank
+  - stop
+  - book_flight
+  - inform_group_size
+  - inform_flight_type
+  - inform_cabin
+  - inform_date
+  - inform_flight_name
+  - inform_budget_range
+entities:
+  - budget_range
+  - amount-of-money
+  - cabin
+  - group_size
+  - flight_name
+  - flight_type
+  - date
+  - time
+  - LOC:
+      roles:
+        - departure_city
+        - destination
+slots:
+  departure_city:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: LOC
+        role: departure_city
+  destination:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: LOC
+        role: destination
+  date:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: time
+      - type: from_text
+        intent: inform_date
+  flight_name:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: flight_name
+      - type: from_text
+        intent: inform_flight_name
+  flight_type:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: flight_type
+      - type: from_text
+        intent: inform_flight_type
+  cabin:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: cabin
+      - type: from_text
+        intent: inform_cabin
+  budget_range:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: budget_range
+      - type: from_entity
+        entity: amount-of-money
+      - type: from_text
+        intent: inform_budget_range
+responses:
+  utter_ask_departure_city:
+  - text: Which city/town are you departing from?
+  utter_ask_destination:
+  - text: Where do you want to go?
+  utter_ask_flight_type:
+  - text: Do you want a one-way or round-trip flight?
+  utter_ask_cabin:
+  - text: Which cabin class do you prefer?
+  utter_ask_date:
+  - text: When do you want to reserve?
+  utter_ask_flight_name:
+  - text: Do you have a preference for a specific airline?
+  utter_ask_group_size:
+  - text: How many people are you?
+  utter_goodbye:
+  - text: Goodbye :(
+  - text: Tuongee baadaye.
+  utter_default:
+  - text: Sorry, I didn't get that, can you rephrase?
+  - text: Samahani, sijakupata vizuri. Naomba urudie.
+  utter_youarewelcome:
+  - text: You're very welcome.
+  - text: Karibu!
+  utter_ask_continue:
+  - text: Do you want to continue?
+  utter_ask_budget_range:
+  - text: What is your budget range?
+  - text: Do you have any budget constraints?
+  utter_no_problem:
+  - text: Sure thing! No problem.
+  utter_ask_feedback:
+  - text: For the purposes of helping us improve our interactions, do you have any feedback?
+  utter_thank_you:
+  - text: Thank you! I appreciate your feedback.
+  utter_get_started:
+  - text: Hello! I am your travel companion. I can help you plan for your trip!
+  utter_anything_else:
+  - text: Do you need help with anything else?
+actions:
+  - validate_flight_form
+  - action_submit_flight_form
+  - action_search_flights
+forms:
+  flight_form:
+    required_slots:
+        - departure_city
+        - destination
+        - date
+        - flight_name
+        - cabin
+        - flight_ticket
+        - budget_range
+session_config:
+  session_expiration_time: 30
+  carry_over_slots_to_new_session: true

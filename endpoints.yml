@@ -1,0 +1,11 @@
+#models:
+#  default: "/app/models"
+
+# Event broker which all conversation events should be streamed to.
+# https://rasa.com/docs/rasa/api/event-brokers/
+
+#event_broker:
+#  url: localhost
+#  username: username
+#  password: password
+#  queue: queue
