@@ -1,12 +1,7 @@
 recipe: 'default.v1'
 language: en
 pipeline:
-- name: "SpacyNLP"
-  model: "en_core_web_md"
-- name: "SpacyTokenizer"
-  "intent_tokenization_flag": False
-  "intent_split_symbol": "_"
-  "token_pattern": None
+- name: WhitespaceTokenizer
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
@@ -18,8 +13,6 @@ pipeline:
   epochs: 100
   ranking_length: 5
   "BILOU_flag": true
-- name: "SpacyEntityExtractor"
-  dimensions: ["LOC"]
 - name: DucklingEntityExtractor
   url: http://localhost:8000
   dimensions:
