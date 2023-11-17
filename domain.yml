@@ -22,12 +22,12 @@ slots:
     type: text
     mappings:
       - type: from_entity
-        entity: city
+        entity: LOC
   destination:
     type: text
     mappings:
       - type: from_entity
-        entity: city
+        entity: LOC
   date:
     type: any
     mappings:
@@ -70,10 +70,7 @@ responses:
         message away. Goodbye for now!
     - text: It's been great helping you today! If there's anything else you need, just
         ask. Bye for now!
-    - text: Goodbye :(
-    - text: Tuongee baadaye.
-  utter_iamabot:
-    - text: I am a bot, powered by Rasa.
+    - text: Bye for now.
   utter_default:
     - text: Could you please provide more details?
     - text: I'd love to understand better. Can you elaborate?

@@ -126,64 +126,64 @@ nlu:
       - nooooo
       - nooooo
       - cheza chini
-  - intent: bot_challenge
+  - intent: thankyou
     examples: |
-      - are you a bot?
-      - are you a human?
-      - am I talking to a bot?
-      - am I talking to a human?
-      - we ni?
-      - unaitwa?
-      - what is you name?
-      - are you a robot?
-      - unajiita?
-      - we ni morio?
-      - nishow your name
-      - who are you?
-      - what are you?
-      - do you have a name?
-      - jitambulishe.
-      - we ni Mkenya?
-      - are you chatGPT?
-      - are you siri?
-      - are you alexa?
+      - I appreciate
+      - thanks
+      - asante
+      - you are dope!
+      - dope!
+      - awesome!
+      - thanks a bunch
+      - thanks so much
+      - thank you so much
+      - merci
+      - wazi
+      - asante maze
+      - you have really helped me out
+      - thanks for helping
+      - thanks for assisting
+      - you have really assisted me
+      - you are a lifesaver
+      - you are efficient
+      - tanks
   - intent: departure_city
     examples: |
-      - I want to fly from [New York](city).
-      - My departure city is [Chicago](city).
-      - I'm flying out of [Los Angeles](city).
-      - I want to fly from [New York](city).
-      - Book me a flight from [London](city).
-      - I want to fly from [Berlin](city) to [San Francisco](city).
-      - Nasafiri kutoka [Nairobi](city) hadi [Mombasa](city)
-      - I need a flight from [Delware](city)
-      - Nimetoka [Mumbai](city)
-      - Airlines from [Kigali](city)
-      - Airlines from [Johannesburg](city)
-      - Airlines from [Kampala](city)
-      - Airlines from [Dubai](city)
-      - Airlines from [Manchester](city)
-      - Airlines from [Barcelona](city)
-      - Airlines from [Bujumbura](city)
-      - Airlines from [Lagos](city)
+      - I want to fly from [New York](LOC).
+      - My departure LOC is [Chicago](LOC).
+      - I'm flying out of [Los Angeles](LOC).
+      - I want to fly from [New York](LOC).
+      - Book me a flight from [London](LOC).
+      - I want to fly from [Berlin](LOC) to [San Francisco](LOC).
+      - Nasafiri kutoka [Nairobi](LOC) hadi [Mombasa](LOC)
+      - I need a flight from [Delware](LOC)
+      - Nimetoka [Mumbai](LOC)
+      - Airlines from [Kigali](LOC)
+      - Airlines from [Johannesburg](LOC)
+      - Airlines from [Kampala](LOC)
+      - Airlines from [Dubai](LOC)
+      - Airlines from [Manchester](LOC)
+      - Airlines from [Barcelona](LOC)
+      - Airlines from [Bujumbura](LOC)
+      - Airlines from [Lagos](LOC)
   - intent: destination
     examples: |
-      - I'm going to [London](city).
-      - My destination is [Paris](city).
-      - I need a flight to [Tokyo](city).
-      - I want to fly to [Paris](city).
-      - airlines to [Amboseli](city).
-      - Airlines to [Angama Mara](city).
-      - Airlines to [Eldoret](city).
-      - Airlines to [Garissa](city).
-      - Airlines to [Kichwa Tembo](city).
-      - Airlines to [Kikambala](city).
-      - Airlines to [Kilaguni](city).
-      - Airlines to [Kisumu](city).
-      - Airlines to [Kitale](city).
-      - Airlines to [Lamu](city).
-      - Airlines to [Lodwar](city).
-      - Airlines to [Maasai Mara](city).
+      - I'm going to [London](LOC).
+      - My destination is [Paris](LOC).
+      - I need a flight to [Tokyo](LOC).
+      - I want to fly to [Paris](LOC).
+      - airlines to [Amboseli](LOC).
+      - Airlines to [Angama Mara](LOC).
+      - Airlines to [Eldoret](LOC).
+      - Airlines to [Garissa](LOC).
+      - Airlines to [Kichwa Tembo](LOC).
+      - Airlines to [Kikambala](LOC).
+      - Airlines to [Kilaguni](LOC).
+      - Airlines to [Kisumu](LOC).
+      - Airlines to [Kitale](LOC).
+      - Airlines to [Lamu](LOC).
+      - Airlines to [Lodwar](LOC).
+      - Airlines to [Maasai Mara](LOC).
   - intent: date
     examples: >
       - I plan to depart on [June 15th](date).
@@ -206,11 +206,11 @@ nlu:
 
       - check me out on [December 4th](date)
 
-      - I want to fly from [New York](city) to [Los Angeles](city) on [March 10th](date)
+      - I want to fly from [New York](LOC) to [Los Angeles](LOC) on [March 10th](date)
 
-      - Flying from [San Francisco](city) to [Chicago](city) on [April 15th](date)
+      - Flying from [San Francisco](LOC) to [Chicago](LOC) on [April 15th](date)
 
-      - I need a [one-way](type) ticket from [London](city) to [Paris](city) on [June 5th](date)
+      - I need a [one-way](flight_type) ticket from [London](LOC) to [Paris](LOC) on [June 5th](date)
   - intent: flight_type
     examples: |
       - I prefer [round trip](flight_type).
@@ -230,20 +230,20 @@ nlu:
 
       - I would like to book a fligt.
 
-      - Book a flight from [Los Angeles](city).
+      - Book a flight from [Los Angeles](LOC).
 
-      - I am departing from [Nairobi](city).
+      - I am departing from [Nairobi](LOC).
 
-      - Departing from [Dubai](city).
+      - Departing from [Dubai](LOC).
 
-      - I am leaving [Diani](city).
+      - I am leaving [Diani](LOC).
 
-      - From [Kitale](city).
+      - From [Kitale](LOC).
 
-      - coming from [Wajir](city).
+      - coming from [Wajir](LOC).
 
-      - My departure town is [Eldoret](city).
+      - My departure town is [Eldoret](LOC).
 
-      - leaving [Zanzibar](city).
+      - leaving [Zanzibar](LOC).
 
-      - Book a [round-trip](flight_type) flight from [Nairobi](city) to [Diani](city) for tomorrow with a preference for morning departures.
+      - Book a [round-trip](flight_type) flight from [Nairobi](LOC) to [Diani](LOC) for tomorrow with a preference for morning departures.

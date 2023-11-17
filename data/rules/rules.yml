@@ -21,3 +21,9 @@ rules:
     steps:
       - intent: book_flight
       - action: utter_destination
+  - rule: rephrase
+    steps:
+      - intent: nlu_fallback
+      - action: utter_default     
+      
+        

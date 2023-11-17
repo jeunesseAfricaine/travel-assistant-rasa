@@ -25,7 +25,6 @@ stories:
     steps:
       - intent: thankyou
       - action: utter_youarewelcome
-      - action: utter_ask_feedback
   - story: small talk
     steps:
       - intent: chitchat
