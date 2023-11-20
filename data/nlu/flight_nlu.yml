@@ -1,0 +1,200 @@
+---
+version: "3.1"
+nlu:
+  - intent: book_flight
+    examples: >
+      - I want to fly from [Berlin]{"entity": "LOC", "role": "departure"} to
+      [San Francisco]{"entity": "LOC", "role": "destination"}.
+      - I want to fly to [Paris]{"entity": "LOC", "role": "destination"}.
+      - Book a flight from [New York](departure) to [Tokyo]{"entity": "LOC", "role": "destination"}.
+      - airlines to [Amboseli]{"entity": "LOC", "role": "destination"}
+      - Airlines to [Angama Mara]{"entity": "LOC", "role": "destination"}
+      - Airlines to [Eldoret]{"entity": "LOC", "role": "destination"}
+      - Airlines to [Garissa]{"entity": "LOC", "role": "destination"}
+      - Airlines to [Kichwa Tembo]{"entity": "LOC", "role": "destination"}
+      - Airlines to [Kikambala]{"entity": "LOC", "role": "destination"}
+      - Airlines to [Kilaguni]{"entity": "LOC", "role": "destination"}
+      - Airlines to [Kisumu]{"entity": "LOC", "role": "destination"}
+      - Airlines to [Kitale]{"entity": "LOC", "role": "destination"}
+      - Airlines to [Lamu]{"entity": "LOC", "role": "destination"}
+      - Airlines to [Lodwar]{"entity": "LOC", "role": "destination"}
+      - Airlines to [Maasai Mara]{"entity": "LOC", "role": "destination"}
+      - Airlines from [Malindi]{"entity": "LOC", "role": "departure"}
+      - Airlines from [Mandera]{"entity": "LOC", "role": "departure"}
+      - Airlines from [Mara Lodges]{"entity": "LOC", "role": "departure"}
+      - Airlines from [Mara North Conservancy]{"entity": "LOC", "role": "departure"}
+      - Airlines from [Meru]{"entity": "LOC", "role": "departure"}
+      - Airlines from [Mombasa]{"entity": "LOC", "role": "departure"}
+      - Airlines from [Nairobi]{"entity": "LOC", "role": "departure"}
+      - Airlines from [Nanyuki]{"entity": "LOC", "role": "departure"}
+      - Airlines from [Olkiombo]{"entity": "LOC", "role": "departure"}
+      - Airlines from [Samburu]{"entity": "LOC", "role": "departure"}
+      - Airlines from [Ukunda]{"entity": "LOC", "role": "departure"}
+      - I want to fly from [New York]{"entity": "LOC", "role": "departure"}.
+      - Book me a flight from [London]{"entity": "LOC", "role": "destination"}.
+      - Book a flight from [Los Angeles]{"entity": "LOC", "role": "departure"}
+      - I am departing from [Nairobi]{"entity": "LOC", "role": "departure"}
+      - Departing from [Dubai]{"entity": "LOC", "role": "departure"}
+      - I am leaving [Diani]{"entity": "LOC", "role": "departure"}
+      - From [Kitale]{"entity": "LOC", "role": "departure"}
+      - coming from [Wajir]{"entity": "LOC", "role": "departure"}
+      - My departure town is [Eldoret]{"entity": "LOC", "role": "departure"}
+      - leaving [Zanzibar]{"entity": "LOC", "role": "departure"}
+      - Book a [round-trip](flight_type) flight from [Nairobi]{"entity": "LOC", "role": "departure"} to [Diani]{"entity": "LOC", "role": "destination"} for tomorrow with a preference for morning departures.
+
+      - Find me the cheapest [one-way](flight_type) flight from [Mombasa]{"entity": "LOC", "role": "departure"} to [Kisumu]{"entity": "LOC", "role": "destination"} for next weekend.
+
+      - Can you help me book a flight from [Wilson Airport]{"entity": "LOC", "role": "departure"} to [Eldoret]{"entity": "LOC", "role": "destination"} Airport?
+
+      - I'm looking for a flight on 16th August with a flexible departure date.
+
+      - I prefer to fly on Sunday. Can you find me a flight?
+
+      - find me cheap flights to [Jomo Kenyatta Int'l]{"entity": "LOC", "role": "destination"} 
+
+      - find me affordable flights from [Harare International]{"entity": "LOC", "role": "departure"} 
+
+      - can i get cheap flights in [Nairobi]{"entity": "LOC", "role": "departure"} to [Dubai]{"entity": "LOC", "role": "destination"}?
+
+      - I have a budget of [500USD](budget_range) for my flight. Can you assist?
+
+      - I need a direct flight from [Nairobi]{"entity": "LOC", "role": "departure"} to [Dubai]{"entity": "LOC", "role": "destination"}.
+
+      - I'm interested in booking a [business class](budget_range) flight. Can you provide options?
+
+      - Unaeza book flight ya [KQ](budget_range) to [Arusha]{"entity": "LOC", "role": "destination"} from [Diani]{"entity": "LOC", "role": "departure"} Airport?
+
+      - Book for me a flight to [Kisumu]{"entity": "LOC", "role": "destination"} from [Mombasa]{"entity": "LOC", "role": "departure"}?
+
+      - Naeza pata flight ya 7pm from [Nairobi]{"entity": "LOC", "role": "departure"} to [Dubai]{"entity": "LOC", "role": "destination"} [business](cabin)?
+
+      - Nitafutie flight ya 10 o'clock from [Nairobi]{"entity": "LOC", "role": "departure"} to [Dubai]{"entity": "LOC", "role": "destination"} [business](cabin)?
+
+      - Please get me a flight to [Cape Town]{"entity": "LOC", "role": "destination"} from [Addis Ababa]{"entity": "LOC", "role": "destination"}. Use [Kenya Airways](budget_range)?
+
+      - Natak flight ya evening from [Paris]{"entity": "LOC", "role": "departure"} to [Dubai]{"entity": "LOC", "role": "destination"} [business](cabin)?
+  - intent: inform_flight_type
+    examples: |
+      - I want a [one-way](flight_type) flight.
+      - Book a [round trip](flight_type) flight.
+      - i prefer [one-way](flight_type) flight
+      - [round trip](flight_type) please
+      - nataka moja [one-way](flight_type)
+  - intent: inform_cabin
+    examples: |
+      - I prefer [economy](cabin) class.
+      - Book a [business](cabin) class flight.
+      - [suites](cabin)
+      - [first class](cabin)
+      - [business class](cabin)
+      - [premium economy](cabin)
+      - [economy](cabin)
+      - [premium](cabin)
+      - [business](cabin)
+      - [first](cabin)
+  - intent: inform_group_size
+    examples: |
+      - We are a group of 4 people.
+      - Find destinations for a group of 10.
+      - Find destinations for couples
+      - Suggest options for large group travel.
+      - We are 2 friends looking for a vacation.
+      - Show me options for a small group trip.
+      - I want to travel with a family of 5
+      - Find destinations suitable for solo travel
+      - List options for a group of friends vacation.
+      - I'm planning for a couple's getaway.
+  - intent: inform_date
+    examples: |
+      - I want to do the activity in the evening.
+      - Plan the activity for next week
+      - I want to fly in early morning
+      - Book a flight on late evening
+      - I want to check in the morning
+      - i want to check out 6 oclock
+      - check me out at 10 am
+      - Book a hotel for midday
+      - Plan a trip for noon
+      - Suggest a suitable morning time for the activity.
+      - Show me options for the afternoon activity.
+      - I prefer the activity in the nighttime
+      - What are the timings for the weekend activity?
+      - Find me suitable daytime slots for the activity.
+      - List available morning slots for the activity.
+      - I'm interested in the evening hours for the activity.
+      - Suggest timings for weekdays activity.
+      - I want to fly on July 15th
+      - Book a flight on August 20th
+      - I want to check-in on September 9th 15th
+      - Book a hotel for November 20th
+      - Plan a trip for next weekend
+      - Find options for tomorrow
+      - Suggest dates for end of the month
+      - What are the dates for next month?
+      - I'm looking for travel plans in October 10th
+      - Check availability for next week
+      - I want to travel during the holiday season
+      - What are the dates for spring break
+      - Show me options for upcoming holidays.
+
+  - intent: inform_budget_range
+    examples: >
+      - My budget range is 500 dollars.
+
+      - I'm looking for flights within a budget of 1000 dollars.
+
+      - My budget is 10000 Euros.
+
+      - I'm looking for hotels within a budget of 150000 Kenya shillings.
+
+      - Find me destinations within 2000 to 3000 shillings.
+
+      - Suggest travel plans within my [affordable budget](budget_range).
+
+      - Show options for [low-cost vacations](budget_range).
+
+      - I can spend around 800 USD on the trip.
+
+      - Find me budget-friendly [holiday destinations](budget_range).
+
+      - What are the options for [cheap getaways](budget_range)?
+
+      - I'm looking for destinations that fit my [financial plan](budget_range).
+
+      - List travel plans within [reasonable budget](budget_range).
+
+      - I'm looking for [Emirates](budget_range) flights.
+      - Book a flight with [Delta](budget_range) airlines.
+      - [Air France](budget_range)
+      - [AF](budget_range)
+      - [British Airways](budget_range)
+      - I want to pay the [Emirates Emirates](budget_range)
+      - [Ethiopian Airlines](budget_range)
+      - [Safarilink Aviation](budget_range)
+      - in [Kenya Airways](budget_range)
+      - the [KQ](budget_range)
+      - [Lufthansa Lufthansa](budget_range)
+      - I want to pay the [Swiss Swiss](budget_range)
+      - the [Qatar Airways](budget_range)
+      - the [Turkish Airlines](budget_range)
+      - my [TK](budget_range)
+      - my [LH](budget_range)
+      - [EA](budget_range)
+      - all [BA](budget_range)
+      - [EK](budget_range)
+      - [China Southern Airlines](budget_range)
+      - [CZ](budget_range)
+      - [Saudia](budget_range)
+      - [SV](budget_range)
+      - [Oman Air](budget_range)
+      - [WY](budget_range)
+      - [Air Mauritius](budget_range) 
+      - [MK](budget_range)
+      - [Korean Air](budget_range)
+      - [Air India](budget_range)
+      - [Condor](budget_range)
+      - [DE](budget_range)
+      - [Etihad Airways](budget_range)
+      - [EY](budget_range)
+      - [EgyptAir](budget_range)
+      - [RwandAir](budget_range)

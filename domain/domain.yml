@@ -15,7 +15,6 @@ intents:
   - goodbye
   - chitchat
   - thankyou
-  - nlu_fallback
 responses:
   utter_ask_num_people:
     - text: How many people?
@@ -30,8 +29,6 @@ responses:
     - text: Which city/town are you departing from?
   utter_destination:
     - text: Where would you like to fly?
-  utter_budget_range:
-    - text: What's your budget?
   utter_date:
     - text: When would you like to travel?
   utter_confirm:
@@ -73,7 +70,6 @@ entities:
   - flight_type
   - budget_range
   - time
-  - amount-of-money
 slots:
   departure:
     type: any
@@ -94,7 +90,6 @@ slots:
         entity: number
       - type: from_intent
         intent: inform_group_size
-        value: 'couple'
   date:
     type: any
     mappings:
@@ -102,33 +97,14 @@ slots:
         entity: time
       - type: from_intent
         intent: inform_date
-        value: 'tomorrow'
   budget_range:
     type: any
     mappings:
       - type: from_entity
         entity: budget_range
-      - type: from_entity
-        entity: amount-of-money
       - type: from_intent
         intent: inform_budget_range
-        value: 'emirates'
-  cabin:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: cabin
-      - type: from_intent
-        intent: inform_cabin
-        value: 'economy'
-  flight_type:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: flight_type
-      - type: from_intent
-        intent: inform_flight_type
-        value: 'round trip'
+
 actions:
 - validate_flight_booking_form
 
