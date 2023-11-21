@@ -1,31 +1,22 @@
----
 version: "3.1"
-rules:
-  - rule: activate flight form
+stories:
+  - story: Start the conversation and fill slots for flight booking
     steps:
       - intent: book_flight
       - action: flight_booking_form
       - active_loop: flight_booking_form
-  - rule: submit form
-    condition:
-      - active_loop: flight_booking_form
-    steps:
-      - action: flight_booking_form
-      - active_loop: null
-      - action: utter_submit
-      - action: utter_slots_values
-      
-  - rule: activate flight form
-    steps:
-      - intent: book_flight
-      - action: flight_booking_form
-      - active_loop: flight_booking_form
-  - rule: submit form
-    condition:
-      - active_loop: flight_booking_form
-    steps:
-      - intent: chitchat
-      - action: utter_chitchat
+      - slot_was_set:
+          - requested_slot: departure
+      - slot_was_set:
+          - requested_slot: destination
+      - slot_was_set:
+          - requested_slot: num_people
+      - slot_was_set:
+          - requested_slot: cabin
+      - slot_was_set:
+          - requested_slot: flight_type
+      - slot_was_set:
+          - requested_slot: budget_range
       - action: flight_booking_form
       - active_loop: null
       - action: utter_submit

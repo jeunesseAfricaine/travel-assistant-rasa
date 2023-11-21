@@ -1,6 +1,6 @@
 version: "3.1"
 stories:
-  - story: Start the conversation
+  - story: Start the conversation and fill slots for flight booking
     steps:
       - intent: book_flight
       - action: flight_booking_form
@@ -17,9 +17,7 @@ stories:
           - requested_slot: flight_type
       - slot_was_set:
           - requested_slot: budget_range
-      - action: action_deactivate_loop
+      - action: flight_booking_form
       - active_loop: null
       - action: utter_submit
       - action: utter_slots_values
-
- 
