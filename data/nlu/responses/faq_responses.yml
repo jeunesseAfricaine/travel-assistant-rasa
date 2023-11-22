@@ -1,40 +1,40 @@
 ---
 version: "3.1"
 responses:
-  utter_faq_baggage_allowance:
+  utter_faq/ask_baggage_allowance:
     - text: Baggage allowances vary between airlines and ticket classes. It's
         advisable to check directly with your airline for specific baggage
         allowances and any associated fees or restrictions.
-  utter_faq_seat_selection:
+  utter_faq/ask_seat_selection:
     - text: Seat selection options might differ depending on the airline and the type
         of ticket purchased. Some airlines offer complimentary seat selection,
         while others may charge for this service. I recommend checking with your
         airline to understand their seat selection policy.
-  utter_faq_check_in_process:
+  utter_faq/ask_check_in_process:
     - text: You can usually check in for your flight through the airline's website,
         mobile app, or at the airport's check-in counters. Online check-in is
         available in most cases, starting 24 hours before the departure time.
         For more specific details, I suggest visiting the airline's website or
         contacting their customer service.
-  utter_faq_payment_methods:
+  utter_faq/ask_payment_methods:
     - text: We accept various payment methods including credit cards, debit cards, and
         online payment platforms. Please note that accepted payment methods may
         vary based on the airline and booking platform.
-  utter_faq_inflight_services:
+  utter_faq/ask_inflight_services:
     - text: Inflight services often include meals and entertainment. Some airlines
         also provide options for special meals upon request. However, specific
         services may vary by airline and the type of ticket purchased.
-  utter_faq_ticket_refund_policy:
+  utter_faq/ask_ticket_refund_policy:
     - text: Ticket refund policies differ among airlines and ticket types. Generally,
         refundability depends on the fare rules associated with the ticket. You
         may be eligible for a refund based on the fare conditions at the time of
         booking.
-  utter_faq_travel_insurance:
+  utter_faq/ask_travel_insurance:
     - text: Travel insurance is not typically included in the ticket price. However,
         it can often be purchased separately during the booking process. It's
         recommended to review the coverage details before purchasing to
         understand what it includes.
-  utter_faq_flight_delay_compensation:
+  utter_faq/ask_flight_delay_compensation:
     - text: Flight delay compensation policies vary by airline and region. In some
         cases, compensation may be provided for significant delays caused by the
         airline. Check the airline's policies or contact their customer service
