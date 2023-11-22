@@ -17,25 +17,26 @@ intents:
   - thankyou
   - nlu_fallback
 responses:
-  utter_ask_num_people:
-    - text: How many people?
   utter_greet:
     - text: Hi! I'm your flight-booking companion. Let's find the best flight options
         together. What are you searching for?
     - text: Hello! I'm here to simplify your flight bookings. How can I assist you
         today?
-    - text: Hello and welcome aboard! I'm here to simplify your flight search. How may
-        I assist you today?
+    - text: Hello! Welcome to Voyage Companion! I’d be delighted to assist you in
+        booking your flight today. 😊
+  utter_ask_num_people:
+    - text: How many people are traveling with you?👥
   utter_departure:
-    - text: Which city/town are you departing from?
+    - text: Which city or town are you departing from?
   utter_destination:
-    - text: Where would you like to fly?
+    - text: Where would you like to fly to?🛫
   utter_budget_range:
-    - text: What's your budget?
+    - text: Could you let me know your budget range for the trip?💰
   utter_date:
-    - text: When would you like to travel?
+    - text: When would you like to start your journey?
   utter_confirm:
     - text: Do you need help with anything else?
+    - text: Just confirming, is there anything else I can assist you with?
   utter_flight_type:
     - text: What type of flight would you like to book?
   utter_goodbye:
@@ -55,14 +56,14 @@ responses:
     - text: All done!
   utter_slots_values:
     - text: |-
-        I am going to run a flight search using the following parameters:
+        I'm ready to search for your flight! Here's what I'll use:
          - departure: {departure}
          - destination: {destination}
          - num_people: {num_people}
          - budget_range: {budget_range}
   utter_youarewelcome:
-    - text: You're very welcome.
-    - text: Karibu!
+    - text: You're most welcome! Safe travels, and feel free to reach out if you need anything else. Bon voyage! ✈️
+    - text: Karibu! Safe travels, and feel free to kureach out if you need anything else. Safari njema! ✈️
 entities:
   - cabin
   - number
@@ -139,6 +140,7 @@ forms:
     required_slots:
       - destination
       - departure
+      - date
       - num_people
       - cabin
       - flight_type
