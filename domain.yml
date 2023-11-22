@@ -15,6 +15,7 @@ intents:
   - goodbye
   - chitchat
   - thankyou
+  - faq
   - nlu_fallback
 responses:
   utter_greet:
