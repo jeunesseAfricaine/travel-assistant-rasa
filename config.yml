@@ -4,9 +4,7 @@ language: en
 pipeline:
   - name: WhitespaceTokenizer
   - name: LanguageModelFeaturizer
-    # Name of the language model to use
     model_name: "gpt2"
-    # Pre-Trained weights to be loaded
     model_weights: "gpt2"
     cache_dir: null
   - name: RegexFeaturizer
@@ -37,6 +35,9 @@ pipeline:
   - name: ResponseSelector
     epochs: 100
     retrieval_intent: chitchat
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: faq
   - name: FallbackClassifier
     threshold: 0.8
     ambiguity_threshold: 0.1
