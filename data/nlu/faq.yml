@@ -2,55 +2,55 @@
 version: "3.1"
 
 nlu:
-  - intent: faq_payment_methods
+  - intent: faq/payment_methods
     examples: |
      - What payment methods are accepted for booking?
      - Can I pay with a debit card?
      - Are credit cards the only payment option?
      - Which payment options does the airline support?
 
-  - intent: faq_inflight_services
+  - intent: faq/inflight_services
     examples: |
      - What inflight services are available?
      - Are meals provided during the flight?
      - Can I request special meals?
      - Do you offer entertainment onboard?
 
-  - intent: faq_ticket_refund_policy
+  - intent: faq/ticket_refund_policy
     examples: |
      - What is the ticket refund policy?
      - Can I get a refund if I cancel my flight?
      - Are tickets refundable?
      - How do I request a ticket refund?
 
-  - intent: faq_travel_insurance
+  - intent: faq/travel_insurance
     examples: |
      - Do you offer travel insurance?
      - Is travel insurance included in the ticket?
      - Can I purchase travel insurance for my trip?
      - What does the travel insurance cover?
 
-  - intent: faq_flight_delay_compensation
+  - intent: faq/flight_delay_compensation
     examples: |
      - Will I receive compensation for flight delays?
      - What happens if my flight is delayed?
      - Is there compensation for delayed flights?
      - How does the airline handle flight delays?
-  - intent: faq_baggage_allowance
+  - intent: faq/baggage_allowance
     examples: |
      - What is the baggage allowance?
      - How much luggage can I carry?
      - What are the baggage restrictions?
      - Is there a limit on luggage for flights?
 
-  - intent: faq_seat_selection
+  - intent: faq/seat_selection
     examples: |
      - Can I choose my seat?
      - How do I select a seat?
      - What are the options for seat selection?
      - Is there a fee for seat reservation?
 
-  - intent: faq_check_in_process
+  - intent: faq/check_in_process
     examples: |
      - How do I check in for my flight?
      - What's the check-in procedure?
