@@ -14,6 +14,7 @@ intents:
   - inform_budget_range
   - goodbye
   - chitchat
+  - faq
   - thankyou
 responses:
   utter_ask_num_people:
