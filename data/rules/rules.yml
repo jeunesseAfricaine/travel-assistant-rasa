@@ -23,3 +23,7 @@ rules:
     steps:
       - intent: chitchat
       - action: utter_chitchat
+  - rule: rule
+    steps:
+      - intent: faq
+      - action: utter_faq
