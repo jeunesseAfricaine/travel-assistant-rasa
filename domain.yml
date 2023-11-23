@@ -10,7 +10,6 @@ intents:
   - inform_cabin
   - inform_group_size
   - inform_date
-  - inform_flight_name
   - inform_budget_range
   - goodbye
   - chitchat
@@ -40,6 +39,8 @@ responses:
     - text: Just confirming, is there anything else I can assist you with?
   utter_flight_type:
     - text: What type of flight would you like to book?
+  utter_default:
+    - text: I'm sorry, I can't help you.
   utter_goodbye:
     - text: Thank you for using our services! Should you need assistance in the
         future, I'll be here. Take care!
@@ -60,7 +61,10 @@ responses:
         I'm ready to search for your flight! Here's what I'll use:
          - departure: {departure}
          - destination: {destination}
+         - date: {date}
          - num_people: {num_people}
+         - cabin: {cabin}
+         - flight_type: {flight_type}
          - budget_range: {budget_range}
   utter_youarewelcome:
     - text: You're most welcome! Safe travels, and feel free to reach out if you need anything else. Bon voyage! ✈️
