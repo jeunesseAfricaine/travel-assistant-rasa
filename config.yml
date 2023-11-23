@@ -51,7 +51,8 @@ policies:
     batch_size: 50
     max_training_samples: 300
   - name: RulePolicy
+    nlu_fallback_threshold: 0.4
     core_fallback_threshold: 0.4
-    enable_fallback_prediction: true
+    enable_fallback_prediction: True
     core_fallback_action_name: action_default_fallback
 assistant_id: 20230723-171301-honest-limo
