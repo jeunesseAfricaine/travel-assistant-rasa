@@ -4,8 +4,8 @@ language: en
 pipeline:
   - name: WhitespaceTokenizer
   - name: LanguageModelFeaturizer
-    model_name: "roberta"
-    model_weights: "roberta-base"
+    model_name: "gpt"
+    model_weights: "openai-gpt"
     cache_dir: null
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
@@ -30,7 +30,7 @@ pipeline:
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 100
+    epochs: 80
     constrain_similarities: true
   - name: EntitySynonymMapper
   - name: ResponseSelector
@@ -48,7 +48,7 @@ policies:
   - name: TEDPolicy
     max_history: 6
     constrain_similarities: true
-    epochs: 200
+    epochs: 100
     batch_size: 50
     max_training_samples: 300
   - name: RulePolicy
