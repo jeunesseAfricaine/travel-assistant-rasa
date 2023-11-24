@@ -79,6 +79,7 @@ entities:
   - flight_type
   - budget_range
   - time
+  - date
   - amount-of-money
 slots:
   departure:
@@ -101,11 +102,16 @@ slots:
       - type: from_intent
         intent: inform_group_size
         value: 'couple'
-  date:
+  time:
     type: any
     mappings:
       - type: from_entity
         entity: time
+  date:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: date
       - type: from_intent
         intent: inform_date
         value: 'tomorrow'
@@ -146,6 +152,7 @@ forms:
       - destination
       - departure
       - date
+      - time
       - num_people
       - cabin
       - flight_type
