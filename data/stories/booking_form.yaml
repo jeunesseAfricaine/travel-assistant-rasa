@@ -19,5 +19,5 @@ stories:
           - requested_slot: budget_range
       - action: flight_booking_form
       - active_loop: null
-      - action: utter_submit
       - action: utter_slots_values
+      - action: utter_submit
