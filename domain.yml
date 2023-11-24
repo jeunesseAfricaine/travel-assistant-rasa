@@ -62,13 +62,14 @@ responses:
          - departure: {departure}
          - destination: {destination}
          - date: {date}
+         - time: {time}
          - num_people: {num_people}
          - cabin: {cabin}
          - flight_type: {flight_type}
          - budget_range: {budget_range}
   utter_youarewelcome:
     - text: You're most welcome! Safe travels, and feel free to reach out if you need anything else. Bon voyage! ✈️
-    - text: Karibu! Safe travels, and feel free to kureach out if you need anything else. Safari njema! ✈️
+    - text: Karibu! Safe travels, and feel free kureach out if you need anything else. Safari njema! ✈️
 entities:
   - cabin
   - number
