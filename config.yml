@@ -4,8 +4,8 @@ language: en
 pipeline:
   - name: WhitespaceTokenizer
   - name: LanguageModelFeaturizer
-    model_name: "distilbert"
-    model_weights: "distilbert-base-uncased"
+    model_name: "gpt2"
+    model_weights: "gpt2"
     cache_dir: null
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
@@ -15,7 +15,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 80
+    epochs: 100
     ranking_length: 5
     BILOU_flag: true
   - name: DucklingEntityExtractor
@@ -23,13 +23,14 @@ pipeline:
     dimensions:
       - time
       - number
+      - date
       - duration
       - amount-of-money
     locale: de_DE
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 80
+    epochs: 100
     constrain_similarities: true
   - name: EntitySynonymMapper
   - name: ResponseSelector
