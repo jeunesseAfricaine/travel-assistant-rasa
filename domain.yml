@@ -22,7 +22,7 @@ responses:
         together. What are you searching for?
     - text: Hello! I'm here to simplify your flight bookings. How can I assist you
         today?
-    - text: Hello! Welcome to Voyage Companion! I’d be delighted to assist you in
+    - text: Hello! Welcome to Voyage Companion! I am your travel assistant. I’d be delighted to assist you in
         booking your flight today. 😊
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
