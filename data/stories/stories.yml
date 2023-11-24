@@ -17,5 +17,8 @@ stories:
     steps:
       - intent: chitchat
       - action: utter_chitchat
-
+  - story: small talk
+    steps:
+      - intent: faq
+      - action: utter_faq
 
