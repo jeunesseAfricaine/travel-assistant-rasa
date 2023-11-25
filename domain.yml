@@ -62,7 +62,6 @@ responses:
          - departure: {departure}
          - destination: {destination}
          - date: {date}
-         - time: {time}
          - num_people: {num_people}
          - cabin: {cabin}
          - flight_type: {flight_type}
@@ -80,7 +79,6 @@ entities:
   - flight_type
   - budget_range
   - time
-  - date
   - amount-of-money
 slots:
   departure:
@@ -103,16 +101,11 @@ slots:
       - type: from_intent
         intent: inform_group_size
         value: 'couple'
-  time:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: time
   date:
     type: any
     mappings:
       - type: from_entity
-        entity: date
+        entity: time
       - type: from_intent
         intent: inform_date
         value: 'tomorrow'
@@ -153,7 +146,6 @@ forms:
       - destination
       - departure
       - date
-      - time
       - num_people
       - cabin
       - flight_type
