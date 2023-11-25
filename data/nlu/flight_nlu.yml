@@ -3,43 +3,6 @@ version: "3.1"
 nlu:
   - intent: book_flight
     examples: >
-      - I want to fly from [Berlin]{"entity": "LOC", "role": "departure"} to
-      [San Francisco]{"entity": "LOC", "role": "destination"}.
-      - I want to fly to [Paris]{"entity": "LOC", "role": "destination"}.
-      - Book a flight from [New York](departure) to [Tokyo]{"entity": "LOC", "role": "destination"}.
-      - airlines to [Amboseli]{"entity": "LOC", "role": "destination"}
-      - Airlines to [Angama Mara]{"entity": "LOC", "role": "destination"}
-      - Airlines to [Eldoret]{"entity": "LOC", "role": "destination"}
-      - Airlines to [Garissa]{"entity": "LOC", "role": "destination"}
-      - Airlines to [Kichwa Tembo]{"entity": "LOC", "role": "destination"}
-      - Airlines to [Kikambala]{"entity": "LOC", "role": "destination"}
-      - Airlines to [Kilaguni]{"entity": "LOC", "role": "destination"}
-      - Airlines to [Kisumu]{"entity": "LOC", "role": "destination"}
-      - Airlines to [Kitale]{"entity": "LOC", "role": "destination"}
-      - Airlines to [Lamu]{"entity": "LOC", "role": "destination"}
-      - Airlines to [Lodwar]{"entity": "LOC", "role": "destination"}
-      - Airlines to [Maasai Mara]{"entity": "LOC", "role": "destination"}
-      - Airlines from [Malindi]{"entity": "LOC", "role": "departure"}
-      - Airlines from [Mandera]{"entity": "LOC", "role": "departure"}
-      - Airlines from [Mara Lodges]{"entity": "LOC", "role": "departure"}
-      - Airlines from [Mara North Conservancy]{"entity": "LOC", "role": "departure"}
-      - Airlines from [Meru]{"entity": "LOC", "role": "departure"}
-      - Airlines from [Mombasa]{"entity": "LOC", "role": "departure"}
-      - Airlines from [Nairobi]{"entity": "LOC", "role": "departure"}
-      - Airlines from [Nanyuki]{"entity": "LOC", "role": "departure"}
-      - Airlines from [Olkiombo]{"entity": "LOC", "role": "departure"}
-      - Airlines from [Samburu]{"entity": "LOC", "role": "departure"}
-      - Airlines from [Ukunda]{"entity": "LOC", "role": "departure"}
-      - I want to fly from [New York]{"entity": "LOC", "role": "departure"}.
-      - Book me a flight from [London]{"entity": "LOC", "role": "destination"}.
-      - Book a flight from [Los Angeles]{"entity": "LOC", "role": "departure"}
-      - I am departing from [Nairobi]{"entity": "LOC", "role": "departure"}
-      - Departing from [Dubai]{"entity": "LOC", "role": "departure"}
-      - I am leaving [Diani]{"entity": "LOC", "role": "departure"}
-      - From [Kitale]{"entity": "LOC", "role": "departure"}
-      - coming from [Wajir]{"entity": "LOC", "role": "departure"}
-      - My departure town is [Eldoret]{"entity": "LOC", "role": "departure"}
-      - leaving [Zanzibar]{"entity": "LOC", "role": "departure"}
       - Book a [round-trip](flight_type) flight from [Nairobi]{"entity": "LOC", "role": "departure"} to [Diani]{"entity": "LOC", "role": "destination"} for tomorrow with a preference for morning departures.
 
       - Find me the cheapest [one-way](flight_type) flight from [Mombasa]{"entity": "LOC", "role": "departure"} to [Kisumu]{"entity": "LOC", "role": "destination"} for next weekend.
@@ -104,6 +67,8 @@ nlu:
       - Find destinations suitable for solo travel
       - List options for a group of friends vacation.
       - I'm planning for a couple's getaway.
+      - we are a group of four.
+      - tuko watu wawili
   - intent: inform_date
     examples: |
       - I want to do the activity in the evening.
@@ -136,6 +101,11 @@ nlu:
       - I want to travel during the holiday season
       - What are the dates for spring break
       - Show me options for upcoming holidays.
+      - Friday afternoon
+      - Tuesday night
+      - Monday noon
+      - In the weekend
+      - on Thursday evening
 
   - intent: inform_budget_range
     examples: >
@@ -158,6 +128,13 @@ nlu:
       - Find me budget-friendly [holiday destinations](budget_range).
 
       - What are the options for [cheap getaways](budget_range)?
+      - I have 600 shillings
+      - 10000 south african rands
+      - 5000 rands
+      - 100000 ugsh
+      - 500 tzsh
+      - 68900 tanzanian shillings
+      - 70000 naira
 
       - I'm looking for destinations that fit my [financial plan](budget_range).
 
