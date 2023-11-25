@@ -73,7 +73,29 @@ nlu:
       - 👐
       - 🫡 
       - 😴
-
+      - Sipendi
+      - aih
+      - Nimegive up
+      - Yangu bado
+      - siezi make
+      - Haileti
+      - Haiwezi
+      - Io sikuwa nikwambie
+      - Sikuwa
+      - Wacha ata
+      - ata sijui
+      - Sijasema
+      - Sijai
+      - hiyo haiezi
+      - haiwes
+      - sidai
+      - achana nayo
+      - si fityy
+      - Nimekataa Mimi
+      - Sijui
+      - Aiwezekani
+      - tricky sana
+      - Bado sioni
   - intent: affirm
     examples: |
       - yes
@@ -113,6 +135,40 @@ nlu:
       - Issaplan
       - 👍 
       - 👍🏾
+      - Hapo sawa..
+      - Fty
+      - Hio si ni better hadi
+      - Imebidi
+      - Eeeh mazee
+      - Fity fity
+      - Oooh poapoa
+      - Yap
+      - Inakaa poa
+      - Yeah itabidi
+      - Si ndo nadaai
+      - Oooh sawa
+      - Okay sawa basi
+      - Venye utaamua ni sawa
+      - lazima
+      - apa umenena
+      - walai
+      - Oooh
+      - inaweza mbaya
+      - Iko poa
+      - Iko tu sawa hivo
+      - imenbamba.
+      - iende ikiendaga
+      - Nataka
+      - Chezea tu hapo
+      - isorait
+      - hmm. Okay
+      - Mimi sina shida
+      - ooooh io iko fity...
+      - banaa
+      - yes bana
+      - Safiii..
+      - hio ni fityyy
+      - katambe
   - intent: deny
     examples: |
       - no
