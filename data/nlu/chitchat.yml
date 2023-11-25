@@ -38,6 +38,12 @@ nlu:
       - you are a retard
       - you are a dick!
       - pussy!
+      - we ni fala
+      - you are a retard
+      - retard
+      - fala hii
+      - uko na umbwakni
+      - umbwa
   - intent: chitchat/ask_builder
     examples: |
       - who built you
@@ -94,6 +100,10 @@ nlu:
       - Lets speak Luo
       - Unajua Kikisii?
       - We ni mkale?
+      - ongea kikuyu
+      - ongea kijaluo
+      - do you speak kenyan languages
+      - unaoza ongea kimasai
   - intent: chitchat/ask_out_of_scope
     examples: >
       - Do you have a girlfriend?
