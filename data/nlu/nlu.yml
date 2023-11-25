@@ -4,8 +4,8 @@ nlu:
   - intent: start
     examples: |
       - hey
-      - hello
-      - hi
+      - hello ☺️
+      - hi 😊
       - hello there
       - good morning
       - good evening
@@ -42,6 +42,7 @@ nlu:
       - btw unaanza aje
       - kuanza niaje
       - tustart
+      - 👋
   - intent: goodbye
     examples: |
       - cu
@@ -66,6 +67,10 @@ nlu:
       - have a good one
       - baadae
       - talk later
+      - 🥱
+      - 👐
+      - 🫡 
+      - 😴
   - intent: affirm
     examples: |
       - yes
@@ -103,6 +108,7 @@ nlu:
       - accept basi
       - ni sawa
       - Issaplan
+      - 👍      
   - intent: deny
     examples: |
       - no
@@ -126,6 +132,10 @@ nlu:
       - nooooo
       - nooooo
       - cheza chini
+      - 🫷
+      - 🫸🏻
+      - 🫷🏻
+      - 🫸🏽
   - intent: thankyou
     examples: |
       - I appreciate
@@ -147,4 +157,11 @@ nlu:
       - you are a lifesaver
       - you are efficient
       - tanks
+      - 👌
+      - 💪
+      - 🤘
+      - 🙏
+      - 💪🏻
+      - 🙏🏻
+      - 🙌🏻
 
