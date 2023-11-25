@@ -4,8 +4,8 @@ language: en
 pipeline:
   - name: WhitespaceTokenizer
   - name: LanguageModelFeaturizer
-    model_name: "roberta"
-    model_weights: "roberta-base"
+    model_name: "xlnet"
+    model_weights: "xlnet-base-cased"
     cache_dir: null
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
