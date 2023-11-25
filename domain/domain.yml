@@ -21,17 +21,17 @@ responses:
     - text: How many people?
   utter_greet:
     - text: Hi! I'm your flight-booking companion. Let's find the best flight options
-        together. What are you searching for?
-    - text: Hello! I'm here to simplify your flight bookings. How can I assist you
+        together. What are you searching for? 🛫
+    - text: Hello! 👋🏿 I'm here to simplify your flight bookings. How can I assist you
         today?
     - text: Hello and welcome aboard! I'm here to simplify your flight search. How may
-        I assist you today?
+        I assist you today? ✈️
   utter_departure:
-    - text: Which city/town are you departing from?
+    - text: Which city/town are you departing from? 🌆
   utter_destination:
-    - text: Where would you like to fly?
+    - text: Where would you like to fly? 🏖
   utter_date:
-    - text: When would you like to travel?
+    - text: When would you like to travel? 📆 
   utter_confirm:
     - text: Do you need help with anything else?
   utter_flight_type:
@@ -42,8 +42,8 @@ responses:
     - text: Your travel plans matter! If there's anything else I can do, I'm just a
         message away. Goodbye for now!
     - text: It's been great helping you today! If there's anything else you need, just
-        ask. Bye for now!
-    - text: Bye for now.
+        ask. Bye for now!✌🏿
+    - text: Bye for now.✌🏿
   utter_ask_rephrase:
     - text: Could you please provide more details?
     - text: I'd love to understand better. Can you elaborate?
