@@ -43,6 +43,8 @@ nlu:
       - kuanza niaje
       - tustart
       - 👋
+      - 👋🏽
+      - 👋🏾
   - intent: goodbye
     examples: |
       - cu
@@ -71,6 +73,7 @@ nlu:
       - 👐
       - 🫡 
       - 😴
+
   - intent: affirm
     examples: |
       - yes
@@ -108,7 +111,8 @@ nlu:
       - accept basi
       - ni sawa
       - Issaplan
-      - 👍      
+      - 👍 
+      - 👍🏾
   - intent: deny
     examples: |
       - no
@@ -136,6 +140,7 @@ nlu:
       - 🫸🏻
       - 🫷🏻
       - 🫸🏽
+      - 👎🏾
   - intent: thankyou
     examples: |
       - I appreciate
@@ -164,4 +169,8 @@ nlu:
       - 💪🏻
       - 🙏🏻
       - 🙌🏻
+      - 🙏🏽
+      - 💪🏽 
+      - 🫶🏾
+      - 🙌🏾
 
