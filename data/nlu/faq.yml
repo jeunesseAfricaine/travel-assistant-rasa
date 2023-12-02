@@ -57,3 +57,56 @@ nlu:
      - Can I check in online?
      - Where can I complete the check-in process?
 
+  - intent: faq/ask_emergency
+    examples: |
+     - If my flight gets canceled, how quickly can a travel agent resolve the issue?
+     - What if my hotel reservation has problems upon arrival?
+     - Does having a travel agent mean I won't face delays during my trip?
+     - What if there's an emergency during my trip? Can a travel agent help?
+     - Will a travel agent be able to help if I miss a connecting flight?
+     - What if I encounter problems with my tour or excursion plans?
+     - Can a travel agent resolve issues if my luggage is lost during transit?
+     - What happens if my booked attraction or event gets canceled?
+     - How effective are travel agents in managing unforeseen circumstances?
+     - If there's a natural disaster or unforeseen event at my destination, can a travel agent assist?
+     - What happens if something goes wrong? Does having a travel agent mean I can’t get things fixed right away?
+
+    - intent: faq/ask_additional_cost
+    examples: |
+     - Is there an additional fee for booking my vacation through a virtual travel assistant?
+     - Will I incur higher charges when booking my vacation with a virtual travel assistant?
+     - Are there extra expenses associated with using a virtual travel assistant to plan my vacation?
+     - Does booking with a virtual travel assistant involve additional charges?
+     - Are the costs higher for vacations booked through a virtual travel assistant?
+     - Will there be a surcharge for using a virtual travel assistant to book my vacation?
+     - Are there any hidden fees when booking vacations through a virtual travel assistant?
+     - Does using a virtual travel assistant incur additional costs for vacation bookings?
+     - Will I have to pay more for my vacation if I use a virtual travel assistant?
+     - Are there any added expenses associated with booking vacations via a virtual travel assistant?
+     - Does it cost more to book my vacation with a virtual travel assistant?
+     
+    - intent: faq/ask_additional_cost
+    examples: |
+     - When should I ideally get in touch with a travel professional?
+     - When is the best time to contact a travel professional?
+     - What's the recommended timing to reach out to a travel agent?
+     - When should I ideally contact a travel professional?
+     - Is there a preferred time frame for contacting a travel professional?
+     - When is it best to get in touch with a travel professional?
+     - How far in advance should I contact a travel agent?
+     - What's the ideal time frame to reach out to a travel professional?
+     - What's the most suitable time to contact a travel professional?
+     - When should I consider contacting a travel professional?
+     - Should I contact a travel agent in advance or at the last minute?
+     - When is the best time to reach out to a travel professional—earlier or later?
+     - Is it better to contact a travel assistant early or closer to my travel dates?
+     - When is the recommended time to contact you—well in advance or closer to the travel dates?
+     - What details should I have ready before contacting a travel agent?
+     - What information should I be prepared with when reaching out to a travel professional?
+     - What specifics should I provide when contacting you?
+     - What details are necessary when getting in touch with a travel assistant?
+     - What information do I need before contacting a travel assistant?
+     - What details should I ensure I have before reaching out to a travel assistant?
+     - When is the best time to contact a travel professional?
+
+
