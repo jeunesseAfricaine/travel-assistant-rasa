@@ -7,6 +7,8 @@ intents:
   - deny
   - stop
   - inform_flight_type
+  - inform_destination_preference
+  - inform_vacation_plan
   - inform_cabin
   - inform_group_size
   - inform_date
@@ -136,19 +138,22 @@ slots:
         intent: inform_flight_type
         value: 'round trip'
 actions:
-- validate_flight_booking_form
+- validate_flight_search_form
+- action_check_warm_destinations
+- action_check_cold_destinations
 
 forms:
   flight_booking_form:
     ignored_intents:
       - chitchat
+      - faq
     required_slots:
       - destination
       - departure
       - date
-      - num_people
-      - cabin
-      - flight_type
+      #- num_people
+      #- cabin
+      #- flight_type
       - budget_range
 session_config:
   session_expiration_time: 60
