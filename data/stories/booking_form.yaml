@@ -8,8 +8,6 @@ stories:
     - active_loop: flight_search_form
     - action: flight_search_form
     - active_loop: null
-    - action: action_submit_flight_form
-    - action: action_search_flights
     - action: utter_anything_else
   - story: Search for flight + chitchat
     steps:
@@ -20,8 +18,6 @@ stories:
     - action: utter_chitchat
     - action: flight_search_form
     - active_loop: null
-    - action: action_submit_flight_form
-    - action: action_search_flights
     - action: utter_anything_else
   - story: Search a flight + faq
     steps:
@@ -32,8 +28,6 @@ stories:
     - action: utter_faq
     - action: flight_search_form
     - active_loop: null
-    - action: action_submit_flight_form
-    - action: action_search_flights
     - action: utter_anything_else
   - story: Search for a flight + stop + affirm
     steps:
@@ -45,10 +39,8 @@ stories:
     - intent: affirm
     - action: flight_search_form
     - active_loop: null
-    - action: action_submit_flight_form
-    - action: action_search_flights
     - action: utter_anything_else
-  - story: Book a flight
+  - story: Search for a flight
     steps:
     - intent: search_flight
     - action: flight_search_form
