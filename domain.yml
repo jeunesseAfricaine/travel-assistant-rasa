@@ -32,6 +32,8 @@ responses:
     - text: Which city or town are you departing from?
   utter_destination:
     - text: Where would you like to fly to?🛫
+  utter_ask_vacay_destination:
+    - text: Absolutely, I can help with that. When are you planning to visit?
   utter_budget_range:
     - text: Could you let me know your budget range for the trip?💰
   utter_date:
