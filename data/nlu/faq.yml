@@ -148,3 +148,34 @@ nlu:
      - What are the steps to find my itinerary after confirming my trip?
      - I've booked my trip. Where should I check for my itinerary details?
      - Where can I find my itinerary once my trip is booked?
+     
+  - intent: faq/ask_explain_recommendation
+    examples: |
+     - How do you make recommendations for sightseeing and tours?
+     - How do you suggest sightseeing spots and tours?
+     - Can you guide me on selecting sightseeing places and tours?
+     - What's your process for recommending sightseeing and tour options?
+     - How do you provide suggestions for sightseeing and tours? 
+     - What's your approach to suggesting sightseeing and tour activities?
+     - Can you assist with recommendations for sightseeing and tours?
+     - How do you help with choosing sightseeing locations and tours?
+     - What methods do you use to recommend sightseeing spots and tours? 
+     - Can you give advice on sightseeing and tours at my destination?
+     - How do you tailor sightseeing and tour recommendations for travelers?
+     
+  - intent: faq/ask_turn_around
+    examples: |
+     - How quickly can you arrange accommodations once I share my preferences?  
+     - Once I give my preferences, how fast can you organize accommodations?
+     - How long does it take to arrange lodging after I provide my preferences?
+     - What's the turnaround time for booking accommodations once I share my choices?
+     - How soon can you set up lodging once I share my accommodation preferences? 
+     - After I share my preferences, how quickly can you arrange my stay?
+     - Once I provide my preferences, how fast can you secure accommodation?
+     - What's the speed of arranging accommodations once I share my preferences?
+     - How prompt are you in organizing lodging after I provide my preferences?
+     - When I give my preferences, what's the timeframe for arranging accommodations?
+     - How rapidly can you book accommodations after I share my preferences?
+     
+
+  
