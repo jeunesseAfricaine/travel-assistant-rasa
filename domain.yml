@@ -64,10 +64,13 @@ responses:
          - departure: {departure}
          - destination: {destination}
          - date: {date}
-         - num_people: {num_people}
-         - cabin: {cabin}
-         - flight_type: {flight_type}
+         #- num_people: {num_people}
+         #- cabin: {cabin}
+         #- flight_type: {flight_type}
          - budget_range: {budget_range}
+  utter_make_reservations:
+    - text: Well, let's make your reservations.
+    - text: I'll be happy to help you make a reservation.
   utter_youarewelcome:
     - text: You're most welcome! Safe travels, and feel free to reach out if you need anything else. Bon voyage! ✈️
     - text: Karibu! Safe travels, and feel free kureach out if you need anything else. Safari njema! ✈️
