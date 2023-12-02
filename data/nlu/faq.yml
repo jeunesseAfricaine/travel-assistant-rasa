@@ -81,6 +81,10 @@ nlu:
      - How effective are travel agents in managing unforeseen circumstances?
      - If there's a natural disaster or unforeseen event at my destination, can a travel agent assist?
      - What happens if something goes wrong? Does having a travel agent mean I can’t get things fixed right away?
+     - Do you offer support for unforeseen events during travel?
+     - What should I do in case of an emergency during my trip?
+     - Can you assist with last-minute changes to my itinerary?
+     - What happens if there's a flight delay or cancellation?
 
   - intent: faq/ask_additional_cost
     examples: |
@@ -191,3 +195,10 @@ nlu:
      - Do your itineraries include extensive details?
      - How detailed can I expect your itineraries to be?
   
+  - intent: faq/ask_shopping_recommendations
+    examples: |
+     - Can you suggest the best places for shopping at my destination?
+
+   - intent: faq/ask_restaurant_recommendations
+    examples: |
+     - Can you suggest some good restaurants at my destination?    
