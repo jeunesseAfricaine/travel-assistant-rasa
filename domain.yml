@@ -121,9 +121,6 @@ slots:
         entity: budget_range
       - type: from_entity
         entity: amount-of-money
-      - type: from_intent
-        intent: inform_budget_range
-        value: 'emirates'
   cabin:
     type: any
     mappings:
@@ -139,7 +136,7 @@ slots:
         entity: flight_type
       - type: from_intent
         intent: inform_flight_type
-        value: 'round trip'
+        value: 'multi-city'
 actions:
 - validate_flight_search_form
 - action_check_warm_destinations
