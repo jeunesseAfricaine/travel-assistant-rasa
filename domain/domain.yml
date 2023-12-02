@@ -2,48 +2,55 @@
 version: "3.1"
 intents:
   - start
-  - book_flight
+  - search_flight
   - affirm
   - deny
   - stop
   - inform_flight_type
+  - inform_destination_preference
+  - inform_vacation_plan
   - inform_cabin
   - inform_group_size
   - inform_date
-  - inform_flight_name
   - inform_budget_range
   - goodbye
   - chitchat
-  - faq
   - thankyou
+  - faq
+  - nlu_fallback
 responses:
-  utter_ask_num_people:
-    - text: How many people?
   utter_greet:
     - text: Hi! I'm your flight-booking companion. Let's find the best flight options
-        together. What are you searching for? 🛫
-    - text: Hello! 👋🏿 I'm here to simplify your flight bookings. How can I assist you
+        together. What are you searching for?
+    - text: Hello! I'm here to simplify your flight bookings. How can I assist you
         today?
-    - text: Hello and welcome aboard! I'm here to simplify your flight search. How may
-        I assist you today? ✈️
+    - text: Hello! Welcome to Voyage Companion! I am your travel assistant. I’d be delighted to assist you in
+        booking your flight today. 😊
+  utter_ask_num_people:
+    - text: How many people are traveling with you?👥
   utter_departure:
-    - text: Which city/town are you departing from? 🌆
+    - text: Which city or town are you departing from?
   utter_destination:
-    - text: Where would you like to fly? 🏖
+    - text: Where would you like to fly to?🛫
+  utter_budget_range:
+    - text: Could you let me know your budget range for the trip?💰
   utter_date:
-    - text: When would you like to travel? 📆 
+    - text: When would you like to start your journey?
   utter_confirm:
     - text: Do you need help with anything else?
+    - text: Just confirming, is there anything else I can assist you with?
   utter_flight_type:
     - text: What type of flight would you like to book?
+  utter_default:
+    - text: I'm sorry, I can't help you.
   utter_goodbye:
     - text: Thank you for using our services! Should you need assistance in the
         future, I'll be here. Take care!
     - text: Your travel plans matter! If there's anything else I can do, I'm just a
         message away. Goodbye for now!
     - text: It's been great helping you today! If there's anything else you need, just
-        ask. Bye for now!✌🏿
-    - text: Bye for now.✌🏿
+        ask. Bye for now!
+    - text: Bye for now.
   utter_ask_rephrase:
     - text: Could you please provide more details?
     - text: I'd love to understand better. Can you elaborate?
@@ -53,14 +60,20 @@ responses:
     - text: All done!
   utter_slots_values:
     - text: |-
-        I am going to run a flight search using the following parameters:
+        I'm ready to search for your flight! Here's what I'll use:
          - departure: {departure}
          - destination: {destination}
-         - num_people: {num_people}
+         - date: {date}
+         #- num_people: {num_people}
+         #- cabin: {cabin}
+         #- flight_type: {flight_type}
          - budget_range: {budget_range}
+  utter_make_reservations:
+    - text: Well, let's make your reservations.
+    - text: I'll be happy to help you make a reservation.
   utter_youarewelcome:
-    - text: You're very welcome.
-    - text: Karibu!
+    - text: You're most welcome! Safe travels, and feel free to reach out if you need anything else. Bon voyage! ✈️
+    - text: Karibu! Safe travels, and feel free kureach out if you need anything else. Safari njema! ✈️
 entities:
   - cabin
   - number
@@ -71,6 +84,7 @@ entities:
   - flight_type
   - budget_range
   - time
+  - amount-of-money
 slots:
   departure:
     type: any
@@ -91,6 +105,7 @@ slots:
         entity: number
       - type: from_intent
         intent: inform_group_size
+        value: 'couple'
   date:
     type: any
     mappings:
@@ -98,27 +113,50 @@ slots:
         entity: time
       - type: from_intent
         intent: inform_date
+        value: 'tomorrow'
   budget_range:
     type: any
     mappings:
       - type: from_entity
         entity: budget_range
+      - type: from_entity
+        entity: amount-of-money
       - type: from_intent
         intent: inform_budget_range
-
+        value: 'emirates'
+  cabin:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: cabin
+      - type: from_intent
+        intent: inform_cabin
+        value: 'economy'
+  flight_type:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: flight_type
+      - type: from_intent
+        intent: inform_flight_type
+        value: 'round trip'
 actions:
-- validate_flight_booking_form
+- validate_flight_search_form
+- action_check_warm_destinations
+- action_check_cold_destinations
 
 forms:
   flight_booking_form:
     ignored_intents:
       - chitchat
+      - faq
     required_slots:
       - destination
       - departure
-      - num_people
-      - cabin
-      - flight_type
+      - date
+      #- num_people
+      #- cabin
+      #- flight_type
       - budget_range
 session_config:
   session_expiration_time: 60
