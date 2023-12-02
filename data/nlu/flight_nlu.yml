@@ -43,6 +43,10 @@ nlu:
       - i prefer [one-way](flight_type) flight
       - [round trip](flight_type) please
       - nataka moja [one-way](flight_type)
+      - book me a [multi-city](flight_type) flight
+      - i want a [round-trip](flight_type)  please
+      - just [one-way]](flight_type) 
+      - do you hv [multi-city]](flight_type) ?
   - intent: inform_cabin
     examples: |
       - I prefer [economy](cabin) class.
@@ -106,10 +110,16 @@ nlu:
       - Monday noon
       - In the weekend
       - on Thursday evening
+      - search for flights on Friday morning
+      - Sunday morning
+      - Early tomorrow
+      - i want to fly Wednesday at night
+      - do you have slots for Saturday 26th?
+      - get me flights for Monday 10 am
 
   - intent: inform_budget_range
     examples: >
-      - My budget range is 500 dollars.
+      - My budget range is 500 canadian dollars.
 
       - I'm looking for flights within a budget of 1000 dollars.
 
@@ -119,13 +129,17 @@ nlu:
 
       - Find me destinations within 2000 to 3000 shillings.
 
+      - i got 16000 bucks
+
+      - i have 1350 sterling pounds
+
       - Suggest travel plans within my [affordable budget](budget_range).
 
       - Show options for [low-cost vacations](budget_range).
 
       - I can spend around 800 USD on the trip.
 
-      - Find me budget-friendly [holiday destinations](budget_range).
+      - Find me [budget-friendly](budget_range) holiday destinationy .
 
       - What are the options for [cheap getaways](budget_range)?
       - I have 600 shillings
@@ -135,43 +149,22 @@ nlu:
       - 500 tzsh
       - 68900 tanzanian shillings
       - 70000 naira
+      - 10000 kenya shillings
+      - 150000 shillings
+      - 135600 rands
+      - 127900 indian rupees
+      - I'm looking for destinations that fit an [affordable](budget_range) range.
+      - find me [luxury] (budget_range) places.
 
-      - I'm looking for destinations that fit my [financial plan](budget_range).
-
-      - List travel plans within [reasonable budget](budget_range).
-
-      - I'm looking for [Emirates](budget_range) flights.
-      - Book a flight with [Delta](budget_range) airlines.
-      - [Air France](budget_range)
-      - [AF](budget_range)
-      - [British Airways](budget_range)
-      - I want to pay the [Emirates Emirates](budget_range)
-      - [Ethiopian Airlines](budget_range)
-      - [Safarilink Aviation](budget_range)
-      - in [Kenya Airways](budget_range)
-      - the [KQ](budget_range)
-      - [Lufthansa Lufthansa](budget_range)
-      - I want to pay the [Swiss Swiss](budget_range)
-      - the [Qatar Airways](budget_range)
-      - the [Turkish Airlines](budget_range)
-      - my [TK](budget_range)
-      - my [LH](budget_range)
-      - [EA](budget_range)
-      - all [BA](budget_range)
-      - [EK](budget_range)
-      - [China Southern Airlines](budget_range)
-      - [CZ](budget_range)
-      - [Saudia](budget_range)
-      - [SV](budget_range)
-      - [Oman Air](budget_range)
-      - [WY](budget_range)
-      - [Air Mauritius](budget_range) 
-      - [MK](budget_range)
-      - [Korean Air](budget_range)
-      - [Air India](budget_range)
-      - [Condor](budget_range)
-      - [DE](budget_range)
-      - [Etihad Airways](budget_range)
-      - [EY](budget_range)
-      - [EgyptAir](budget_range)
-      - [RwandAir](budget_range)
+  - intent: inform_vacation_plan
+    examples: >
+      - I'm planning a vacation to explore some exotic places.
+      - I've decided to go on a vacation and explore new destinations.
+      - I'm organizing a holiday trip and seeking some suggestions.
+      - Planning a getaway to relax and unwind from work.
+      - I want to plan a vacation to a beautiful location.
+      - Considering a vacation to rejuvenate and experience new cultures.
+      - I've been thinking about taking a break and planning a vacation.
+      - I'm looking to organize a vacation to enjoy some time off.
+      - Interested in arranging a vacation to visit some scenic spots.
+      - I want to schedule a holiday to discover some picturesque places.
