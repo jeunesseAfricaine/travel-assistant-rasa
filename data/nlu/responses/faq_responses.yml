@@ -34,44 +34,73 @@ responses:
         it can often be purchased separately during the booking process. It's
         recommended to review the coverage details before purchasing to
         understand what it includes.
-    - text: Travel insurance is available and recommended to protect your travel investment. Many trips, such as tours and cruises, involve non-refundable funds paid months in advance. Travel insurance protects you from losing this investment. Perhaps even more important is the ‘during travel’ coverage and assistance that comes with the top-flight insurance companies we carry.
+    - text: Travel insurance is available and recommended to protect your travel
+        investment. Many trips, such as tours and cruises, involve
+        non-refundable funds paid months in advance. Travel insurance protects
+        you from losing this investment. Perhaps even more important is the
+        ‘during travel’ coverage and assistance that comes with the top-flight
+        insurance companies we carry.
   utter_faq/ask_flight_delay_compensation:
     - text: Flight delay compensation policies vary by airline and region. In some
         cases, compensation may be provided for significant delays caused by the
         airline. Check the airline's policies or contact their customer service
         for specific details.
-
   utter_faq/ask_emergency:
-    - text: We are often aware of potential “hiccups” in a travel itinerary before you are. It’s not uncommon for a travel professional to have already worked out a solution before you know that a problem exists.
-    - text: We're available round the clock. Whether it's a last-minute change or an unexpected delay, we're here to swiftly adapt and ensure your trip goes smoothly.
-    - text: We're available round the clock, day or night, before, during, and after your trip. In case of any emergency or unexpected disruption, 
-
+    - text: We are often aware of potential “hiccups” in a travel itinerary before you
+        are. It’s not uncommon for a travel professional to have already worked
+        out a solution before you know that a problem exists.
+    - text: We're available round the clock. Whether it's a last-minute change or an
+        unexpected delay, we're here to swiftly adapt and ensure your trip goes
+        smoothly.
+    - text: We're available round the clock, day or night, before, during, and after
+        your trip. In case of any emergency or unexpected disruption,
   utter_faq/ask_additional_cost:
-    - text: The price for your vacation is the same whether you book it yourself or you use the services of a travel assistant.  
-
+    - text: The price for your vacation is the same whether you book it yourself or
+        you use the services of a travel assistant.
   utter_faq/ask_availability:
-    - text: The sooner, the better. Whether it’s last minute or planned 18 months in advance, the more time you can give us, the better! You’ll need to be sure of a few details such as the dates (or date range) you wish to travel, the number of people in your travel party including the ages of any children going with you, your anticipated budget, and an idea of what you’d like to experience. Your travel professional will be happy to recommend specifics based on the information you provide.
-
+    - text: The sooner, the better. Whether it’s last minute or planned 18 months in
+        advance, the more time you can give us, the better! You’ll need to be
+        sure of a few details such as the dates (or date range) you wish to
+        travel, the number of people in your travel party including the ages of
+        any children going with you, your anticipated budget, and an idea of
+        what you’d like to experience. Your travel professional will be happy to
+        recommend specifics based on the information you provide.
   utter_faq/ask_why_ai:
-    - text: As a travel AI assistant, I simplify your trip planning by managing all travel aspects for you without any additional cost. I work with an experienced team, and human agents to leverage traveler feedback to provide invaluable resources for planning your trip effectively.
-    - text: As a travel assistant, I use AI to simplify your vacation planning by managing all travel-related tasks without any additional cost. Our team's expertise, combined with insights from numerous travelers, offers valuable assistance for planning your trip
-
+    - text: As a travel AI assistant, I simplify your trip planning by managing all
+        travel aspects for you without any additional cost. I work with an
+        experienced team, and human agents to leverage traveler feedback to
+        provide invaluable resources for planning your trip effectively.
+    - text: As a travel assistant, I use AI to simplify your vacation planning by
+        managing all travel-related tasks without any additional cost. Our
+        team's expertise, combined with insights from numerous travelers, offers
+        valuable assistance for planning your trip
   utter_faq/ask_itinerary:
-    - text: Your itinerary as booked by Voyage Companion is available on our www.ai.voyagecompanion.online website with your specific reservation code as the login. Since we are directly connected to vendors’ inventory systems (airlines, cruise lines, hotels), you will also be able to retrieve your information on their unique client sites, many of which offer a wealth of information to help you prepare for the trip ahead..  
-
+    - text: Your itinerary as booked by Voyage Companion is available on our
+        www.ai.voyagecompanion.online website with your specific reservation
+        code as the login. Since we are directly connected to vendors’ inventory
+        systems (airlines, cruise lines, hotels), you will also be able to
+        retrieve your information on their unique client sites, many of which
+        offer a wealth of information to help you prepare for the trip ahead..
   utter_faq/ask_explain_recommendation:
-    - text: Our travel experts and AI engineers work on the right APIs and data for personalized recommendations, taking into account local culture, weather, and your preferences. We can suggest the best sightseeing spots and tour guides tailored just for you!
-
+    - text: Our travel experts and AI engineers work on the right APIs and data for
+        personalized recommendations, taking into account local culture,
+        weather, and your preferences. We can suggest the best sightseeing spots
+        and tour guides tailored just for you!
   utter_faq/ask_turn_around:
-    - text: Once you've shared your preferences and budget, we'll promptly handle all arrangements, including accommodations and detailed itineraries, to ensure your comfort and satisfaction.
-
+    - text: Once you've shared your preferences and budget, we'll promptly handle all
+        arrangements, including accommodations and detailed itineraries, to
+        ensure your comfort and satisfaction.
   utter_faq/ask_itinerary_detail:
-    - text:  Our itineraries are meticulously planned, covering every aspect of your trip. Just provide us with your preferences, and we'll craft a detailed itinerary to ensure you have a memorable journey! 
-
+    - text: Our itineraries are meticulously planned, covering every aspect of your
+        trip. Just provide us with your preferences, and we'll craft a detailed
+        itinerary to ensure you have a memorable journey!
   utter_faq/ask_shopping_recommendations:
-    - text: Currently, our engineers are working diligently on the right APIs. We are building insider knowledge about the best shopping locations. Feel free to ask us about local markets and boutiques that cater to your style soon! 
-
+    - text: Currently, our engineers are working diligently on the right APIs. We are
+        building insider knowledge about the best shopping locations. Feel free
+        to ask us about local markets and boutiques that cater to your style
+        soon!
   utter_faq/ask_restaurant_recommendations:
-    - text: Currently, our engineers are working diligently on the right APIs. When it comes to dining recommendations, we'll explore various local eateries. Feel free to ask us about our favorite restaurants that perfectly align with your taste soon!
-
-    
+    - text: Currently, our engineers are working diligently on the right APIs. When it
+        comes to dining recommendations, we'll explore various local eateries.
+        Feel free to ask us about our favorite restaurants that perfectly align
+        with your taste soon!
