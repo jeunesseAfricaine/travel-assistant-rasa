@@ -29,6 +29,17 @@ nlu:
      - Is travel insurance included in the ticket?
      - Can I purchase travel insurance for my trip?
      - What does the travel insurance cover?
+     - Why should I consider travel insurance?
+     - Is travel insurance necessary for tours and cruises?
+     - What does travel insurance cover during the trip?
+     - Why is travel insurance important during travel?
+     - How does travel insurance protect my investment?
+     - When should I consider purchasing travel insurance?
+     - Are there specific situations where travel insurance is crucial?
+     - What does 'during travel' coverage mean in travel insurance?
+     - How does travel insurance benefit travelers?
+     - What is the significance of top-flight insurance companies in travel insurance?
+     - Do I need Travel Insurance?
 
   - intent: faq/ask_flight_delay_compensation
     examples: |
@@ -71,7 +82,7 @@ nlu:
      - If there's a natural disaster or unforeseen event at my destination, can a travel agent assist?
      - What happens if something goes wrong? Does having a travel agent mean I can’t get things fixed right away?
 
-    - intent: faq/ask_additional_cost
+  - intent: faq/ask_additional_cost
     examples: |
      - Is there an additional fee for booking my vacation through a virtual travel assistant?
      - Will I incur higher charges when booking my vacation with a virtual travel assistant?
@@ -85,7 +96,7 @@ nlu:
      - Are there any added expenses associated with booking vacations via a virtual travel assistant?
      - Does it cost more to book my vacation with a virtual travel assistant?
      
-    - intent: faq/ask_additional_cost
+  - intent: faq/ask_availability
     examples: |
      - When should I ideally get in touch with a travel professional?
      - When is the best time to contact a travel professional?
@@ -109,4 +120,31 @@ nlu:
      - What details should I ensure I have before reaching out to a travel assistant?
      - When is the best time to contact a travel professional?
 
+  - intent: faq/ask_why_ai
+    examples: |
+     - When should I ideally get in touch with a travel professional?
+     - What's the advantage of using a travel assistant to book a vacation?
+     - Why should I opt for a travel AI to plan my vacation?
+     - What are the benefits of utilizing a travel AI to organize my vacation?
+     - How does a travel assistant make vacation booking easier?
+     - Why consider using a travel assistant for vacation bookings?
+     - How can a travel AI help in booking my vacation?
+     - What's the advantage of using an AI assistant to book a vacation?
+     - How does a travel assistant benefit me in vacation planning?
+     - What makes a travel AI beneficial for planning vacations?
+     - Why use a travel assistant instead of planning a vacation myself?
+     - What makes a travel AI beneficial for planning vacations?
 
+  - intent: faq/ask_itinerary
+    examples: |
+     - How can I access my itinerary once I've confirmed my trip?
+     - I've booked my trip. Where do I locate my itinerary details?
+     - Once the trip is booked, where do I find the itinerary details?
+     - Where do I retrieve my itinerary after confirming my trip booking?
+     - After booking, how do I access my trip itinerary?
+     - What is the process to view my itinerary post-booking?
+     - How can I view my itinerary once my trip is confirmed?
+     - Once the trip is finalized, where can I find my itinerary?
+     - What are the steps to find my itinerary after confirming my trip?
+     - I've booked my trip. Where should I check for my itinerary details?
+     - Where can I find my itinerary once my trip is booked?
