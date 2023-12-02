@@ -229,4 +229,19 @@ nlu:
       - 💪🏽 
       - 🫶🏾
       - 🙌🏾
-
+ - intent: stop
+    examples: |
+      - I need you to stop
+      - just stop maze
+      - just stop
+      - i do not wish to proceed
+      - i cannot proceed 
+      - i dont proceed
+      - hebu stop this
+      - stop this
+      - staaaaap!
+      - stoooooop!
+      - hen do you stop!
+      - when will you stop?
+      - will you just stop
+      - wil u jst stop!
