@@ -1,224 +1,288 @@
 ---
 version: "3.1"
-
 nlu:
   - intent: faq/ask_payment_methods
     examples: |
-     - What payment methods are accepted for booking?
-     - Can I pay with a debit card?
-     - Are credit cards the only payment option?
-     - Which payment options does the airline support?
-
+      - What payment methods are accepted for booking?
+      - Can I pay with a debit card?
+      - Are credit cards the only payment option?
+      - Which payment options does the airline support?
   - intent: faq/ask_inflight_services
     examples: |
-     - What inflight services are available?
-     - Are meals provided during the flight?
-     - Can I request special meals?
-     - Do you offer entertainment onboard?
-
+      - What inflight services are available?
+      - Are meals provided during the flight?
+      - Can I request special meals?
+      - Do you offer entertainment onboard?
   - intent: faq/ask_ticket_refund_policy
     examples: |
-     - What is the ticket refund policy?
-     - Can I get a refund if I cancel my flight?
-     - Are tickets refundable?
-     - How do I request a ticket refund?
-
+      - What is the ticket refund policy?
+      - Can I get a refund if I cancel my flight?
+      - Are tickets refundable?
+      - How do I request a ticket refund?
   - intent: faq/ask_travel_insurance
-    examples: |
-     - Do you offer travel insurance?
-     - Is travel insurance included in the ticket?
-     - Can I purchase travel insurance for my trip?
-     - What does the travel insurance cover?
-     - Why should I consider travel insurance?
-     - Is travel insurance necessary for tours and cruises?
-     - What does travel insurance cover during the trip?
-     - Why is travel insurance important during travel?
-     - How does travel insurance protect my investment?
-     - When should I consider purchasing travel insurance?
-     - Are there specific situations where travel insurance is crucial?
-     - What does 'during travel' coverage mean in travel insurance?
-     - How does travel insurance benefit travelers?
-     - What is the significance of top-flight insurance companies in travel insurance?
-     - Do I need Travel Insurance?
+    examples: >
+      - Do you offer travel insurance?
 
+      - Is travel insurance included in the ticket?
+
+      - Can I purchase travel insurance for my trip?
+
+      - What does the travel insurance cover?
+
+      - Why should I consider travel insurance?
+
+      - Is travel insurance necessary for tours and cruises?
+
+      - What does travel insurance cover during the trip?
+
+      - Why is travel insurance important during travel?
+
+      - How does travel insurance protect my investment?
+
+      - When should I consider purchasing travel insurance?
+
+      - Are there specific situations where travel insurance is crucial?
+
+      - What does 'during travel' coverage mean in travel insurance?
+
+      - How does travel insurance benefit travelers?
+
+      - What is the significance of top-flight insurance companies in travel insurance?
+
+      - Do I need Travel Insurance?
   - intent: faq/ask_flight_delay_compensation
     examples: |
-     - Will I receive compensation for flight delays?
-     - What happens if my flight is delayed?
-     - Is there compensation for delayed flights?
-     - How does the airline handle flight delays?
+      - Will I receive compensation for flight delays?
+      - What happens if my flight is delayed?
+      - Is there compensation for delayed flights?
+      - How does the airline handle flight delays?
   - intent: faq/ask_baggage_allowance
     examples: |
-     - What is the baggage allowance?
-     - How much luggage can I carry?
-     - What are the baggage restrictions?
-     - Is there a limit on luggage for flights?
-
+      - What is the baggage allowance?
+      - How much luggage can I carry?
+      - What are the baggage restrictions?
+      - Is there a limit on luggage for flights?
   - intent: faq/ask_seat_selection
     examples: |
-     - Can I choose my seat?
-     - How do I select a seat?
-     - What are the options for seat selection?
-     - Is there a fee for seat reservation?
-
+      - Can I choose my seat?
+      - How do I select a seat?
+      - What are the options for seat selection?
+      - Is there a fee for seat reservation?
   - intent: faq/ask_check_in_process
     examples: |
-     - How do I check in for my flight?
-     - What's the check-in procedure?
-     - Can I check in online?
-     - Where can I complete the check-in process?
-
+      - How do I check in for my flight?
+      - What's the check-in procedure?
+      - Can I check in online?
+      - Where can I complete the check-in process?
   - intent: faq/ask_emergency
-    examples: |
-     - If my flight gets canceled, how quickly can a travel agent resolve the issue?
-     - What if my hotel reservation has problems upon arrival?
-     - Does having a travel agent mean I won't face delays during my trip?
-     - What if there's an emergency during my trip? Can a travel agent help?
-     - Will a travel agent be able to help if I miss a connecting flight?
-     - What if I encounter problems with my tour or excursion plans?
-     - Can a travel agent resolve issues if my luggage is lost during transit?
-     - What happens if my booked attraction or event gets canceled?
-     - How effective are travel agents in managing unforeseen circumstances?
-     - If there's a natural disaster or unforeseen event at my destination, can a travel agent assist?
-     - What happens if something goes wrong? Does having a travel agent mean I can’t get things fixed right away?
-     - Do you offer support for unforeseen events during travel?
-     - What should I do in case of an emergency during my trip?
-     - Can you assist with last-minute changes to my itinerary?
-     - What happens if there's a flight delay or cancellation?
+    examples: >
+      - If my flight gets canceled, how quickly can a travel agent resolve
+      the issue?
 
+      - What if my hotel reservation has problems upon arrival?
+
+      - Does having a travel agent mean I won't face delays during my trip?
+
+      - What if there's an emergency during my trip? Can a travel agent help?
+
+      - Will a travel agent be able to help if I miss a connecting flight?
+
+      - What if I encounter problems with my tour or excursion plans?
+
+      - Can a travel agent resolve issues if my luggage is lost during transit?
+
+      - What happens if my booked attraction or event gets canceled?
+
+      - How effective are travel agents in managing unforeseen circumstances?
+
+      - If there's a natural disaster or unforeseen event at my destination, can a travel agent assist?
+
+      - What happens if something goes wrong? Does having a travel agent mean I can’t get things fixed right away?
+
+      - Do you offer support for unforeseen events during travel?
+
+      - What should I do in case of an emergency during my trip?
+
+      - Can you assist with last-minute changes to my itinerary?
+
+      - What happens if there's a flight delay or cancellation?
   - intent: faq/ask_additional_cost
-    examples: |
-     - Is there an additional fee for booking my vacation through a virtual travel assistant?
-     - Will I incur higher charges when booking my vacation with a virtual travel assistant?
-     - Are there extra expenses associated with using a virtual travel assistant to plan my vacation?
-     - Does booking with a virtual travel assistant involve additional charges?
-     - Are the costs higher for vacations booked through a virtual travel assistant?
-     - Will there be a surcharge for using a virtual travel assistant to book my vacation?
-     - Are there any hidden fees when booking vacations through a virtual travel assistant?
-     - Does using a virtual travel assistant incur additional costs for vacation bookings?
-     - Will I have to pay more for my vacation if I use a virtual travel assistant?
-     - Are there any added expenses associated with booking vacations via a virtual travel assistant?
-     - Does it cost more to book my vacation with a virtual travel assistant?
-     
-  - intent: faq/ask_availability
-    examples: |
-     - When should I ideally get in touch with a travel professional?
-     - When is the best time to contact a travel professional?
-     - What's the recommended timing to reach out to a travel agent?
-     - When should I ideally contact a travel professional?
-     - Is there a preferred time frame for contacting a travel professional?
-     - When is it best to get in touch with a travel professional?
-     - How far in advance should I contact a travel agent?
-     - What's the ideal time frame to reach out to a travel professional?
-     - What's the most suitable time to contact a travel professional?
-     - When should I consider contacting a travel professional?
-     - Should I contact a travel agent in advance or at the last minute?
-     - When is the best time to reach out to a travel professional—earlier or later?
-     - Is it better to contact a travel assistant early or closer to my travel dates?
-     - When is the recommended time to contact you—well in advance or closer to the travel dates?
-     - What details should I have ready before contacting a travel agent?
-     - What information should I be prepared with when reaching out to a travel professional?
-     - What specifics should I provide when contacting you?
-     - What details are necessary when getting in touch with a travel assistant?
-     - What information do I need before contacting a travel assistant?
-     - What details should I ensure I have before reaching out to a travel assistant?
-     - When is the best time to contact a travel professional?
+    examples: >
+      - Is there an additional fee for booking my vacation through a virtual
+      travel assistant?
 
+      - Will I incur higher charges when booking my vacation with a virtual travel assistant?
+
+      - Are there extra expenses associated with using a virtual travel assistant to plan my vacation?
+
+      - Does booking with a virtual travel assistant involve additional charges?
+
+      - Are the costs higher for vacations booked through a virtual travel assistant?
+
+      - Will there be a surcharge for using a virtual travel assistant to book my vacation?
+
+      - Are there any hidden fees when booking vacations through a virtual travel assistant?
+
+      - Does using a virtual travel assistant incur additional costs for vacation bookings?
+
+      - Will I have to pay more for my vacation if I use a virtual travel assistant?
+
+      - Are there any added expenses associated with booking vacations via a virtual travel assistant?
+
+      - Does it cost more to book my vacation with a virtual travel assistant?
+  - intent: faq/ask_availability
+    examples: >
+      - When should I ideally get in touch with a travel professional?
+
+      - When is the best time to contact a travel professional?
+
+      - What's the recommended timing to reach out to a travel agent?
+
+      - When should I ideally contact a travel professional?
+
+      - Is there a preferred time frame for contacting a travel professional?
+
+      - When is it best to get in touch with a travel professional?
+
+      - How far in advance should I contact a travel agent?
+
+      - What's the ideal time frame to reach out to a travel professional?
+
+      - What's the most suitable time to contact a travel professional?
+
+      - When should I consider contacting a travel professional?
+
+      - Should I contact a travel agent in advance or at the last minute?
+
+      - When is the best time to reach out to a travel professional—earlier or later?
+
+      - Is it better to contact a travel assistant early or closer to my travel dates?
+
+      - When is the recommended time to contact you—well in advance or closer to the travel dates?
+
+      - What details should I have ready before contacting a travel agent?
+
+      - What information should I be prepared with when reaching out to a travel professional?
+
+      - What specifics should I provide when contacting you?
+
+      - What details are necessary when getting in touch with a travel assistant?
+
+      - What information do I need before contacting a travel assistant?
+
+      - What details should I ensure I have before reaching out to a travel assistant?
+
+      - When is the best time to contact a travel professional?
   - intent: faq/ask_why_ai
     examples: |
-     - When should I ideally get in touch with a travel professional?
-     - What's the advantage of using a travel assistant to book a vacation?
-     - Why should I opt for a travel AI to plan my vacation?
-     - What are the benefits of utilizing a travel AI to organize my vacation?
-     - How does a travel assistant make vacation booking easier?
-     - Why consider using a travel assistant for vacation bookings?
-     - How can a travel AI help in booking my vacation?
-     - What's the advantage of using an AI assistant to book a vacation?
-     - How does a travel assistant benefit me in vacation planning?
-     - What makes a travel AI beneficial for planning vacations?
-     - Why use a travel assistant instead of planning a vacation myself?
-     - What makes a travel AI beneficial for planning vacations?
-
+      - When should I ideally get in touch with a travel professional?
+      - What's the advantage of using a travel assistant to book a vacation?
+      - Why should I opt for a travel AI to plan my vacation?
+      - What are the benefits of utilizing a travel AI to organize my vacation?
+      - How does a travel assistant make vacation booking easier?
+      - Why consider using a travel assistant for vacation bookings?
+      - How can a travel AI help in booking my vacation?
+      - What's the advantage of using an AI assistant to book a vacation?
+      - How does a travel assistant benefit me in vacation planning?
+      - What makes a travel AI beneficial for planning vacations?
+      - Why use a travel assistant instead of planning a vacation myself?
+      - What makes a travel AI beneficial for planning vacations?
   - intent: faq/ask_itinerary
     examples: |
-     - How can I access my itinerary once I've confirmed my trip?
-     - I've booked my trip. Where do I locate my itinerary details?
-     - Once the trip is booked, where do I find the itinerary details?
-     - Where do I retrieve my itinerary after confirming my trip booking?
-     - After booking, how do I access my trip itinerary?
-     - What is the process to view my itinerary post-booking?
-     - How can I view my itinerary once my trip is confirmed?
-     - Once the trip is finalized, where can I find my itinerary?
-     - What are the steps to find my itinerary after confirming my trip?
-     - I've booked my trip. Where should I check for my itinerary details?
-     - Where can I find my itinerary once my trip is booked?
-     
+      - How can I access my itinerary once I've confirmed my trip?
+      - I've booked my trip. Where do I locate my itinerary details?
+      - Once the trip is booked, where do I find the itinerary details?
+      - Where do I retrieve my itinerary after confirming my trip booking?
+      - After booking, how do I access my trip itinerary?
+      - What is the process to view my itinerary post-booking?
+      - How can I view my itinerary once my trip is confirmed?
+      - Once the trip is finalized, where can I find my itinerary?
+      - What are the steps to find my itinerary after confirming my trip?
+      - I've booked my trip. Where should I check for my itinerary details?
+      - Where can I find my itinerary once my trip is booked?
   - intent: faq/ask_explain_recommendation
     examples: |
-     - How do you make recommendations for sightseeing and tours?
-     - How do you suggest sightseeing spots and tours?
-     - Can you guide me on selecting sightseeing places and tours?
-     - What's your process for recommending sightseeing and tour options?
-     - How do you provide suggestions for sightseeing and tours? 
-     - What's your approach to suggesting sightseeing and tour activities?
-     - Can you assist with recommendations for sightseeing and tours?
-     - How do you help with choosing sightseeing locations and tours?
-     - What methods do you use to recommend sightseeing spots and tours? 
-     - Can you give advice on sightseeing and tours at my destination?
-     - How do you tailor sightseeing and tour recommendations for travelers?
-     
+      - How do you make recommendations for sightseeing and tours?
+      - How do you suggest sightseeing spots and tours?
+      - Can you guide me on selecting sightseeing places and tours?
+      - What's your process for recommending sightseeing and tour options?
+      - How do you provide suggestions for sightseeing and tours? 
+      - What's your approach to suggesting sightseeing and tour activities?
+      - Can you assist with recommendations for sightseeing and tours?
+      - How do you help with choosing sightseeing locations and tours?
+      - What methods do you use to recommend sightseeing spots and tours? 
+      - Can you give advice on sightseeing and tours at my destination?
+      - How do you tailor sightseeing and tour recommendations for travelers?
   - intent: faq/ask_turn_around
-    examples: |
-     - How quickly can you arrange accommodations once I share my preferences?  
-     - Once I give my preferences, how fast can you organize accommodations?
-     - How long does it take to arrange lodging after I provide my preferences?
-     - What's the turnaround time for booking accommodations once I share my choices?
-     - How soon can you set up lodging once I share my accommodation preferences? 
-     - After I share my preferences, how quickly can you arrange my stay?
-     - Once I provide my preferences, how fast can you secure accommodation?
-     - What's the speed of arranging accommodations once I share my preferences?
-     - How prompt are you in organizing lodging after I provide my preferences?
-     - When I give my preferences, what's the timeframe for arranging accommodations?
-     - How rapidly can you book accommodations after I share my preferences?
-     
+    examples: >
+      - How quickly can you arrange accommodations once I share my
+      preferences?  
+
+      - Once I give my preferences, how fast can you organize accommodations?
+
+      - How long does it take to arrange lodging after I provide my preferences?
+
+      - What's the turnaround time for booking accommodations once I share my choices?
+
+      - How soon can you set up lodging once I share my accommodation preferences? 
+
+      - After I share my preferences, how quickly can you arrange my stay?
+
+      - Once I provide my preferences, how fast can you secure accommodation?
+
+      - What's the speed of arranging accommodations once I share my preferences?
+
+      - How prompt are you in organizing lodging after I provide my preferences?
+
+      - When I give my preferences, what's the timeframe for arranging accommodations?
+
+      - How rapidly can you book accommodations after I share my preferences?
   - intent: faq/ask_itinerary_detail
     examples: |
-     - How detailed are the itineraries you create? 
-     - What level of detail do your itineraries usually have?
-     - How comprehensive are the itineraries you make?
-     - Are the itineraries you create very detailed?
-     - How thorough are the itineraries you typically provide?
-     - What's the extent of detail in the itineraries you create?
-     - How elaborate are the itineraries you usually craft?
-     - Are your itineraries quite detailed and specific?
-     - What's the depth of detail in the itineraries you prepare?
-     - Do your itineraries include extensive details?
-     - How detailed can I expect your itineraries to be?
-  
+      - How detailed are the itineraries you create? 
+      - What level of detail do your itineraries usually have?
+      - How comprehensive are the itineraries you make?
+      - Are the itineraries you create very detailed?
+      - How thorough are the itineraries you typically provide?
+      - What's the extent of detail in the itineraries you create?
+      - How elaborate are the itineraries you usually craft?
+      - Are your itineraries quite detailed and specific?
+      - What's the depth of detail in the itineraries you prepare?
+      - Do your itineraries include extensive details?
+      - How detailed can I expect your itineraries to be?
   - intent: faq/ask_shopping_recommendations
     examples: |
-     - Can you suggest the best places for shopping at my destination?
-     - What are some top shopping spots in the area?
-     - Could you recommend the best places to shop at my destination?
-     - Where can I find good shopping areas around here?
-     - Can you suggest great shopping places nearby?
-     - I'm looking for the best shopping places. Any recommendations?
-     - What are the popular shopping districts in this location?
-     - Where should I go for a fantastic shopping experience?
-     -Any suggestions on where to shop for souvenirs?
-     - Could you point me to the best shopping malls or streets?
-     - What are the must-visit shopping destinations here?
+      - Can you suggest the best places for shopping at my destination?
+      - What are some top shopping spots in the area?
+      - Could you recommend the best places to shop at my destination?
+      - Where can I find good shopping areas around here?
+      - Can you suggest great shopping places nearby?
+      - I'm looking for the best shopping places. Any recommendations?
+      - What are the popular shopping districts in this location?
+      - Where should I go for a fantastic shopping experience?
+      -Any suggestions on where to shop for souvenirs?
+      - Could you point me to the best shopping malls or streets?
+      - What are the must-visit shopping destinations here?
+  - intent: faq/ask_restaurant_recommendations
+    examples: >
+      - Can you suggest some good restaurants at my destination?   
 
-   - intent: faq/ask_restaurant_recommendations
-    examples: |
-     - Can you suggest some good restaurants at my destination?   
-     - Could you recommend some excellent dining spots at my destination?
-     - I'm looking for suggestions on great restaurants in the area. Can you help?
-     - Any ideas for good places to eat at my destination?
-     - Can you provide some recommendations for good dining places?
-     - I'm in need of suggestions for good restaurants. Any tips?
-     - I'm curious about the best restaurants around my destination. Any suggestions?
-     - Where can I find good places to eat at my destination?
-     - Do you have any advice on good restaurants in that area?
-     - Can you assist me in finding good dining options at my destination?
-     - I'm searching for recommendations for good places to dine. Can you help me out?
+      - Could you recommend some excellent dining spots at my destination?
+
+      - I'm looking for suggestions on great restaurants in the area. Can you help?
+
+      - Any ideas for good places to eat at my destination?
+
+      - Can you provide some recommendations for good dining places?
+
+      - I'm in need of suggestions for good restaurants. Any tips?
+
+      - I'm curious about the best restaurants around my destination. Any suggestions?
+
+      - Where can I find good places to eat at my destination?
+
+      - Do you have any advice on good restaurants in that area?
+
+      - Can you assist me in finding good dining options at my destination?
+
+      - I'm searching for recommendations for good places to dine. Can you help me out?
