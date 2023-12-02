@@ -43,6 +43,8 @@ responses:
 
   utter_faq/ask_emergency:
     - text: We are often aware of potential “hiccups” in a travel itinerary before you are. It’s not uncommon for a travel professional to have already worked out a solution before you know that a problem exists.
+    - text: We're available round the clock. Whether it's a last-minute change or an unexpected delay, we're here to swiftly adapt and ensure your trip goes smoothly.
+    - text: We're available round the clock, day or night, before, during, and after your trip. In case of any emergency or unexpected disruption, 
 
   utter_faq/ask_additional_cost:
     - text: The price for your vacation is the same whether you book it yourself or you use the services of a travel assistant.  
