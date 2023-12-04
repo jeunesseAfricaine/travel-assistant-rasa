@@ -58,6 +58,8 @@ responses:
     - text: I'd love to understand better. Can you elaborate?
   utter_ask_continue:
     - text: Do you wish to continue?
+  utter_anything_else:
+    - text: Please reach out if you have any further question
   utter_submit:
     - text: All done!
   utter_slots_values:
@@ -123,6 +125,9 @@ slots:
         entity: budget_range
       - type: from_entity
         entity: amount-of-money
+      - type: from_intent
+        intent: inform_budget_range
+        value: 'low-cost vacations'
   cabin:
     type: any
     mappings:
@@ -139,6 +144,13 @@ slots:
       - type: from_intent
         intent: inform_flight_type
         value: 'multi-city'
+  warm:
+    type: bool
+    mappings:
+      - type: from_entity
+        entity: warm
+    influence_conversation: true
+
 actions:
 - validate_flight_search_form
 - action_check_warm_destinations
