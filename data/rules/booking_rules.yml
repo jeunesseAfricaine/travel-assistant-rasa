@@ -1,17 +1,66 @@
 ---
 version: "3.1"
 rules:
-  - rule: activate flight form
+
+  - rule: activate flight form + chitchat
     steps:
-      - intent: book_flight
-      - action: flight_booking_form
-      - active_loop: flight_booking_form
+      - intent: search_flight
+      - action: validate_flight_search_form
+      - active_loop: validate_flight_search_form
   - rule: submit form
     condition:
-      - active_loop: flight_booking_form
+      - active_loop: validate_flight_search_form
     steps:
-      - action: flight_booking_form
+      - intent: chitchat
+      - action: utter_chitchat
+      - action: validate_flight_search_form
       - active_loop: null
-      - action: utter_slots_values
-      - action: utter_submit
+      - action: utter_anything_else
 
+  - rule: activate flight form + FAQs
+    steps:
+      - intent: search_flight
+      - action: validate_flight_search_form
+      - active_loop: validate_flight_search_form
+  - rule: submit form
+    condition:
+      - active_loop: validate_flight_search_form
+    steps:
+      - intent: faq
+      - action: utter_faq
+      - action: validate_flight_search_form
+      - active_loop: null
+      - action: utter_anything_else
+      
+  - rule: activate flight form + interject form
+    steps:
+      - intent: search_flight
+      - action: validate_flight_search_form
+      - active_loop: validate_flight_search_form
+  - rule: submit form
+    condition:
+      - active_loop: validate_flight_search_form
+    steps:
+      - intent: stop
+      - action: utter_ask_continue
+      - intent: affirm
+      - action: validate_flight_search_form
+      - active_loop: null
+      - action: utter_anything_else
+      
+  - rule: activate flight form + stop form
+    steps:
+      - intent: search_flight
+      - action: validate_flight_search_form
+      - active_loop: validate_flight_search_form
+  - rule: submit form
+    condition:
+      - active_loop: validate_flight_search_form
+    steps:
+      - intent: stop
+      - action: utter_ask_continue
+      - intent: deny
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_anything_else
+      
