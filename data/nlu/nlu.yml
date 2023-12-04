@@ -229,8 +229,10 @@ nlu:
       - 💪🏽 
       - 🫶🏾
       - 🙌🏾
- - intent: stop
+  - intent: stop
     examples: |
+      - I need you to stop
+      - just stop maze
       - I need you to stop
       - just stop maze
       - just stop
