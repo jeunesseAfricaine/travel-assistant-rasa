@@ -1,89 +1,69 @@
 ---
 version: "3.1"
 stories:
-  - story: Search for a flight
-    steps:
-    - intent: search_flight
-    - action: flight_search_form
-    - active_loop: flight_search_form
-    - action: flight_search_form
-    - active_loop: null
-    - action: utter_anything_else
   - story: Search for flight + chitchat
     steps:
-    - intent: search_flight
-    - action: flight_search_form
-    - active_loop: flight_search_form
-    - intent: chitchat
-    - action: utter_chitchat
-    - action: flight_search_form
-    - active_loop: null
-    - action: utter_anything_else
+      - intent: search_flight
+      - action: validate_flight_search_form
+      - active_loop: validate_flight_search_form
+      - intent: chitchat
+      - action: utter_chitchat
+      - action: validate_flight_search_form
+      - active_loop: null
+      - action: utter_anything_else
   - story: Search a flight + faq
     steps:
-    - intent: search_flight
-    - action: flight_search_form
-    - active_loop: flight_search_form
-    - intent: faq
-    - action: utter_faq
-    - action: flight_search_form
-    - active_loop: null
-    - action: utter_anything_else
+      - intent: search_flight
+      - action: validate_flight_search_form
+      - active_loop: validate_flight_search_form
+      - intent: faq
+      - action: utter_faq
+      - action: validate_flight_search_form
+      - active_loop: null
+      - action: utter_anything_else
   - story: Search for a flight + stop + affirm
     steps:
-    - intent: search_flight
-    - action: flight_search_form
-    - active_loop: flight_search_form
-    - intent: stop
-    - action: utter_ask_continue
-    - intent: affirm
-    - action: flight_search_form
-    - active_loop: null
-    - action: utter_anything_else
+      - intent: search_flight
+      - action: validate_flight_search_form
+      - active_loop: validate_flight_search_form
+      - intent: stop
+      - action: utter_ask_continue
+      - intent: affirm
+      - action: validate_flight_search_form
+      - active_loop: null
+      - action: utter_anything_else
   - story: Search for a flight
     steps:
-    - intent: search_flight
-    - action: flight_search_form
-    - active_loop: flight_search_form
-    - intent: stop
-    - action: utter_ask_continue
-    - or:
-    - intent: stop
-    - intent: deny
-    - action: action_deactivate_loop
-    - active_loop: null
-    - action: utter_anything_else
-    
-- story: Plan vacation + warm climate
-  steps:
-    - intent: inform_vacation_plan
-    - action: utter_ask_vacay_destination
-    - intent: inform_destination_preference
-    - slot_was_set:
-     - warm: true
-    - action: action_check_warm_destinations
-    - or:
-    - intent: affirm
-    - intent: thanks
-    - action: utter_ask_budget
-    - intent: inform_budget
-      entities:
-        - budget: 1000 Kenya Shillings
-    - action: utter_make_reservations
-    
-- story: Plan vacation + cold climate
-  steps:
-    - intent: inform_vacation_plan
-    - action: utter_ask_vacay_destination
-    - intent: inform_destination_preference
-    - slot_was_set:
-     - warm: false
-    - action: action_check_cold_destinations
-    - or:
-    - intent: affirm
-    - intent: thanks
-    - action: utter_ask_budget
-    - intent: inform_budget
-      entities:
-        - budget: 1000 dollars
-    - action: utter_make_reservations
+      - intent: search_flight
+      - action: validate_flight_search_form
+      - active_loop: validate_flight_search_form
+      - intent: stop
+      - action: utter_ask_continue
+      - intent: deny
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_anything_else
+  - story: Plan vacation + warm climate
+    steps:
+      - intent: inform_vacation_plan
+      - action: utter_ask_vacay_destination
+      - intent: inform_destination_preference
+      - slot_was_set:
+          - warm: true
+      - action: action_check_warm_destinations
+      - intent: affirm
+      - action: utter_budget_range
+      - intent: inform_budget_range
+      - action: utter_make_reservations
+  - story: Plan vacation + cold climate
+    steps:
+      - intent: inform_vacation_plan
+      - action: utter_ask_vacay_destination
+      - intent: inform_destination_preference
+      - slot_was_set:
+          - warm: false
+      - action: action_check_cold_destinations
+      - intent: affirm
+      - action: utter_budget_range
+      - intent: inform_budget_range
+      - action: utter_make_reservations
