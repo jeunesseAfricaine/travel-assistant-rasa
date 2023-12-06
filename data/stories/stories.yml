@@ -13,6 +13,12 @@ stories:
       - action: utter_greet
       - intent: ask_shopping_recommendations
       - action: utter_shopping_recommendations
+  - story: greet + plan trip itinerary
+    steps:
+      - intent: start
+      - action: utter_greet
+      - intent: inform_vacation_plan
+      - action: utter_ask_vacay_destination      
   - story: goodbye
     steps:
       - intent: goodbye
