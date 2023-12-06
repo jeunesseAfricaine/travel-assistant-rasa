@@ -44,7 +44,7 @@ pipeline:
     ambiguity_threshold: 0.1
 policies:
   - name: AugmentedMemoizationPolicy
-    max_history: 6
+    max_history: 8
   - name: TEDPolicy
     max_history: 6
     constrain_similarities: true
