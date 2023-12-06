@@ -45,8 +45,6 @@ stories:
       - action: utter_anything_else
   - story: Plan vacation + warm climate
     steps:
-      - intent: inform_vacation_plan
-      - action: utter_ask_vacay_destination
       - intent: inform_destination_preference
       - slot_was_set:
           - warm: true
@@ -57,8 +55,6 @@ stories:
       - action: utter_make_reservations
   - story: Plan vacation + cold climate
     steps:
-      - intent: inform_vacation_plan
-      - action: utter_ask_vacay_destination
       - intent: inform_destination_preference
       - slot_was_set:
           - warm: false
