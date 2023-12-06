@@ -22,16 +22,17 @@ intents:
   - ask_restaurant_recommendations
 responses:
   utter_greet:
-    - text: Hello! Welcome to Voyage Companion! I am your virtual travel assistant. How can I assist you today? 😊
+    - text: Hello! Welcome to Voyage Companion! I am your virtual travel assistant.
+        How can I assist you today? 😊
       buttons:
-        - title: "Search a Flight ✈️"
-          payload: "/search_flight"
-        - title: "Plan Travel 🗺️"
-          payload: "/inform_vacation_plan""
-        - title: "Get Restaurant Recommendations 🍽️"
-          payload: "ask_restaurant_recommendations"
-        - title: "Explore Shopping 🛍️"
-          payload: "ask_shopping_recommendations"
+        - title: Search a Flight ✈️
+          payload: /search_flight
+        - title: Plan Travel 🗺️
+          payload: /inform_vacation_plan
+        - title: Get Restaurant Recommendations 🍽️
+          payload: ask_restaurant_recommendations
+        - title: Explore Shopping 🛍️
+          payload: ask_shopping_recommendations
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_departure:
@@ -67,23 +68,23 @@ responses:
     - text: Do you wish to continue?
   utter_anything_else:
     - text: Please reach out if you have any further question.
-  utter_submit:
-    - text: All done!
-  utter_slots_values:
-    - text: |-
-        I'm ready to search for your flight! Here's what I'll use:
-         - departure: {departure}
-         - destination: {destination}
-         - date: {date}
-         #- num_people: {num_people}
-         #- cabin: {cabin}
-         #- flight_type: {flight_type}
-         - budget_range: {budget_range}
+  utter_shopping_recommendations:
+    - text: Currently, our engineers are working diligently on the right APIs. We are
+        building insider knowledge about the best shopping locations. Feel free
+        to ask us about local markets and boutiques that cater to your style
+        soon!
+  utter_restaurant_recommendations:
+    - text: Currently, our engineers are working diligently on the right APIs. When it
+        comes to dining recommendations, we'll explore various local eateries.
+        Feel free to ask us about our favorite restaurants that perfectly align
+        with your taste soon!
   utter_make_reservations:
     - text: I'll be happy to help you make a reservation.
   utter_youarewelcome:
-    - text: You're most welcome! Safe travels, and feel free to reach out if you need anything else. Bon voyage! ✈️
-    - text: Karibu! Safe travels, and feel free kureach out if you need anything else. Safari njema! ✈️
+    - text: You're most welcome! Safe travels, and feel free to reach out if you need
+        anything else. Bon voyage! ✈️
+    - text: Karibu! Safe travels, and feel free kureach out if you need anything else.
+        Safari njema! ✈️
 entities:
   - cabin
   - number
@@ -115,7 +116,7 @@ slots:
         entity: number
       - type: from_intent
         intent: inform_group_size
-        value: 'couple'
+        value: couple
   date:
     type: any
     mappings:
@@ -123,7 +124,7 @@ slots:
         entity: time
       - type: from_intent
         intent: inform_date
-        value: 'tomorrow'
+        value: tomorrow
   budget_range:
     type: any
     mappings:
@@ -133,7 +134,7 @@ slots:
         entity: amount-of-money
       - type: from_intent
         intent: inform_budget_range
-        value: 'low-cost vacations'
+        value: low-cost vacations
   cabin:
     type: any
     mappings:
@@ -141,7 +142,7 @@ slots:
         entity: cabin
       - type: from_intent
         intent: inform_cabin
-        value: 'economy'
+        value: economy
   flight_type:
     type: any
     mappings:
@@ -149,19 +150,17 @@ slots:
         entity: flight_type
       - type: from_intent
         intent: inform_flight_type
-        value: 'multi-city'
+        value: multi-city
   warm:
     type: bool
     mappings:
       - type: from_entity
         entity: warm
     influence_conversation: true
-
 actions:
-- validate_flight_search_form
-- action_check_warm_destinations
-- action_check_cold_destinations
-
+  - validate_flight_search_form
+  - action_check_warm_destinations
+  - action_check_cold_destinations
 forms:
   flight_booking_form:
     ignored_intents:
@@ -171,15 +170,7 @@ forms:
       - destination
       - departure
       - date
-      #- num_people
-      #- cabin
-      #- flight_type
       - budget_range
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
-
-
-
-
