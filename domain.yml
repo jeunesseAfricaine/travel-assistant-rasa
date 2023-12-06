@@ -20,12 +20,14 @@ intents:
   - nlu_fallback
 responses:
   utter_greet:
-    - text: Hi! I'm your flight-booking companion. Let's find the best flight options
-        together. What are you searching for?
-    - text: Hello! I'm here to simplify your flight bookings. How can I assist you
-        today?
-    - text: Hello! Welcome to Voyage Companion! I am your travel assistant. I’d be delighted to assist you in
-        booking your flight today. 😊
+    - text: Hello! Welcome to Voyage Companion! I am your virtual travel assistant. How can I assist you today? 😊
+      buttons:
+        - title: "Search a Flight ✈️"
+          payload: "/book_flight"
+        - title: "Plan Travel 🗓️"
+          payload: "/plan_travel"
+        - title: "Make Hotel Reservation 🏨"
+          payload: "/plan_travel"
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_departure:
@@ -33,7 +35,8 @@ responses:
   utter_destination:
     - text: Where would you like to fly to?🛫
   utter_ask_vacay_destination:
-    - text: Absolutely, I can help with that. When are you planning to visit?
+    - text: Absolutely, I can help with that. Where are you planning to travel?
+    - text: Great! Let's plan your trip. Where are you planning to travel?
   utter_budget_range:
     - text: Could you let me know your budget range for the trip?💰
   utter_date:
@@ -59,7 +62,7 @@ responses:
   utter_ask_continue:
     - text: Do you wish to continue?
   utter_anything_else:
-    - text: Please reach out if you have any further question
+    - text: Please reach out if you have any further question.
   utter_submit:
     - text: All done!
   utter_slots_values:
@@ -73,7 +76,6 @@ responses:
          #- flight_type: {flight_type}
          - budget_range: {budget_range}
   utter_make_reservations:
-    - text: Well, let's make your reservations.
     - text: I'll be happy to help you make a reservation.
   utter_youarewelcome:
     - text: You're most welcome! Safe travels, and feel free to reach out if you need anything else. Bon voyage! ✈️
@@ -172,3 +174,8 @@ forms:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+
+
+
+
