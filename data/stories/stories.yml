@@ -5,8 +5,8 @@ stories:
     steps:
       - intent: start
       - action: utter_greet
-      - intent: ask_hotel_recommendations
-      - action: utter_hotel_recommendations
+      - intent: ask_restaurant_recommendations
+      - action: utter_restaurant_recommendations
   - story: greet + shopping
     steps:
       - intent: start
