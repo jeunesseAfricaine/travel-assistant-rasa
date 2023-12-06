@@ -247,20 +247,7 @@ nlu:
       - when will you stop?
       - will you just stop
       - wil u jst stop!
-- intent: faq/ask_itinerary_detail
-    examples: |
-      - How detailed are the itineraries you create? 
-      - What level of detail do your itineraries usually have?
-      - How comprehensive are the itineraries you make?
-      - Are the itineraries you create very detailed?
-      - How thorough are the itineraries you typically provide?
-      - What's the extent of detail in the itineraries you create?
-      - How elaborate are the itineraries you usually craft?
-      - Are your itineraries quite detailed and specific?
-      - What's the depth of detail in the itineraries you prepare?
-      - Do your itineraries include extensive details?
-      - How detailed can I expect your itineraries to be?
-- intent: ask_shopping_recommendations
+  - intent: ask_shopping_recommendations
     examples: |
       - Can you suggest the best places for shopping at my destination?
       - What are some top shopping spots in the area?
