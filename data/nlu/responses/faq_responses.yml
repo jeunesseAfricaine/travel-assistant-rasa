@@ -94,13 +94,4 @@ responses:
     - text: Our itineraries are meticulously planned, covering every aspect of your
         trip. Just provide us with your preferences, and we'll craft a detailed
         itinerary to ensure you have a memorable journey!
-  utter_faq/ask_shopping_recommendations:
-    - text: Currently, our engineers are working diligently on the right APIs. We are
-        building insider knowledge about the best shopping locations. Feel free
-        to ask us about local markets and boutiques that cater to your style
-        soon!
-  utter_faq/ask_restaurant_recommendations:
-    - text: Currently, our engineers are working diligently on the right APIs. When it
-        comes to dining recommendations, we'll explore various local eateries.
-        Feel free to ask us about our favorite restaurants that perfectly align
-        with your taste soon!
+
