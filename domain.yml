@@ -25,11 +25,11 @@ responses:
     - text: Hello! Welcome to Voyage Companion! I am your virtual travel assistant.
         How can I assist you today? 😊
       buttons:
-        - title: Flight ✈️
+        - title: Flight ✈
           payload: /search_flight
-        - title: Plan 🗺️
+        - title: Plan 🗺️🧳
           payload: /inform_vacation_plan
-        - title: Hotels 🍽️
+        - title: Hotels 🏨
           payload: ask_restaurant_recommendations
         - title: Shop 🛍️
           payload: ask_shopping_recommendations
