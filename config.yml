@@ -30,14 +30,14 @@ pipeline:
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 200
+    epochs: 150
     constrain_similarities: true
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 50
+    epochs: 100
     retrieval_intent: chitchat
   - name: ResponseSelector
-    epochs: 50
+    epochs: 100
     retrieval_intent: faq
   - name: FallbackClassifier
     threshold: 0.3
