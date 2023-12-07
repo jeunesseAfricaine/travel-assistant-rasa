@@ -2,9 +2,11 @@
 recipe: default.v1
 language: en
 pipeline:
-  - name: SpacyNLP
-  - name: SpacyTokenizer
-  - name: SpacyFeaturizer
+  - name: WhitespaceTokenizer
+  - name: LanguageModelFeaturizer
+    model_name: "roberta"
+    model_weights: "roberta-base"
+    cache_dir: null
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -16,8 +18,6 @@ pipeline:
     epochs: 100
     ranking_length: 5
     batch_strategy: sequence
-  - name: "SpacyEntityExtractor"
-    dimensions: ["LOC"]
   - name: DucklingEntityExtractor
     url: http://localhost:8000
     dimensions:
@@ -30,7 +30,7 @@ pipeline:
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 150
+    epochs: 100
     constrain_similarities: true
     batch_strategy: sequence
   - name: EntitySynonymMapper
