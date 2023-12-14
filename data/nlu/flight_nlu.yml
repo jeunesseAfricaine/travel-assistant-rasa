@@ -3,7 +3,9 @@ version: "3.1"
 nlu:
   - intent: search_flight
     examples: >
-      - Book a [round-trip](flight_type) flight from [Nairobi]{"entity": "LOC", "role": "departure"} to [Diani]{"entity": "LOC", "role": "destination"} for tomorrow with a preference for morning departures.
+      - Book a [round-trip](flight_type) flight from [Nairobi]{"entity":
+      "LOC", "role": "departure"} to [Diani]{"entity": "LOC", "role":
+      "destination"} for tomorrow with a preference for morning departures.
 
       - Find me the cheapest [one-way](flight_type) flight from [Mombasa]{"entity": "LOC", "role": "departure"} to [Kisumu]{"entity": "LOC", "role": "destination"} for next weekend.
 
@@ -34,29 +36,6 @@ nlu:
       - Please get me a flight to [Cape Town]{"entity": "LOC", "role": "destination"} from [Addis Ababa]{"entity": "LOC", "role": "destination"}. Use [Kenya Airways](budget_range)?
 
       - Natak flight ya evening from [Paris]{"entity": "LOC", "role": "departure"} to [Dubai]{"entity": "LOC", "role": "destination"} [business](cabin)?
-  - intent: inform_flight_type
-    examples: |
-      - I want a [one-way](flight_type) flight.
-      - Book a [round trip](flight_type) flight.
-      - i prefer [one-way](flight_type) flight
-      - [round trip](flight_type) please
-      - nataka moja [one-way](flight_type)
-      - book me a [multi-city](flight_type) flight
-      - i want a [round-trip](flight_type)  please
-      - just [one-way]](flight_type) 
-      - do you hv [multi-city]](flight_type) ?
-  - intent: inform_cabin
-    examples: |
-      - I prefer [economy](cabin) class.
-      - Book a [business](cabin) class flight.
-      - [suites](cabin)
-      - [first class](cabin)
-      - [business class](cabin)
-      - [premium economy](cabin)
-      - [economy](cabin)
-      - [premium](cabin)
-      - [business](cabin)
-      - [first](cabin)
   - intent: inform_group_size
     examples: |
       - We are a group of 4 people.
@@ -114,7 +93,6 @@ nlu:
       - i want to fly Wednesday at night
       - do you have slots for Saturday 26th?
       - get me flights for Monday 10 am
-
   - intent: inform_budget_range
     examples: >
       - My budget range is 500 canadian dollars.
@@ -139,44 +117,145 @@ nlu:
 
       - Find me [budget-friendly](budget_range) holiday destinationy .
 
-      - What are the options for [cheap getaways](budget_range)?
-      - I have 600 shillings
-      - 10000 south african rands
-      - 5000 rands
-      - 100000 ugsh
-      - 500 tzsh
-      - 68900 tanzanian shillings
-      - 70000 naira
-      - 10000 kenya shillings
-      - 150000 shillings
-      - 135600 rands
-      - 127900 indian rupees
-      - I'm looking for destinations that fit an [affordable](budget_range) range.
-      - find me [luxury] (budget_range) places.
-      - I have a budget of [500USD](budget_range) for my flight. Can you assist?
-
+      - What are the options for [cheap getaways](budget_range)? - I have 600 shillings - 10000 south african rands - 5000 rands - 100000 ugsh - 500 tzsh - 68900 tanzanian shillings - 70000 naira - 10000 kenya shillings - 150000 shillings - 135600 rands - 127900 indian rupees - I'm looking for destinations that fit an [affordable](budget_range) range. - find me [luxury] (budget_range) places. - I have a budget of [500USD](budget_range) for my flight. Can you assist?
   - intent: inform_vacation_plan
     examples: >
-      - I'm planning a vacation to explore some exotic places.
-      - I've decided to go on a vacation and explore new destinations.
-      - I'm organizing a holiday trip and seeking some suggestions.
-      - Planning a getaway to relax and unwind from work.
-      - I want to plan a vacation to a beautiful location.
-      - Considering a vacation to rejuvenate and experience new cultures.
-      - I've been thinking about taking a break and planning a vacation.
-      - I'm looking to organize a vacation to enjoy some time off.
-      - Interested in arranging a vacation to visit some scenic spots.
-      - I want to schedule a holiday to discover some picturesque places.
-
-  - intent: inform_destination_preference
+      - I'm planning a vacation to explore some exotic places. - I've
+      decided to go on a vacation and explore new destinations. - I'm organizing
+      a holiday trip and seeking some suggestions. - Planning a getaway to relax
+      and unwind from work. - I want to plan a vacation to a beautiful location.
+      - Considering a vacation to rejuvenate and experience new cultures. - I've
+      been thinking about taking a break and planning a vacation. - I'm looking
+      to organize a vacation to enjoy some time off. - Interested in arranging a
+      vacation to visit some scenic spots. - I want to schedule a holiday to
+      discover some picturesque places.
+  - intent: inform
     examples: >
-      - I'd love a warm getaway, somewhere tropical!
-      - I'm looking for a destination with sunny weather and beaches.
-      - I prefer places with a warm climate, like a tropical paradise.
-      - I want to explore destinations known for their warm weather.
-      - Warm destinations with palm trees and beaches are my preference.
-      - I enjoy colder climates, like snowy mountains and chilly weather.
-      - I'm more inclined towards cooler destinations, maybe somewhere with snow.
-      - I prefer destinations with a cooler climate, like mountainous regions.
-      - I'd love to explore colder regions with icy landscapes.
-      - I enjoy vacations in cooler climates, such as places with fresh air and colder temperatures.
+      - I need assistance with arranging a [business]{"entity":
+      "travel-type", "value": "corporate"} trip to [New York]{"entity": "LOC",
+      "role": "destination"}. - Can you help me with booking flights for our
+      [corporate]{"entity": "travel-type", "value": "corporate"} event next
+      month? - I'm looking for accommodation options for a [professional
+      conference]{"entity": "travel-type", "value": "corporate"} in
+      [London]{"entity": "LOC", "role": "destination"}. - I require your support
+      in organizing a [company retreat]{"entity": "travel-type", "value":
+      "corporate"} in the [Bahamas]{"entity": "LOC", "role": "destination"}. -
+      Can you assist with planning a [business]{"entity": "travel-type",
+      "value": "corporate"} trip to [Tokyo]{"entity": "LOC", "role":
+      "destination"} for our team? - I'm seeking help with arranging
+      transportation for a [corporate meeting]{"entity": "travel-type", "value":
+      "corporate"} in [Paris]{"entity": "LOC", "role": "destination"}. - I need
+      assistance in scheduling meetings for our [business trip]{"entity":
+      "travel-type", "value": "corporate"} to [San Francisco]{"entity": "LOC",
+      "role": "destination"}. - Can you book a hotel for our [corporate
+      delegation]{"entity": "travel-type", "value": "corporate"} visiting
+      [Dubai]{"entity": "LOC", "role": "destination"}? - I'm looking for
+      assistance in managing travel itineraries for our [executives]{"entity":
+      "travel-type", "value": "corporate"}. - Can you help arrange a [seminar
+      venue]{"entity": "travel-type", "value": "corporate"} for our
+      [corporate]{"entity": "travel-type", "value": "corporate"} event in
+      [Sydney]{"entity": "LOC", "role": "destination"}? - I'm planning a
+      [relaxing]{"entity": "travel-type", "value": "leisure"} vacation to
+      [Bali]{"entity": "LOC", "role": "destination"}, can you assist with the
+      bookings? - I want to explore [adventure]{"entity": "travel-type",
+      "value": "leisure"} travel options for a trip to [Costa Rica]{"entity":
+      "LOC", "role": "destination"}. - Can you suggest
+      [family-friendly]{"entity": "travel-type", "value": "leisure"}
+      destinations for our holiday in [Italy]{"entity": "LOC", "role":
+      "destination"}? - I'm looking for a [romantic getaway]{"entity":
+      "travel-type", "value": "leisure"} to [Paris]{"entity": "LOC", "role":
+      "destination"}, any suggestions? - I'm interested in [hiking and
+      nature]{"entity": "travel-type", "value": "leisure"} tours for a trip to
+      the [Swiss Alps]{"entity": "LOC", "role": "destination"}. - I'm searching
+      for [cultural experiences]{"entity": "travel-type", "value": "leisure"}
+      for a trip to [Japan]{"entity": "LOC", "role": "destination"}. - I want to
+      book a [safari]{"entity": "travel-type", "value": "leisure"} for an
+      [African wildlife adventure]{"entity": "travel-type", "value": "leisure"}.
+      - Can you recommend [luxury resorts]{"entity": "travel-type", "value":
+      "leisure"} for a trip to the [Caribbean]{"entity": "LOC", "role":
+      "destination"}? - I'm planning a [ski vacation]{"entity": "travel-type",
+      "value": "leisure"} to [Aspen]{"entity": "LOC", "role": "destination"},
+      any recommendations for accommodations? - I'm interested in
+      [personalized]{"entity": "travel-type", "value": "bespoke"} travel
+      experiences for my upcoming trip to [Thailand]{"entity": "LOC", "role":
+      "destination"} - Can you suggest unique [boutique hotels]{"entity":
+      "travel-type", "value": "bespoke"} for my stay in [Barcelona]{"entity":
+      "LOC", "role": "destination"}? - I'm seeking [tailored]{"entity":
+      "travel-type", "value": "bespoke"} travel itineraries for an
+      [exclusive]{"entity": "travel-type", "value": "bespoke"} tour of
+      [Tuscany]{"entity": "LOC", "role": "destination"}. - Can you assist in
+      arranging a [customized culinary]{"entity": "travel-type", "value":
+      "bespoke"} tour in [France]{"entity": "LOC", "role": "destination"}? - I
+      want to explore [offbeat]{"entity": "travel-type", "value": "bespoke"}
+      destinations for my next [bespoke]{"entity": "travel-type", "value":
+      "bespoke"} travel experience. - I'm looking for [boutique]{"entity":
+      "travel-type", "value": "bespoke"} travel packages for a solo trip. - Can
+      you recommend [bespoke]{"entity": "travel-type", "value": "bespoke"}
+      travel? - I'm interested in [curated]{"entity": "travel-type", "value":
+      "bespoke"} travel experiences focused on art and culture. - I'm seeking a
+      [tailor-made itinerary]{"entity": "travel-type", "value": "bespoke"} for a
+      wellness retreat in [Bali]{"entity": "LOC", "role": "destination"}. - Can
+      you assist with arranging a [private guided]{"entity": "travel-type",
+      "value": "bespoke"} tour of historical sites in [Greece]{"entity": "LOC",
+      "role": "destination"}? - I prefer flying for my upcoming business trip to
+      [Singapore]{"entity": "LOC", "role": "destination"}. - Can you suggest
+      train routes for my leisure travel across [Europe]{"entity": "LOC",
+      "role": "destination"}? - I'm considering a [road trip]{"entity":
+      "mode-of-transport", "value": "road-trip"} to the [Grand Canyon]{"entity":
+      "LOC", "role": "destination"}, any advice? - I'm looking for information
+      on [bus]{"entity": "mode-of-transport", "value": "road-trip"} tours for
+      sightseeing in [New York City]{"entity": "LOC", "role": "destination"}. -
+      I prefer traveling by private [car]{"entity": "mode-of-transport",
+      "value": "flight"} for my bespoke travel experiences. - I'm interested in
+      [helicopter]{"entity": "mode-of-transport", "value": "flight"} tours for a
+      scenic adventure. - I'm seeking information on luxury [train]{"entity":
+      "mode-of-transport", "value": "train"} travel for a special occasion. -
+      I'm looking for [flights]{"entity": "mode-of-transport", "value":
+      "flight"} to Paris for my [leisure]{"entity": "travel-type", "value":
+      "leisure"} travel next month. - Can you help me find the best
+      [airline]{"entity": "mode-of-transport", "value": "flight"} options for my
+      [business]{"entity": "travel-type", "value": "corporate"} trip to Hong
+      Kong? - I prefer booking [direct flights]{"entity": "mode-of-transport",
+      "value": "flight"}  - I'm interested in first-class tickets for my
+      [flight]{"entity": "mode-of-transport", "value": "flight"}  - Can you
+      assist with finding budget [airlines]{"entity": "mode-of-transport",
+      "value": "flight"} for my trip to [Amsterdam]{"entity": "LOC", "role":
+      "destination"}? - I'm considering taking the [SGR train]{"entity":
+      "mode-of-transport", "value": "train"} to [Brussels]{"entity": "LOC",
+      "role": "destination"} for a short trip. - Can you provide information on
+      [high-speed train]{"entity": "mode-of-transport", "value": "train"} routes
+      for my travel across [Europe]{"entity": "LOC", "role": "destination"}? - I
+      prefer sleeper cabins for overnight [train journeys]{"entity":
+      "mode-of-transport", "value": "train"} during my holiday. - I'm seeking
+      passes for scenic [train rides]{"entity": "mode-of-transport", "value":
+      "train"} through [Voi]{"entity": "LOC", "role": "destination"}. - Can you
+      suggest [rental car]{"entity": "mode-of-transport", "value": "road-trip"}
+      options for my journey through [New Zealand?]{"entity": "LOC", "role":
+      "destination"} - I prefer hiring a [camper van]{"entity":
+      "mode-of-transport", "value": "road-trip"} for exploring [national
+      parks]{"entity": "travel-type", "value": "bespoke"} during my vacation. -
+      I'm considering a [self-drive tour]{"entity": "mode-of-transport",
+      "value": "road-trip"} along the [Great Ocean Road]{"entity": "LOC",
+      "role": "destination"}  - I'd love a [warm]{"entity": "climate", "value":
+      "warm"} getaway, somewhere [tropical]{"entity": "climate", "value":
+      "warm"}! - I'm looking for a destination with [sunny]{"entity": "climate",
+      "value": "warm"} weather and [beaches]{"entity": "climate", "value":
+      "warm"}. - I prefer places with a [warm]{"entity": "climate", "value":
+      "warm"} climate, like a [tropical paradise]{"entity": "climate", "value":
+      "warm"}. - I want to explore destinations known for their [warm]{"entity":
+      "climate", "value": "warm"} weather. - some place thats is just
+      [chill]{"entity": "climate", "value": "warm"}.  - Warm destinations with
+      [palm trees]{"entity": "climate", "value": "warm"} and [beaches]{"entity":
+      "climate", "value": "warm"} are my preference. - I enjoy colder climates,
+      like [snowy mountains]{"entity": "climate", "value": "cold"} and
+      [chilly]{"entity": "climate", "value": "cold"} weather. - I'm more
+      inclined towards [cooler]{"entity": "climate", "value": "cold"}
+      destinations, maybe somewhere with [snow]{"entity": "climate", "value":
+      "cold"}. - I prefer destinations with a [cooler]{"entity": "climate",
+      "value": "cold"} climate, like [mountainous]{"entity": "climate", "value":
+      "cold"} regions. - I'd love to explore [colder]{"entity": "climate",
+      "value": "cold"} regions with [icy]{"entity": "climate", "value": "cold"}
+      landscapes. - I enjoy vacations in [cooler]{"entity": "climate", "value":
+      "cold"} climates, such as places with [fresh air]{"entity": "climate",
+      "value": "cold"} and [colder temperatures]{"entity": "climate", "value":
+      "cold"}.
