@@ -54,7 +54,7 @@ stories:
       - active_loop: travel_form
       - active_loop: null
       - action: utter_check_options
-      - action: action_handle_travel_preference
+
   - story: Plan vacation + leisure
     steps:
       - intent: inform_vacation_plan
@@ -66,7 +66,7 @@ stories:
       - active_loop: travel_form
       - active_loop: null
       - action: utter_check_options
-      - action: action_handle_travel_preference
+
   - story: Plan vacation + boutique
     steps:
       - intent: inform_vacation_plan
@@ -77,5 +77,4 @@ stories:
       - action: travel_form
       - active_loop: travel_form
       - active_loop: null
-      - action: utter_check_options
-      - action: action_handle_travel_preference
+
