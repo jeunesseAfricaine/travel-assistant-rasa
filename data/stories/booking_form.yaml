@@ -43,23 +43,39 @@ stories:
       - action: action_deactivate_loop
       - active_loop: null
       - action: utter_anything_else
-  - story: Plan vacation + warm climate
+  - story: Plan vacation + corporate
     steps:
-      - intent: inform_destination_preference
-      - slot_was_set:
-          - warm: true
-      - action: action_check_warm_destinations
-      - intent: affirm
-      - action: utter_budget_range
-      - intent: inform_budget_range
-      - action: utter_make_reservations
-  - story: Plan vacation + cold climate
+      - intent: inform_vacation_plan
+      - action: utter_ask_travel_type
+      - intent: inform
+        entities:
+          - travel_type: corporate
+      - action: travel_form
+      - active_loop: travel_form
+      - active_loop: null
+      - action: utter_check_options
+      - action: action_handle_travel_preference
+  - story: Plan vacation + leisure
     steps:
-      - intent: inform_destination_preference
-      - slot_was_set:
-          - warm: false
-      - action: action_check_cold_destinations
-      - intent: affirm
-      - action: utter_budget_range
-      - intent: inform_budget_range
-      - action: utter_make_reservations
+      - intent: inform_vacation_plan
+      - action: utter_ask_travel_type
+      - intent: inform
+        entities:
+          - travel_type: leisure
+      - action: travel_form
+      - active_loop: travel_form
+      - active_loop: null
+      - action: utter_check_options
+      - action: action_handle_travel_preference
+  - story: Plan vacation + boutique
+    steps:
+      - intent: inform_vacation_plan
+      - action: utter_ask_travel_type
+      - intent: inform
+        entities:
+          - travel_type: bespoke
+      - action: travel_form
+      - active_loop: travel_form
+      - active_loop: null
+      - action: utter_check_options
+      - action: action_handle_travel_preference
