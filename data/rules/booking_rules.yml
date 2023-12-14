@@ -32,4 +32,54 @@ rules:
       - active_loop: null
       - action: utter_anything_else
       
+  - rule: Plan vacation + corporate
+    steps:
+      - intent: inform_vacation_plan
+      - intent: inform
+        entities:
+          - travel_type: corporate
+      - action: travel_form
+      - active_loop: travel_form
+  - rule: submit form
+    condition:
+      - active_loop: travel_form
+    steps:
+      - action: travel_form
+      - active_loop: null
+      - action: utter_check_options
+      - action: action_handle_travel_preference
  
+  - rule: Plan vacation + leisure
+    steps:
+      - intent: inform_vacation_plan
+      - intent: inform
+        entities:
+          - travel_type: leisure
+      - action: travel_form
+      - active_loop: travel_form
+  - rule: submit form
+    condition:
+      - active_loop: travel_form
+    steps:
+      - action: travel_form
+      - active_loop: null
+      - action: utter_check_options
+      - action: action_handle_travel_preference 
+      
+
+  - rule: Plan vacation + bespoke
+    steps:
+      - intent: inform_vacation_plan
+      - intent: inform
+        entities:
+          - travel_type: bespoke
+      - action: travel_form
+      - active_loop: travel_form
+  - rule: submit form
+    condition:
+      - active_loop: travel_form
+    steps:
+      - action: travel_form
+      - active_loop: null
+      - action: utter_check_options
+      - action: action_handle_travel_preference 
