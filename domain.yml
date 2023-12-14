@@ -6,10 +6,8 @@ intents:
   - affirm
   - deny
   - stop
-  - inform_flight_type
   - inform_destination_preference
   - inform_vacation_plan
-  - inform_cabin
   - inform_group_size
   - inform_date
   - inform_budget_range
@@ -20,28 +18,32 @@ intents:
   - nlu_fallback
   - ask_shopping_recommendations
   - ask_restaurant_recommendations
+  - inform
 responses:
   utter_greet:
-    - text: Hello! Welcome to Voyage Companion! I am your virtual travel assistant.
+    - text: Hello! Welcome to Voyage Companion! I am your AI travel assistant.
         How can I assist you today? 😊
       buttons:
-        - title: Flight ✈
+        - title: Search 🛫️
           payload: /search_flight
-        - title: Plan 🗺️🧳
+        - title: Plan 🗺️
           payload: /inform_vacation_plan
-        - title: Hotels 🏨
-          payload: ask_restaurant_recommendations
-        - title: Shop 🛍️
+        - title: Explore 🛍️
           payload: ask_shopping_recommendations
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_departure:
     - text: Which city or town are you departing from?
   utter_destination:
-    - text: Where would you like to fly to?🛫
-  utter_ask_vacay_destination:
-    - text: Absolutely, I can help with that. Where are you planning to travel?
-    - text: Great! Let's plan your trip. Where are you planning to travel?
+    - text: Where would you like to fly to?
+  utter_ask_climate:
+    - text: Great! Let's customize your trip. Do you prefer a cold destination or warm
+        destination?
+      buttons:
+        - title: Cold🏞
+          payload: /inform{{"climate":"cold"}}
+        - title: Warm🏖 or Tropical🌴
+          payload: /inform{{"climate":"warm"}}
   utter_budget_range:
     - text: Could you let me know your budget range for the trip?💰
   utter_date:
@@ -49,10 +51,26 @@ responses:
   utter_confirm:
     - text: Do you need help with anything else?
     - text: Just confirming, is there anything else I can assist you with?
-  utter_flight_type:
-    - text: What type of flight would you like to book?
   utter_default:
     - text: I'm sorry, I can't help you.
+  utter_ask_travel_type:
+    - text: Great! What type of travel are you considering?
+      buttons:
+        - title: Corporate 😎🧳
+          payload: /inform{{"travel_type":"corporate"}}
+        - title: Leisure🏄
+          payload: /inform{{"travel_type":"leisure"}}
+        - title: Bespoke🏕
+          payload: /inform{{"travel_type":"bespoke"}}
+  utter_ask_mode_of_transport:
+    - text: What mode of transport do you prefer for your travels?
+      buttons:
+        - title: Flight ✈️
+          payload: /inform{{"mode-of-transport":"flight"}}
+        - title: Train🚈
+          payload: /inform{{"mode-of-transport":"train"}}
+        - title: Road-Trip🚗💨
+          payload: /inform{{"mode-of-transport":"road-trip"}}
   utter_goodbye:
     - text: Thank you for using our services! Should you need assistance in the
         future, I'll be here. Take care!
@@ -78,24 +96,28 @@ responses:
         comes to dining recommendations, we'll explore various local eateries.
         Feel free to ask us about our favorite restaurants that perfectly align
         with your taste soon!
-  utter_make_reservations:
-    - text: I'll be happy to help you make a reservation.
+  utter_check_options:
+    - text: Great! I'll check our available options and their cost-effectiveness for
+        you.
+  utter_bespoke_not_available:
+    - text: Thank you for your interest in bespoke travel! Currently, our bespoke travel feature is still in development. We're working hard to bring you personalized and tailored travel experiences. In the meantime, I'd be delighted to assist you with corporateor leisure travels.
   utter_youarewelcome:
     - text: You're most welcome! Safe travels, and feel free to reach out if you need
         anything else. Bon voyage! ✈️
     - text: Karibu! Safe travels, and feel free kureach out if you need anything else.
         Safari njema! ✈️
 entities:
-  - cabin
   - number
   - LOC:
       roles:
         - departure
         - destination
-  - flight_type
   - budget_range
   - time
   - amount-of-money
+  - travel-type
+  - climate
+  - mode-of-transport
 slots:
   departure:
     type: any
@@ -135,32 +157,38 @@ slots:
       - type: from_intent
         intent: inform_budget_range
         value: low-cost vacations
-  cabin:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: cabin
-      - type: from_intent
-        intent: inform_cabin
-        value: economy
-  flight_type:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: flight_type
-      - type: from_intent
-        intent: inform_flight_type
-        value: multi-city
-  warm:
-    type: bool
-    mappings:
-      - type: from_entity
-        entity: warm
+  travel_type:
     influence_conversation: true
+    type: categorical
+    values:
+      - corporate
+      - leisure
+      - bespoke
+    mappings:
+      - type: from_entity
+        entity: travel-type
+  climate:
+    influence_conversation: true
+    type: categorical
+    values:
+      - warm
+      - cold
+    mappings:
+      - type: from_entity
+        entity: climate
+  mode_of_transport:
+    influence_conversation: false
+    type: categorical
+    values:
+      - flight
+      - train
+      - road-trip
+    mappings:
+      - type: from_entity
+        entity: mode-of-transport
 actions:
   - validate_flight_search_form
-  - action_check_warm_destinations
-  - action_check_cold_destinations
+  - action_handle_travel_preference
 forms:
   flight_booking_form:
     ignored_intents:
@@ -171,6 +199,13 @@ forms:
       - departure
       - date
       - budget_range
+  travel_form:
+    required_slots:
+      - destination
+      - date
+      - num_people
+      - budget_range
+      - mode_of_transport
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
