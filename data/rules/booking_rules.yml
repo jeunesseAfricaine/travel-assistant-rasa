@@ -47,7 +47,6 @@ rules:
       - action: travel_form
       - active_loop: null
       - action: utter_check_options
-      - action: action_handle_travel_preference
  
   - rule: Plan vacation + leisure
     steps:
@@ -64,7 +63,6 @@ rules:
       - action: travel_form
       - active_loop: null
       - action: utter_check_options
-      - action: action_handle_travel_preference 
       
 
   - rule: Plan vacation + bespoke
@@ -82,4 +80,3 @@ rules:
       - action: travel_form
       - active_loop: null
       - action: utter_check_options
-      - action: action_handle_travel_preference 
