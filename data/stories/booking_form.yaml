@@ -77,4 +77,5 @@ stories:
       - action: travel_form
       - active_loop: travel_form
       - active_loop: null
+      - action: utter_check_options
 
