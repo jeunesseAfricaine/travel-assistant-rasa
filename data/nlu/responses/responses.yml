@@ -32,4 +32,4 @@ responses:
     - text: One of the smart engineers at Voyage Companion Speech AI! 🧠
     - text: The engineers at Voyage Companion Speech AI 🛠
   utter_chitchat/ask_out_of_scope:
-    - text: I'm afraid I do not have an answer to that. I can help you with flight bookings! 🛩 
+    - text: I'm afraid I do not have an answer to that. I can help you with planning for your travel. 🧳✈️🗺️
