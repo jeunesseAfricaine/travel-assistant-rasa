@@ -109,15 +109,18 @@ nlu:
 
       - i have 1350 sterling pounds
 
-      - Suggest travel plans within my affordable budget 
-
-      - Show options for low-cost vacations
-
       - I can spend around 800 USD on the trip.
-
-      - Find me [budget-friendly](budget_range) holiday destinationy .
-
-      - What are the options for [cheap getaways](budget_range)? - I have 600 shillings - 10000 south african rands - 5000 rands - 100000 ugsh - 500 tzsh - 68900 tanzanian shillings - 70000 naira - 10000 kenya shillings - 150000 shillings - 135600 rands - 127900 indian rupees - I'm looking for destinations that fit an [affordable](budget_range) range. - find me [luxury] (budget_range) places. - I have a budget of [500USD](budget_range) for my flight. Can you assist?
+      - I have 600 shillings 
+      - 10000 south african rands 
+      - 5000 rands 
+      - 100000 ugsh 
+      - 500 tzsh 
+      - 68900 tanzanian shillings 
+      - 70000 naira 
+      - 10000 kenya shillings 
+      - 150000 shillings 
+      - 135600 rands 
+      - 127900 indian rupees  
   - intent: inform_vacation_plan
     examples: >
       - I'm planning a vacation to explore some exotic places. - I've
