@@ -174,9 +174,6 @@ slots:
     mappings:
       - type: from_entity
         entity: travel-type
-        conditions:
-        - active_loop: travel_form
-          requested_slot: travel_type
   climate:
     influence_conversation: true
     type: categorical
