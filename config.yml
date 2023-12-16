@@ -26,7 +26,7 @@ pipeline:
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 200
+    epochs: 100
     constrain_similarities: true
     batch_strategy: sequence
   - name: EntitySynonymMapper
@@ -41,7 +41,7 @@ pipeline:
     ambiguity_threshold: 0.1
 policies:
   - name: UnexpecTEDIntentPolicy
-    epochs: 200
+    epochs: 100
     max_history: 8
   - name: AugmentedMemoizationPolicy
     max_history: 6
