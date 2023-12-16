@@ -139,6 +139,8 @@ slots:
       - type: from_intent
         intent: inform_group_size
         value: couple
+        conditions:
+        - active_loop: travel_form 
   date:
     type: any
     mappings:
@@ -147,6 +149,8 @@ slots:
       - type: from_intent
         intent: inform_date
         value: tomorrow
+        conditions:
+        - active_loop: travel_form 
   budget_range:
     type: any
     mappings:
@@ -157,6 +161,8 @@ slots:
       - type: from_intent
         intent: inform_budget_range
         value: low-cost vacations
+        conditions:
+        - active_loop: travel_form 
   travel_type:
     influence_conversation: true
     type: categorical
@@ -167,6 +173,8 @@ slots:
     mappings:
       - type: from_entity
         entity: travel-type
+        conditions:
+        - active_loop: travel_form 
   climate:
     influence_conversation: true
     type: categorical
@@ -186,6 +194,8 @@ slots:
     mappings:
       - type: from_entity
         entity: mode-of-transport
+    conditions:
+      - active_loop: travel_form 
 actions:
   - validate_flight_search_form
   - action_handle_travel_preference
