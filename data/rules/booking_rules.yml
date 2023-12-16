@@ -5,15 +5,15 @@ rules:
   - rule: activate flight form + chitchat
     steps:
       - intent: search_flight
-      - action: validate_flight_search_form
-      - active_loop: validate_flight_search_form
+      - action: flight_booking_form
+      - active_loop: flight_booking_form
   - rule: submit form
     condition:
-      - active_loop: validate_flight_search_form
+      - active_loop: flight_booking_form
     steps:
       - intent: chitchat
       - action: utter_chitchat
-      - action: validate_flight_search_form
+      - action: flight_booking_form
       - active_loop: null
       - slot_was_set: 
         - requested_slot: null
@@ -22,15 +22,15 @@ rules:
   - rule: activate flight form + FAQs
     steps:
       - intent: search_flight
-      - action: validate_flight_search_form
-      - active_loop: validate_flight_search_form
+      - action: flight_booking_form
+      - active_loop: flight_booking_form
   - rule: submit form
     condition:
-      - active_loop: validate_flight_search_form
+      - active_loop: flight_booking_form
     steps:
       - intent: faq
       - action: utter_faq
-      - action: validate_flight_search_form
+      - action: flight_booking_form
       - active_loop: null
       - slot_was_set: 
         - requested_slot: null
