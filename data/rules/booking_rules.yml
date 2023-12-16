@@ -15,6 +15,8 @@ rules:
       - action: utter_chitchat
       - action: validate_flight_search_form
       - active_loop: null
+      - slot_was_set: 
+        - requested_slot: null
       - action: utter_anything_else
 
   - rule: activate flight form + FAQs
@@ -30,6 +32,8 @@ rules:
       - action: utter_faq
       - action: validate_flight_search_form
       - active_loop: null
+      - slot_was_set: 
+        - requested_slot: null
       - action: utter_anything_else
       
   - rule: Plan vacation + corporate
@@ -45,6 +49,8 @@ rules:
     steps:
       - action: travel_form
       - active_loop: null
+      - slot_was_set: 
+        - requested_slot: null
       - action: utter_check_options
  
   - rule: Plan vacation + leisure
@@ -60,6 +66,8 @@ rules:
     steps:
       - action: travel_form
       - active_loop: null
+      - slot_was_set: 
+        - requested_slot: null
       - action: utter_check_options
       
 
@@ -76,4 +84,6 @@ rules:
     steps:
       - action: travel_form
       - active_loop: null
+      - slot_was_set: 
+        - requested_slot: null
       - action: utter_check_options
