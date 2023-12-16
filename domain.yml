@@ -26,10 +26,10 @@ responses:
       buttons:
         - title: Search 🛫️
           payload: /search_flight
-        - title: Plan 🗺️
+        - title: Plan Trip 🗺️
           payload: /inform_vacation_plan
         - title: Explore 🛍️
-          payload: ask_shopping_recommendations
+          payload: /ask_shopping_recommendations
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_departure:
@@ -57,11 +57,11 @@ responses:
     - text: Great! What type of travel are you considering?
       buttons:
         - title: Corporate 😎🧳
-          payload: /inform{{"travel_type":"corporate"}}
+          payload: /inform{{"travel-type":"corporate"}}
         - title: Leisure🏄
-          payload: /inform{{"travel_type":"leisure"}}
+          payload: /inform{{"travel-type":"leisure"}}
         - title: Bespoke🏕
-          payload: /inform{{"travel_type":"bespoke"}}
+          payload: /inform{{"travel-type":"bespoke"}}
   utter_ask_mode_of_transport:
     - text: What mode of transport do you prefer for your travels?
       buttons:
