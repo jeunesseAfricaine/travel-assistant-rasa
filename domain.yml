@@ -32,9 +32,9 @@ responses:
           payload: /ask_shopping_recommendations
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
-  utter_departure:
+  utter_ask_departure:
     - text: Which city or town are you departing from?
-  utter_destination:
+  utter_ask_destination:
     - text: Where would you like to fly to?
   utter_ask_climate:
     - text: Great! Let's customize your trip. Do you prefer a cold destination or warm
@@ -44,9 +44,9 @@ responses:
           payload: /inform{{"climate":"cold"}}
         - title: Warm🏖 or Tropical🌴
           payload: /inform{{"climate":"warm"}}
-  utter_budget_range:
+  utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip?💰
-  utter_date:
+  utter_ask_date:
     - text: When would you like to start your journey?
   utter_confirm:
     - text: Do you need help with anything else?
@@ -141,6 +141,7 @@ slots:
         value: couple
         conditions:
         - active_loop: travel_form 
+          requested_slot: num_people
   date:
     type: any
     mappings:
@@ -150,19 +151,19 @@ slots:
         intent: inform_date
         value: tomorrow
         conditions:
-        - active_loop: travel_form 
+        - active_loop: travel_form
+          requested_slot: date
   budget_range:
     type: any
     mappings:
       - type: from_entity
-        entity: budget_range
-      - type: from_entity
         entity: amount-of-money
       - type: from_intent
         intent: inform_budget_range
-        value: low-cost vacations
+        value: 50000 ugandan shillings
         conditions:
-        - active_loop: travel_form 
+        - active_loop: travel_form
+          requested_slot: budget_range
   travel_type:
     influence_conversation: true
     type: categorical
@@ -174,7 +175,8 @@ slots:
       - type: from_entity
         entity: travel-type
         conditions:
-        - active_loop: travel_form 
+        - active_loop: travel_form
+          requested_slot: travel_type
   climate:
     influence_conversation: true
     type: categorical
@@ -194,8 +196,9 @@ slots:
     mappings:
       - type: from_entity
         entity: mode-of-transport
-    conditions:
-      - active_loop: travel_form 
+        conditions:
+        - active_loop: travel_form
+          requested_slot: mode_of_transport
 actions:
   - validate_flight_search_form
   - action_handle_travel_preference
