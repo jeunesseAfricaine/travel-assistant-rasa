@@ -52,9 +52,30 @@ stories:
           - travel_type: corporate
       - action: travel_form
       - active_loop: travel_form
+      - slot_was_set:
+          - requested_slot: destination
+      - slot_was_set:
+          - destination: Bali
+      - slot_was_set:
+          - requested_slot: date
+      - slot_was_set:
+          - date: tomorrow
+      - slot_was_set:
+          - requested_slot: num_people
+      - slot_was_set:
+          - num_people: 10
+      - slot_was_set:
+          - requested_slot: budget_range
+      - slot_was_set:
+          - budget_range: 50000 dollars
+      - slot_was_set:
+          - requested_slot: mode_of_transport
+      - slot_was_set:
+          - mode_of_transport: flight
+      - slot_was_set:
+          - requested_slot: null
       - active_loop: null
       - action: utter_check_options
-
   - story: Plan vacation + leisure
     steps:
       - intent: inform_vacation_plan
@@ -64,10 +85,31 @@ stories:
           - travel_type: leisure
       - action: travel_form
       - active_loop: travel_form
+      - slot_was_set:
+          - requested_slot: destination
+      - slot_was_set:
+          - destination: Maasai Mara
+      - slot_was_set:
+          - requested_slot: date
+      - slot_was_set:
+          - date: Friday 10am
+      - slot_was_set:
+          - requested_slot: num_people
+      - slot_was_set:
+          - num_people: couple
+      - slot_was_set:
+          - requested_slot: budget_range
+      - slot_was_set:
+          - budget_range: 50000 ugandan shillings
+      - slot_was_set:
+          - requested_slot: mode_of_transport
+      - slot_was_set:
+          - mode_of_transport: train
+      - slot_was_set:
+          - requested_slot: null
       - active_loop: null
       - action: utter_check_options
-
-  - story: Plan vacation + boutique
+  - story: Plan vacation + bespoke
     steps:
       - intent: inform_vacation_plan
       - action: utter_ask_travel_type
@@ -76,6 +118,27 @@ stories:
           - travel_type: bespoke
       - action: travel_form
       - active_loop: travel_form
+      - slot_was_set:
+          - requested_slot: destination
+      - slot_was_set:
+          - destination: Mt Kilimanjaro
+      - slot_was_set:
+          - requested_slot: date
+      - slot_was_set:
+          - date: Tuesday
+      - slot_was_set:
+          - requested_slot: num_people
+      - slot_was_set:
+          - num_people: 2
+      - slot_was_set:
+          - requested_slot: budget_range
+      - slot_was_set:
+          - budget_range: 50000 shillings
+      - slot_was_set:
+          - requested_slot: mode_of_transport
+      - slot_was_set:
+          - mode_of_transport: road-trip
+      - slot_was_set:
+          - requested_slot: null
       - active_loop: null
       - action: utter_check_options
-
