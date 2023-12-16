@@ -4,39 +4,39 @@ stories:
   - story: Search for flight + chitchat
     steps:
       - intent: search_flight
-      - action: validate_flight_search_form
-      - active_loop: validate_flight_search_form
+      - action: flight_booking_form
+      - active_loop: flight_booking_form
       - intent: chitchat
       - action: utter_chitchat
-      - action: validate_flight_search_form
+      - action: flight_booking_form
       - active_loop: null
       - action: utter_anything_else
   - story: Search a flight + faq
     steps:
       - intent: search_flight
-      - action: validate_flight_search_form
-      - active_loop: validate_flight_search_form
+      - action: flight_booking_form
+      - active_loop: flight_booking_form
       - intent: faq
       - action: utter_faq
-      - action: validate_flight_search_form
+      - action: flight_booking_form
       - active_loop: null
       - action: utter_anything_else
   - story: Search for a flight + stop + affirm
     steps:
       - intent: search_flight
-      - action: validate_flight_search_form
-      - active_loop: validate_flight_search_form
+      - action: flight_booking_form
+      - active_loop: flight_booking_form
       - intent: stop
       - action: utter_ask_continue
       - intent: affirm
-      - action: validate_flight_search_form
+      - action: flight_booking_formm
       - active_loop: null
       - action: utter_anything_else
   - story: Search for a flight
     steps:
       - intent: search_flight
-      - action: validate_flight_search_form
-      - active_loop: validate_flight_search_form
+      - action: flight_booking_form
+      - active_loop: flight_booking_form
       - intent: stop
       - action: utter_ask_continue
       - intent: deny
