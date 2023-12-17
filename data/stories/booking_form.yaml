@@ -29,7 +29,7 @@ stories:
       - intent: stop
       - action: utter_ask_continue
       - intent: affirm
-      - action: flight_booking_formm
+      - action: flight_booking_form
       - active_loop: null
       - action: utter_anything_else
   - story: Search for a flight
