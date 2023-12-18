@@ -21,8 +21,8 @@ intents:
   - inform
 responses:
   utter_greet:
-    - text: Hello! Welcome to Voyage Companion! I am your AI travel assistant.
-        How can I assist you today? 😊
+    - text: Hello! Welcome to Voyage Companion! I am your AI travel assistant. How can
+        I assist you today? 😊
       buttons:
         - title: Search 🛫️
           payload: /search_flight
@@ -35,7 +35,7 @@ responses:
   utter_ask_departure:
     - text: Which city or town are you departing from?
   utter_ask_destination:
-    - text: Where would you like to fly to?
+    - text: Where would you like to visit?
   utter_ask_climate:
     - text: Great! Let's customize your trip. Do you prefer a cold destination or warm
         destination?
@@ -47,7 +47,20 @@ responses:
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip?💰
   utter_ask_date:
-    - text: When would you like to start your journey?
+    - text: null
+  utter_take_bet:
+    - custom:
+        blocks:
+          - type: section
+            text:
+              text: "When would you like to start your journey?:"
+              type: mrkdwn
+            accessory:
+              type: datepicker
+              initial_date: 2023-12-24
+              placeholder:
+                type: plain_text
+                text: Select a date
   utter_confirm:
     - text: Do you need help with anything else?
     - text: Just confirming, is there anything else I can assist you with?
@@ -100,7 +113,10 @@ responses:
     - text: Great! I'll check our available options and their cost-effectiveness for
         you.
   utter_bespoke_not_available:
-    - text: Thank you for your interest in bespoke travel! Currently, our bespoke travel feature is still in development. We're working hard to bring you personalized and tailored travel experiences. In the meantime, I'd be delighted to assist you with corporateor leisure travels.
+    - text: Thank you for your interest in bespoke travel! Currently, our bespoke
+        travel feature is still in development. We're working hard to bring you
+        personalized and tailored travel experiences. In the meantime, I'd be
+        delighted to assist you with corporateor leisure travels.
   utter_youarewelcome:
     - text: You're most welcome! Safe travels, and feel free to reach out if you need
         anything else. Bon voyage! ✈️
@@ -140,8 +156,8 @@ slots:
         intent: inform_group_size
         value: couple
         conditions:
-        - active_loop: travel_form 
-          requested_slot: num_people
+          - active_loop: travel_form
+            requested_slot: num_people
   date:
     type: any
     mappings:
@@ -151,8 +167,8 @@ slots:
         intent: inform_date
         value: tomorrow
         conditions:
-        - active_loop: travel_form
-          requested_slot: date
+          - active_loop: travel_form
+            requested_slot: date
   budget_range:
     type: any
     mappings:
@@ -162,8 +178,8 @@ slots:
         intent: inform_budget_range
         value: 50000 ugandan shillings
         conditions:
-        - active_loop: travel_form
-          requested_slot: budget_range
+          - active_loop: travel_form
+            requested_slot: budget_range
   travel_type:
     influence_conversation: true
     type: categorical
@@ -194,8 +210,8 @@ slots:
       - type: from_entity
         entity: mode-of-transport
         conditions:
-        - active_loop: travel_form
-          requested_slot: mode_of_transport
+          - active_loop: travel_form
+            requested_slot: mode_of_transport
 actions:
   - validate_flight_search_form
   - action_handle_travel_preference
