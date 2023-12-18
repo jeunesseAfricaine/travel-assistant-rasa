@@ -6,6 +6,24 @@ stories:
       - intent: search_flight
       - action: flight_booking_form
       - active_loop: flight_booking_form
+      - slot_was_set:
+          - requested_slot: departure
+      - slot_was_set:
+          - departure: JKIA
+      - slot_was_set:
+          - requested_slot: destination
+      - slot_was_set:
+          - destination: Heathrow Airport
+      - slot_was_set:
+          - requested_slot: date
+      - slot_was_set:
+          - date: Wednesday night
+      - slot_was_set:
+          - requested_slot: budget_range
+      - slot_was_set:
+          - budget_range: 600 Kenya shillings
+      - slot_was_set:
+          - requested_slot: null
       - intent: chitchat
       - action: utter_chitchat
       - action: flight_booking_form
@@ -16,6 +34,24 @@ stories:
       - intent: search_flight
       - action: flight_booking_form
       - active_loop: flight_booking_form
+      - slot_was_set:
+          - requested_slot: departure
+      - slot_was_set:
+          - departure: JKIA
+      - slot_was_set:
+          - requested_slot: destination
+      - slot_was_set:
+          - destination: Heathrow Airport
+      - slot_was_set:
+          - requested_slot: date
+      - slot_was_set:
+          - date: Wednesday night
+      - slot_was_set:
+          - requested_slot: budget_range
+      - slot_was_set:
+          - budget_range: 600 Kenya shillings
+      - slot_was_set:
+          - requested_slot: null
       - intent: faq
       - action: utter_faq
       - action: flight_booking_form
@@ -26,6 +62,24 @@ stories:
       - intent: search_flight
       - action: flight_booking_form
       - active_loop: flight_booking_form
+      - slot_was_set:
+          - requested_slot: departure
+      - slot_was_set:
+          - departure: JKIA
+      - slot_was_set:
+          - requested_slot: destination
+      - slot_was_set:
+          - destination: Heathrow Airport
+      - slot_was_set:
+          - requested_slot: date
+      - slot_was_set:
+          - date: Wednesday night
+      - slot_was_set:
+          - requested_slot: budget_range
+      - slot_was_set:
+          - budget_range: 600 Kenya shillings
+      - slot_was_set:
+          - requested_slot: null
       - intent: stop
       - action: utter_ask_continue
       - intent: affirm
@@ -37,6 +91,24 @@ stories:
       - intent: search_flight
       - action: flight_booking_form
       - active_loop: flight_booking_form
+      - slot_was_set:
+          - requested_slot: departure
+      - slot_was_set:
+          - departure: JKIA
+      - slot_was_set:
+          - requested_slot: destination
+      - slot_was_set:
+          - destination: Heathrow Airport
+      - slot_was_set:
+          - requested_slot: date
+      - slot_was_set:
+          - date: Wednesday night
+      - slot_was_set:
+          - requested_slot: budget_range
+      - slot_was_set:
+          - budget_range: 600 Kenya shillings
+      - slot_was_set:
+          - requested_slot: null
       - intent: stop
       - action: utter_ask_continue
       - intent: deny
