@@ -110,18 +110,16 @@ responses:
         Feel free to ask us about our favorite restaurants that perfectly align
         with your taste soon!
   utter_check_options:
-    - text: Great! I'll check our available options and their cost-effectiveness for
-        you.
-  utter_bespoke_not_available:
-    - text: Thank you for your interest in bespoke travel! Currently, our bespoke
+    - text: Thank you for your interest in {travel-type} travel! Currently, our {travel-type}
         travel feature is still in development. We're working hard to bring you
         personalized and tailored travel experiences. In the meantime, I'd be
-        delighted to assist you with corporateor leisure travels.
+        delighted to assist you with any FAQs eg. 
   utter_youarewelcome:
     - text: You're most welcome! Safe travels, and feel free to reach out if you need
-        anything else. Bon voyage! ✈️
+        anything else. Bon voyage!😊
     - text: Karibu! Safe travels, and feel free kureach out if you need anything else.
-        Safari njema! ✈️
+        Safari njema!😊
+    - text: Anytime maze! Unaeza nitext in case u need anything else. Safiri salama!😊
 entities:
   - number
   - LOC:
