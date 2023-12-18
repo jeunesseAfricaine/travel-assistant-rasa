@@ -47,8 +47,6 @@ responses:
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip?💰
   utter_ask_date:
-    - text: null
-  utter_take_bet:
     - custom:
         blocks:
           - type: section
