@@ -47,7 +47,7 @@ responses:
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip?💰
   utter_ask_date:
-    - text: When would you like to start your journey?: Please enter the travel date in this format eg. Thursday 9am.
+    - text: When would you like to start your journey? Please provide the travel date in this format eg. Thursday 9am.
   utter_confirm:
     - text: Do you need help with anything else?
     - text: Just confirming, is there anything else I can assist you with?
