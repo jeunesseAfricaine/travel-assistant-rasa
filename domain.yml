@@ -47,18 +47,7 @@ responses:
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip?💰
   utter_ask_date:
-    - custom:
-        blocks:
-          - type: section
-            text:
-              text: "When would you like to start your journey?:"
-              type: mrkdwn
-            accessory:
-              type: datepicker
-              initial_date: '2023-12-24'
-              placeholder:
-                type: plain_text
-                text: Select a date
+    - text: "When would you like to start your journey?: \nPlease enter the travel date in this format eg. June 26
   utter_confirm:
     - text: Do you need help with anything else?
     - text: Just confirming, is there anything else I can assist you with?
