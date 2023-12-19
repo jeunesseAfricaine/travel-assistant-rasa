@@ -55,7 +55,7 @@ responses:
               type: mrkdwn
             accessory:
               type: datepicker
-              initial_date: 2023-12-24
+              initial_date: '2023-12-24'
               placeholder:
                 type: plain_text
                 text: Select a date
