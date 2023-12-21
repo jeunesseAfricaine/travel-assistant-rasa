@@ -97,8 +97,8 @@ responses:
         Feel free to ask us about our favorite restaurants that perfectly align
         with your taste soon!
   utter_check_options:
-    - text: Thank you for your interest in {travel-type} travel! Currently, our
-        {travel-type} travel feature is still in development. We're working hard
+    - text: Thank you for your interest in {travel_type} travel! Currently, our
+        {travel_type} travel feature is still in development. We're working hard
         to bring you personalized and tailored travel experiences. In the
         meantime, I'd be delighted to assist you with any FAQs like, 'Does it
         cost more to book my vacation with a virtual travel assistant?'
