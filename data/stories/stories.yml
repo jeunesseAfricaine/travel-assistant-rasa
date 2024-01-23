@@ -1,13 +1,10 @@
 ---
 version: "3.1"
 stories:
-  - story: greet + shopping
+  - story: greet
     steps:
       - intent: start
       - action: utter_greet
-      - intent: ask_shopping_recommendations
-      - action: utter_shopping_recommendations
-  
   - story: goodbye
     steps:
       - intent: goodbye
@@ -24,4 +21,3 @@ stories:
     steps:
       - intent: faq
       - action: utter_faq
-
