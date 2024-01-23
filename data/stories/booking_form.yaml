@@ -1,216 +1,129 @@
 ---
 version: "3.1"
 stories:
-  - story: Search for flight + chitchat
+  - story: Make reservation
     steps:
-      - intent: search_flight
-      - action: flight_booking_form
-      - active_loop: flight_booking_form
+      - intent: start_booking
+      - action: booking_form
+      - active_loop: booking_form
       - slot_was_set:
-          - requested_slot: departure
+          - requested_slot: name
       - slot_was_set:
-          - departure: JKIA
+          - name: Bookeem Woodbine
       - slot_was_set:
-          - requested_slot: destination
+          - requested_slot: phone_num
       - slot_was_set:
-          - destination: Heathrow Airport
+          - phone_num: 0723456798
       - slot_was_set:
-          - requested_slot: date
+          - requested_slot: check-in
       - slot_was_set:
-          - date: Wednesday night
+          - check-in: Jan 18th
       - slot_was_set:
-          - requested_slot: budget_range
+          - requested_slot: check-out
       - slot_was_set:
-          - budget_range: 600 Kenya shillings
+          - check-out: Jan 24th
+      - slot_was_set:
+          - requested_slot: num_people
+      - slot_was_set:
+          - num_people: 6 travelers
+      - slot_was_set:
+          - requested_slot: num_rooms
+      - slot_was_set:
+          - num_rooms: 3 rooms
+      - slot_was_set:
+          - requested_slot: mode_of_transport
+      - slot_was_set:
+          - mode_of_transport: Tour Van
       - slot_was_set:
           - requested_slot: null
-      - intent: chitchat
-      - action: utter_chitchat
-      - action: flight_booking_form
+      - action: booking_form
       - active_loop: null
       - action: utter_anything_else
-  - story: Search a flight + faq
-    steps:
-      - intent: search_flight
-      - action: flight_booking_form
-      - active_loop: flight_booking_form
-      - slot_was_set:
-          - requested_slot: departure
-      - slot_was_set:
-          - departure: JKIA
-      - slot_was_set:
-          - requested_slot: destination
-      - slot_was_set:
-          - destination: Heathrow Airport
-      - slot_was_set:
-          - requested_slot: date
-      - slot_was_set:
-          - date: Wednesday night
-      - slot_was_set:
-          - requested_slot: budget_range
-      - slot_was_set:
-          - budget_range: 600 Kenya shillings
-      - slot_was_set:
-          - requested_slot: null
-      - intent: faq
-      - action: utter_faq
-      - action: flight_booking_form
-      - active_loop: null
-      - action: utter_anything_else
-  - story: Search for a flight + stop + affirm
-    steps:
-      - intent: search_flight
-      - action: flight_booking_form
-      - active_loop: flight_booking_form
-      - slot_was_set:
-          - requested_slot: departure
-      - slot_was_set:
-          - departure: JKIA
-      - slot_was_set:
-          - requested_slot: destination
-      - slot_was_set:
-          - destination: Heathrow Airport
-      - slot_was_set:
-          - requested_slot: date
-      - slot_was_set:
-          - date: Wednesday night
-      - slot_was_set:
-          - requested_slot: budget_range
-      - slot_was_set:
-          - budget_range: 600 Kenya shillings
-      - slot_was_set:
-          - requested_slot: null
-      - intent: stop
-      - action: utter_ask_continue
-      - intent: affirm
-      - action: flight_booking_form
-      - active_loop: null
-      - action: utter_anything_else
-  - story: Search for a flight
-    steps:
-      - intent: search_flight
-      - action: flight_booking_form
-      - active_loop: flight_booking_form
-      - slot_was_set:
-          - requested_slot: departure
-      - slot_was_set:
-          - departure: JKIA
-      - slot_was_set:
-          - requested_slot: destination
-      - slot_was_set:
-          - destination: Heathrow Airport
-      - slot_was_set:
-          - requested_slot: date
-      - slot_was_set:
-          - date: Wednesday night
-      - slot_was_set:
-          - requested_slot: budget_range
-      - slot_was_set:
-          - budget_range: 600 Kenya shillings
-      - slot_was_set:
-          - requested_slot: null
-      - intent: stop
-      - action: utter_ask_continue
-      - intent: deny
-      - action: action_deactivate_loop
-      - active_loop: null
-      - action: utter_anything_else
-  - story: Plan vacation + corporate
+      
+  - story: explore destination + safari 
     steps:
       - intent: inform_vacation_plan
       - action: utter_ask_travel_type
       - intent: inform
         entities:
-          - travel_type: corporate
-      - action: travel_form
-      - active_loop: travel_form
+          - travel-type: safari
+      - action: safari_form
+      - active_loop: safari_form
       - slot_was_set:
-          - requested_slot: destination
+          - requested_slot: safari_type
       - slot_was_set:
-          - destination: Bali
-      - slot_was_set:
-          - requested_slot: date
-      - slot_was_set:
-          - date: tomorrow
-      - slot_was_set:
-          - requested_slot: num_people
-      - slot_was_set:
-          - num_people: 10
+          - safari_type: Kenya
       - slot_was_set:
           - requested_slot: budget_range
       - slot_was_set:
-          - budget_range: 50000 dollars
-      - slot_was_set:
-          - requested_slot: mode_of_transport
-      - slot_was_set:
-          - mode_of_transport: flight
+          - budget_range: budget    
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
-      - action: utter_check_options
-  - story: Plan vacation + leisure
+      - action: utter_top_deals
+      
+  - story: explore destination + themed
     steps:
       - intent: inform_vacation_plan
       - action: utter_ask_travel_type
       - intent: inform
         entities:
-          - travel_type: leisure
-      - action: travel_form
-      - active_loop: travel_form
+          - travel-type: themed
+      - action: themed_form
+      - active_loop: themed_form
       - slot_was_set:
-          - requested_slot: destination
+          - requested_slot: theme_type
       - slot_was_set:
-          - destination: Maasai Mara
-      - slot_was_set:
-          - requested_slot: date
-      - slot_was_set:
-          - date: Friday 10am
-      - slot_was_set:
-          - requested_slot: num_people
-      - slot_was_set:
-          - num_people: couple
+          - theme_type: honeymoon
       - slot_was_set:
           - requested_slot: budget_range
       - slot_was_set:
-          - budget_range: 50000 ugandan shillings
-      - slot_was_set:
-          - requested_slot: mode_of_transport
-      - slot_was_set:
-          - mode_of_transport: train
+          - budget_range: mid-range 
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
-      - action: utter_check_options
-  - story: Plan vacation + bespoke
+      - action: utter_top_deals
+          
+  - story: explore destination + corporate
     steps:
       - intent: inform_vacation_plan
       - action: utter_ask_travel_type
       - intent: inform
         entities:
-          - travel_type: bespoke
-      - action: travel_form
-      - active_loop: travel_form
+          - travel-type: corporate
+      - action: corporate_form
+      - active_loop: corporate_form
       - slot_was_set:
-          - requested_slot: destination
+          - requested_slot: corporate
       - slot_was_set:
-          - destination: Mt Kilimanjaro
-      - slot_was_set:
-          - requested_slot: date
-      - slot_was_set:
-          - date: Tuesday
-      - slot_was_set:
-          - requested_slot: num_people
-      - slot_was_set:
-          - num_people: 2
+          - corporate: bleisure
       - slot_was_set:
           - requested_slot: budget_range
       - slot_was_set:
-          - budget_range: 50000 shillings
-      - slot_was_set:
-          - requested_slot: mode_of_transport
-      - slot_was_set:
-          - mode_of_transport: road-trip
+          - budget_range: luxury 
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
-      - action: utter_check_options
+      - action: utter_top_deals
+          
+  - story: explore destination + local
+    steps:
+      - intent: inform_vacation_plan
+      - action: utter_ask_travel_type
+      - intent: inform
+        entities:
+          - travel-type: local
+      - action: local_form
+      - active_loop: local_form
+      - slot_was_set:
+          - requested_slot: local_type
+      - slot_was_set:
+          - local_type: beach
+      - slot_was_set:
+          - requested_slot: budget_range
+      - slot_was_set:
+          - budget_range: budget 
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: utter_top_deals
