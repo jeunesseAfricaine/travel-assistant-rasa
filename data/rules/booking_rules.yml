@@ -2,88 +2,86 @@
 version: "3.1"
 rules:
 
-  - rule: activate flight form + chitchat
+  - rule: activate booking_form + chitchat
     steps:
-      - intent: search_flight
-      - action: flight_booking_form
-      - active_loop: flight_booking_form
+      - intent: start_booking
+      - action: booking_form
+      - active_loop: booking_form
   - rule: submit form
     condition:
-      - active_loop: flight_booking_form
+      - active_loop: booking_form
     steps:
-      - intent: chitchat
-      - action: utter_chitchat
-      - action: flight_booking_form
-      - active_loop: null
-      - slot_was_set: 
-        - requested_slot: null
-      - action: utter_anything_else
-
-  - rule: activate flight form + FAQs
-    steps:
-      - intent: search_flight
-      - action: flight_booking_form
-      - active_loop: flight_booking_form
-  - rule: submit form
-    condition:
-      - active_loop: flight_booking_form
-    steps:
-      - intent: faq
-      - action: utter_faq
-      - action: flight_booking_form
+      - action: booking_form
       - active_loop: null
       - slot_was_set: 
         - requested_slot: null
       - action: utter_anything_else
       
+  - rule: Plan vacation + safari
+    steps:
+      - intent: inform
+        entities:
+          - travel-type: safari
+      - action: safari_form
+      - active_loop: safari_form
+  - rule: submit form
+    condition:
+      - active_loop: safari_form
+    steps:
+      - action: safari_form
+      - active_loop: null
+      - slot_was_set: 
+        - requested_slot: null
+      - action: utter_top_deals
+ 
+  - rule: Plan vacation + themed
+    steps:
+      - intent: inform
+        entities:
+          - travel-type: themed
+      - action: themed_form
+      - active_loop: themed_form
+  - rule: submit form
+    condition:
+      - active_loop: themed_form
+    steps:
+      - action: themed_form
+      - active_loop: null
+      - slot_was_set: 
+        - requested_slot: null
+      - action: utter_top_deals
+      
+
   - rule: Plan vacation + corporate
     steps:
       - intent: inform
         entities:
-          - travel_type: corporate
-      - action: travel_form
-      - active_loop: travel_form
+          - travel-type: corporate
+      - action: corporate_form
+      - active_loop: corporate_form
   - rule: submit form
     condition:
-      - active_loop: travel_form
+      - active_loop: corporate_form
     steps:
-      - action: travel_form
+      - action: corporate_form
       - active_loop: null
       - slot_was_set: 
         - requested_slot: null
-      - action: utter_check_options
- 
-  - rule: Plan vacation + leisure
-    steps:
-      - intent: inform
-        entities:
-          - travel_type: leisure
-      - action: travel_form
-      - active_loop: travel_form
-  - rule: submit form
-    condition:
-      - active_loop: travel_form
-    steps:
-      - action: travel_form
-      - active_loop: null
-      - slot_was_set: 
-        - requested_slot: null
-      - action: utter_check_options
-      
+      - action: utter_top_deals
 
-  - rule: Plan vacation + bespoke
+  - rule: Plan vacation + local
     steps:
       - intent: inform
         entities:
-          - travel_type: bespoke
-      - action: travel_form
-      - active_loop: travel_form
+          - travel-type: local
+      - action: local_form
+      - active_loop: local_form
   - rule: submit form
     condition:
-      - active_loop: travel_form
+      - active_loop: local_form
     steps:
-      - action: travel_form
+      - action: local_form
       - active_loop: null
       - slot_was_set: 
         - requested_slot: null
-      - action: utter_check_options
+      - action: utter_top_deals
