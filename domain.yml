@@ -27,7 +27,7 @@ responses:
         payload: /inform_vacation_plan
       - title: Book Now 🏨
         payload: /start_booking
-  utter_ask_travel_type:
+      button_type: vertical
     - text: Sure, I can help you with that. What specific package are you looking for?
       buttons:
       - title: Safaris 🗺🦓
@@ -38,6 +38,7 @@ responses:
         payload: /inform{{"travel-type":"corporate"}}
       - title: Local 🏞️
         payload: /inform{{"travel-type":"local"}}
+      button_type: vertical
   utter_ask_safari_type:
     - text: Planning a safari is exciting! Here are some Safari options you might be
         interested in
@@ -49,6 +50,7 @@ responses:
         payload: /inform{{"safari-type", "east-africa"}}
       - title: South Africa🇿🇦
         payload: /inform{{"safari-type", "south-africa"}}
+      button_type: vertical
   utter_ask_local_type:
     - text: Planning a local adventure! Here are some packages you might be interested
         in
@@ -58,6 +60,7 @@ responses:
         payload: /inform{{"local-type", "beach"}}
       - title: Weekend 🌄
         payload: /inform{{"local-type", "weekend"}}
+      button_type: vertical
   utter_ask_theme_type:
     - text: Looking for themed packages? Check out these options
       image: image_url
@@ -76,6 +79,7 @@ responses:
         payload: /inform{{"theme-type", "jamhuri"}}
       - title: Christmas 🎄
         payload: /inform{{"theme-type", "christmas"}}
+      button_type: vertical
   utter_ask_corporate:
     - text: Looking for corporate packages? Check out these options
       image: image_url
@@ -86,6 +90,7 @@ responses:
         payload: /inform{{"corporate", "conference"}}
       - title: Trade Fair 🎪
         payload: /inform{{"corporate", "trade-fair"}}
+      button_type: vertical
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip?💰
       buttons:
@@ -95,6 +100,7 @@ responses:
         payload: /inform{{"budget-range", "mid-range"}}
       - title: Luxury 💎
         payload: /inform{{"budget-range", "luxury"}}
+      button_type: vertical
   utter_top_deals:
     - text: >
         Top Deals
