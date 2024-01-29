@@ -45,8 +45,8 @@ pipeline:
     ambiguity_threshold: 0.1
 policies:
   - name: UnexpecTEDIntentPolicy
-    epochs: 200
-    max_history: 8
+    epochs: 100
+    max_history: 5
   - name: AugmentedMemoizationPolicy
     max_history: 5
   - name: TEDPolicy
