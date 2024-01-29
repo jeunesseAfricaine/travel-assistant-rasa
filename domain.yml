@@ -19,87 +19,88 @@ intents:
   - inform
 responses:
   utter_greet:
-    - text: Hello! Welcome to Voyage Companion! I am your AI travel virtual assistant. You can
-        ask me about travel options, or explore destinations. How can I assist
-        you with your travel plans today?😊
+    - text: Hello! Welcome to Voyage Companion! I am your AI travel virtual assistant.
+        You can ask me about travel options, or explore destinations. How can I
+        assist you with your travel plans today?😊
       buttons:
-      - title: Explore destinations 🌍
-        payload: /inform_vacation_plan
-      - title: Book Now 🏨
-        payload: /start_booking
+        - title: Explore destinations 🌍
+          payload: /inform_vacation_plan
+        - title: Book Now 🏨
+          payload: /start_booking
       button_type: vertical
+  utter_ask_travel_type:
     - text: Sure, I can help you with that. What specific package are you looking for?
       buttons:
-      - title: Safaris 🗺🦓
-        payload: /inform{{"travel-type":"safari"}}
-      - title: Themed 🎉
-        payload: /inform{{"travel-type":"themed"}}
-      - title: Corporate 🏢
-        payload: /inform{{"travel-type":"corporate"}}
-      - title: Local 🏞️
-        payload: /inform{{"travel-type":"local"}}
+        - title: Safaris 🗺🦓
+          payload: /inform{{"travel-type":"safari"}}
+        - title: Themed 🎉
+          payload: /inform{{"travel-type":"themed"}}
+        - title: Corporate 🏢
+          payload: /inform{{"travel-type":"corporate"}}
+        - title: Local 🏞️
+          payload: /inform{{"travel-type":"local"}}
       button_type: vertical
   utter_ask_safari_type:
     - text: Planning a safari is exciting! Here are some Safari options you might be
         interested in
       image: image_url
       buttons:
-      - title: Kenya🇰🇪
-        payload: /inform{{"safari-type", "kenya"}}
-      - title: East Africa🌍
-        payload: /inform{{"safari-type", "east-africa"}}
-      - title: South Africa🇿🇦
-        payload: /inform{{"safari-type", "south-africa"}}
+        - title: Kenya🇰🇪
+          payload: /inform{{"safari-type", "kenya"}}
+        - title: East Africa🌍
+          payload: /inform{{"safari-type", "east-africa"}}
+        - title: South Africa🇿🇦
+          payload: /inform{{"safari-type", "south-africa"}}
       button_type: vertical
   utter_ask_local_type:
     - text: Planning a local adventure! Here are some packages you might be interested
         in
       image: image_url
       buttons:
-      - title: Beach 🏖️
-        payload: /inform{{"local-type", "beach"}}
-      - title: Weekend 🌄
-        payload: /inform{{"local-type", "weekend"}}
+        - title: Beach 🏖️
+          payload: /inform{{"local-type", "beach"}}
+        - title: Weekend 🌄
+          payload: /inform{{"local-type", "weekend"}}
       button_type: vertical
   utter_ask_theme_type:
     - text: Looking for themed packages? Check out these options
       image: image_url
       buttons:
-      - title: Valentines ❤️
-        payload: /inform{{"theme-type", "valentines"}}
-      - title: Honeymoon 💑
-        payload: /inform{{"theme-type", "honeymoon"}}
-      - title: Easter 🐰
-        payload: /inform{{"theme-type", "easter"}}
-      - title: Madaraka 🇰🇪
-        payload: /inform{{"theme-type", "madaraka"}}
-      - title: Mashujaa 🎖️
-        payload: /inform{{"theme-type", "mashujaa"}}
-      - title: Jamhuri 🇰🇪
-        payload: /inform{{"theme-type", "jamhuri"}}
-      - title: Christmas 🎄
-        payload: /inform{{"theme-type", "christmas"}}
+        - title: Valentines ❤️
+          payload: /inform{{"theme-type", "valentines"}}
+        - title: Honeymoon 💑
+          payload: /inform{{"theme-type", "honeymoon"}}
+        - title: Easter 🐰
+          payload: /inform{{"theme-type", "easter"}}
+        - title: Madaraka 🇰🇪
+          payload: /inform{{"theme-type", "madaraka"}}
+        - title: Mashujaa 🎖️
+          payload: /inform{{"theme-type", "mashujaa"}}
+        - title: Jamhuri 🇰🇪
+          payload: /inform{{"theme-type", "jamhuri"}}
+        - title: Christmas 🎄
+          payload: /inform{{"theme-type", "christmas"}}
       button_type: vertical
   utter_ask_corporate:
     - text: Looking for corporate packages? Check out these options
       image: image_url
       buttons:
-      - title: Bleisure 🏢✈️
-        payload: /inform{{"corporate", "bleisure"}}
-      - title: Conferences 📚
-        payload: /inform{{"corporate", "conference"}}
-      - title: Trade Fair 🎪
-        payload: /inform{{"corporate", "trade-fair"}}
+        - title: Bleisure 🏢✈️
+          payload: /inform{{"corporate", "bleisure"}}
+        - title: Conferences 📚
+          payload: /inform{{"corporate", "conference"}}
+        - title: Trade Fair 🎪
+          payload: /inform{{"corporate", "trade-fair"}}
       button_type: vertical
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip?💰
       buttons:
-      - title: On-budget 💸
-        payload: /inform{{"budget-range", "budget"}}
-      - title: Mid-range 💳
-        payload: /inform{{"budget-range", "mid-range"}}
-      - title: Luxury 💎
-        payload: /inform{{"budget-range", "luxury"}}
+        - title: On-budget 💸
+          payload: /inform{{"budget-range", "budget"}}
+        - title: Mid-range 💳
+          payload: /inform{{"budget-range", "mid-range"}}
+        - title: Luxury 💎
+          payload: /inform{{"budget-range", "luxury"}}
       button_type: vertical
   utter_top_deals:
     - text: >
@@ -111,16 +112,16 @@ responses:
     - text: How would you like to travel to your destination? Choose your preferred
         mode of transport.
       buttons:
-      - title: Self-Drive 🚗
-        payload: /inform{"mode-of-transport", "self-drive"}
-      - title: SGR 🚆
-        payload: /inform{"mode-of-transport", "sgr"}
-      - title: Flying ✈️
-        payload: /inform{"mode-of-transport", "flying"}
-      - title: Tour Van 🚐
-        payload: /inform{"mode-of-transport", "tour-van"}
-      - title: Cruiser 🚢
-        payload: /inform{"mode-of-transport", "cruiser"}
+        - title: Self-Drive 🚗
+          payload: /inform{"mode-of-transport", "self-drive"}
+        - title: SGR 🚆
+          payload: /inform{"mode-of-transport", "sgr"}
+        - title: Flying ✈️
+          payload: /inform{"mode-of-transport", "flying"}
+        - title: Tour Van 🚐
+          payload: /inform{"mode-of-transport", "tour-van"}
+        - title: Cruiser 🚢
+          payload: /inform{"mode-of-transport", "cruiser"}
   utter_ask_name:
     - text: Please provide your contact information. What is your full name?
   utter_ask_phone_num:
@@ -136,10 +137,10 @@ responses:
   utter_ask_continue:
     - text: Awesome! Do you wish to continue with booking??
       buttons:
-      - title: Yes
-        payload: /affirm
-      - title: No
-        payload: /deny
+        - title: Yes
+          payload: /affirm
+        - title: No
+          payload: /deny
   utter_default:
     - text: I'm sorry, I can't help you.
   utter_goodbye:
@@ -255,7 +256,6 @@ slots:
       - Flying
       - Tour Van
       - Cruiser
-
     mappings:
       - type: from_entity
         entity: mode-of-transport
