@@ -104,7 +104,7 @@ responses:
           payload: /inform{{"budget-range", "luxury"}}
       button_type: vertical
   utter_top_deals:
-    - text: I appreciate your interest in the selected travel package. Currently, its not available, but rest assured, we are working diligently to make it accessible for you. May I assist you with any other travel preferences?
+    - text: I appreciate your interest in the selected travel package. Currently, it's not available, but rest assured, we are working diligently to make it accessible for you. May I assist you with any other travel preferences?
   utter_ask_transport_mode:
     - text: How would you like to travel to your destination? Choose your preferred
         mode of transport.
