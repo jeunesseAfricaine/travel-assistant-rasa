@@ -104,11 +104,7 @@ responses:
           payload: /inform{{"budget-range", "luxury"}}
       button_type: vertical
   utter_top_deals:
-    - text: >
-        Top Deals
-
-        3rd Jan - 31st March 2024 <> USD 1030.00 for 2 pax 1st June - 30th June 2024 <> USD 900.00 for 4 pax 1st April - 31st May 2024 (excluding Easter) <> USD 815 for 6 pax 
-    - text: Special child rates apply, please request us for details.
+    -     - text: I appreciate your interest in the selected travel package. Currently, its not available, but rest assured, we are working diligently to make it accessible for you. May I assist you with any other travel preferences?
   utter_ask_transport_mode:
     - text: How would you like to travel to your destination? Choose your preferred
         mode of transport.
