@@ -7,6 +7,11 @@ intents:
   - stop
   - start_booking
   - inform_vacation_plan
+  - inform_transport_mode
+  - inform_corporate
+  - inform_theme
+  - inform_local
+  - inform_safari
   - inform_group_size
   - inform_date
   - inform_num_of_rooms
