@@ -52,11 +52,11 @@ responses:
       image: "https://www.flightcentre.co.nz/sites/default/files/product-images/8807405223966-a0715d679ff86f60821264dde776e27c.jpg"
       buttons:
         - title: Kenya🇰🇪
-          payload: /inform{{"safari-type", "kenya"}}
+          payload: /inform_safari{{"safari-type", "kenya"}}
         - title: East Africa🌍
-          payload: /inform{{"safari-type", "east-africa"}}
+          payload: /inform_safari{{"safari-type", "east-africa"}}
         - title: South Africa🇿🇦
-          payload: /inform{{"safari-type", "south-africa"}}
+          payload: /inform_safari{{"safari-type", "south-africa"}}
       button_type: vertical
   utter_ask_local_type:
     - text: Planning a local adventure! Here are some packages you might be interested
@@ -64,66 +64,66 @@ responses:
       image: "https://cfimages.mercuryholidays.co.uk/3vgdkcmqrnp2/6zbmBIr61OIRiiP24syxjj/6f6c8bfd53db55b08422b5ea33a29071/Sarova_Whitesands_Beach_Resort_Hero.jpg?w=1920&fm=jpg&fl=progressive&q=80"
       buttons:
         - title: Beach 🏖️
-          payload: /inform{{"local-type", "beach"}}
+          payload: /inform_local{{"local-type", "beach"}}
         - title: Weekend 🌄
-          payload: /inform{{"local-type", "weekend"}}
+          payload: /inform_local{{"local-type", "weekend"}}
       button_type: vertical
   utter_ask_theme_type:
     - text: Looking for themed packages? Check out these options
       image: "https://i.pinimg.com/originals/40/1b/a6/401ba6c29f813068c505737ffdb8d33f.jpg"
       buttons:
         - title: Valentines ❤️
-          payload: /inform{{"theme-type", "valentines"}}
+          payload: /inform_theme{{"theme-type", "valentines"}}
         - title: Honeymoon 💑
-          payload: /inform{{"theme-type", "honeymoon"}}
+          payload: /inform_theme{{"theme-type", "honeymoon"}}
         - title: Easter 🐰
-          payload: /inform{{"theme-type", "easter"}}
+          payload: /inform_theme{{"theme-type", "easter"}}
         - title: Madaraka 🇰🇪
-          payload: /inform{{"theme-type", "madaraka"}}
+          payload: /inform_theme{{"theme-type", "madaraka"}}
         - title: Mashujaa 🎖️
-          payload: /inform{{"theme-type", "mashujaa"}}
+          payload: /inform_theme{{"theme-type", "mashujaa"}}
         - title: Jamhuri 🇰🇪
-          payload: /inform{{"theme-type", "jamhuri"}}
+          payload: /inform_theme{{"theme-type", "jamhuri"}}
         - title: Christmas 🎄
-          payload: /inform{{"theme-type", "christmas"}}
+          payload: /inform_theme{{"theme-type", "christmas"}}
       button_type: vertical
   utter_ask_corporate:
     - text: Looking for corporate packages? Check out these options
       image: "https://btttravel.com/wp-content/uploads/2015/01/Slider-4.jpg"
       buttons:
         - title: Bleisure 🏢✈️
-          payload: /inform{{"corporate", "bleisure"}}
+          payload: /inform_corporate{{"corporate", "bleisure"}}
         - title: Conferences 📚
-          payload: /inform{{"corporate", "conference"}}
+          payload: /inform_corporate{{"corporate", "conference"}}
         - title: Trade Fair 🎪
-          payload: /inform{{"corporate", "trade-fair"}}
+          payload: /inform_corporate{{"corporate", "trade-fair"}}
       button_type: vertical
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip?💰
       buttons:
         - title: On-budget 💸
-          payload: /inform{{"budget-range", "budget"}}
+          payload: /inform_budget_range{{"budget-range", "budget"}}
         - title: Mid-range 💳
-          payload: /inform{{"budget-range", "mid-range"}}
+          payload: /inform_budget_range{{"budget-range", "mid-range"}}
         - title: Luxury 💎
-          payload: /inform{{"budget-range", "luxury"}}
+          payload: /inform_budget_range{{"budget-range", "luxury"}}
       button_type: vertical
   utter_top_deals:
-    - text: I appreciate your interest in the selected travel package. Currently, it's not available, but rest assured, we are working diligently to make it accessible for you. May I assist you with any other travel preferences?
+    - text: I appreciate your interest in the {travel_type} package. Currently, it's not available, but rest assured, we are working diligently to make it accessible for you. May I assist you with any other travel preferences?
   utter_ask_transport_mode:
     - text: How would you like to travel to your destination? Choose your preferred
         mode of transport.
       buttons:
         - title: Self-Drive 🚗
-          payload: /inform{"mode-of-transport", "self-drive"}
+          payload: /inform_transport_mode{"mode-of-transport", "self-drive"}
         - title: SGR 🚆
-          payload: /inform{"mode-of-transport", "sgr"}
+          payload: /inform_transport_mode{"mode-of-transport", "sgr"}
         - title: Flying ✈️
-          payload: /inform{"mode-of-transport", "flying"}
+          payload: /inform_transport_mode{"mode-of-transport", "flying"}
         - title: Tour Van 🚐
-          payload: /inform{"mode-of-transport", "tour-van"}
+          payload: /inform_transport_mode{"mode-of-transport", "tour-van"}
         - title: Cruiser 🚢
-          payload: /inform{"mode-of-transport", "cruiser"}
+          payload: /inform_transport_mode{"mode-of-transport", "cruiser"}
   utter_ask_name:
     - text: Please provide your contact information. What is your full name?
   utter_ask_phone_num:
