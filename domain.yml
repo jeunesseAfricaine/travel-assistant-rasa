@@ -187,6 +187,7 @@ entities:
   - corporate
   - PERSON
   - phoneNo
+  - local-type
 slots:
   name:
     type: any
