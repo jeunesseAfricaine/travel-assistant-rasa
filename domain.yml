@@ -30,6 +30,7 @@ responses:
       button_type: vertical
   utter_ask_travel_type:
     - text: Sure, I can help you with that. What specific package are you looking for?
+      image: "https://www.andbeyond.com/wp-content/uploads/sites/5/guest-area-with-golden-sunrise-at-andbeyond-bateleur-camp-on-a-luxury-kenya-safari1.jpg"
       buttons:
         - title: Safaris 🗺🦓
           payload: /inform{{"travel-type":"safari"}}
@@ -43,7 +44,7 @@ responses:
   utter_ask_safari_type:
     - text: Planning a safari is exciting! Here are some Safari options you might be
         interested in
-      image: image_url
+      image: "https://www.flightcentre.co.nz/sites/default/files/product-images/8807405223966-a0715d679ff86f60821264dde776e27c.jpg"
       buttons:
         - title: Kenya🇰🇪
           payload: /inform{{"safari-type", "kenya"}}
@@ -55,7 +56,7 @@ responses:
   utter_ask_local_type:
     - text: Planning a local adventure! Here are some packages you might be interested
         in
-      image: image_url
+      image: "https://cfimages.mercuryholidays.co.uk/3vgdkcmqrnp2/6zbmBIr61OIRiiP24syxjj/6f6c8bfd53db55b08422b5ea33a29071/Sarova_Whitesands_Beach_Resort_Hero.jpg?w=1920&fm=jpg&fl=progressive&q=80"
       buttons:
         - title: Beach 🏖️
           payload: /inform{{"local-type", "beach"}}
@@ -64,7 +65,7 @@ responses:
       button_type: vertical
   utter_ask_theme_type:
     - text: Looking for themed packages? Check out these options
-      image: image_url
+      image: "https://i.pinimg.com/originals/40/1b/a6/401ba6c29f813068c505737ffdb8d33f.jpg"
       buttons:
         - title: Valentines ❤️
           payload: /inform{{"theme-type", "valentines"}}
@@ -83,7 +84,7 @@ responses:
       button_type: vertical
   utter_ask_corporate:
     - text: Looking for corporate packages? Check out these options
-      image: image_url
+      image: "https://btttravel.com/wp-content/uploads/2015/01/Slider-4.jpg"
       buttons:
         - title: Bleisure 🏢✈️
           payload: /inform{{"corporate", "bleisure"}}
