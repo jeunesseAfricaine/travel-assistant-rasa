@@ -2,7 +2,7 @@
 version: "3.1"
 rules:
 
-  - rule: activate booking_form + chitchat
+  - rule: activate booking_form
     steps:
       - intent: start_booking
       - action: booking_form
@@ -13,8 +13,6 @@ rules:
     steps:
       - action: booking_form
       - active_loop: null
-      - slot_was_set: 
-        - requested_slot: null
       - action: utter_anything_else
       
   - rule: Plan vacation + safari
@@ -30,13 +28,11 @@ rules:
     steps:
       - action: safari_form
       - active_loop: null
-      - slot_was_set: 
-        - requested_slot: null
       - action: utter_top_deals
  
   - rule: Plan vacation + themed
     steps:
-      - intent: inform_local
+      - intent: inform_theme
         entities:
           - travel-type: themed
       - action: themed_form
@@ -47,8 +43,6 @@ rules:
     steps:
       - action: themed_form
       - active_loop: null
-      - slot_was_set: 
-        - requested_slot: null
       - action: utter_top_deals
 
   - rule: Plan vacation + corporate
@@ -64,8 +58,6 @@ rules:
     steps:
       - action: corporate_form
       - active_loop: null
-      - slot_was_set: 
-        - requested_slot: null
       - action: utter_top_deals
 
   - rule: Plan vacation + local
@@ -81,6 +73,156 @@ rules:
     steps:
       - action: local_form
       - active_loop: null
-      - slot_was_set: 
-        - requested_slot: null
+      - action: utter_top_deals
+---
+version: "3.1"
+rules:
+
+  - rule: activate booking_form
+    steps:
+      - intent: start_booking
+      - action: booking_form
+      - active_loop: booking_form
+  - rule: submit form
+    condition:
+      - active_loop: booking_form
+    steps:
+      - action: booking_form
+      - active_loop: null
+      - action: utter_anything_else
+      
+  - rule: Plan vacation + safari
+    steps:
+      - intent: inform_safari
+        entities:
+          - travel-type: safari
+      - action: safari_form
+      - active_loop: safari_form
+  - rule: submit form
+    condition:
+      - active_loop: safari_form
+    steps:
+      - action: safari_form
+      - active_loop: null
+      - action: utter_top_deals
+ 
+  - rule: Plan vacation + themed
+    steps:
+      - intent: inform_theme
+        entities:
+          - travel-type: themed
+      - action: themed_form
+      - active_loop: themed_form
+  - rule: submit form
+    condition:
+      - active_loop: themed_form
+    steps:
+      - action: themed_form
+      - active_loop: null
+      - action: utter_top_deals
+
+  - rule: Plan vacation + corporate
+    steps:
+      - intent: inform_corporate
+        entities:
+          - travel-type: corporate
+      - action: corporate_form
+      - active_loop: corporate_form
+  - rule: submit form
+    condition:
+      - active_loop: corporate_form
+    steps:
+      - action: corporate_form
+      - active_loop: null
+      - action: utter_top_deals
+
+  - rule: Plan vacation + local
+    steps:
+      - intent: inform_local
+        entities:
+          - travel-type: local
+      - action: local_form
+      - active_loop: local_form
+  - rule: submit form
+    condition:
+      - active_loop: local_form
+    steps:
+      - action: local_form
+      - active_loop: null
+      - action: utter_top_deals
+---
+version: "3.1"
+rules:
+
+  - rule: activate booking_form
+    steps:
+      - intent: start_booking
+      - action: booking_form
+      - active_loop: booking_form
+  - rule: submit form
+    condition:
+      - active_loop: booking_form
+    steps:
+      - action: booking_form
+      - active_loop: null
+      - action: utter_anything_else
+      
+  - rule: Plan vacation + safari
+    steps:
+      - intent: inform_safari
+        entities:
+          - travel-type: safari
+      - action: safari_form
+      - active_loop: safari_form
+  - rule: submit form
+    condition:
+      - active_loop: safari_form
+    steps:
+      - action: safari_form
+      - active_loop: null
+      - action: utter_top_deals
+ 
+  - rule: Plan vacation + themed
+    steps:
+      - intent: inform_theme
+        entities:
+          - travel-type: themed
+      - action: themed_form
+      - active_loop: themed_form
+  - rule: submit form
+    condition:
+      - active_loop: themed_form
+    steps:
+      - action: themed_form
+      - active_loop: null
+      - action: utter_top_deals
+
+  - rule: Plan vacation + corporate
+    steps:
+      - intent: inform_corporate
+        entities:
+          - travel-type: corporate
+      - action: corporate_form
+      - active_loop: corporate_form
+  - rule: submit form
+    condition:
+      - active_loop: corporate_form
+    steps:
+      - action: corporate_form
+      - active_loop: null
+      - action: utter_top_deals
+
+  - rule: Plan vacation + local
+    steps:
+      - intent: inform_local
+        entities:
+          - travel-type: local
+      - action: local_form
+      - active_loop: local_form
+  - rule: submit form
+    condition:
+      - active_loop: local_form
+    steps:
+      - action: local_form
+      - active_loop: null
       - action: utter_top_deals
