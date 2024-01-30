@@ -35,7 +35,7 @@ responses:
       button_type: vertical
   utter_ask_travel_type:
     - text: Sure, I can help you with that. What specific package are you looking for?
-      image: https://www.andbeyond.com/wp-content/uploads/sites/5/guest-area-with-golden-sunrise-at-andbeyond-bateleur-camp-on-a-luxury-kenya-safari1.jpg
+      image: "https://www.andbeyond.com/wp-content/uploads/sites/5/guest-area-with-golden-sunrise-at-andbeyond-bateleur-camp-on-a-luxury-kenya-safari1.jpg"
       buttons:
         - title: Safaris 🗺🦓
           payload: /inform{{"travel-type":"safari"}}
@@ -49,7 +49,7 @@ responses:
   utter_ask_safari_type:
     - text: Planning a safari is exciting! Here are some Safari options you might be
         interested in
-      image: https://www.flightcentre.co.nz/sites/default/files/product-images/8807405223966-a0715d679ff86f60821264dde776e27c.jpg
+      image: "https://www.flightcentre.co.nz/sites/default/files/product-images/8807405223966-a0715d679ff86f60821264dde776e27c.jpg"
       buttons:
         - title: Kenya🇰🇪
           payload: /inform_safari{{"safari-type", "kenya"}}
@@ -61,7 +61,7 @@ responses:
   utter_ask_local_type:
     - text: Planning a local adventure! Here are some packages you might be interested
         in
-      image: https://cfimages.mercuryholidays.co.uk/3vgdkcmqrnp2/6zbmBIr61OIRiiP24syxjj/6f6c8bfd53db55b08422b5ea33a29071/Sarova_Whitesands_Beach_Resort_Hero.jpg?w=1920&fm=jpg&fl=progressive&q=80
+      image: "https://cfimages.mercuryholidays.co.uk/3vgdkcmqrnp2/6zbmBIr61OIRiiP24syxjj/6f6c8bfd53db55b08422b5ea33a29071/Sarova_Whitesands_Beach_Resort_Hero.jpg?w=1920&fm=jpg&fl=progressive&q=80"
       buttons:
         - title: Beach 🏖️
           payload: /inform_local{{"local-type", "beach"}}
@@ -70,7 +70,7 @@ responses:
       button_type: vertical
   utter_ask_theme_type:
     - text: Please check out these options for themed packages?
-      image: https://i.pinimg.com/originals/40/1b/a6/401ba6c29f813068c505737ffdb8d33f.jpg
+      image: "https://i.pinimg.com/originals/40/1b/a6/401ba6c29f813068c505737ffdb8d33f.jpg"
       buttons:
         - title: Valentines ❤️
           payload: /inform_theme{{"theme-type", "valentines"}}
@@ -89,7 +89,7 @@ responses:
       button_type: vertical
   utter_ask_corporate:
     - text: Please check out these options for corporate packages.
-      image: https://btttravel.com/wp-content/uploads/2015/01/Slider-4.jpg
+      image: "https://btttravel.com/wp-content/uploads/2015/01/Slider-4.jpg"
       buttons:
         - title: Bleisure 🏢✈️
           payload: /inform_corporate{{"corporate", "bleisure"}}
@@ -109,9 +109,7 @@ responses:
           payload: /inform_budget_range{{"budget-range", "luxury"}}
       button_type: vertical
   utter_top_deals:
-    - text: I appreciate your interest in the {travel_type} package. Currently, it's
-        not available, but rest assured, we are working diligently to make it
-        accessible for you. May I assist you with any other travel preferences?
+    - text: I appreciate your interest in the {travel_type} package. Currently, it's not available, but rest assured, we are working diligently to make it accessible for you. May I assist you with any other travel preferences?
       buttons:
         - title: Other destinations 🏞️
           payload: /inform_vacation_plan
@@ -139,17 +137,10 @@ responses:
     - text: When do you plan to check in? eg. June 📅
   utter_ask_check_out:
     - text: When are you planning to check out eg. July 📅
-  utter_ask_num_of_rooms:
+  utter_ask_num_rooms:
     - text: How many rooms would you like to book for your stay? eg. 2 Rooms
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
-  utter_ask_continue:
-    - text: Awesome! Do you wish to continue with booking??
-      buttons:
-        - title: Yes
-          payload: /affirm
-        - title: No
-          payload: /deny
   utter_default:
     - text: I'm sorry, I can't help you.
       buttons:
@@ -202,9 +193,6 @@ slots:
     mappings:
       - type: from_entity
         entity: PERSON
-        conditions:
-          - active_loop: booking_form
-            requested_slot: name
   phone_num:
     type: any
     mappings:
@@ -212,9 +200,6 @@ slots:
         entity: phoneNo
       - type: from_entity
         entity: number
-        conditions:
-          - active_loop: booking_form
-            requested_slot: phone_num
   num_people:
     type: any
     mappings:
@@ -237,7 +222,7 @@ slots:
         conditions:
           - active_loop: booking_form
             requested_slot: num_rooms
-  check-in:
+  check_in:
     type: any
     mappings:
       - type: from_entity
@@ -247,8 +232,8 @@ slots:
         value: tomorrow
         conditions:
           - active_loop: booking_form
-            requested_slot: check-in
-  check-out:
+            requested_slot: check_in
+  check_out:
     type: any
     mappings:
       - type: from_entity
@@ -258,7 +243,7 @@ slots:
         value: Jan 24th
         conditions:
           - active_loop: booking_form
-            requested_slot: check-out
+            requested_slot: check_out
   mode_of_transport:
     influence_conversation: false
     type: categorical
@@ -271,9 +256,6 @@ slots:
     mappings:
       - type: from_entity
         entity: mode-of-transport
-        conditions:
-          - active_loop: booking_form
-            requested_slot: mode_of_transport
   travel_type:
     influence_conversation: true
     type: categorical
@@ -295,12 +277,7 @@ slots:
     mappings:
       - type: from_entity
         entity: safari-type
-      - type: from_intent
-        intent: inform_safari
-        value: Kenya Safari
-        conditions:
-          - active_loop: safari_form
-            requested_slot: safari_type
+        
   theme_type:
     influence_conversation: true
     type: categorical
@@ -315,9 +292,6 @@ slots:
     mappings:
       - type: from_entity
         entity: theme-type
-        conditions:
-          - active_loop: themed_form
-            requested_slot: theme_type
   local_type:
     influence_conversation: true
     type: categorical
@@ -327,12 +301,6 @@ slots:
     mappings:
       - type: from_entity
         entity: local-type
-      - type: from_intent
-        intent: inform_local
-        value: visit nearby
-        conditions:
-          - active_loop: local_form
-            requested_slot: local_type
   corporate:
     influence_conversation: true
     type: categorical
@@ -343,12 +311,6 @@ slots:
     mappings:
       - type: from_entity
         entity: corporate
-      - type: from_intent
-        intent: inform_corporate
-        value: corporate event
-        conditions:
-          - active_loop: corporate_form
-            requested_slot: corporate
   budget_range:
     influence_conversation: true
     type: categorical
@@ -373,8 +335,8 @@ forms:
     required_slots:
       - name
       - phone_num
-      - check-in
-      - check-out
+      - check_in
+      - check_out
       - num_people
       - num_rooms
       - mode_of_transport
