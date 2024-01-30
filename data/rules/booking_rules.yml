@@ -19,7 +19,7 @@ rules:
       
   - rule: Plan vacation + safari
     steps:
-      - intent: inform
+      - intent: inform_safari
         entities:
           - travel-type: safari
       - action: safari_form
@@ -36,7 +36,7 @@ rules:
  
   - rule: Plan vacation + themed
     steps:
-      - intent: inform
+      - intent: inform_local
         entities:
           - travel-type: themed
       - action: themed_form
@@ -50,11 +50,10 @@ rules:
       - slot_was_set: 
         - requested_slot: null
       - action: utter_top_deals
-      
 
   - rule: Plan vacation + corporate
     steps:
-      - intent: inform
+      - intent: inform_corporate
         entities:
           - travel-type: corporate
       - action: corporate_form
@@ -71,7 +70,7 @@ rules:
 
   - rule: Plan vacation + local
     steps:
-      - intent: inform
+      - intent: inform_local
         entities:
           - travel-type: local
       - action: local_form
