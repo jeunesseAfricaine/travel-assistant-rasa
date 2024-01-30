@@ -3,7 +3,7 @@ version: "3.1"
 nlu:
   - intent: start_booking
     examples: |
-      - Book Now
+      - Book Now 🏨
       - I want to make a booking.
       - Start the booking process.
       - Can I book a trip?
