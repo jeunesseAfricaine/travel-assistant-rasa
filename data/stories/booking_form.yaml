@@ -43,7 +43,7 @@ stories:
     steps:
       - intent: inform_vacation_plan
       - action: utter_ask_travel_type
-      - intent: inform_safari
+      - intent: inform
         entities:
           - travel-type: safari
       - action: safari_form
@@ -65,7 +65,7 @@ stories:
     steps:
       - intent: inform_vacation_plan
       - action: utter_ask_travel_type
-      - intent: inform_theme
+      - intent: inform
         entities:
           - travel-type: themed
       - action: themed_form
@@ -87,7 +87,7 @@ stories:
     steps:
       - intent: inform_vacation_plan
       - action: utter_ask_travel_type
-      - intent: inform_corporate
+      - intent: inform
         entities:
           - travel-type: corporate
       - action: corporate_form
@@ -109,7 +109,7 @@ stories:
     steps:
       - intent: inform_vacation_plan
       - action: utter_ask_travel_type
-      - intent: inform_local
+      - intent: inform
         entities:
           - travel-type: local
       - action: local_form
