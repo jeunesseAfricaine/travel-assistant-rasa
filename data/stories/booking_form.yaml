@@ -36,7 +36,6 @@ stories:
           - mode_of_transport: Tour Van
       - slot_was_set:
           - requested_slot: null
-      - action: booking_form
       - active_loop: null
       - action: utter_anything_else
       
