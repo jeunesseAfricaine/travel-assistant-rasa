@@ -300,8 +300,7 @@ nlu:
       [beach]{"entity":"local-type", "value": "beach"} adventures. - Show me
       some [mountain]{"entity":"local-type", "value": "mountain"} escapes. - Can
       you suggest some [countryside]{"entity":"local-type", "value":
-      "countryside"} retreats? - What [safari]{"entity":"local-type", "value":
-      "safari"} experiences do you have? - Any recommendations for
+      "countryside"} retreats? - Any recommendations for
       [island]{"entity":"local-type", "value": "island"} getaways? - I'm looking
       for [adventure]{"entity":"local-type", "value": "adventure"} activities
       nearby. - Show me options for [camping]{"entity":"local-type", "value":
@@ -461,8 +460,8 @@ nlu:
       Are there any [SGR]{"entity":"mode-of-transport", "value": "sgr"} 🚆 deals
       available? - What are the benefits of
       [self-drive]{"entity":"mode-of-transport", "value": "self-drive"} 🚗
-      travel? - I'm considering [flying]{"entity":"mode-of-transport", "value":
-      "flying"} ✈️ for my journey. - Tell me about [tour
+      travel? - I'm considering taking a [plane]{"entity":"mode-of-transport",
+      "value": "flying"} for my journey. - Tell me about [tour
       van]{"entity":"mode-of-transport", "value": "tour-van"} 🚐 options. - Any
       recommendations for [cruiser]{"entity":"mode-of-transport", "value":
       "cruiser"} 🚢 travel experiences?
