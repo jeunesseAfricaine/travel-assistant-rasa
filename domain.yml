@@ -14,7 +14,7 @@ intents:
   - inform_safari
   - inform_group_size
   - inform_date
-  - inform_num_of_rooms
+  - inform_num_rooms
   - inform_budget_range
   - goodbye
   - chitchat
