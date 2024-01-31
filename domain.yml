@@ -330,10 +330,6 @@ slots:
       - type: from_intent
         intent: inform_budget_range
         value: GBP 1200
-actions:
-  - action_booking_form
-  - action_travel_form
-  - action_handle_travel_preference
 forms:
   booking_form:
     required_slots:
