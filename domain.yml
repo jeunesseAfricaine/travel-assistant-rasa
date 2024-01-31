@@ -61,7 +61,7 @@ responses:
   utter_ask_local_type:
     - text: Planning a local adventure! Here are some packages you might be interested
         in
-      image: "https://cfimages.mercuryholidays.co.uk/3vgdkcmqrnp2/6zbmBIr61OIRiiP24syxjj/6f6c8bfd53db55b08422b5ea33a29071/Sarova_Whitesands_Beach_Resort_Hero.jpg?w=1920&fm=jpg&fl=progressive&q=80"
+      image: "https://www.safaritravelplus.com/wp-content/uploads/2018/08/kenya-Beach-holidays.jpg"
       buttons:
         - title: Beach 🏖️
           payload: /inform_local{{"local-type", "beach"}}
@@ -145,7 +145,7 @@ responses:
     - text: I'm sorry, I can't help you.
       buttons:
         - title: Start Over 🔄
-          payload: /affirm
+          payload: /restart
   utter_goodbye:
     - text: Thank you for using our services! Should you need assistance in the
         future, I'll be here. Take care!
@@ -257,6 +257,9 @@ slots:
     mappings:
       - type: from_entity
         entity: mode-of-transport
+      - type: from_intent
+        intent: inform_transport_mode
+        value: take a plane
   travel_type:
     influence_conversation: true
     type: categorical
@@ -278,6 +281,9 @@ slots:
     mappings:
       - type: from_entity
         entity: safari-type
+      - type: from_intent
+        intent: inform_safari
+        value: wildlife
         
   theme_type:
     influence_conversation: true
@@ -293,6 +299,9 @@ slots:
     mappings:
       - type: from_entity
         entity: theme-type
+      - type: from_intent
+        intent: inform_theme
+        value: holiday getaways
   local_type:
     influence_conversation: true
     type: categorical
@@ -302,6 +311,9 @@ slots:
     mappings:
       - type: from_entity
         entity: local-type
+      - type: from_intent
+        intent: inform_local
+        value: visit nearby
   corporate:
     influence_conversation: true
     type: categorical
@@ -312,6 +324,9 @@ slots:
     mappings:
       - type: from_entity
         entity: corporate
+      - type: from_intent
+        intent: inform_corporate
+        value:  team-building event
   budget_range:
     influence_conversation: true
     type: categorical
