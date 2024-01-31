@@ -24,8 +24,7 @@ intents:
   - inform
 responses:
   utter_greet:
-    - text: Hello! Welcome to Voyage Companion! I am your AI travel virtual assistant.
-        You can ask me about travel options, or explore destinations. How can I
+    - text: Hello! Welcome to Voyage Companion! I am your AI travel virtual assistant. How can I
         assist you with your travel plans today?😊
       buttons:
         - title: Explore destinations 🌍
@@ -130,15 +129,15 @@ responses:
         - title: Cruiser 🚢
           payload: /inform_transport_mode{"mode-of-transport", "cruiser"}
   utter_ask_name:
-    - text: Please provide your contact information. What is your full name?
+    - text: What is your full name?
   utter_ask_phone_num:
     - text: What is your phone number?
   utter_ask_check_in:
-    - text: When do you plan to check in? eg. June 📅
+    - text: When do you plan to check in? 
   utter_ask_check_out:
-    - text: When are you planning to check out eg. July 📅
+    - text: When are you planning to check out?
   utter_ask_num_rooms:
-    - text: How many rooms would you like to book for your stay? eg. 2 Rooms
+    - text: How many rooms would you like to book for your stay?
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_default:
