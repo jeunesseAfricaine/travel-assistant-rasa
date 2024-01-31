@@ -1,24 +1,6 @@
 ---
 version: "3.1"
 nlu:
-  - intent: faq/ask_payment_methods
-    examples: |
-      - What payment methods are accepted for booking?
-      - Can I pay with a debit card?
-      - Are credit cards the only payment option?
-      - Which payment options does the airline support?
-  - intent: faq/ask_inflight_services
-    examples: |
-      - What inflight services are available?
-      - Are meals provided during the flight?
-      - Can I request special meals?
-      - Do you offer entertainment onboard?
-  - intent: faq/ask_ticket_refund_policy
-    examples: |
-      - What is the ticket refund policy?
-      - Can I get a refund if I cancel my flight?
-      - Are tickets refundable?
-      - How do I request a ticket refund?
   - intent: faq/ask_travel_insurance
     examples: >
       - Do you offer travel insurance?
@@ -50,30 +32,18 @@ nlu:
       - What is the significance of top-flight insurance companies in travel insurance?
 
       - Do I need Travel Insurance?
-  - intent: faq/ask_flight_delay_compensation
-    examples: |
-      - Will I receive compensation for flight delays?
-      - What happens if my flight is delayed?
-      - Is there compensation for delayed flights?
-      - How does the airline handle flight delays?
-  - intent: faq/ask_baggage_allowance
-    examples: |
-      - What is the baggage allowance?
-      - How much luggage can I carry?
-      - What are the baggage restrictions?
-      - Is there a limit on luggage for flights?
-  - intent: faq/ask_seat_selection
-    examples: |
-      - Can I choose my seat?
-      - How do I select a seat?
-      - What are the options for seat selection?
-      - Is there a fee for seat reservation?
   - intent: faq/ask_check_in_process
     examples: |
-      - How do I check in for my flight?
-      - What's the check-in procedure?
-      - Can I check in online?
-      - Where can I complete the check-in process?
+      - How does the check-in process work?
+      - Can you guide me through the check-in procedure?
+      - What are the steps involved in the check-in process?
+      - Explain the check-in process for my travel.
+      - Tell me about the check-in requirements.
+      - How can I check in for my upcoming trip?
+      - Provide information on the check-in procedures.
+      - What do I need to do for the check-in?
+      - Can you clarify the steps for the check-in process?
+      - Tell me about the check-in options available.
   - intent: faq/ask_emergency
     examples: >
       - If my flight gets canceled, how quickly can a travel agent resolve
@@ -250,3 +220,146 @@ nlu:
       - What's the depth of detail in the itineraries you prepare?
       - Do your itineraries include extensive details?
       - How detailed can I expect your itineraries to be?
+  - intent: faq/ask_get_to_destination
+    examples: |
+      - How do I get to my destination.
+      - Can you guide me on reaching my destination?
+      - What's the best way to get to my intended location?
+      - Explain the transportation options to reach my destination.
+      - What transportation methods are available for reaching my destination?
+      - Tell me about the routes to get to my destination.
+      - How do I navigate to my destination?
+      - Provide information on reaching my destination.
+      - What are the transportation choices for reaching my destination?
+      - Can you assist me in reaching my destination?
+  - intent: faq/ask_visa
+    examples: |
+      - do i need a visa?
+      - Explain the visa requirements for my trip.
+      - What is the visa policy for the destination?
+      - Is a visa necessary for my travel plans?
+      - Tell me about the visa regulations for my journey.
+      - Do I have to obtain a visa before traveling?
+      - Provide information on the visa process for my destination.
+      - What are the visa requirements for my trip?
+      - Clarify if a visa is mandatory for my travel.
+      - Explain the visa application procedure for my journey.
+  - intent: faq/ask_wadrobe
+    examples: |
+      - what kind of cloth should i wear?
+      - Can you guide me on what to wear during my travel?
+      - Tell me about the recommended wardrobe for my journey.
+      - Provide advice on dressing appropriately for my destination.
+      - What clothing should I pack for my travel?
+      - Explain the dress code for the location I'm visiting.
+      - Any recommendations on what clothes to bring?
+      - Tell me about the appropriate attire for my journey.
+      - What kind of wardrobe is suitable for my travel plans?
+      - Provide information on dressing for the destination.
+  - intent: faq/ask_security
+    examples: |
+      - what is security like? 
+      - Can you brief me on the security conditions of the place I'm visiting?
+      - What is the security like at the destination?
+      - Explain the safety measures at my intended location.
+      - Provide information on the security situation of the destination.
+      - Are there any security concerns at my travel location?
+      - Tell me about the safety measures in place for travelers.
+      - What should I know about security at the destination?
+      - Can you share details on the security arrangements at my destination?
+      - Explain the security protocols for travelers.
+  - intent: faq/ask_spoken_language
+    examples: |
+      - what are the most used languages in Kenya?
+      - an you tell me about the primary languages in Kenya?
+      - Provide information on the most used languages in Kenya.
+      - What are the dominant languages in Kenya?
+      - Tell me about the spoken languages in the region I'm visiting.
+      - Which languages should I be aware of while in Kenya?
+      - Explain the language scenario in the area I'm traveling to.
+      - What are the common languages spoken at my destination?
+      - Can you guide me on the prevalent languages in Kenya?
+      - Tell me about the linguistic diversity in Kenya.
+  - intent: faq/ask_phone_usage
+    examples: |
+      - how do i use my phone in Kenya?
+      - Can you provide information on using phones in Kenya?
+      - What are the phone usage guidelines for travelers in Kenya?
+      - Explain the procedures for using my phone while in Kenya.
+      - How can I ensure seamless phone usage during my travel?
+      - Provide tips on using my phone in the region I'm visiting.
+      - Tell me about the phone services available in Kenya.
+      - What should I know about mobile phone usage in Kenya?
+      - Share details on using phones responsibly in Kenya.
+      - Can you guide me on using my phone abroad?
+  - intent: faq/ask_money_exchange
+    examples: |
+      - is there a place to change money at the airport?
+      - Where can I exchange currency at the airport?
+      - Explain the currency exchange options at the airport.
+      - What are the money exchange facilities at the airport?
+      - Can I change my currency at the airport?
+      - Tell me about the currency exchange services at the airport.
+      - Where can I find money exchange services upon arrival?
+      - Provide information on currency exchange at the airport.
+      - What are the options for exchanging money at the airport?
+      - Can you guide me on currency exchange facilities at the airport?
+  - intent: faq/ask_safari_vehicle
+    examples: |
+      - what type of vehicle is used on safari?
+      - Can you describe the safari vehicles used for tours?
+      - Provide information on the vehicles used during safari trips.
+      - Tell me about the safari transportation options.
+      - What kind of vehicles are typically used for safari adventures?
+      - Explain the safari vehicle options available.
+      - Can you guide me on the safari vehicle choices?
+      - Describe the vehicles used for safaris.
+      - What should I know about safari transportation?
+      - Tell me about the vehicles provided for safari tours.
+  - intent: faq/ask_payment_options
+    examples: |
+      - is there a place to change money at the airport?
+      - Can you provide details on the payment methods accepted?
+      - Explain the payment choices for booking travel services.
+      - Tell me about the accepted payment options for your services.
+      - What payment methods do you support for bookings?
+      - Provide information on the available payment options.
+      - Can you guide me on the payment options for reservations?
+      - Explain the payment procedures and accepted forms.
+      - What are the payment options for booking with your agency?
+      - Tell me about the payment methods for travel bookings.
+  - intent: faq/ask_refund_procedure
+    examples: |
+      - What is the travel agency refund procedure?
+      - Can you explain the process for requesting a refund?
+      - Provide details on the refund policy of the travel agency.
+      - Tell me about the steps to follow for a refund.
+      - What is the procedure for obtaining a refund?
+      - Explain how refunds are handled by the travel agency.
+      - Can you guide me on the refund process for bookings?
+      - Provide information on the agency's refund guidelines.
+      - What should I know about the refund procedure?
+      - Tell me about the steps involved in requesting a refund.
+  - intent: faq/ask_refund_timeframe
+    examples: |
+      - What is the travel agency refund procedure?
+      - Can you provide an estimate of the refund processing time?
+      - Explain the usual timeframe for receiving a refund.
+      - Tell me about the expected time for refund processing.
+      - What is the standard waiting period for travel refunds?
+      - Provide information on the general timeframe for refunds.
+      - Can you guide me on the average time it takes to receive a refund?
+      - Explain the typical duration for travel agency refunds.
+      - What should I expect in terms of the refund timeframe?
+      - Tell me about the usual time it takes to process a refund.
+  - intent: faq/ask_travel_guidelines
+    examples: |
+      - Before travelling what all are the travel any guidelines?
+      - Can you provide information on the pre-travel guidelines?
+      - What guidelines should I follow before embarking on my journey?
+      - Explain the travel agency's recommendations before travel.
+      - Tell me about the guidelines for travelers before departure.
+      - Provide details on the pre-travel instructions from the agency.
+      - Can you guide me on the guidelines to follow before traveling?
+      - Explain the pre-travel requirements set by the agency.
+      - What are the travel guidelines I should be
