@@ -5,30 +5,12 @@ responses:
     - text: Baggage allowances vary between airlines and ticket classes. It's
         advisable to check directly with your airline for specific baggage
         allowances and any associated fees or restrictions.
-  utter_faq/ask_seat_selection:
-    - text: Seat selection options might differ depending on the airline and the type
-        of ticket purchased. Some airlines offer complimentary seat selection,
-        while others may charge for this service. I recommend checking with your
-        airline to understand their seat selection policy.
   utter_faq/ask_check_in_process:
     - text: You can usually check in for your flight through the airline's website,
         mobile app, or at the airport's check-in counters. Online check-in is
         available in most cases, starting 24 hours before the departure time.
         For more specific details, I suggest visiting the airline's website or
         contacting their customer service.
-  utter_faq/ask_payment_methods:
-    - text: We accept various payment methods including credit cards, debit cards, and
-        online payment platforms. Please note that accepted payment methods may
-        vary based on the airline and booking platform.
-  utter_faq/ask_inflight_services:
-    - text: Inflight services often include meals and entertainment. Some airlines
-        also provide options for special meals upon request. However, specific
-        services may vary by airline and the type of ticket purchased.
-  utter_faq/ask_ticket_refund_policy:
-    - text: Ticket refund policies differ among airlines and ticket types. Generally,
-        refundability depends on the fare rules associated with the ticket. You
-        may be eligible for a refund based on the fare conditions at the time of
-        booking.
   utter_faq/ask_travel_insurance:
     - text: Travel insurance is not typically included in the ticket price. However,
         it can often be purchased separately during the booking process. It's
@@ -40,11 +22,6 @@ responses:
         you from losing this investment. Perhaps even more important is the
         ‘during travel’ coverage and assistance that comes with the top-flight
         insurance companies we carry.
-  utter_faq/ask_flight_delay_compensation:
-    - text: Flight delay compensation policies vary by airline and region. In some
-        cases, compensation may be provided for significant delays caused by the
-        airline. Check the airline's policies or contact their customer service
-        for specific details.
   utter_faq/ask_emergency:
     - text: We are often aware of potential “hiccups” in a travel itinerary before you
         are. It’s not uncommon for a travel professional to have already worked
@@ -94,4 +71,60 @@ responses:
     - text: Our itineraries are meticulously planned, covering every aspect of your
         trip. Just provide us with your preferences, and we'll craft a detailed
         itinerary to ensure you have a memorable journey!
-
+  utter_faq/ask_get_to_destination:
+    - text: Many international airlines operate in and out of these destinations. To
+        name a few, Kenya Airways, KLM, Virgin Atlantic, Emirates, and Qatar
+        Airways.
+  utter_faq/ask_visa:
+    - text: Yes, most of these destinations will require a visa for international
+        travelers. It can be obtained on arrival at the airport with a visa fee
+        but it is advisable to check with the Embassy in your local country.
+  utter_faq/ask_wadrobe:
+    - text: 🌍 Kenya and Tanzania offer diverse climates! ️🌞 Coastal areas are
+        tropical; think loose cotton and sun protection. 🏞️ Eastern regions are
+        hot and dry; pack a hat, cotton pants, and long-sleeved shirts. 🏔️🌧️
+        In highlands (3000-5000ft), be ready for cool/hot days and cold nights;
+        bring a sweater and rain jacket. 🗻❄️ Mountainous regions (5000ft+) are
+        cooler; gloves, sturdy footwear, and heavy rain gear recommended.
+  utter_faq/ask_security:
+    - text: All the destinations are tourist-friendly. However, it is advisable to
+        safely keep your important documents and valuables. Most hotels will
+        have safety lockers in the room. Do not live your valuables unattended.
+  utter_faq/ask_spoken_language:
+    - text: Swahili & English is widely spoken in almost  all destinations. Sheng is
+        widely spoken in urban areas.
+  utter_faq/ask_phone_usage:
+    - text: The main telecommunication modes are fairly reliable and include the
+        internet and mobile communication. The most reliable is the mobile
+        phone, which is widely used for mobile transactions and cheap to buy.
+        Internet communication is also largely available in most major towns and
+        cities and is quite efficient in addition to being cheap.
+  utter_faq/ask_money_exchange:
+    - text: Yes, but it is not the best rate. It is advisable to go to the bank or a
+        forex bureau.
+  utter_faq/ask_safari_vehicle:
+    - text: We use both safari tour vans and four-wheel drive Landcruisers. The tour
+        vans are just as comfortable while being a little cheaper. Landcruisers
+        are useful for locations that may experience muddy roads if it rains.
+        Both vehicles have game viewing roofs, radio calls, and comfortable
+        seats with seat belts. Everything is done to assure your comfort while
+        traveling. Special cooler boxes for cold drinks are part of the standard
+        equipment.
+  utter_faq/ask_payment_options:
+    - text: You may pay by mobile money, credit card or by direct bank transfer.
+        Credit cards attract a 4% bank fee while a bank transfer attracts a flat
+        USD 50-70 fee depending on where you remit the money from – these are
+        bank costs. Before booking the travel, you will also receive the
+        cancellation and general Terms and Conditions.
+  utter_faq/ask_refund_procedure:
+    - text: Refund process is not automated and cannot be done online. I can escalate
+        this process to the travel agency for assistance. Currently, this
+        feature is under development.
+  utter_faq/ask_refund_timeframe:
+    - text: Once a refund is initiated the refund process can take 5-7 working days,
+        We will update the traveler once the refund is received.
+  utter_faq/ask_travel_guidelines:
+    - text: Ensure your Visa and Passport is valid for travel . Check rules and
+        restrictions set by the country you are travelling to or transiting,
+        PCR, Vaccination requirements. Where possible check-in online and plan
+        to reach the airport in good time.
