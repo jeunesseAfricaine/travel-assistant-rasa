@@ -81,47 +81,36 @@ nlu:
       - Informing you that we'll need 5 rooms for the upcoming trip.
   - intent: inform_date
     examples: |
-      - I want to do the activity in the evening.
-      - Plan the activity for next week
-      - I want to fly in early morning
-      - Book a flight on late evening
-      - I want to check in the morning
-      - i want to check out 6 oclock
-      - check me out at 10 am
-      - Book a hotel for midday
-      - Plan a trip for noon
-      - Suggest a suitable morning time for the activity.
-      - Show me options for the afternoon activity.
-      - I prefer the activity in the nighttime
-      - What are the timings for the weekend activity?
-      - Find me suitable daytime slots for the activity.
-      - List available morning slots for the activity.
-      - I'm interested in the evening hours for the activity.
-      - Suggest timings for weekdays activity.
-      - I want to fly on July 15th
-      - Book a flight on August 20th
-      - I want to check-in on September 9th 15th
-      - Book a hotel for November 20th
-      - Plan a trip for next weekend
-      - Find options for tomorrow
-      - Suggest dates for end of the month
-      - What are the dates for next month?
-      - I'm looking for travel plans in October 10th
-      - Check availability for next week
-      - I want to travel during the holiday season
-      - What are the dates for spring break
-      - Show me options for upcoming holidays.
-      - Friday afternoon
-      - Tuesday night
-      - Monday noon
-      - In the weekend
-      - on Thursday evening
-      - search for flights on Friday morning
-      - Sunday morning
-      - Early tomorrow
-      - i want to fly Wednesday at night
-      - do you have slots for Saturday 26th?
-      - get me flights for Monday 10 am
+      - Can you arrange my check-in on March 5th?
+      - I'd like to check in on the 10th of June.
+      - Please schedule my arrival for July 15th.
+      - Is it possible to check in on August 1st?
+      - I want to start my stay on September 10th.
+      - Arrange my check-in for October 25th, please.
+      - Can you book my arrival on November 8th?
+      - I'd like to check in on December 3rd.
+      - Schedule my arrival for January 12th.
+      - Please arrange my check-in on February 18th.
+      - I want to start my stay on March 21st.
+      - Can you check me in on April 7th?
+      - I'd like to arrive on May 30th.
+      - Schedule my check-in for June 12th, if possible.
+      - Is there availability for check-in on July 3rd?
+      - I plan to check out on March 10th.
+      - Can I check out on the 15th of June?
+      - My stay ends on July 25th, so arrange check-out.
+      - Please schedule my departure for August 5th.
+      - I want to end my stay on September 18th.
+      - Arrange my check-out on October 30th, please.
+      - Can I check out on November 15th?
+      - I'd like to end my stay on December 8th.
+      - Schedule my departure for January 20th.
+      - Please arrange check-out on February 28th.
+      - I plan to check out on March 10th.
+      - Can I check out on April 2nd?
+      - My stay ends on May 15th, so arrange check-out.
+      - Please schedule my departure for June 8th.
+      - I want to end my stay on July 1st.
   - intent: inform_vacation_plan
     examples: >
       - I'm planning a vacation to explore some exotic places.  - I've
