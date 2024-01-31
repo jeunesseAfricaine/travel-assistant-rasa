@@ -154,105 +154,52 @@ nlu:
       discover vibrant city life.
   - intent: inform
     examples: >
-      - [Safaris 🗺🦓]{"entity":"travel-type", "value": "safari"} - [Themed
-      🎉]{"entity":"travel-type", "value": "themed"} - [Corporate
-      🏢]{"entity":"travel-type", "value": "corporate"} - [Local
-      🏞]{"entity":"travel-type", "value": "local"} - My name is [John
-      Doe]{"entity": "PERSON", "value": "John Doe"} and my phone number is
-      [123-456-7890]{"entity": "phoneNo", "value": "123-456-7890"}. - Contact
-      [Alice]{"entity": "PERSON", "value": "Alice"} at [987654321]{"entity":
-      "phoneNo", "value": "987654321"}. - I need assistance from [Jane
-      Smith]{"entity": "PERSON", "value": "Jane Smith"}. You can reach me at
-      [555-1234]{"entity": "phoneNo", "value": "555-1234"}. - [Bob]{"entity":
-      "PERSON", "value": "Bob"}'s contact number is [456-7890]{"entity":
-      "phoneNo", "value": "456-7890"}. - Please connect me with
-      [Emily]{"entity": "PERSON", "value": "Emily"} at [876543210]{"entity":
-      "phoneNo", "value": "876543210"}. - [Sam]{"entity": "PERSON", "value":
-      "Sam"} is the person to contact. His phone number is
-      [987-654-3210]{"entity": "phoneNo", "value": "987-654-3210"}. - I'm trying
-      to reach [Sara]{"entity": "PERSON", "value": "Sara"}. Her phone number is
-      [111-222-3333]{"entity": "phoneNo", "value": "111-222-3333"}. -
-      [Michael]{"entity": "PERSON", "value": "Michael"} is available at
-      [555-6789]{"entity": "phoneNo", "value": "555-6789"}. - Contact
-      [Lucy]{"entity": "PERSON", "value": "Lucy"} at [987-654-3211]{"entity":
-      "phoneNo", "value": "987-654-3211"} for more information. - I'm
-      [Alex]{"entity": "PERSON", "value": "Alex"} and my phone number is
-      [444-555-6666]{"entity": "phoneNo", "value": "444-555-6666"}. - I'm
-      interested in going on a [safari]{"entity": "travel-type", "value":
-      "safari"} - Tell me about [safari]{"entity":"travel-type", "value":
-      "safari"} options - [Safaris]{"entity":"travel-type", "value": "safari"}
-      sound exciting, where should I go? - Share information about wildlife
-      [safaris]{"entity":"travel-type", "value": "safari"}.  - What are the best
-      [safari]{"entity":"travel-type", "value": "safari"} destinations? - I want
-      to explore nature through [safaris]{"entity":"travel-type", "value":
-      "safari"}. - [Safari]{"entity":"travel-type", "value": "safari"}
-      adventures, please! - Where can I experience a great
-      [safari]{"entity":"travel-type", "value": "safari"}? - Tell me more about
-      [safari]{"entity":"travel-type", "value": "safari"} travel. - I'm
-      fascinated by [safaris]{"entity":"travel-type", "value": "safari"}, guide
-      me. - I'm looking for [themed]{"entity":"travel-type", "value": "themed"}
-      travel experiences. - Tell me about unique
-      [themed]{"entity":"travel-type", "value": "themed"} vacations. - What are
-      some interesting [themed]{"entity":"travel-type", "value": "themed"}
-      trips? - Share information on [themed]{"entity":"travel-type", "value":
-      "themed"} destinations. - [Themed]{"entity":"travel-type", "value":
-      "themed"} travel ideas, please! - I want to explore destinations with a
-      [theme]{"entity":"travel-type", "value": "themed"}. - Guide me on
-      [themed]{"entity":"travel-type", "value": "themed"} vacation planning. -
-      Where can I find [themed]{"entity":"travel-type", "value": "themed"}
-      travel packages? - Share some [themed]{"entity":"travel-type", "value":
-      "themed"} travel inspiration. - I'm curious about
-      [themed]{"entity":"travel-type", "value": "themed"} vacations, tell me
-      more. - I need assistance with arranging a
-      [business]{"entity":"travel-type", "value": "corporate"} trip  - I need
-      information on [corporate]{"entity":"travel-type", "value": "corporate"}
-      travel. - Planning a [business trip]{"entity":"travel-type", "value":
-      "corporate"}, any suggestions? - Where should I go for a
-      [corporate]{"entity":"travel-type", "value": "corporate"} retreat? - Share
-      [corporate]{"entity":"travel-type", "value": "corporate"} travel
-      destinations. - What are some [business-friendly]{"entity":"travel-type",
-      "value": "corporate"} travel spots? - Guide me on
-      [corporate]{"entity":"travel-type", "value": "corporate"} travel planning.
-      - I'm traveling for [work]{"entity":"travel-type", "value": "corporate"},
-      help me plan. - [Corporate]{"entity":"travel-type", "value": "corporate"}
-      travel advice needed. - Any recommendations for
-      [business]{"entity":"travel-type", "value": "corporate"} trips? - Tell me
-      about travel options for [professionals]{"entity":"travel-type", "value":
-      "corporate"}. - I want to explore [local]{"entity":"travel-type", "value":
-      "local"} travel options. - Tell me about vacation spots within [my
-      country][local]{"entity":"travel-type", "value": "local"}. - Where can I
-      go for a [local[local]{"entity":"travel-type", "value": "local"} getaway?
-      - Share [local[local]{"entity":"travel-type", "value": "local"} travel
-      destinations. - Any suggestions for [local[local]{"entity":"travel-type",
-      "value": "local"} vacation spots? - I'm looking for
-      [nearby[local]{"entity":"travel-type", "value": "local"} travel ideas. -
-      Guide me on [local]{"entity":"travel-type", "value": "local"} vacation
-      planning. - [Local]{"entity":"travel-type", "value": "local"} travel
-      recommendations, please! - What are some popular
-      [local]{"entity":"travel-type", "value": "local"} destinations? - Explore
-      [local]{"entity":"travel-type", "value": "local"} gems for me. - I'm
-      seeking help with arranging transportation for a [corporate
-      meeting]{"entity": "travel-type", "value":"corporate"} in
-      [Paris]{"entity": "LOC", "role": "destination"}.  - I need assistance in
-      scheduling meetings for our [business trip]{"entity":"travel-type",
-      "value": "corporate"} to [San Francisco]{"entity": "LOC", "role":
-      "destination"}.  - Can you book a hotel for our [corporate
-      delegation]{"entity": "travel-type", "value": "corporate"} visiting
-      [Dubai]{"entity": "LOC", "role": "destination"}?  - I'm looking for
-      assistance in managing travel itineraries for our
-      [executives]{"entity":"travel-type", "value": "corporate"}.  - Can you
-      help arrange a [seminar venue]{"entity": "travel-type", "value":
-      "corporate"} for our [corporate]{"entity": "travel-type", "value":
-      "corporate"} event in [Sydney]{"entity": "LOC", "role": "destination"}? -
-      I'm looking for accommodation options for a [professional
-      conference]{"entity": "travel-type", "value": "corporate"} in
-      [London]{"entity": "LOC", "role": "destination"}.  - I require your
-      support in organizing a [company retreat]{"entity": "travel-type",
-      "value":"corporate"} in the [Bahamas]{"entity": "LOC", "role":
-      "destination"}.  - Can you assist with planning a [business]{"entity":
-      "travel-type", "value": "corporate"} trip to [Tokyo]{"entity": "LOC",
-      "role":"destination"} for our team? - I am interested in
-      [safaris]{"entity":"travel-type", "value": "local"} in Kenya.
+      - My name is [John Doe]{"entity": "PERSON", "value": "John Doe"}. - My
+      colleague is [Mary Wanjiru]{"entity": "PERSON", "value": "Mary
+      Wanjiru"}.  - Phone number [+2541234567890]{"entity": "phoneNo", "value":
+      "+2541234567890"}.  - [+2559876543210]{"entity": "phoneNo", "value":
+      "+2559876543210"}. - I'm [David Ochieng]{"entity": "PERSON", "value":
+      "David Ochieng"}. - I'm with [Sara Njeri]{"entity": "PERSON", "value":
+      "Sara Njeri"}.  - You can contact me at [+2545557890"]{"entity":
+      "phoneNo", "value": "+2545557890"}. - [+2558765432]{"entity": "phoneNo",
+      "value": "+2558765432"}. - [Kwame Agyei]{"entity": "PERSON", "value":
+      "Kwame Agyei"}. - [Aisha Kamau]{"entity": "PERSON", "value": "Aisha
+      Kamau"}. - Reach Kwame at [+2562345678]{"entity": "phoneNo", "value":
+      "+2562345678"}. - Aisha at [+2549871234]{"entity": "phoneNo", "value":
+      "+2549871234"}. - [James Mwangi]{"entity": "PERSON", "value": "James
+      Mwangi"}. - [Grace Nyambura]{"entity": "PERSON", "value": "Grace
+      Nyambura"}. - Number is [+2558765432]{"entity": "phoneNo", "value":
+      "+2558765432"}. - [Michael Onyango]{"entity": "PERSON", "value": "Michael
+      Onyango"}. - [Lilian Auma]{"entity": "PERSON", "value": "Lilian Auma"} at
+      [+2549876543210]{"entity": "phoneNo", "value": "+2549876543210"}. -
+      [Daniel Kamau]{"entity": "PERSON", "value": "Daniel Kamau"}. - [Samantha
+      Akinyi]{"entity": "PERSON", "value": "Samantha Akinyi"}. - [Ngozi
+      Eze]{"entity": "PERSON", "value": "Ngozi Eze"}. - [Kwesi Asante]{"entity":
+      "PERSON", "value": "Kwesi Asante"}. - [Wangari Maina]{"entity": "PERSON",
+      "value": "Wangari Maina"}. - [Oluwafemi Ojo]{"entity": "PERSON", "value":
+      "Oluwafemi Ojo"}. - [Fatima Bello]{"entity": "PERSON", "value": "Fatima
+      Bello"}. - [Jacob Mugo]{"entity": "PERSON", "value": "Jacob Mugo"} at
+      [+2549876543211]{"entity": "phoneNo", "value": "+2549876543211"}. -
+      [Naledi Moloi]{"entity": "PERSON", "value": "Naledi Moloi"}. - [Felix
+      Kiplagat]{"entity": "PERSON", "value": "Felix Kiplagat"}. - [Abena
+      Owusu]{"entity": "PERSON", "value": "Abena Owusu"}. - [Simba
+      Ndlovu]{"entity": "PERSON", "value": "Simba Ndlovu"} at
+      [+2549876543212]{"entity": "phoneNo", "value": "+2549876543212"}. -
+      [Chioma Obi]{"entity": "PERSON", "value": "Chioma Obi"}. - [Kwabena
+      Osei]{"entity": "PERSON", "value": "Kwabena Osei"}. - [Amina
+      Ibrahim]{"entity": "PERSON", "value": "Amina Ibrahim"}. - [Brian
+      Kimani]{"entity": "PERSON", "value": "Brian Kimani"} at
+      [0776543213]{"entity": "phoneNo", "value": "0776543213"}. - [Chinwe
+      Onuoha]{"entity": "PERSON", "value": "Chinwe Onuoha"}. - [Juma
+      Musa]{"entity": "PERSON", "value": "Juma Musa"}. - [Tariro
+      Chuma]{"entity": "PERSON", "value": "Tariro Chuma"}. - [Malik
+      Ndiaye]{"entity": "PERSON", "value": "Malik Ndiaye"} at
+      [0776543214]{"entity": "phoneNo", "value": "0776543214"}. - [Sadia
+      Abdi]{"entity": "PERSON", "value": "Sadia Abdi"}. - [Musa Kamau]{"entity":
+      "PERSON", "value": "Musa Kamau"}.
+
+
+      - [Safaris 🗺🦓]{"entity":"travel-type", "value": "safari"} - [Themed 🎉]{"entity":"travel-type", "value": "themed"} - [Corporate 🏢]{"entity":"travel-type", "value": "corporate"} - [Local 🏞]{"entity":"travel-type", "value": "local"} - My name is [John Doe]{"entity": "PERSON", "value": "John Doe"} and my phone number is [123-456-7890]{"entity": "phoneNo", "value": "123-456-7890"}. - Contact [Alice]{"entity": "PERSON", "value": "Alice"} at [987654321]{"entity": "phoneNo", "value": "987654321"}. - I need assistance from [Jane Smith]{"entity": "PERSON", "value": "Jane Smith"}. You can reach me at [555-1234]{"entity": "phoneNo", "value": "555-1234"}. - [Bob]{"entity": "PERSON", "value": "Bob"}'s contact number is [456-7890]{"entity": "phoneNo", "value": "456-7890"}. - Please connect me with [Emily]{"entity": "PERSON", "value": "Emily"} at [876543210]{"entity": "phoneNo", "value": "876543210"}. - [Sam]{"entity": "PERSON", "value": "Sam"} is the person to contact. His phone number is [987-654-3210]{"entity": "phoneNo", "value": "987-654-3210"}. - I'm trying to reach [Sara]{"entity": "PERSON", "value": "Sara"}. Her phone number is [111-222-3333]{"entity": "phoneNo", "value": "111-222-3333"}. - [Michael]{"entity": "PERSON", "value": "Michael"} is available at [555-6789]{"entity": "phoneNo", "value": "555-6789"}. - Contact [Lucy]{"entity": "PERSON", "value": "Lucy"} at [987-654-3211]{"entity": "phoneNo", "value": "987-654-3211"} for more information. - I'm [Alex]{"entity": "PERSON", "value": "Alex"} and my phone number is [444-555-6666]{"entity": "phoneNo", "value": "444-555-6666"}. - I'm interested in going on a [safari]{"entity": "travel-type", "value": "safari"} - Tell me about [safari]{"entity":"travel-type", "value": "safari"} options - [Safaris]{"entity":"travel-type", "value": "safari"} sound exciting, where should I go? - Share information about wildlife [safaris]{"entity":"travel-type", "value": "safari"}.  - What are the best [safari]{"entity":"travel-type", "value": "safari"} destinations? - I want to explore nature through [safaris]{"entity":"travel-type", "value": "safari"}. - [Safari]{"entity":"travel-type", "value": "safari"} adventures, please! - Where can I experience a great [safari]{"entity":"travel-type", "value": "safari"}? - Tell me more about [safari]{"entity":"travel-type", "value": "safari"} travel. - I'm fascinated by [safaris]{"entity":"travel-type", "value": "safari"}, guide me. - I'm looking for [themed]{"entity":"travel-type", "value": "themed"} travel experiences. - Tell me about unique [themed]{"entity":"travel-type", "value": "themed"} vacations. - What are some interesting [themed]{"entity":"travel-type", "value": "themed"} trips? - Share information on [themed]{"entity":"travel-type", "value": "themed"} destinations. - [Themed]{"entity":"travel-type", "value": "themed"} travel ideas, please! - I want to explore destinations with a [theme]{"entity":"travel-type", "value": "themed"}. - Guide me on [themed]{"entity":"travel-type", "value": "themed"} vacation planning. - Where can I find [themed]{"entity":"travel-type", "value": "themed"} travel packages? - Share some [themed]{"entity":"travel-type", "value": "themed"} travel inspiration. - I'm curious about [themed]{"entity":"travel-type", "value": "themed"} vacations, tell me more. - I need assistance with arranging a [business]{"entity":"travel-type", "value": "corporate"} trip  - I need information on [corporate]{"entity":"travel-type", "value": "corporate"} travel. - Planning a [business trip]{"entity":"travel-type", "value": "corporate"}, any suggestions? - Where should I go for a [corporate]{"entity":"travel-type", "value": "corporate"} retreat? - Share [corporate]{"entity":"travel-type", "value": "corporate"} travel destinations. - What are some [business-friendly]{"entity":"travel-type", "value": "corporate"} travel spots? - Guide me on [corporate]{"entity":"travel-type", "value": "corporate"} travel planning. - I'm traveling for [work]{"entity":"travel-type", "value": "corporate"}, help me plan. - [Corporate]{"entity":"travel-type", "value": "corporate"} travel advice needed. - Any recommendations for [business]{"entity":"travel-type", "value": "corporate"} trips? - Tell me about travel options for [professionals]{"entity":"travel-type", "value": "corporate"}. - I want to explore [local]{"entity":"travel-type", "value": "local"} travel options. - Tell me about vacation spots within [my country][local]{"entity":"travel-type", "value": "local"}. - Where can I go for a [local[local]{"entity":"travel-type", "value": "local"} getaway? - Share [local[local]{"entity":"travel-type", "value": "local"} travel destinations. - Any suggestions for [local[local]{"entity":"travel-type", "value": "local"} vacation spots? - I'm looking for [nearby[local]{"entity":"travel-type", "value": "local"} travel ideas. - Guide me on [local]{"entity":"travel-type", "value": "local"} vacation planning. - [Local]{"entity":"travel-type", "value": "local"} travel recommendations, please! - What are some popular [local]{"entity":"travel-type", "value": "local"} destinations? - Explore [local]{"entity":"travel-type", "value": "local"} gems for me. - I'm seeking help with arranging transportation for a [corporate meeting]{"entity": "travel-type", "value":"corporate"} in [Paris]{"entity": "LOC", "role": "destination"}.  - I need assistance in scheduling meetings for our [business trip]{"entity":"travel-type", "value": "corporate"} to [San Francisco]{"entity": "LOC", "role": "destination"}.  - Can you book a hotel for our [corporate delegation]{"entity": "travel-type", "value": "corporate"} visiting [Dubai]{"entity": "LOC", "role": "destination"}?  - I'm looking for assistance in managing travel itineraries for our [executives]{"entity":"travel-type", "value": "corporate"}.  - Can you help arrange a [seminar venue]{"entity": "travel-type", "value": "corporate"} for our [corporate]{"entity": "travel-type", "value": "corporate"} event in [Sydney]{"entity": "LOC", "role": "destination"}? - I'm looking for accommodation options for a [professional conference]{"entity": "travel-type", "value": "corporate"} in [London]{"entity": "LOC", "role": "destination"}.  - I require your support in organizing a [company retreat]{"entity": "travel-type", "value":"corporate"} in the [Bahamas]{"entity": "LOC", "role": "destination"}.  - Can you assist with planning a [business]{"entity": "travel-type", "value": "corporate"} trip to [Tokyo]{"entity": "LOC", "role":"destination"} for our team? - I am interested in [safaris]{"entity":"travel-type", "value": "local"} in Kenya.
   - intent: inform_safari
     examples: >
       - [Kenya🇰🇪]{"entity":"safari-type", "value": "kenya"}  - [East
