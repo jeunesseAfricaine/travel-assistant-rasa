@@ -15,13 +15,13 @@ stories:
       - slot_was_set:
           - phone_num: 0723456798
       - slot_was_set:
-          - requested_slot: check-in
+          - requested_slot: check_in
       - slot_was_set:
-          - check-in: Jan 18th
+          - check_in: Jan 18th
       - slot_was_set:
-          - requested_slot: check-out
+          - requested_slot: check_out
       - slot_was_set:
-          - check-out: Jan 24th
+          - check_out: Jan 24th
       - slot_was_set:
           - requested_slot: num_people
       - slot_was_set:
