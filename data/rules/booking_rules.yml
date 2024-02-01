@@ -13,7 +13,10 @@ rules:
     steps:
       - action: booking_form
       - active_loop: null
-      - action: utter_anything_else
+      - slot_was_set:
+        - requested_slot: null
+      - action: utter_confirm_booking
+      wait_for_user_input: false
       
   - rule: Plan vacation + safari
     steps:
