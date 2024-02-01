@@ -27,9 +27,9 @@ stories:
       - slot_was_set:
           - num_people: 6 travelers
       - slot_was_set:
-          - requested_slot: num_rooms
+          - requested_slot: accom_type
       - slot_was_set:
-          - num_rooms: 3 rooms
+          - accom_type: Villa
       - slot_was_set:
           - requested_slot: mode_of_transport
       - slot_was_set:
@@ -37,6 +37,7 @@ stories:
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
+      - action: utter_confirm_booking
       - action: utter_anything_else
       
   - story: explore destination + safari 
