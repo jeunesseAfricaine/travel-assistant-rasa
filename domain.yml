@@ -247,7 +247,7 @@ slots:
         entity: accommodation-type
       - type: from_intent
         intent: inform_accomodation_type
-        value: Tents ⛺
+        value: for camping
   check_in:
     type: any
     mappings:
