@@ -1,391 +1,464 @@
 ---
 version: "3.1"
-intents:
-  - start
-  - affirm
-  - deny
-  - stop
-  - start_booking
-  - inform_vacation_plan
-  - inform_transport_mode
-  - inform_corporate
-  - inform_theme
-  - inform_local
-  - inform_safari
-  - inform_group_size
-  - inform_date
-  - inform_num_rooms
-  - inform_budget_range
-  - goodbye
-  - chitchat
-  - thankyou
-  - faq
-  - nlu_fallback
-  - inform
-  - inform_accomodation_type
-responses:
-  utter_greet:
-    - text: Hello! Welcome to Voyage Companion! I am your AI travel virtual assistant.
-        How can I assist you with your travel plans today?😊
-      buttons:
-        - title: Explore destinations 🌍
-          payload: /inform_vacation_plan
-        - title: Book Now 🏨
-          payload: /start_booking
-      button_type: vertical
-  utter_ask_travel_type:
-    - text: Sure, I can help you with that. What specific package are you looking for?
-      image: https://www.andbeyond.com/wp-content/uploads/sites/5/guest-area-with-golden-sunrise-at-andbeyond-bateleur-camp-on-a-luxury-kenya-safari1.jpg
-      buttons:
-        - title: Safaris 🗺🦓
-          payload: /inform{{"travel-type":"safari"}}
-        - title: Themed 🎉
-          payload: /inform{{"travel-type":"themed"}}
-        - title: Corporate 🏢
-          payload: /inform{{"travel-type":"corporate"}}
-        - title: Local 🏞️
-          payload: /inform{{"travel-type":"local"}}
-      button_type: vertical
-  utter_ask_safari_type:
-    - text: Planning a safari is exciting! Here are some Safari options you might be
-        interested in
-      image: https://www.flightcentre.co.nz/sites/default/files/product-images/8807405223966-a0715d679ff86f60821264dde776e27c.jpg
-      buttons:
-        - title: Kenya🇰🇪
-          payload: /inform_safari{{"safari-type", "kenya"}}
-        - title: East Africa🌍
-          payload: /inform_safari{{"safari-type", "east-africa"}}
-        - title: South Africa🇿🇦
-          payload: /inform_safari{{"safari-type", "south-africa"}}
-      button_type: vertical
-  utter_ask_local_type:
-    - text: Planning a local adventure! Here are some packages you might be interested
-        in
-      image: https://www.safaritravelplus.com/wp-content/uploads/2018/08/kenya-Beach-holidays.jpg
-      buttons:
-        - title: Beach 🏖️
-          payload: /inform_local{{"local-type", "beach"}}
-        - title: Weekend 🌄
-          payload: /inform_local{{"local-type", "weekend"}}
-      button_type: vertical
-  utter_ask_theme_type:
-    - text: Please check out these options for themed packages?
-      image: https://i.pinimg.com/originals/40/1b/a6/401ba6c29f813068c505737ffdb8d33f.jpg
-      buttons:
-        - title: Valentines ❤️
-          payload: /inform_theme{{"theme-type", "valentines"}}
-        - title: Honeymoon 💑
-          payload: /inform_theme{{"theme-type", "honeymoon"}}
-        - title: Easter 🐰
-          payload: /inform_theme{{"theme-type", "easter"}}
-        - title: Madaraka 🇰🇪
-          payload: /inform_theme{{"theme-type", "madaraka"}}
-        - title: Mashujaa 🎖️
-          payload: /inform_theme{{"theme-type", "mashujaa"}}
-        - title: Jamhuri 🇰🇪
-          payload: /inform_theme{{"theme-type", "jamhuri"}}
-        - title: Christmas 🎄
-          payload: /inform_theme{{"theme-type", "christmas"}}
-      button_type: vertical
-  utter_ask_corporate:
-    - text: Please check out these options for corporate packages.
-      image: https://btttravel.com/wp-content/uploads/2015/01/Slider-4.jpg
-      buttons:
-        - title: Bleisure 🏢✈️
-          payload: /inform_corporate{{"corporate", "bleisure"}}
-        - title: Conferences 📚
-          payload: /inform_corporate{{"corporate", "conference"}}
-        - title: Trade Fair 🎪
-          payload: /inform_corporate{{"corporate", "trade-fair"}}
-      button_type: vertical
-  utter_ask_budget_range:
-    - text: Could you let me know your budget range for the trip?💰
-      buttons:
-        - title: On-budget 💸
-          payload: /inform_budget_range{{"budget-range", "budget"}}
-        - title: Mid-range 💳
-          payload: /inform_budget_range{{"budget-range", "mid-range"}}
-        - title: Luxury 💎
-          payload: /inform_budget_range{{"budget-range", "luxury"}}
-      button_type: vertical
-  utter_top_deals:
-    - text: I appreciate your interest in the {travel_type} package. Currently, it's
-        not available, but rest assured, we are working diligently to make it
-        accessible for you. May I assist you with any other travel preferences?
-      buttons:
-        - title: Other destinations 🏞️
-          payload: /inform_vacation_plan
-        - title: Quick Booking 🛎️
-          payload: /start_booking
-  utter_ask_transport_mode:
-    - text: How would you like to travel to your destination? Choose your preferred
-        mode of transport.
-      buttons:
-        - title: Self-Drive 🚗
-          payload: /inform_transport_mode{"mode-of-transport", "self-drive"}
-        - title: SGR 🚆
-          payload: /inform_transport_mode{"mode-of-transport", "sgr"}
-        - title: Flying ✈️
-          payload: /inform_transport_mode{"mode-of-transport", "flying"}
-        - title: Tour Van 🚐
-          payload: /inform_transport_mode{"mode-of-transport", "tour-van"}
-        - title: Cruiser 🚢
-          payload: /inform_transport_mode{"mode-of-transport", "cruiser"}
-  utter_ask_name:
-    - text: What is your full name?
-  utter_ask_phone_num:
-    - text: What is your phone number?
-  utter_ask_check_in:
-    - text: When are you planning to check in? Say dates like 'May 15' or 'next month'
-  utter_ask_check_out:
-    - text: When are you planning to check out? Say dates like 'May 16' or 'next
-        Monday'
-  utter_ask_accom_type:
-    - text: Where would you like to stay?
-      image: https://food-mag.co.uk/wp-content/uploads/2022/04/Hotels-with-self-catering-accommodation-Bovey-Castle.jpg
-      buttons:
-        - title: Cottages 🏡
-          payload: /inform_accomodation_type{"accommodation-type", "cottages"}
-        - title: Villas 🏰
-          payload: /inform_accomodation_type{"accommodation-type", "villas"}
-        - title: Resorts 🏝
-          payload: inform_accomodation_type{"accommodation-type", "resorts"}
-        - title: Hotels 🏨
-          payload: inform_accomodation_type{"accommodation-type", "hotels"}
-        - title: Lodges 🏡
-          payload: inform_accomodation_type{"accommodation-type", "lodges"}
-        - title: Tents ⛺
-          payload: inform_accomodation_type{"accommodation-type", "tents"}
-      button_type: vertical
-  utter_ask_num_people:
-    - text: How many people are traveling with you?👥
-  utter_default:
-    - text: I'm sorry, I can't help you.
-      buttons:
-        - title: Start Over 🔄
-          payload: /restart
-  utter_goodbye:
-    - text: Thank you for using our services! Should you need assistance in the
-        future, I'll be here. Take care!
-    - text: Your travel plans matter! If there's anything else I can do, I'm just a
-        message away. Goodbye for now!
-    - text: It's been great helping you today! If there's anything else you need, just
-        ask. Bye for now!
-    - text: Bye for now.
-  utter_ask_rephrase:
-    - text: Could you please provide more details?
-    - text: I'd love to understand better. Can you elaborate?
-  utter_anything_else:
-    - text: Please reach out if you have any further question.
-  utter_confirm_booking:
-    - text: Great! Confirming your booking details, 🏠 Accommodation - {accom_type},
-        🧑‍🤝‍🧑 Guests - {num_people}, 📅 Stay - {check_in} to {check_out}, ☎️
-        - {phone_num}. All set {name}!
-  utter_check_options:
-    - text: Thank you for your interest in {travel_type} travel! Currently, our
-        {travel_type} travel feature is still in development. We're working hard
-        to bring you personalized and tailored travel experiences. In the
-        meantime, I'd be delighted to assist you with any FAQs like, 'Does it
-        cost more to book my vacation with a virtual travel assistant?'
-  utter_youarewelcome:
-    - text: You're most welcome! Safe travels, and feel free to reach out if you need
-        anything else. Bon voyage!😊
-    - text: Karibu! Safe travels, and feel free kureach out if you need anything else.
-        Safari njema!😊
-    - text: Anytime maze! Unaeza nitext in case u need anything else. Safiri salama!😊
-entities:
-  - number
-  - LOC:
-      roles:
-        - departure
-        - destination
-  - budget-range
-  - time
-  - amount-of-money
-  - travel-type
-  - mode-of-transport
-  - safari-type
-  - theme-type
-  - corporate
-  - PERSON
-  - phoneNo
-  - local-type
-  - accommodation-type
-slots:
-  name:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: PERSON
-  phone_num:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: phoneNo
-      - type: from_entity
-        entity: number
-  num_people:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: number
-      - type: from_intent
-        intent: inform_group_size
-        value: couple
-  accom_type:
-    influence_conversation: false
-    type: categorical
-    values:
-      - Hotels
-      - Resorts
-      - Lodges
-      - Villas
-      - Cottages
-      - Tents
-    mappings:
-      - type: from_entity
-        entity: accommodation-type
-      - type: from_intent
-        intent: inform_accomodation_type
-        value: Tents ⛺
-  check_in:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: time
-      - type: from_intent
-        intent: inform_date
-        value: tomorrow
-  check_out:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: time
-      - type: from_intent
-        intent: inform_date
-        value: Jan 24th
-  mode_of_transport:
-    influence_conversation: false
-    type: categorical
-    values:
-      - Self-Drive
-      - SGR
-      - Flying
-      - Tour Van
-      - Cruiser
-    mappings:
-      - type: from_entity
-        entity: mode-of-transport
-      - type: from_intent
-        intent: inform_transport_mode
-        value: plane
-  travel_type:
-    influence_conversation: true
-    type: categorical
-    values:
-      - safari
-      - themed
-      - corporate
-      - local
-    mappings:
-      - type: from_entity
-        entity: travel-type
-  safari_type:
-    influence_conversation: true
-    type: categorical
-    values:
-      - kenya
-      - east-africa
-      - south-africa
-    mappings:
-      - type: from_entity
-        entity: safari-type
-      - type: from_intent
-        intent: inform_safari
-        value: wildlife
-  theme_type:
-    influence_conversation: true
-    type: categorical
-    values:
-      - valentines
-      - honeymoon
-      - easter
-      - madaraka
-      - mashujaa
-      - jamhuri
-      - christmas
-    mappings:
-      - type: from_entity
-        entity: theme-type
-      - type: from_intent
-        intent: inform_theme
-        value: holiday getaways
-  local_type:
-    influence_conversation: true
-    type: categorical
-    values:
-      - beach
-      - weekend
-    mappings:
-      - type: from_entity
-        entity: local-type
-      - type: from_intent
-        intent: inform_local
-        value: visit nearby
-  corporate:
-    influence_conversation: true
-    type: categorical
-    values:
-      - bleisure
-      - conference
-      - trade-fair
-    mappings:
-      - type: from_entity
-        entity: corporate
-      - type: from_intent
-        intent: inform_corporate
-        value: team-building event
-  budget_range:
-    influence_conversation: true
-    type: categorical
-    values:
-      - budget
-      - mid-range
-      - luxury
-    mappings:
-      - type: from_entity
-        entity: amount-of-money
-      - type: from_entity
-        entity: budget-range
-      - type: from_intent
-        intent: inform_budget_range
-        value: GBP 1200
-forms:
-  booking_form:
-    required_slots:
-      - name
-      - phone_num
-      - accom_type
-      - check_in
-      - check_out
-      - num_people
-      - mode_of_transport
-  safari_form:
-    required_slots:
-      - safari_type
-      - budget_range
-  themed_form:
-    required_slots:
-      - theme_type
-      - budget_range
-  corporate_form:
-    required_slots:
-      - corporate
-      - budget_range
-  local_form:
-    required_slots:
-      - local_type
-      - budget_range
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+nlu:
+  - intent: start_booking
+    examples: |
+      - Book Now 🏨
+      - I want to make a booking.
+      - Start the booking process.
+      - Can I book a trip?
+      - Let's begin the booking.
+      - I'm ready to book.
+      - Begin the reservation.
+      - How can I make a booking?
+      - Start the booking form.
+      - Let's initiate the booking process.
+      - I'd like to book a package.
+      - Can I start the booking?
+      - I want to make a booking.
+      - Anza mchakato wa kubook.
+      - How can I book a safari?
+      - Nianzishe mchakato wa kubook.
+      - Let's start the reservation.
+      - Tuanzishe mchakato wa booking.
+      - I'm ready to book my trip.
+      - Nataka kuanza booking yangu.
+      - Can I initiate the booking process?
+      - Je, naweza kuanzisha mchakato wa kubook?
+  - intent: inform_group_size
+    examples: |
+      - We are a group of 4 people.
+      - Find destinations for a group of 10.
+      - Find destinations for couples
+      - Suggest options for large group travel.
+      - We are 2 friends looking for a vacation.
+      - Show me options for a small group trip.
+      - I want to travel with a family of 5
+      - Find destinations suitable for solo travel
+      - List options for a group of friends vacation.
+      - I'm planning for a couple's getaway.
+      - we are a group of four.
+      - tuko watu wawili
+      - I'm traveling with a group of 5 people
+      - Our group size is 10 members
+      - I have 3 friends joining me.
+      - We are a group of 6 individuals
+      - There are 8 of us planning the trip.
+      - Our group consists of 12 participants
+      - I'll be traveling with 7 companions
+      - The group size is 4 travelers
+      - We have 9 members in our group.
+      - Our group consists of 15 people
+      - I'm planning for a group of 20 individuals
+      - There will be 2 of us on the trip.
+      - Our group size is 18 participants
+      - I have 5 friends joining me.
+      - We are a group of 14 travelers
+      - There are 3 of us planning the trip.
+      - Our group consists of 11 companions
+      - I'll be traveling with 6 participants
+      - The group size is 8 friends
+  - intent: inform_num_of_rooms
+    examples: |
+      - I'd like to book 2 rooms for my stay.
+      - We'll need 3 rooms for our group.
+      - Booking a single room for the night.
+      - Can I reserve 4 rooms for the upcoming dates?
+      - Need accommodation for 2 adults and 2 kids, so 2 rooms please.
+      - Planning to stay with friends, so we'll need 5 rooms in total.
+      - Just one room for a solo traveler.
+      - We're a family of 6, so we require 3 rooms.
+      - Booking 2 rooms for a weekend getaway.
+      - Reserving 4 rooms for a corporate event.
+      - I'd like to inform you that we'll need 3 rooms.
+      - Can you help me book 2 rooms for the specified dates?
+      - Informing about the need for 1 room with a double bed.
+      - Needing accommodation for a group, so 6 rooms are required.
+      - Planning to stay for a week and would like to book 3 rooms.
+      - Please arrange 2 rooms with twin beds.
+      - Booking 4 rooms for a family vacation.
+      - I'm interested in reserving 1 room for the night.
+      - Informing you that we'll need 5 rooms for the upcoming trip.
+  - intent: inform_date
+    examples: |
+      - Can you arrange my check-in for next Monday?
+      - I'd like to check in three days from now.
+      - Please schedule my arrival for two weeks later.
+      - Is it possible to check in on the first day of next month?
+      - Arrange my check-in in the next week.
+      - I want to check in tomorrow.
+      - Please schedule my arrival in three months.
+      - Is it possible to check in next Friday?
+      - Arrange my check-in in the next two days.
+      - I'd like to check in next year.
+      - Please schedule my arrival in four weeks.
+      - Is it possible to check in in the next month?
+      - Arrange my check-in this weekend.
+      - I want to check in next Tuesday.
+      - Please schedule my arrival in the next six months.
+      - Is it possible to check in on the last day of this month?
+      - Arrange my check-in next Thursday.
+      - I'd like to check in in the next ten days.
+      - Please schedule my arrival next weekend.
+      - Is it possible to check in in the next quarter?
+      - Arrange my check-in next month on the 20th.
+      - I want to check in in the next year.
+      - Can you arrange my check-in on March 5th?
+      - Can you arrange my check-in on Mar 16th?
+      - I'd like to check in on the 10th of June.
+      - Please schedule my arrival for July 15th.
+      - Is it possible to check in on August 1st?
+      - I want to start my stay on September 10th.
+      - I want to start my stay on Sep 20th.
+      - Arrange my check-in for October 25th, please.
+      - Arrange my check-in for Oct 8th, please.
+      - Can you book my arrival on November 8th?
+      - Nov 8th?
+      - I'd like to check in on December 3rd.
+      - check in on Dec 2nd
+      - Schedule my arrival for January 12th.
+      - Jan 8th.
+      - Please arrange my check-in on February 18th.
+      - I want to start my stay on March 21st.
+      - Can you check me in on April 7th?
+      - I'd like to arrive on May 30th.
+      - Schedule my check-in for June 12th, if possible.
+      - Is there availability for check-in on July 3rd?
+      - I plan to check out on March 10th.
+      - Can I check out on the 15th of June?
+      - My stay ends on July 25th, so arrange check-out.
+      - Please schedule my departure for August 5th.
+      - I want to end my stay on September 18th.
+      - Arrange my check-out on October 30th, please.
+      - Can I check out on November 15th?
+      - I'd like to end my stay on December 8th.
+      - Schedule my departure for January 20th.
+      - Please arrange check-out on February 28th.
+      - I plan to check out on March 10th.
+      - Can I check out on April 2nd?
+      - My stay ends on May 15th, so arrange check-out.
+      - Please schedule my departure for June 8th.
+      - I want to end my stay on July 1st.
+  - intent: inform_vacation_plan
+    examples: >
+      - I'm planning a vacation to explore some exotic places.  - I've
+      decided to go on a vacation and explore new destinations.  - I'm
+      organizing a holiday trip and seeking some suggestions.  - Planning a
+      getaway to relax and unwind from work.  - I want to plan a vacation to a
+      beautiful location. - Considering a vacation to rejuvenate and experience
+      new cultures.  - I've been thinking about taking a break and planning a
+      vacation.  - I'm looking to organize a vacation to enjoy some time off.  -
+      Interested in arranging a vacation to visit some scenic spots.  - I want
+      to schedule a holiday to discover some picturesque places. - Nadai
+      vacation to explore some beautiful destinations. - Recently, nimekuwa
+      nikifikiria kupanga likizo to unwind. - Thinking about kuandaa likizo ya
+      kugundua different landscapes. - I've got the travel bug na nataka kuplan
+      a vacation to satisfy it. - Exploring the idea ya kuchukua vacation to
+      discover hidden gems. - Ni time for a break, na ninafikiria kuplan a
+      vacation. - Considering vacation to escape na kujitosa kwenye new
+      surroundings. - I'm in the mood for a holiday; any suggestions for a great
+      vacation? - I want kuandaa vacation to create unforgettable memories. -
+      Exploring the possibility ya vacation to enjoy some quality time. -
+      Planning a getaway to explore diverse cultures and cuisines. - I'm looking
+      kuandaa vacation to experience new adventures. - Interested in arranging
+      vacation to unwind na recharge. - Dreaming ya vacation to disconnect na
+      relax by the beach. - Considering vacation to capture breathtaking moments
+      through travel. - I want kuschedule a holiday to visit some
+      off-the-beaten-path destinations. - I'm yearning for a vacation to immerse
+      myself in nature na tranquility. - Exploring the idea ya planning a
+      vacation to explore historic sites. - I've decided ni time for a vacation
+      to explore different climates. - Thinking about kuandaa vacation to
+      discover vibrant city life.
+  - intent: inform
+    examples: >
+      - My name is [John Doe]{"entity": "PERSON", "value": "John Doe"}. - My
+      colleague is [Mary Wanjiru]{"entity": "PERSON", "value": "Mary
+      Wanjiru"}.  - Phone number [+2541234567890]{"entity": "phoneNo", "value":
+      "+2541234567890"}.  - [+2559876543210]{"entity": "phoneNo", "value":
+      "+2559876543210"}. - I'm [David Ochieng]{"entity": "PERSON", "value":
+      "David Ochieng"}. - I'm with [Sara Njeri]{"entity": "PERSON", "value":
+      "Sara Njeri"}.  - You can contact me at [+2545557890"]{"entity":
+      "phoneNo", "value": "+2545557890"}. - [+2558765432]{"entity": "phoneNo",
+      "value": "+2558765432"}. - [Kwame Agyei]{"entity": "PERSON", "value":
+      "Kwame Agyei"}. - [Aisha Kamau]{"entity": "PERSON", "value": "Aisha
+      Kamau"}. - Reach Kwame at [+2562345678]{"entity": "phoneNo", "value":
+      "+2562345678"}. - Aisha at [+2549871234]{"entity": "phoneNo", "value":
+      "+2549871234"}. - [James Mwangi]{"entity": "PERSON", "value": "James
+      Mwangi"}. - [Grace Nyambura]{"entity": "PERSON", "value": "Grace
+      Nyambura"}. - Number is [+2558765432]{"entity": "phoneNo", "value":
+      "+2558765432"}. - [Michael Onyango]{"entity": "PERSON", "value": "Michael
+      Onyango"}. - [Lilian Auma]{"entity": "PERSON", "value": "Lilian Auma"} at
+      [+2549876543210]{"entity": "phoneNo", "value": "+2549876543210"}. -
+      [Daniel Kamau]{"entity": "PERSON", "value": "Daniel Kamau"}. - [Samantha
+      Akinyi]{"entity": "PERSON", "value": "Samantha Akinyi"}. - [Ngozi
+      Eze]{"entity": "PERSON", "value": "Ngozi Eze"}. - [Kwesi Asante]{"entity":
+      "PERSON", "value": "Kwesi Asante"}. - [Wangari Maina]{"entity": "PERSON",
+      "value": "Wangari Maina"}. - [Oluwafemi Ojo]{"entity": "PERSON", "value":
+      "Oluwafemi Ojo"}. - [Fatima Bello]{"entity": "PERSON", "value": "Fatima
+      Bello"}. - [Jacob Mugo]{"entity": "PERSON", "value": "Jacob Mugo"} at
+      [+2549876543211]{"entity": "phoneNo", "value": "+2549876543211"}. -
+      [Naledi Moloi]{"entity": "PERSON", "value": "Naledi Moloi"}. - [Felix
+      Kiplagat]{"entity": "PERSON", "value": "Felix Kiplagat"}. - [Abena
+      Owusu]{"entity": "PERSON", "value": "Abena Owusu"}. - [Simba
+      Ndlovu]{"entity": "PERSON", "value": "Simba Ndlovu"} at
+      [+2549876543212]{"entity": "phoneNo", "value": "+2549876543212"}. -
+      [Chioma Obi]{"entity": "PERSON", "value": "Chioma Obi"}. - [Kwabena
+      Osei]{"entity": "PERSON", "value": "Kwabena Osei"}. - [Amina
+      Ibrahim]{"entity": "PERSON", "value": "Amina Ibrahim"}. - [Brian
+      Kimani]{"entity": "PERSON", "value": "Brian Kimani"} at
+      [0776543213]{"entity": "phoneNo", "value": "0776543213"}. - [Chinwe
+      Onuoha]{"entity": "PERSON", "value": "Chinwe Onuoha"}. - [Juma
+      Musa]{"entity": "PERSON", "value": "Juma Musa"}. - [Tariro
+      Chuma]{"entity": "PERSON", "value": "Tariro Chuma"}. - [Malik
+      Ndiaye]{"entity": "PERSON", "value": "Malik Ndiaye"} at
+      [0776543214]{"entity": "phoneNo", "value": "0776543214"}. - [Sadia
+      Abdi]{"entity": "PERSON", "value": "Sadia Abdi"}. - [Musa Kamau]{"entity":
+      "PERSON", "value": "Musa Kamau"}.
+
+
+      - [Safaris 🗺🦓]{"entity":"travel-type", "value": "safari"} - [Themed 🎉]{"entity":"travel-type", "value": "themed"} - [Corporate 🏢]{"entity":"travel-type", "value": "corporate"} - [Local 🏞]{"entity":"travel-type", "value": "local"} - My name is [John Doe]{"entity": "PERSON", "value": "John Doe"} and my phone number is [123-456-7890]{"entity": "phoneNo", "value": "123-456-7890"}. - Contact [Alice]{"entity": "PERSON", "value": "Alice"} at [987654321]{"entity": "phoneNo", "value": "987654321"}. - I need assistance from [Jane Smith]{"entity": "PERSON", "value": "Jane Smith"}. You can reach me at [555-1234]{"entity": "phoneNo", "value": "555-1234"}. - [Bob]{"entity": "PERSON", "value": "Bob"}'s contact number is [456-7890]{"entity": "phoneNo", "value": "456-7890"}. - Please connect me with [Emily]{"entity": "PERSON", "value": "Emily"} at [876543210]{"entity": "phoneNo", "value": "876543210"}. - [Sam]{"entity": "PERSON", "value": "Sam"} is the person to contact. His phone number is [987-654-3210]{"entity": "phoneNo", "value": "987-654-3210"}. - I'm trying to reach [Sara]{"entity": "PERSON", "value": "Sara"}. Her phone number is [111-222-3333]{"entity": "phoneNo", "value": "111-222-3333"}. - [Michael]{"entity": "PERSON", "value": "Michael"} is available at [555-6789]{"entity": "phoneNo", "value": "555-6789"}. - Contact [Lucy]{"entity": "PERSON", "value": "Lucy"} at [987-654-3211]{"entity": "phoneNo", "value": "987-654-3211"} for more information. - I'm [Alex]{"entity": "PERSON", "value": "Alex"} and my phone number is [444-555-6666]{"entity": "phoneNo", "value": "444-555-6666"}. - I'm interested in going on a [safari]{"entity": "travel-type", "value": "safari"} - Tell me about [safari]{"entity":"travel-type", "value": "safari"} options - [Safaris]{"entity":"travel-type", "value": "safari"} sound exciting, where should I go? - Share information about wildlife [safaris]{"entity":"travel-type", "value": "safari"}.  - What are the best [safari]{"entity":"travel-type", "value": "safari"} destinations? - I want to explore nature through [safaris]{"entity":"travel-type", "value": "safari"}. - [Safari]{"entity":"travel-type", "value": "safari"} adventures, please! - Where can I experience a great [safari]{"entity":"travel-type", "value": "safari"}? - Tell me more about [safari]{"entity":"travel-type", "value": "safari"} travel. - I'm fascinated by [safaris]{"entity":"travel-type", "value": "safari"}, guide me. - I'm looking for [themed]{"entity":"travel-type", "value": "themed"} travel experiences. - Tell me about unique [themed]{"entity":"travel-type", "value": "themed"} vacations. - What are some interesting [themed]{"entity":"travel-type", "value": "themed"} trips? - Share information on [themed]{"entity":"travel-type", "value": "themed"} destinations. - [Themed]{"entity":"travel-type", "value": "themed"} travel ideas, please! - I want to explore destinations with a [theme]{"entity":"travel-type", "value": "themed"}. - Guide me on [themed]{"entity":"travel-type", "value": "themed"} vacation planning. - Where can I find [themed]{"entity":"travel-type", "value": "themed"} travel packages? - Share some [themed]{"entity":"travel-type", "value": "themed"} travel inspiration. - I'm curious about [themed]{"entity":"travel-type", "value": "themed"} vacations, tell me more. - I need assistance with arranging a [business]{"entity":"travel-type", "value": "corporate"} trip  - I need information on [corporate]{"entity":"travel-type", "value": "corporate"} travel. - Planning a [business trip]{"entity":"travel-type", "value": "corporate"}, any suggestions? - Where should I go for a [corporate]{"entity":"travel-type", "value": "corporate"} retreat? - Share [corporate]{"entity":"travel-type", "value": "corporate"} travel destinations. - What are some [business-friendly]{"entity":"travel-type", "value": "corporate"} travel spots? - Guide me on [corporate]{"entity":"travel-type", "value": "corporate"} travel planning. - I'm traveling for [work]{"entity":"travel-type", "value": "corporate"}, help me plan. - [Corporate]{"entity":"travel-type", "value": "corporate"} travel advice needed. - Any recommendations for [business]{"entity":"travel-type", "value": "corporate"} trips? - Tell me about travel options for [professionals]{"entity":"travel-type", "value": "corporate"}. - I want to explore [local]{"entity":"travel-type", "value": "local"} travel options. - Tell me about vacation spots within [my country][local]{"entity":"travel-type", "value": "local"}. - Where can I go for a [local[local]{"entity":"travel-type", "value": "local"} getaway? - Share [local[local]{"entity":"travel-type", "value": "local"} travel destinations. - Any suggestions for [local[local]{"entity":"travel-type", "value": "local"} vacation spots? - I'm looking for [nearby[local]{"entity":"travel-type", "value": "local"} travel ideas. - Guide me on [local]{"entity":"travel-type", "value": "local"} vacation planning. - [Local]{"entity":"travel-type", "value": "local"} travel recommendations, please! - What are some popular [local]{"entity":"travel-type", "value": "local"} destinations? - Explore [local]{"entity":"travel-type", "value": "local"} gems for me. - I'm seeking help with arranging transportation for a [corporate meeting]{"entity": "travel-type", "value":"corporate"} in [Paris]{"entity": "LOC", "role": "destination"}.  - I need assistance in scheduling meetings for our [business trip]{"entity":"travel-type", "value": "corporate"} to [San Francisco]{"entity": "LOC", "role": "destination"}.  - Can you book a hotel for our [corporate delegation]{"entity": "travel-type", "value": "corporate"} visiting [Dubai]{"entity": "LOC", "role": "destination"}?  - I'm looking for assistance in managing travel itineraries for our [executives]{"entity":"travel-type", "value": "corporate"}.  - Can you help arrange a [seminar venue]{"entity": "travel-type", "value": "corporate"} for our [corporate]{"entity": "travel-type", "value": "corporate"} event in [Sydney]{"entity": "LOC", "role": "destination"}? - I'm looking for accommodation options for a [professional conference]{"entity": "travel-type", "value": "corporate"} in [London]{"entity": "LOC", "role": "destination"}.  - I require your support in organizing a [company retreat]{"entity": "travel-type", "value":"corporate"} in the [Bahamas]{"entity": "LOC", "role": "destination"}.  - Can you assist with planning a [business]{"entity": "travel-type", "value": "corporate"} trip to [Tokyo]{"entity": "LOC", "role":"destination"} for our team? - I am interested in [safaris]{"entity":"travel-type", "value": "local"} in Kenya.
+  - intent: inform_safari
+    examples: >
+      - [Kenya🇰🇪]{"entity":"safari-type", "value": "kenya"}  - [East
+      Africa🌍]{"entity":"safari-type", "value": "east-africa"} - [South
+      Africa🇿🇦]{"entity":"safari-type", "value": "south-africa"} - I'm looking
+      for [Kenya]{"entity":"safari-type", "value": "kenya"} safari options. -
+      Show me [East Africa]{"entity":"safari-type", "value": "east-africa"}
+      safari choices. - What [Safari]{"entity":"safari-type", "value": "safari"}
+      options do you have in [South Africa]{"entity":"safari-type", "value":
+      "south-africa"}? - Explore [Kenya]{"entity":"safari-type", "value":
+      "kenya"} for safari adventures. - Any [East
+      Africa]{"entity":"safari-type", "value": "east-africa"} safari packages
+      available? - Can you suggest a [South Africa]{"entity":"safari-type",
+      "value": "south-africa"} safari itinerary? - I'm interested in
+      [safari]{"entity":"safari-type", "value": "safari"} options in
+      [Kenya]{"entity":"safari-type", "value": "kenya"}. - Show me [South
+      Africa]{"entity":"safari-type", "value": "south-africa"} safari choices. -
+      What [East Africa]{"entity":"safari-type", "value": "east-africa"} safari
+      experiences do you recommend? - [East Africa]{"entity":"safari-type",
+      "value": "east-africa"} safari options, please! - I want to explore
+      [safari]{"entity":"safari-type", "value": "safari"} options in [South
+      Africa]{"entity":"safari-type", "value": "south-africa"}. - Any
+      [Kenya]{"entity":"safari-type", "value": "kenya"} safari adventures you
+      can suggest? - [South Africa]{"entity":"safari-type", "value":
+      "south-africa"} safari recommendations, please! - [East
+      Africa]{"entity":"safari-type", "value": "east-africa"} safari options for
+      me? - Can you provide information on [Kenya]{"entity":"safari-type",
+      "value": "kenya"} safari choices? - I'm interested in
+      [safari]{"entity":"safari-type", "value": "safari"} options in [East
+      Africa]{"entity":"safari-type", "value": "east-africa"}. - [South
+      Africa]{"entity":"safari-type", "value": "south-africa"} safari
+      suggestions, please! - Explore [Kenya]{"entity":"safari-type", "value":
+      "kenya"} safari itineraries. - What are the [East
+      Africa]{"entity":"safari-type", "value": "east-africa"} safari options?
+  - intent: inform_local
+    examples: >
+      - [Beach 🏖️]{"entity":"local-type", "value": "beach"} - [Weekend
+      🌄]{"entity":"local-type", "value": "weekend"} - Show me
+      [weekend]{"entity":"local-type", "value": "weekend"} adventures. - Any
+      suggestions for [wikendi]{"entity":"local-type", "value": "weekend"}
+      getaways? - Looking for [beach]{"entity":"local-type", "value": "beach"}
+      experiences. - What are the [weekend]{"entity":"local-type", "value":
+      "weekend"} packages available? - nishow [sato]{"entity":"local-type",
+      "value": "weekend"} retreat options. - I'm interested in
+      [beach]{"entity":"local-type", "value": "beach"} adventures. - Show me
+      some [mountain]{"entity":"local-type", "value": "mountain"} escapes. - Can
+      you suggest some [countryside]{"entity":"local-type", "value":
+      "countryside"} retreats? - Any recommendations for
+      [island]{"entity":"local-type", "value": "island"} getaways? - I'm looking
+      for [adventure]{"entity":"local-type", "value": "adventure"} activities
+      nearby. - Show me options for [camping]{"entity":"local-type", "value":
+      "camping"} trips. - What [outdoor]{"entity":"local-type", "value":
+      "outdoor"} activities are available? - Can you provide information on
+      [cultural]{"entity":"local-type", "value": "cultural"} tours? - I'd like
+      to explore [nature]{"entity":"local-type", "value": "nature"} spots in the
+      area. - Are there any [historic]{"entity":"local-type", "value":
+      "historic"} sites to visit nearby?
+  - intent: inform_theme
+    examples: >
+      - [Valentines ❤️]{"entity":"theme-type", "value": "valentine"} -
+      [Honeymoon 💑]{"entity":"theme-type", "value": "honeymoon"} - [Easter
+      🐰]{"entity":"theme-type", "value": "easter"} - [Madaraka
+      🇰🇪]{"entity":"theme-type", "value": "madaraka"} - [Mashujaa
+      🎖️]{"entity":"theme-type", "value": "mashujaa"} - [Jamhuri
+      🇰🇪]{"entity":"theme-type", "value": "jamhuri"} - [Christmas
+      🎄]{"entity":"theme-type", "value": "christmas"} - I'm interested in
+      [Valentine]{"entity":"theme-type", "value": "valentine"} getaways. ❤️ -
+      Show me [honeymoon]{"entity":"theme-type", "value": "honeymoon"} packages
+      for couples. 💑 - Any [Easter]{"entity":"theme-type", "value": "easter"}
+      holiday options available? 🐰 - Tell me about
+      [Madaraka]{"entity":"theme-type", "value": "madaraka"} celebration
+      packages. 🇰🇪 - Explore [Mashujaa]{"entity":"theme-type", "value":
+      "mashujaa"} holiday deals. 🎖️ - What are the
+      [Jamhuri]{"entity":"theme-type", "value": "jamhuri"} Day travel options?
+      🇰🇪 - Show me [Christmas]{"entity":"theme-type", "value": "christmas"}
+      vacation packages. 🎄 - Any recommendations for a
+      [Valentine](theme-type){"entity":"theme-type", "value": "valentine"}
+      escape? ❤️ - I'm looking for a [honeymoon]{"entity":"theme-type", "value":
+      "honeymoon"} retreat. 💑 - Tell me about [Easter]{"entity":"theme-type",
+      "value": "easter"} holiday getaways. 🐰 - Explore
+      [Madaraka]{"entity":"theme-type", "value": "madaraka"} celebration
+      destinations. 🇰🇪 - Any [Mashujaa]{"entity":"theme-type", "value":
+      "mashujaa"} holiday adventures? 🎖️ - What are the
+      [Jamhuri]{"entity":"theme-type", "value": "jamhuri"} Day travel packages?
+      🇰🇪 - Show me [Christmas]{"entity":"theme-type", "value": "christmas"}
+      holiday options. 🎄 - Can you recommend a
+      [Valentine]{"entity":"theme-type", "value": "valentine"} getaway? ❤️ - I'm
+      planning a [honeymoon]{"entity":"theme-type", "value": "honeymoon"} trip.
+      💑 - What are the [Easter]{"entity":"theme-type", "value": "easter"}
+      holiday suggestions? 🐰 - Explore [Madaraka]{"entity":"theme-type",
+      "value": "madaraka"} Day destinations. 🇰🇪 - Any
+      [Mashujaa]{"entity":"theme-type", "value": "mashujaa"} holiday getaways?
+      🎖️
+  - intent: inform_corporate
+    examples: >
+      - [Bleisure 🏢✈]{"entity":"corporate", "value": "bleisure"} -
+      [Conferences 📚]{"entity":"corporate", "value": "conference"} - [Trade
+      Fair 🎪]{"entity":"corporate", "value": "trade-fair"} - I'm interested in
+      [bleisure]{"entity":"corporate", "value": "bleisure"} 🏢✈️ options. - Show
+      me corporate packages with [conferences]{"entity":"corporate", "value":
+      "conference"} 📚. - Can you suggest [trade fair]{"entity":"corporate",
+      "value": "trade-fair"} 🎪 options for corporate travel? - Explore
+      [bleisure]{"entity":"corporate", "value": "bleisure"} 🏢✈️ packages for my
+      team. - Tell me about corporate [conference]{"entity":"corporate",
+      "value": "conference"} 📚 options. - I'm looking for [trade
+      fair]{"entity":"corporate", "value": "trade-fair"} 🎪 opportunities in
+      corporate packages. - Show me [bleisure]{"entity":"corporate", "value":
+      "bleisure"} 🏢✈️ options for team-building events. - Any
+      [conferences]{"entity":"corporate", "value": "conference"} 📚 included in
+      the corporate package? - What [trade fair]{"entity":"corporate", "value":
+      "trade-fair"} 🎪 options are available for corporate trips? - I want
+      information on [bleisure]{"entity":"corporate", "value": "bleisure"} 🏢✈️
+      corporate packages. - Can you suggest a corporate package with
+      [conferences]{"entity":"corporate", "value": "conference"} 📚? - Show me
+      [trade fair]{"entity":"corporate", "value": "trade-fair"} 🎪 options for
+      our upcoming corporate event. - I'm interested in
+      [bleisure]{"entity":"corporate", "value": "bleisure"} 🏢✈️ for our
+      corporate team. - Tell me about [conferences]{"entity":"corporate",
+      "value": "conference"} 📚 included in corporate travel. - Explore [trade
+      fair]{"entity":"corporate", "value": "trade-fair"} 🎪 options for our next
+      corporate trip. - I'm looking for [bleisure]{"entity":"corporate",
+      "value": "bleisure"} 🏢✈️ experiences in corporate packages. - Any
+      recommendations for [conferences]{"entity":"corporate", "value":
+      "conference"} 📚 in corporate travel? - Show me [trade
+      fair]{"entity":"corporate", "value": "trade-fair"} 🎪 opportunities for
+      corporate events. - Can you suggest [bleisure]{"entity":"corporate",
+      "value": "bleisure"} 🏢✈️ options for our team retreat? - Tell me about
+      corporate packages with [conferences]{"entity":"corporate", "value":
+      "conference"} 📚.
+  - intent: inform_budget_range
+    examples: >
+      - [On-budget 💸]{"entity":"budget-range", "value": "budget"} -
+      [Mid-range 💳]{"entity":"budget-range", "value": "mid-range"} - [Luxury
+      💎]{"entity":"budget-range", "value": "luxury"}  - What are the options
+      for a [budget]{"entity":"budget-range", "value": "budget"} trip? 💸 - Show
+      me travel choices within the [mid-range]{"entity":"budget-range", "value":
+      "mid-range"} 💳 category. - Can you suggest options for a
+      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 vacation? -
+      Explore [budget]{"entity":"budget-range", "value": "budget"} 💸
+      possibilities for a family trip. - Tell me about
+      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳 vacation
+      packages. - I'm looking for [luxury]{"entity":"budget-range", "value":
+      "luxury"} 💎 travel experiences. - Show me deals within the
+      [budget]{"entity":"budget-range", "value": "budget"} 💸 range for solo
+      travel. - Any recommendations for [mid-range]{"entity":"budget-range",
+      "value": "mid-range"} 💳 group vacations? - What are the
+      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 options for a
+      honeymoon? - I want information on [budget]{"entity":"budget-range",
+      "value": "budget"} 💸 travel packages. - Can you suggest a
+      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳 holiday for
+      couples? - Show me [luxury]{"entity":"budget-range", "value": "luxury"} 💎
+      deals for luxury getaways. - I'm interested in
+      [budget]{"entity":"budget-range", "value": "budget"} 💸 solo travel
+      options. - Tell me about [mid-range]{"entity":"budget-range", "value":
+      "mid-range"} 💳 family-friendly vacations. - Explore
+      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 packages for
+      anniversary trips. - What [budget]{"entity":"budget-range", "value":
+      "budget"} 💸 choices do you have for group travel? - Any
+      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳
+      recommendations for a weekend getaway? - I'm looking for
+      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 experiences for
+      special occasions. - Show me [budget]{"entity":"budget-range", "value":
+      "budget"} 💸 options for adventure travel. - Can you suggest
+      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳 travel plans
+      for friends? - My budget for the trip is USD 1000 - I'm looking for
+      options within EUR 800. - Can you suggest packages around GBP 1200? - I
+      have a budget of AUD 1500 for the trip. - Show me deals for a budget of
+      CAD 2000. - I'm considering options with a budget of INR 70000. - What
+      packages do you have for a budget of JPY 90000? - My budget range is CNY
+      6000 for the trip. - Explore options within AED 2500 for me. - Can you
+      recommend packages around CHF 1100? - I'm looking for deals within NZD
+      1300. - Show me options for a budget of SEK 9500. - What packages do you
+      have for a budget of SGD 1800? - I have a budget range of HKD 7500 for the
+      trip. - Explore deals within NOK 8500 for me. - Can you suggest options
+      around BRL 3200? - My budget for the trip is ZAR 14000. - Show me packages
+      for a budget of RUB 55000. - I'm considering options with a budget of TRY
+      950.
+  - intent: inform_transport_mode
+    examples: >
+      - [Self-Drive 🚗]{"entity":"mode-of-transport", "value": "self-drive"}
+      - [SGR 🚆]{"entity":"mode-of-transport", "value": "sgr"} - [Flying
+      ✈]{"entity":"mode-of-transport", "value": "flying"} - [Cruiser
+      🚢]{"entity":"mode-of-transport", "value": "cruiser"} - [Tour Van
+      🚐{"entity":"mode-of-transport", "value": "tour-van"} - I'm interested in
+      [self-drive]{"entity":"mode-of-transport", "value": "self-drive"} 🚗. -
+      What are the options for [SGR]{"entity":"mode-of-transport", "value":
+      "sgr"} 🚆 travel? - I'd like to explore
+      [flying]{"entity":"mode-of-transport", "value": "flying"} options ✈️. -
+      What [tour van]{"entity":"mode-of-transport", "value": "tour-van"} 🚐
+      packages do you have? - Show me [cruiser]{"entity":"mode-of-transport",
+      "value": "cruiser"} 🚢 options for travel. - I prefer
+      [self-drive]{"entity":"mode-of-transport", "value": "self-drive"} 🚗 to my
+      destination. - Any recommendations for
+      [flying]{"entity":"mode-of-transport", "value": "flying"} ✈️ to the
+      destination? - Tell me about [tour van]{"entity":"mode-of-transport",
+      "value": "tour-van"} 🚐 travel experiences. - What's the duration of
+      [cruiser]{"entity":"mode-of-transport", "value": "cruiser"} 🚢 trips? -
+      I'm considering [SGR]{"entity":"mode-of-transport", "value": "sgr"} 🚆 for
+      my journey. - Show me [self-drive]{"entity":"mode-of-transport", "value":
+      "self-drive"} 🚗 options for travel. - What's the cost of
+      [flying]{"entity":"mode-of-transport", "value": "flying"} ✈️ to my
+      destination? - Explore [tour van]{"entity":"mode-of-transport", "value":
+      "tour-van"} 🚐 travel packages. - I'd like information on
+      [cruiser]{"entity":"mode-of-transport", "value": "cruiser"} 🚢 travel. -
+      Are there any [SGR]{"entity":"mode-of-transport", "value": "sgr"} 🚆 deals
+      available? - What are the benefits of
+      [self-drive]{"entity":"mode-of-transport", "value": "self-drive"} 🚗
+      travel? - I'm considering taking a [plane]{"entity":"mode-of-transport",
+      "value": "flying"} for my journey. - Tell me about [tour
+      van]{"entity":"mode-of-transport", "value": "tour-van"} 🚐 options. - Any
+      recommendations for [cruiser]{"entity":"mode-of-transport", "value":
+      "cruiser"} 🚢 travel experiences?
+
+  - intent: inform_accommodation_type
+    examples: |
+      - [Cottages 🏡]{"entity":"accommodation-type", "value": "Cottages"}
+      - [Villas 🏰]{"entity":"accommodation-type", "value": "Villas"}
+      - [Resorts 🏝]{"entity":"accommodation-type", "value": "Resorts"}
+      - [Hotels 🏨]{"entity":"accommodation-type", "value": "Hotels"}
+      - [Tents ⛺]{"entity":"accommodation-type", "value": "Tents"}
+      - [Lodges 🏡]{"entity":"accommodation-type", "value": "Lodges"}
+      - I prefer staying in [Cottages]{"entity":"accommodation-type", "value": "Cottages"}.
+      - Show me options for [Villas]{"entity":"accommodation-type", "value": "Villas"}.
+      - What [Resorts]{"entity":"accommodation-type", "value": "Resorts"} do you have available?
+      - [Hotels]{"entity":"accommodation-type", "value": "Hotels"} with good amenities, please.
+      - [Lodges 🏡]{"entity":"accommodation-type", "value": "Lodges"} near wildlife reserves.
+      - Are [Tents]{"entity":"accommodation-type", "value": "Tents"} available for booking?
+      - I'm interested in [Cottages]{"entity":"accommodation-type", "value": "Cottages"}.
+      - Any [Villas]{"entity":"accommodation-type", "value": "Villas"} with a scenic view?
+      - Tell me about your [Resorts]{"entity":"accommodation-type", "value": "Resorts"}.
+      - Looking for budget-friendly [Hotels]{"entity":"accommodation-type", "value": "Hotels"}.
+      - Show me [Lodges]{"entity":"accommodation-type", "value": "Lodges"} in natural surroundings.
+      - Do you have [Tents]{"entity":"accommodation-type", "value": "Tents"} for camping?
+      - [Cottages]{"entity":"accommodation-type", "value": "Cottages"} for a weekend getaway.
+      - Any luxury [Villas]{"entity":"accommodation-type", "value": "Villas"} in the area?
+      - [Resorts]{"entity":"accommodation-type", "value": "Resorts"} with beach access, please.
+      - Are there [Hotels]{"entity":"accommodation-type", "value": "Hotels"} near the city center?
+      - Show me [Lodges]{"entity":"accommodation-type", "value": "Lodges"} suitable for families.
+      - [Tents]{"entity":"accommodation-type", "value": "Tents"} with basic amenities.
+      - I'd like information on [Cottages]{"entity":"accommodation-type", "value": "Cottages"}.
+      - Any [Villas]{"entity":"accommodation-type", "value": "Villas"} with a pool?
+      - What [Resorts]{"entity":"accommodation-type", "value": "Resorts"} are available for booking?
+      - [Hotels]{"entity":"accommodation-type", "value": "Hotels"} with a view, please.
+      - Show me [Lodges]{"entity":"accommodation-type", "value": "Lodges"} near a national park.
+      - Are [Tents]{"entity":"accommodation-type", "value": "Tents"} suitable for couples?
