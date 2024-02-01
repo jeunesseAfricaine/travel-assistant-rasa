@@ -190,11 +190,11 @@ nlu:
 
       - Once I give my preferences, how fast can you organize accommodations?
 
-      - How long does it take to arrange lodging after I provide my preferences?
+      - How long does it take to arrange after I provide my preferences?
 
-      - What's the turnaround time for booking accommodations once I share my choices?
+      - What's the turnaround time once I share my choices?
 
-      - How soon can you set up lodging once I share my accommodation preferences? 
+      - How soon can you set up lthe reservations? 
 
       - After I share my preferences, how quickly can you arrange my stay?
 
@@ -202,7 +202,7 @@ nlu:
 
       - What's the speed of arranging accommodations once I share my preferences?
 
-      - How prompt are you in organizing lodging after I provide my preferences?
+      - How prompt are you in organizing my reservations after I provide my preferences?
 
       - When I give my preferences, what's the timeframe for arranging accommodations?
 
