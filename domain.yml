@@ -1,4 +1,4 @@
----
+v---
 version: "3.1"
 intents:
   - start
@@ -25,8 +25,8 @@ intents:
   - inform_accomodation_type
 responses:
   utter_greet:
-    - text: Hello! Welcome to Voyage Companion! I am your AI travel virtual assistant.
-        How can I assist you with your travel plans today?😊
+    - text: Hello! Welcome to Voyage Companion! I am your AI travel virtual assistant. How can I
+        assist you with your travel plans today?😊
       buttons:
         - title: Explore destinations 🌍
           payload: /inform_vacation_plan
@@ -35,7 +35,7 @@ responses:
       button_type: vertical
   utter_ask_travel_type:
     - text: Sure, I can help you with that. What specific package are you looking for?
-      image: https://www.andbeyond.com/wp-content/uploads/sites/5/guest-area-with-golden-sunrise-at-andbeyond-bateleur-camp-on-a-luxury-kenya-safari1.jpg
+      image: "https://www.andbeyond.com/wp-content/uploads/sites/5/guest-area-with-golden-sunrise-at-andbeyond-bateleur-camp-on-a-luxury-kenya-safari1.jpg"
       buttons:
         - title: Safaris 🗺🦓
           payload: /inform{{"travel-type":"safari"}}
@@ -49,7 +49,7 @@ responses:
   utter_ask_safari_type:
     - text: Planning a safari is exciting! Here are some Safari options you might be
         interested in
-      image: https://www.flightcentre.co.nz/sites/default/files/product-images/8807405223966-a0715d679ff86f60821264dde776e27c.jpg
+      image: "https://www.flightcentre.co.nz/sites/default/files/product-images/8807405223966-a0715d679ff86f60821264dde776e27c.jpg"
       buttons:
         - title: Kenya🇰🇪
           payload: /inform_safari{{"safari-type", "kenya"}}
@@ -61,7 +61,7 @@ responses:
   utter_ask_local_type:
     - text: Planning a local adventure! Here are some packages you might be interested
         in
-      image: https://www.safaritravelplus.com/wp-content/uploads/2018/08/kenya-Beach-holidays.jpg
+      image: "https://www.safaritravelplus.com/wp-content/uploads/2018/08/kenya-Beach-holidays.jpg"
       buttons:
         - title: Beach 🏖️
           payload: /inform_local{{"local-type", "beach"}}
@@ -70,7 +70,7 @@ responses:
       button_type: vertical
   utter_ask_theme_type:
     - text: Please check out these options for themed packages?
-      image: https://i.pinimg.com/originals/40/1b/a6/401ba6c29f813068c505737ffdb8d33f.jpg
+      image: "https://i.pinimg.com/originals/40/1b/a6/401ba6c29f813068c505737ffdb8d33f.jpg"
       buttons:
         - title: Valentines ❤️
           payload: /inform_theme{{"theme-type", "valentines"}}
@@ -89,7 +89,7 @@ responses:
       button_type: vertical
   utter_ask_corporate:
     - text: Please check out these options for corporate packages.
-      image: https://btttravel.com/wp-content/uploads/2015/01/Slider-4.jpg
+      image: "https://btttravel.com/wp-content/uploads/2015/01/Slider-4.jpg"
       buttons:
         - title: Bleisure 🏢✈️
           payload: /inform_corporate{{"corporate", "bleisure"}}
@@ -109,9 +109,7 @@ responses:
           payload: /inform_budget_range{{"budget-range", "luxury"}}
       button_type: vertical
   utter_top_deals:
-    - text: I appreciate your interest in the {travel_type} package. Currently, it's
-        not available, but rest assured, we are working diligently to make it
-        accessible for you. May I assist you with any other travel preferences?
+    - text: I appreciate your interest in the {travel_type} package. Currently, it's not available, but rest assured, we are working diligently to make it accessible for you. May I assist you with any other travel preferences?
       buttons:
         - title: Other destinations 🏞️
           payload: /inform_vacation_plan
@@ -138,11 +136,10 @@ responses:
   utter_ask_check_in:
     - text: When are you planning to check in? Say dates like 'May 15' or 'next month'
   utter_ask_check_out:
-    - text: When are you planning to check out? Say dates like 'May 16' or 'next
-        Monday'
+    - text: When are you planning to check out? Say dates like 'May 16' or 'next Monday'
   utter_ask_accom_type:
     - text: Where would you like to stay?
-      image: https://food-mag.co.uk/wp-content/uploads/2022/04/Hotels-with-self-catering-accommodation-Bovey-Castle.jpg
+      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       buttons:
         - title: Cottages 🏡
           payload: /inform_accomodation_type{"accommodation-type", "cottages"}
@@ -177,10 +174,8 @@ responses:
     - text: I'd love to understand better. Can you elaborate?
   utter_anything_else:
     - text: Please reach out if you have any further question.
-  utter_confirm_booking:
-    - text: Great! Confirming your booking details, 🏠 Accommodation - {accom_type},
-        🧑‍🤝‍🧑 Guests - {num_people}, 📅 Stay - {check_in} to {check_out}, ☎️
-        - {phone_num}. All set {name}!
+  - utter_confirm_booking:
+      - text: Great! Confirming your booking details, 🏠 Accommodation - {accom_type}, 🧑‍🤝‍🧑 Guests - {num_people}, 📅 Stay - {check_in} to {check_out}, ☎️ - {phone_num}. All set {name}!
   utter_check_options:
     - text: Thank you for your interest in {travel_type} travel! Currently, our
         {travel_type} travel feature is still in development. We're working hard
@@ -303,6 +298,7 @@ slots:
       - type: from_intent
         intent: inform_safari
         value: wildlife
+        
   theme_type:
     influence_conversation: true
     type: categorical
@@ -344,7 +340,7 @@ slots:
         entity: corporate
       - type: from_intent
         intent: inform_corporate
-        value: team-building event
+        value:  team-building event
   budget_range:
     influence_conversation: true
     type: categorical
