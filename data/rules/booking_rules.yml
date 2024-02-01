@@ -1,7 +1,6 @@
 ---
 version: "3.1"
 rules:
-
   - rule: activate booking_form
     steps:
       - intent: start_booking
@@ -14,10 +13,9 @@ rules:
       - action: booking_form
       - active_loop: null
       - slot_was_set:
-        - requested_slot: null
+          - requested_slot: null
       - action: utter_confirm_booking
-      wait_for_user_input: false
-      
+        wait_for_user_input: false
   - rule: Plan vacation + safari
     steps:
       - intent: inform
@@ -32,7 +30,6 @@ rules:
       - action: safari_form
       - active_loop: null
       - action: utter_top_deals
- 
   - rule: Plan vacation + themed
     steps:
       - intent: inform
@@ -47,7 +44,6 @@ rules:
       - action: themed_form
       - active_loop: null
       - action: utter_top_deals
-
   - rule: Plan vacation + corporate
     steps:
       - intent: inform
@@ -62,7 +58,6 @@ rules:
       - action: corporate_form
       - active_loop: null
       - action: utter_top_deals
-
   - rule: Plan vacation + local
     steps:
       - intent: inform
