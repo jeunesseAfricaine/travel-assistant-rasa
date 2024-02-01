@@ -226,7 +226,7 @@ slots:
         entity: number
       - type: from_intent
         intent: inform_group_size
-        value: couple
+        value: 5 people
   accom_type:
     influence_conversation: false
     type: categorical
@@ -250,7 +250,7 @@ slots:
         entity: time
       - type: from_intent
         intent: inform_date
-        value: tomorrow
+        value: November 15
   check_out:
     type: any
     mappings:
