@@ -15,7 +15,7 @@ rules:
       - slot_was_set:
           - requested_slot: null
       - action: utter_confirm_booking
-        wait_for_user_input: false
+    wait_for_user_input: false
   - rule: Plan vacation + safari
     steps:
       - intent: inform
