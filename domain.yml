@@ -34,7 +34,7 @@ responses:
           payload: /start_booking
       button_type: vertical
   utter_ask_travel_type:
-    - text: Sure, I can help you with that. What specific package are you looking for?
+    - text: Sure, naeza kusort. What specific package are you looking for?
       image: https://www.andbeyond.com/wp-content/uploads/sites/5/guest-area-with-golden-sunrise-at-andbeyond-bateleur-camp-on-a-luxury-kenya-safari1.jpg
       buttons:
         - title: Safaris 🗺🦓
@@ -175,12 +175,13 @@ responses:
   utter_ask_rephrase:
     - text: Could you please provide more details?
     - text: I'd love to understand better. Can you elaborate?
+    - text: Sijakuget. Hebu nishow tena...
   utter_anything_else:
     - text: Please reach out if you have any further question.
   utter_confirm_booking:
-    - text: Great! Confirming your booking details, 🏠 Accommodation - {accom_type},
-        🧑‍🤝‍🧑 Guests - {num_people}, 📅 Stay - {check_in} to {check_out}, ☎️
-        - {phone_num}. All set {name}!
+    - text: All set {name}! Confirming your booking details, 🏠 Accommodation -
+        {accom_type}, 🧑‍🤝‍🧑 Guests - {num_people}, 📅 Stay - {check_in} to
+        {check_out}, ☎️ - {phone_num}.
   utter_check_options:
     - text: Thank you for your interest in {travel_type} travel! Currently, our
         {travel_type} travel feature is still in development. We're working hard
@@ -253,6 +254,8 @@ slots:
     mappings:
       - type: from_entity
         entity: time
+      - type: from_entity
+        entity: date
       - type: from_intent
         intent: inform_date
         value: November 15
@@ -261,6 +264,8 @@ slots:
     mappings:
       - type: from_entity
         entity: time
+      - type: from_entity
+        entity: date
       - type: from_intent
         intent: inform_date
         value: Jan 24th
