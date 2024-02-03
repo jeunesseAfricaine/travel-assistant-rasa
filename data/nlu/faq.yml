@@ -100,6 +100,10 @@ nlu:
       - Are there any added expenses associated with booking vacations via a virtual travel assistant?
 
       - Does it cost more to book my vacation with a virtual travel assistant?
+      
+      - kuna any additional cost?
+      
+      - mtanicharge tena for this?
   - intent: faq/ask_availability
     examples: >
       - When should I ideally get in touch with a travel professional?
@@ -157,6 +161,9 @@ nlu:
       - What makes a travel AI beneficial for planning vacations?
       - Why use a travel assistant instead of planning a vacation myself?
       - What makes a travel AI beneficial for planning vacations?
+      - mbona nitumie ai?
+      - nitumie ai ndio why?
+      - y ai?
   - intent: faq/ask_itinerary
     examples: |
       - How can I access my itinerary once I've confirmed my trip?
@@ -232,6 +239,8 @@ nlu:
       - Provide information on reaching my destination.
       - What are the transportation choices for reaching my destination?
       - Can you assist me in reaching my destination?
+      - nafika aje huko?
+      - ntafikaje?
   - intent: faq/ask_visa
     examples: |
       - do i need a visa?
@@ -244,6 +253,13 @@ nlu:
       - What are the visa requirements for my trip?
       - Clarify if a visa is mandatory for my travel.
       - Explain the visa application procedure for my journey.
+      - naitaji visa?
+      - naneed visa 
+      - naneed visa kweli?
+      - visa?
+      - nadai kubeba visa
+      - viza?
+      - do i need viza
   - intent: faq/ask_wadrobe
     examples: |
       - what kind of cloth should i wear?
@@ -256,6 +272,18 @@ nlu:
       - Tell me about the appropriate attire for my journey.
       - What kind of wardrobe is suitable for my travel plans?
       - Provide information on dressing for the destination.
+      - what should i pack?
+      - i want to pack
+      - how should plan for packing
+      - what clothes should i carry
+      - nibebe nini
+      - naeza vaa nguo gani huko
+      - naeza beba mini
+      - naeza vaa hoodie?
+      - i need to pack
+      - packing?
+      - clothes?
+      - can i carry my sweat pant?
   - intent: faq/ask_security
     examples: |
       - what is security like? 
