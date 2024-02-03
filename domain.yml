@@ -212,6 +212,7 @@ entities:
   - phoneNo
   - local-type
   - accommodation-type
+  - date
 slots:
   name:
     type: any
