@@ -80,65 +80,115 @@ nlu:
       - I'm interested in reserving 1 room for the night.
       - Informing you that we'll need 5 rooms for the upcoming trip.
   - intent: inform_date
-    examples: |
-      - Can you arrange my check-in for next Monday?
-      - I'd like to check in three days from now.
-      - Please schedule my arrival for two weeks later.
-      - Is it possible to check in on the first day of next month?
-      - Arrange my check-in in the next week.
-      - I want to check in tomorrow.
-      - Please schedule my arrival in three months.
-      - Is it possible to check in next Friday?
-      - Arrange my check-in in the next two days.
-      - I'd like to check in next year.
-      - Please schedule my arrival in four weeks.
-      - Is it possible to check in in the next month?
-      - Arrange my check-in this weekend.
-      - I want to check in next Tuesday.
-      - Please schedule my arrival in the next six months.
-      - Is it possible to check in on the last day of this month?
-      - Arrange my check-in next Thursday.
-      - I'd like to check in in the next ten days.
-      - Please schedule my arrival next weekend.
-      - Is it possible to check in in the next quarter?
-      - Arrange my check-in next month on the 20th.
-      - I want to check in in the next year.
-      - Can you arrange my check-in on March 5th?
-      - Can you arrange my check-in on Mar 16th?
-      - I'd like to check in on the 10th of June.
-      - Please schedule my arrival for July 15th.
-      - Is it possible to check in on August 1st?
-      - I want to start my stay on September 10th.
-      - I want to start my stay on Sep 20th.
-      - Arrange my check-in for October 25th, please.
-      - Arrange my check-in for Oct 8th, please.
-      - Can you book my arrival on November 8th?
-      - Nov 8th?
-      - I'd like to check in on December 3rd.
-      - check in on Dec 2nd
-      - Schedule my arrival for January 12th.
-      - Jan 8th.
-      - Please arrange my check-in on February 18th.
-      - I want to start my stay on March 21st.
-      - Can you check me in on April 7th?
-      - I'd like to arrive on May 30th.
-      - Schedule my check-in for June 12th, if possible.
-      - Is there availability for check-in on July 3rd?
-      - I plan to check out on March 10th.
-      - Can I check out on the 15th of June?
-      - My stay ends on July 25th, so arrange check-out.
-      - Please schedule my departure for August 5th.
-      - I want to end my stay on September 18th.
-      - Arrange my check-out on October 30th, please.
-      - Can I check out on November 15th?
-      - I'd like to end my stay on December 8th.
-      - Schedule my departure for January 20th.
-      - Please arrange check-out on February 28th.
-      - I plan to check out on March 10th.
-      - Can I check out on April 2nd?
-      - My stay ends on May 15th, so arrange check-out.
-      - Please schedule my departure for June 8th.
-      - I want to end my stay on July 1st.
+    examples: >
+      - Can you arrange my check-in for [next Monday]{"entity": "date",
+      "value": "next Monday"}?
+
+      - I'd like to check in [three days from now]{"entity": "date", "value": "three days from now"}.
+
+      - Please schedule my arrival for [two weeks later]{"entity": "date", "value": "two weeks later"}.
+
+      - Is it possible to check in on [the first day of next month]{"entity": "date", "value": "the first day of next month"}?
+
+      - Arrange my check-in in [the next week]{"entity": "date", "value": "the next week"}.
+
+      - I want to check in [tomorrow]{"entity": "date", "value": "tomorrow"}.
+
+      - Please schedule my arrival in [three months]{"entity": "date", "value": "three months"}.
+
+      - Is it possible to check in [next Friday]{"entity": "date", "value": "next Friday"}?
+
+      - Arrange my check-in in [the next two days]{"entity": "date", "value": "the next two days"}.
+
+      - I'd like to check in [next year]{"entity": "date", "value": "next year"}.
+
+      - Please schedule my arrival in [four weeks]{"entity": "date", "value": "four weeks"}.
+
+      - Is it possible to check in in [the next month]{"entity": "date", "value": "the next month"}?
+
+      - Arrange my check-in [this weekend]{"entity": "date", "value": "this weekend"}.
+
+      - I want to check in [next Tuesday]{"entity": "date", "value": "next Tuesday"}.
+
+      - Please schedule my arrival in [the next six months]{"entity": "date", "value": "the next six months"}.
+
+      - Is it possible to check in on [the last day of this month]{"entity": "date", "value": "the last day of this month"}?
+
+      - Arrange my check-in [next Thursday]{"entity": "date", "value": "next Thursday"}.
+
+      - I'd like to check in in [the next ten days]{"entity": "date", "value": "the next ten days"}.
+
+      - Please schedule my arrival [next weekend]{"entity": "date", "value": "next weekend"}.
+
+      - Is it possible to check in in [the next quarter]{"entity": "date", "value": "the next quarter"}?
+
+      - Arrange my check-in [next month on the 20th]{"entity": "date", "value": "next month on the 20th"}.
+
+      - I want to check in in [the next year]{"entity": "date", "value": "the next year"}.
+
+      - Can you arrange my check-in on [March 5th]{"entity": "date", "value": "March 5th"}?
+
+      - Can you arrange my check-in on [Mar 16th]{"entity": "date", "value": "Mar 16th"}?
+
+      - I'd like to check in on [the 10th of June]{"entity": "date", "value": "the 10th of June"}.
+
+      - Please schedule my arrival for [July 15th]{"entity": "date", "value": "July 15th"}.
+
+      - Is it possible to check in on [August 1st]{"entity": "date", "value": "August 1st"}?
+
+      - I want to start my stay on [September 10th]{"entity": "date", "value": "September 10th"}.
+
+      - I want to start my stay on [Sep 20th]{"entity": "date", "value": "Sep 20th"}.
+
+      - Arrange my check-in for [October 25th]{"entity": "date", "value": "October 25th"}, please.
+
+      - Arrange my check-in for [Oct 8th]{"entity": "date", "value": "Oct 8th"}, please.
+
+      - Can you book my arrival on [November 8th]{"entity": "date", "value": "November 8th"}?
+
+      - [Nov 8th]{"entity": "date", "value": "Nov 8th"}?
+
+      - I'd like to check in on [December 3rd]{"entity": "date", "value": "December 3rd"}.
+
+      - check in on [Dec 2nd]{"entity": "date", "value": "Dec 2nd"}.
+
+      - Schedule my arrival for [January 12th]{"entity": "date", "value": "January 12th"}.
+
+      - [Jan 8th]{"entity": "date", "value": "Jan 8th"}.
+
+      - Please arrange my check-in on [February 18th]{"entity": "date", "value": "February 18th"}.
+
+      - I want to start my stay on [March 21st]{"entity": "date", "value": "March 21st"}.
+
+      - Can you check me in on [April 7th]{"entity": "date", "value": "April 7th"}?
+
+      - I'd like to arrive on [May 30th]{"entity": "date", "value": "May 30th"}.
+
+      - Schedule my check-in for [June 12th]{"entity": "date", "value": "June 12th"}, if possible.
+
+      - Is there availability for check-in on [July 3rd]{"entity": "date", "value": "July 3rd"}?
+
+      - I plan to check out on [March 10th]{"entity": "date", "value": "March 10th"}.
+
+      - Can I check out on [the 15th of June]{"entity": "date", "value": "the 15th of June"}?
+
+      - My stay ends on [July 25th]{"entity": "date", "value": "July 25th"}, so arrange check-out.
+
+      - Please schedule my departure for [August 5th]{"entity": "date", "value": "August 5th"}.
+
+      - I want to end my stay on [September 18th]{"entity": "date", "value": "September 18th"}.
+
+      - Arrange my check-out on [October 30th]{"entity": "date", "value": "October 30th"}, please.
+
+      - Can I check out on [November 15th]{"entity": "date", "value": "November 15th"}?
+
+      - I'd like to end my stay on [December 8th]{"entity": "date", "value": "December 8th"}.
+
+      - Schedule my departure for [January 20th]{"entity": "date", "value": "January 20th"}.
+
+      - Please arrange check-out on [February 28th]{"entity": "date", "value": "February 28th"}.
+
+      - I plan to check out on [March 10th]{"entity": "date", "value": "March 10th"}.
   - intent: inform_vacation_plan
     examples: >
       - I'm planning a vacation to explore some exotic places.  - I've
@@ -429,36 +479,64 @@ nlu:
       van]{"entity":"mode-of-transport", "value": "tour-van"} 🚐 options. - Any
       recommendations for [cruiser]{"entity":"mode-of-transport", "value":
       "cruiser"} 🚢 travel experiences?
-
   - intent: inform_accommodation_type
-    examples: |
+    examples: >
       - [Cottages 🏡]{"entity":"accommodation-type", "value": "Cottages"}
+
       - [Villas 🏰]{"entity":"accommodation-type", "value": "Villas"}
+
       - [Resorts 🏝]{"entity":"accommodation-type", "value": "Resorts"}
+
       - [Hotels 🏨]{"entity":"accommodation-type", "value": "Hotels"}
+
       - [Tents ⛺]{"entity":"accommodation-type", "value": "Tents"}
+
       - [Lodges 🏡]{"entity":"accommodation-type", "value": "Lodges"}
+
       - I prefer staying in [Cottages]{"entity":"accommodation-type", "value": "Cottages"}.
+
       - Show me options for [Villas]{"entity":"accommodation-type", "value": "Villas"}.
+
       - What [Resorts]{"entity":"accommodation-type", "value": "Resorts"} do you have available?
+
       - [Hotels]{"entity":"accommodation-type", "value": "Hotels"} with good amenities, please.
+
       - [Lodges 🏡]{"entity":"accommodation-type", "value": "Lodges"} near wildlife reserves.
+
       - Are [Tents]{"entity":"accommodation-type", "value": "Tents"} available for booking?
+
       - I'm interested in [Cottages]{"entity":"accommodation-type", "value": "Cottages"}.
+
       - Any [Villas]{"entity":"accommodation-type", "value": "Villas"} with a scenic view?
+
       - Tell me about your [Resorts]{"entity":"accommodation-type", "value": "Resorts"}.
+
       - Looking for budget-friendly [Hotels]{"entity":"accommodation-type", "value": "Hotels"}.
+
       - Show me [Lodges]{"entity":"accommodation-type", "value": "Lodges"} in natural surroundings.
+
       - Do you have [Tents]{"entity":"accommodation-type", "value": "Tents"} for camping?
+
       - [Cottages]{"entity":"accommodation-type", "value": "Cottages"} for a weekend getaway.
+
       - Any luxury [Villas]{"entity":"accommodation-type", "value": "Villas"} in the area?
+
       - [Resorts]{"entity":"accommodation-type", "value": "Resorts"} with beach access, please.
+
       - Are there [Hotels]{"entity":"accommodation-type", "value": "Hotels"} near the city center?
+
       - Show me [Lodges]{"entity":"accommodation-type", "value": "Lodges"} suitable for families.
+
       - [Tents]{"entity":"accommodation-type", "value": "Tents"} with basic amenities.
+
       - I'd like information on [Cottages]{"entity":"accommodation-type", "value": "Cottages"}.
+
       - Any [Villas]{"entity":"accommodation-type", "value": "Villas"} with a pool?
+
       - What [Resorts]{"entity":"accommodation-type", "value": "Resorts"} are available for booking?
+
       - [Hotels]{"entity":"accommodation-type", "value": "Hotels"} with a view, please.
+
       - Show me [Lodges]{"entity":"accommodation-type", "value": "Lodges"} near a national park.
+
       - Are [Tents]{"entity":"accommodation-type", "value": "Tents"} suitable for couples?
