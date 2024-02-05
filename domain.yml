@@ -158,8 +158,16 @@ responses:
         - title: Tents ⛺
           payload: inform_accomodation_type{"accommodation-type", "tents"}
       button_type: vertical
-  utter_ask_duration:
-    - text: How many nights are you planning to stay at the {accomodation_type}. Please use durations like '2 nights' or 'fortnight'
+utter_ask_duration:
+  - text: "How long are you planning to stay at the {accom_type}?"
+    buttons:
+      - title: Short Stay (1-3 nights)
+        payload: /inform_duration{"duration", "short-stay"}
+      - title: Medium Stay (4-7 nights)
+        payload: /inform_duration{"duration", "medium-stay"}
+      - title: Extended Stay (8+ nights)
+        payload: /inform_duration{"duration", "extended-stay"}
+    button_type: vertical
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_default:
@@ -182,9 +190,7 @@ responses:
   utter_anything_else:
     - text: Please reach out if you have any further question.
   utter_confirm_booking:
-    - text: All set {name}! Confirming your booking details, 🏠 Accommodation -
-        {accom_type}, 🧑‍🤝‍🧑 Guests - {num_people}, 📅 Stay - {check_in} to
-        {check_out}, ☎️ - {phone_num}.
+    - text: All set {name}! Confirming your booking details; {accom_type} Accommodation for {num_people} Guests 🧑‍🤝‍🧑, 📅 Staying for {duration}, ☎️ {phone_num}.
   utter_check_options:
     - text: Thank you for your interest in {travel_type} travel! Currently, our
         {travel_type} travel feature is still in development. We're working hard
@@ -217,6 +223,9 @@ entities:
   - accommodation-type
   - date
   - duration
+  - short-stay
+  - medium-stay
+  - extended-stay
 slots:
   name:
     type: any
@@ -265,7 +274,12 @@ slots:
         intent: inform_date
         value: November 15
   duration:
-    type: any
+    influence_conversation: false
+    type: categorical
+    values:
+      - short-stay
+      - medium-stay
+      - extended-stay
     mappings:
       - type: from_entity
         entity: duration
