@@ -530,6 +530,9 @@ nlu:
       - Are [Tents]{"entity":"accommodation-type", "value": "Tents"} suitable for couples?
   - intent: inform_duration
     examples: |
+      - [Short Stay (1-3 nights)]{"entity": "short-stay", "value": "Short Stay (1-3 nights)"}
+      - [Medium Stay (4-7 nights)]{"entity": "medium-stay", "value": "Medium Stay (4-7 nights)"}
+      - [Extended Stay (8+ nights)]{"entity": "extended-stay", "value": "Extended Stay (8+ nights)"}
       - I plan to stay for [2 nights]{"entity": "short-stay", "value": "2 nights"}.
       - Can you find accommodations for [4 nights]{"entity": "medium-stay", "value": "4 nights"}?
       - I'd like to book for a [week]{"entity": "medium-stay", "value": "week"}.
