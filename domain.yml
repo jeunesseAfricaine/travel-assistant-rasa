@@ -137,7 +137,8 @@ responses:
   utter_ask_phone_num:
     - text: What is your phone number?
   utter_ask_check_in:
-    - text: When are you planning to check in? Say dates like 'tomorrow' or 'November 10th'
+    - text: When are you planning to check in? Say dates like 'tomorrow' or 'November
+        10th'
   utter_ask_check_out:
     - text: When are you planning to check out? Say dates like 'May 16' or 'next
         Monday'
@@ -158,16 +159,16 @@ responses:
         - title: Tents ⛺
           payload: inform_accomodation_type{"accommodation-type", "tents"}
       button_type: vertical
-utter_ask_duration:
-  - text: "How long are you planning to stay at the {accom_type}?"
-    buttons:
-      - title: Short Stay (1-3 nights)
-        payload: /inform_duration{"duration", "short-stay"}
-      - title: Medium Stay (4-7 nights)
-        payload: /inform_duration{"duration", "medium-stay"}
-      - title: Extended Stay (8+ nights)
-        payload: /inform_duration{"duration", "extended-stay"}
-    button_type: vertical
+  utter_ask_duration:
+    - text: How long are you planning to stay at the {accom_type}?
+      buttons:
+        - title: Short Stay (1-3 nights)
+          payload: /inform_duration{"duration", "short-stay"}
+        - title: Medium Stay (4-7 nights)
+          payload: /inform_duration{"duration", "medium-stay"}
+        - title: Extended Stay (8+ nights)
+          payload: /inform_duration{"duration", "extended-stay"}
+      button_type: vertical
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_default:
@@ -190,7 +191,9 @@ utter_ask_duration:
   utter_anything_else:
     - text: Please reach out if you have any further question.
   utter_confirm_booking:
-    - text: All set {name}! Confirming your booking details; {accom_type} Accommodation for {num_people} Guests 🧑‍🤝‍🧑, 📅 Staying for {duration}, ☎️ {phone_num}.
+    - text: All set {name}! Confirming your booking details; {accom_type}
+        Accommodation for {num_people} Guests 🧑‍🤝‍🧑, 📅 Staying for
+        {duration}, ☎️ {phone_num}.
   utter_check_options:
     - text: Thank you for your interest in {travel_type} travel! Currently, our
         {travel_type} travel feature is still in development. We're working hard
