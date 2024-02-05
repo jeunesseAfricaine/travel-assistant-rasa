@@ -6,6 +6,7 @@ intents:
   - deny
   - stop
   - start_booking
+  - inform_duration
   - inform_vacation_plan
   - inform_transport_mode
   - inform_corporate
@@ -157,6 +158,8 @@ responses:
         - title: Tents ⛺
           payload: inform_accomodation_type{"accommodation-type", "tents"}
       button_type: vertical
+  utter_ask_duration:
+    - text: How many nights are you planning to stay at the {accomodation_type}. Please use durations like '2 nights' or 'fortnight'
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_default:
@@ -213,6 +216,7 @@ entities:
   - local-type
   - accommodation-type
   - date
+  - duration
 slots:
   name:
     type: any
@@ -260,16 +264,14 @@ slots:
       - type: from_intent
         intent: inform_date
         value: November 15
-  check_out:
+  duration:
     type: any
     mappings:
       - type: from_entity
-        entity: time
-      - type: from_entity
-        entity: date
+        entity: duration
       - type: from_intent
-        intent: inform_date
-        value: Jan 24th
+        intent: inform_duration
+        value: 1-week staycation
   mode_of_transport:
     influence_conversation: false
     type: categorical
@@ -373,7 +375,7 @@ forms:
       - phone_num
       - accom_type
       - check_in
-      - check_out
+      - duration
       - num_people
       - mode_of_transport
   safari_form:
