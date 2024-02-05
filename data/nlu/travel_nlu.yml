@@ -530,38 +530,33 @@ nlu:
       - Are [Tents]{"entity":"accommodation-type", "value": "Tents"} suitable for couples?
   - intent: inform_duration
     examples: |
-      - I plan to stay for 2 nights.
-      - Can you find accommodations for 5 days and 4 nights?
-      - I'd like to book for a week.
-      - 3 nights
-      - Please check availability for a 10-night stay.
-      - I'm thinking of staying for a weekend, so 2 nights.
-      - Is there a discount for a 14-day stay?
-      - for a 3-night stay?
-      - I'm considering a 1-month stay
-      - Check for availability for a 5-night stay
-      - I need a place for 3 nights and 4 days.
-      - Can I book for just one night?
-      - for a 7-night stay
-      - I plan to stay for 3 weeks.
-      - for 4 nights?
-      - I'm looking for options for a 2-night stay.
-      - Check availability for a stay of 10 days.
-      - I want to stay for a month and a half
-      - for a 6-night stay
-      - 4-night stay
-      - a 9-night stay 
-      - I'm considering an 11-day stay
-      - Can you suggest options for a 1-night 
-      - I'm looking for a place to stay during my 2-week workation.
-      - Any special deals for a 13-night stay 
-      - accommodations for a fortnight?
-      - I'm interested in a 5-night stay 
-      - for a 30-day retreat.
-      - 3-night getaway
-      - I need a spot for a 21-day
-      - I'm planning a 6-night stay
-      - Any offers for a 12-night
+      - I plan to stay for [2 nights]{"entity": "short-stay", "value": "2 nights"}.
+      - Can you find accommodations for [4 nights]{"entity": "medium-stay", "value": "4 nights"}?
+      - I'd like to book for a [week]{"entity": "medium-stay", "value": "week"}.
+      - [3 nights]{"entity": "short-stay", "value": "3 nights"}
+      - Please check availability for a [10-night]{"entity": "extended-stay", "value": "10-night"} stay.
+      - I'm thinking of staying for a weekend, so [2 nights]{"entity": "short-stay", "value": "2 nights"}.
+      - Is there a discount for a [14-day]{"entity": "extended-stay", "value": "14-day"} stay?
+      - for a [3-night]{"entity": "short-stay", "value": "3-night"} stay?
+      - I'm considering a [1-month]{"entity": "extended-stay", "value": "1-month"} stay
+      - Check for availability for a [5-night]{"entity": "medium-stay", "value": "5-night"} stay
+      - I need a place for [3 nights]{"entity": "short-stay", "value": "3 nights"}
+      - Can I book for just [one night]{"entity": "short-stay", "value": "one night"}?
+      - for a [7-night]{"entity": "medium-stay", "value": "7-nights"} stay
+      - I plan to stay for [3 weeks]{"entity": "extended-stay", "value": "3 weeks"}.
+      - for [4 nights]{"entity": "medium-stay", "value": "4 nights"}?
+      - I'm looking for options for a [2-night]{"entity": "short-stay", "value": "2-night"} stay.
+      - Check availability for a stay of [10 days]{"entity": "extended-stay", "value": "10 days"}.
+      - I want to stay for a [month and a half]{"entity": "extended-stay", "value": "month and a half"}
+      - for a [6-night]{"entity": "medium-stay", "value": "6-night"} stay
+      - [4-night]{"entity": "medium-stay", "value": "4-night"} stay
+      - a [9-night]{"entity": "extended-stay", "value": "9-night"} stay 
+      - I'm considering an [11 day]{"entity": "extended-stay", "value": "11 day"} stay
+      - Can you suggest options for a [1-night]{"entity": "short-stay", "value": "1-night"} 
+      - I'm looking for a place to stay during my [2-week]{"entity": "extended-stay", "value": "2-week"} workation.
+      - Any special deals for a [13-night]{"entity": "extended-stay", "value": "13-night"} stay 
+      - accommodations for a [fortnight]{"entity": "extended-stay", "value": "2 nights"}?
+      - I'm interested in a [5-night]{"entity": "medium-stay", "value": "5-night"} stay 
+      - for a [30-day]{"entity": "extended-stay", "value": "30-day"} retreat.
       - Can you recommend places for a 1-week staycation
-      - I'm thinking of a 17-night stay 
-      - for a 8-night stay
+      - for a [8-night]{"entity": "extended-stay", "value": "8-night"} stay
