@@ -84,25 +84,15 @@ nlu:
       - Can you arrange my check-in for [next Monday]{"entity": "date",
       "value": "next Monday"}?
 
-      - I'd like to check in [three days from now]{"entity": "date", "value": "three days from now"}.
-
-      - Please schedule my arrival for [two weeks later]{"entity": "date", "value": "two weeks later"}.
-
       - Is it possible to check in on [the first day of next month]{"entity": "date", "value": "the first day of next month"}?
 
       - Arrange my check-in in [the next week]{"entity": "date", "value": "the next week"}.
 
-      - I want to check in [tomorrow]{"entity": "date", "value": "tomorrow"}.
-
-      - Please schedule my arrival in [three months]{"entity": "date", "value": "three months"}.
+      - I want to check in tomorrow
 
       - Is it possible to check in [next Friday]{"entity": "date", "value": "next Friday"}?
 
-      - Arrange my check-in in [the next two days]{"entity": "date", "value": "the next two days"}.
-
       - I'd like to check in [next year]{"entity": "date", "value": "next year"}.
-
-      - Please schedule my arrival in [four weeks]{"entity": "date", "value": "four weeks"}.
 
       - Is it possible to check in in [the next month]{"entity": "date", "value": "the next month"}?
 
@@ -110,13 +100,9 @@ nlu:
 
       - I want to check in [next Tuesday]{"entity": "date", "value": "next Tuesday"}.
 
-      - Please schedule my arrival in [the next six months]{"entity": "date", "value": "the next six months"}.
-
-      - Is it possible to check in on [the last day of this month]{"entity": "date", "value": "the last day of this month"}?
+      - Is it possible to check in on the [last day of this month]{"entity": "date", "value": "last day of this month"}?
 
       - Arrange my check-in [next Thursday]{"entity": "date", "value": "next Thursday"}.
-
-      - I'd like to check in in [the next ten days]{"entity": "date", "value": "the next ten days"}.
 
       - Please schedule my arrival [next weekend]{"entity": "date", "value": "next weekend"}.
 
@@ -130,7 +116,7 @@ nlu:
 
       - Can you arrange my check-in on [Mar 16th]{"entity": "date", "value": "Mar 16th"}?
 
-      - I'd like to check in on [the 10th of June]{"entity": "date", "value": "the 10th of June"}.
+      - I'd like to check in on the [10th of June]{"entity": "date", "value": "10th of June"}.
 
       - Please schedule my arrival for [July 15th]{"entity": "date", "value": "July 15th"}.
 
@@ -170,7 +156,7 @@ nlu:
 
       - I plan to check out on [March 10th]{"entity": "date", "value": "March 10th"}.
 
-      - Can I check out on [the 15th of June]{"entity": "date", "value": "the 15th of June"}?
+      - Can I check out on the [15th of June]{"entity": "date", "value": "15th of June"}?
 
       - My stay ends on [July 25th]{"entity": "date", "value": "July 25th"}, so arrange check-out.
 
@@ -189,6 +175,8 @@ nlu:
       - Please arrange check-out on [February 28th]{"entity": "date", "value": "February 28th"}.
 
       - I plan to check out on [March 10th]{"entity": "date", "value": "March 10th"}.
+
+      - next Monday - Please schedule my arrival on March 5th - next Thursday - Can you book my arrival on April 10th - Check in on May 20th would be preferable. - Arrange my check-in for next Sunday. - Can you arrange my check-in on June 8th? - Book July 3rd if there's availability. - Is it possible to check in on August 15th - I'd like to start my stay on September 25th - Please schedule for October 10th. - Can you arrange check-in on November 5th - Nov 5th - I want to check in next week if possible. - Schedule my arrival for December 20th - I plan to check out on January 8th{"entity": "date", "role": "check-out"}. - on Feb 15th? - My stay starts on March 1st 
   - intent: inform_vacation_plan
     examples: >
       - I'm planning a vacation to explore some exotic places.  - I've
@@ -540,3 +528,40 @@ nlu:
       - Show me [Lodges]{"entity":"accommodation-type", "value": "Lodges"} near a national park.
 
       - Are [Tents]{"entity":"accommodation-type", "value": "Tents"} suitable for couples?
+  - intent: inform_duration
+    examples: |
+      - I plan to stay for 2 nights.
+      - Can you find accommodations for 5 days and 4 nights?
+      - I'd like to book for a week.
+      - 3 nights
+      - Please check availability for a 10-night stay.
+      - I'm thinking of staying for a weekend, so 2 nights.
+      - Is there a discount for a 14-day stay?
+      - for a 3-night stay?
+      - I'm considering a 1-month stay
+      - Check for availability for a 5-night stay
+      - I need a place for 3 nights and 4 days.
+      - Can I book for just one night?
+      - for a 7-night stay
+      - I plan to stay for 3 weeks.
+      - for 4 nights?
+      - I'm looking for options for a 2-night stay.
+      - Check availability for a stay of 10 days.
+      - I want to stay for a month and a half
+      - for a 6-night stay
+      - 4-night stay
+      - a 9-night stay 
+      - I'm considering an 11-day stay
+      - Can you suggest options for a 1-night 
+      - I'm looking for a place to stay during my 2-week workation.
+      - Any special deals for a 13-night stay 
+      - accommodations for a fortnight?
+      - I'm interested in a 5-night stay 
+      - for a 30-day retreat.
+      - 3-night getaway
+      - I need a spot for a 21-day
+      - I'm planning a 6-night stay
+      - Any offers for a 12-night
+      - Can you recommend places for a 1-week staycation
+      - I'm thinking of a 17-night stay 
+      - for a 8-night stay
