@@ -21,7 +21,7 @@ stories:
       - slot_was_set:
           - requested_slot: duration
       - slot_was_set:
-          - duration: 5 nights
+          - duration: short-stay
       - slot_was_set:
           - requested_slot: num_people
       - slot_was_set:
