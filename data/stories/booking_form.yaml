@@ -19,9 +19,9 @@ stories:
       - slot_was_set:
           - check_in: Jan 18th
       - slot_was_set:
-          - requested_slot: check_out
+          - requested_slot: duration
       - slot_was_set:
-          - check_out: Jan 24th
+          - duration: 5 nights
       - slot_was_set:
           - requested_slot: num_people
       - slot_was_set:
