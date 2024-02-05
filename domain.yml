@@ -137,7 +137,7 @@ responses:
   utter_ask_phone_num:
     - text: What is your phone number?
   utter_ask_check_in:
-    - text: When are you planning to check in? Say dates like 'May 15' or 'next month'
+    - text: When are you planning to check in? Say dates like 'tomorrow' or 'November 10th'
   utter_ask_check_out:
     - text: When are you planning to check out? Say dates like 'May 16' or 'next
         Monday'
