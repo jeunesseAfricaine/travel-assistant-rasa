@@ -163,16 +163,19 @@ responses:
     - text: How long are you planning to stay at the {accom_type}?
       buttons:
         - title: Short Stay (1-3 nights)
-          payload: /inform_duration{"duration", "short-stay"}
+          payload: /inform_duration{"duration-type", "short-stay"}
         - title: Medium Stay (4-7 nights)
-          payload: /inform_duration{"duration", "medium-stay"}
+          payload: /inform_duration{"duration-type", "medium-stay"}
         - title: Extended Stay (8+ nights)
-          payload: /inform_duration{"duration", "extended-stay"}
+          payload: /inform_duration{"duration-type", "extended-stay"}
       button_type: vertical
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_default:
-    - text: I'm sorry, I can't help you.
+    - text: I'm sorry, I can't help you. We're working hard to bring you personalized
+        and tailored travel experiences. In the meantime, I'd be delighted to
+        assist you with any FAQs like, 'Does it cost more to book my vacation
+        with a virtual travel assistant?'
       buttons:
         - title: Start Over 🔄
           payload: /restart
@@ -208,10 +211,6 @@ responses:
     - text: Anytime maze! Unaeza nitext in case u need anything else. Safiri salama!😊
 entities:
   - number
-  - LOC:
-      roles:
-        - departure
-        - destination
   - budget-range
   - time
   - amount-of-money
@@ -226,6 +225,9 @@ entities:
   - accommodation-type
   - date
   - duration
+  - duration-type
+  - phone-number
+  - ordinal
   - short-stay
   - medium-stay
   - extended-stay
@@ -241,7 +243,7 @@ slots:
       - type: from_entity
         entity: phoneNo
       - type: from_entity
-        entity: number
+        entity: phone-number
   num_people:
     type: any
     mappings:
@@ -249,7 +251,8 @@ slots:
         entity: number
       - type: from_intent
         intent: inform_group_size
-        value: 5 people
+        value: couples
+        not_intent: inform
   accom_type:
     influence_conversation: false
     type: categorical
@@ -273,10 +276,13 @@ slots:
         entity: time
       - type: from_entity
         entity: date
+      - type: from_entity
+        entity: ordinal
       - type: from_intent
         intent: inform_date
-        value: November 15
-  duration:
+        value: November 15th
+        not_intent: inform_group_size
+  duration_type:
     influence_conversation: false
     type: categorical
     values:
@@ -288,7 +294,8 @@ slots:
         entity: duration
       - type: from_intent
         intent: inform_duration
-        value: 1-week staycation
+        value: one week staycation
+        not_intent: inform_group_size
   mode_of_transport:
     influence_conversation: false
     type: categorical
@@ -392,7 +399,7 @@ forms:
       - phone_num
       - accom_type
       - check_in
-      - duration
+      - duration_type
       - num_people
       - mode_of_transport
   safari_form:
