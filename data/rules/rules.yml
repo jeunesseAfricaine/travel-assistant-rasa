@@ -27,3 +27,7 @@ rules:
     steps:
       - intent: faq
       - action: utter_faq
+  - rule: inquiry
+    steps:
+      - intent: inquire_travel_packages
+      - action: utter_ask_travel_experience
