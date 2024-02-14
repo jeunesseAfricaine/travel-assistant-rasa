@@ -2,11 +2,12 @@
 recipe: default.v1
 language: en
 pipeline:
-  - name: "SpacyNLP"
-    model: "en_core_web_md"
-    case_sensitive: False
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
+  - name: LanguageModelFeaturizer
+    model_name: "bert"
+    model_weights: "rasa/LaBSE"
+    cache_dir: null
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -14,10 +15,8 @@ pipeline:
     analyzer: "char_wb"
     min_ngram: 1
     max_ngram: 4
-  - name: "SpacyEntityExtractor"
-    dimensions: ["PERSON", "LOC", "ORG"]
   - name: DIETClassifier
-    epochs: 500
+    epochs: 1
     ranking_length: 5
     batch_strategy: sequence
   - name: DucklingEntityExtractor
@@ -26,36 +25,39 @@ pipeline:
       - time
       - phone-number
       - number
-      - duration
-      - ordinal
       - amount-of-money
     locale: de_DE
     timezone: Europe/Berlin
     timeout: 3
+  - name: SpacyNLP
+    model: "en_core_web_md"
+    case_sensitive: False
+  - name: "SpacyEntityExtractor"
+    dimensions: ["PERSON", "LOC"]
   - name: DIETClassifier
-    epochs: 450
+    epochs: 1
     constrain_similarities: true
     batch_strategy: sequence
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 300
+    epochs: 1
     retrieval_intent: chitchat
   - name: ResponseSelector
-    epochs: 300
+    epochs: 1
     retrieval_intent: faq
   - name: FallbackClassifier
     threshold: 0.3
     ambiguity_threshold: 0.1
 policies:
   - name: UnexpecTEDIntentPolicy
-    epochs: 200
+    epochs: 1
     max_history: 5
   - name: AugmentedMemoizationPolicy
     max_history: 6
   - name: TEDPolicy
     max_history: 6
     constrain_similarities: true
-    epochs: 500
+    epochs: 1
     batch_size: 50
     max_training_samples: 300
   - name: RulePolicy
