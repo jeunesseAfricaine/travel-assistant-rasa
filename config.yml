@@ -29,7 +29,7 @@ pipeline:
     locale: de_DE
     timezone: Europe/Berlin
     timeout: 3
-  - name: SpacyNLP
+  - name: "SpacyNLP"
     model: "en_core_web_md"
     case_sensitive: False
   - name: "SpacyEntityExtractor"
