@@ -128,3 +128,17 @@ responses:
         restrictions set by the country you are travelling to or transiting,
         PCR, Vaccination requirements. Where possible check-in online and plan
         to reach the airport in good time.
+  utter_faq/ask_restart_conversation:
+    - text: You can restart the conversation and explore new travel itineraries by
+        using a command like '/session_restart.'
+  utter_faq/ask_group_travel:
+    - text: Certainly! The travel assistant can create itineraries for solo travelers,
+        couples, families, or groups. Just let us know your preferences!
+  utter_faq/ask_user_privacy:
+    - text: Yes, your personal information is secure when using the travel assistant.
+        We prioritize data security and handle personal details with utmost
+        confidentiality.
+  utter_faq/ask_per_person_sharing:
+    - text: Per person sharing refers to the cost of a travel package or accommodation
+        being shared among individuals. It's a common pricing model for group
+        travel.
