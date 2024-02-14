@@ -354,7 +354,7 @@ nlu:
       vacation to immerse myself in nature na tranquility. - Exploring the idea
       ya planning a vacation to explore historic sites. - I've decided ni time
       for a vacation to explore different climates. - Thinking about kuandaa
-      vacation to discover vibrant city life. - Surprise Me
+      vacation to discover vibrant city life. - Surprise Me - suggest some options
   - intent: inform_travel_destination
     examples: >
       - I want to visit [Bali](LOC) for my next vacation. - Can you provide
