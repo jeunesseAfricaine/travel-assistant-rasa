@@ -9,8 +9,8 @@ pipeline:
   - name: SpacyFeaturizer
   - name: RegexFeaturizer
   - name: LanguageModelFeaturizer
-    model_name: "bert"
-    model_weights: "rasa/LaBSE"
+    model_name: "xlnet"
+    model_weights: "xlnet-base-cased"
     cache_dir: null
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
