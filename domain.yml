@@ -22,11 +22,9 @@ intents:
   - inform_travel_experience
 responses:
   utter_greet:
-    - text: Hello! Welcome to Voyage Companion! I am your AI travel virtual assistant.
-        Are you looking for something specific, or would you like me to suggest
-        some options?
-  utter_ask_travel_experience:
-    - text: Tell me about your ideal travel experience.
+    - text: Hello! Welcome to Voyage Companion! I am your AI travel virtual assistant. Are you looking for something specific, or would you like me to suggest some options?
+  utter_travel_experience:
+    - text: Tell me about your ideal travel experience. 
       buttons:
         - title: Adventure 🌍
           payload: /inform_travel_experience{{"travel-exp", "adventure"}}
@@ -50,7 +48,8 @@ responses:
   utter_ask_phone_num:
     - text: What is your phone number?
   utter_ask_check_in:
-    - text: When are you planning to check in? Say dates like 'November 10th'
+    - text: When are you planning to check in? Say dates like 'November
+        10th'
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_default:
@@ -94,6 +93,7 @@ entities:
   - amount-of-money
   - budget-range
   - travel-exp
+
 slots:
   destination:
     type: any
@@ -168,6 +168,7 @@ forms:
 actions:
   - action_provide_package_options
   - action_provide_destination_details
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
