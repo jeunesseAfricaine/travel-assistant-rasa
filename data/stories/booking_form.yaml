@@ -11,8 +11,6 @@ stories:
     steps:
       - intent: inquire_travel_packages
       - action: utter_travel_experience
-        entities:
-          - travel-exp: adventure
       - intent: inform_travel_experience
       - action: action_provide_package_options
   - story: proceed to booking
