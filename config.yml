@@ -2,19 +2,24 @@
 recipe: default.v1
 language: en
 pipeline:
+  - name: "SpacyNLP"
+    model: "en_core_web_md"
+    case_sensitive: False
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
+  - name: RegexFeaturizer
   - name: LanguageModelFeaturizer
     model_name: "bert"
     model_weights: "rasa/LaBSE"
     cache_dir: null
-  - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"
     min_ngram: 1
     max_ngram: 4
+  - name: "SpacyEntityExtractor"
+    dimensions: ["PERSON", "LOC"]
   - name: DIETClassifier
     epochs: 1
     ranking_length: 5
@@ -29,11 +34,6 @@ pipeline:
     locale: de_DE
     timezone: Europe/Berlin
     timeout: 3
-  - name: "SpacyNLP"
-    model: "en_core_web_md"
-    case_sensitive: False
-  - name: "SpacyEntityExtractor"
-    dimensions: ["PERSON", "LOC"]
   - name: DIETClassifier
     epochs: 1
     constrain_similarities: true
