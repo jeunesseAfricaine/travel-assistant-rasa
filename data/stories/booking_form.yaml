@@ -1,9 +1,23 @@
 ---
 version: "3.1"
 stories:
-  - story: Make reservation
+  - story: get specific destination
     steps:
-      - intent: start_booking
+      - intent: inform_travel_destination
+        entities:
+          - LOC: Bali
+      - action: action_provide_destination_details
+  - story: recommend destination AND/OR explore_other_options
+    steps:
+      - intent: inquire_travel_packages
+      - action: utter_ask_travel_experience
+        entities:
+          - travel-exp: adventure
+      - intent: inform_travel_experience
+      - action: action_provide_package_options
+  - story: proceed to booking
+    steps:
+      - intent: proceed_to_booking
       - action: booking_form
       - active_loop: booking_form
       - slot_was_set:
@@ -13,117 +27,17 @@ stories:
       - slot_was_set:
           - requested_slot: phone_num
       - slot_was_set:
-          - phone_num: 0723456798
+          - phone_num: 723456798
       - slot_was_set:
           - requested_slot: check_in
       - slot_was_set:
           - check_in: Jan 18th
       - slot_was_set:
-          - requested_slot: duration
-      - slot_was_set:
-          - duration: short-stay
-      - slot_was_set:
           - requested_slot: num_people
       - slot_was_set:
           - num_people: 6 travelers
-      - slot_was_set:
-          - requested_slot: accom_type
-      - slot_was_set:
-          - accom_type: Villa
-      - slot_was_set:
-          - requested_slot: mode_of_transport
-      - slot_was_set:
-          - mode_of_transport: Tour Van
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
       - action: utter_confirm_booking
       - action: utter_anything_else
-      
-  - story: explore destination + safari 
-    steps:
-      - intent: inform_vacation_plan
-      - action: utter_ask_travel_type
-      - intent: inform
-        entities:
-          - travel-type: safari
-      - action: safari_form
-      - active_loop: safari_form
-      - slot_was_set:
-          - requested_slot: safari_type
-      - slot_was_set:
-          - safari_type: Kenya
-      - slot_was_set:
-          - requested_slot: budget_range
-      - slot_was_set:
-          - budget_range: budget    
-      - slot_was_set:
-          - requested_slot: null
-      - active_loop: null
-      - action: utter_top_deals
-      
-  - story: explore destination + themed
-    steps:
-      - intent: inform_vacation_plan
-      - action: utter_ask_travel_type
-      - intent: inform
-        entities:
-          - travel-type: themed
-      - action: themed_form
-      - active_loop: themed_form
-      - slot_was_set:
-          - requested_slot: theme_type
-      - slot_was_set:
-          - theme_type: honeymoon
-      - slot_was_set:
-          - requested_slot: budget_range
-      - slot_was_set:
-          - budget_range: mid-range 
-      - slot_was_set:
-          - requested_slot: null
-      - active_loop: null
-      - action: utter_top_deals
-          
-  - story: explore destination + corporate
-    steps:
-      - intent: inform_vacation_plan
-      - action: utter_ask_travel_type
-      - intent: inform
-        entities:
-          - travel-type: corporate
-      - action: corporate_form
-      - active_loop: corporate_form
-      - slot_was_set:
-          - requested_slot: corporate
-      - slot_was_set:
-          - corporate: bleisure
-      - slot_was_set:
-          - requested_slot: budget_range
-      - slot_was_set:
-          - budget_range: luxury 
-      - slot_was_set:
-          - requested_slot: null
-      - active_loop: null
-      - action: utter_top_deals
-          
-  - story: explore destination + local
-    steps:
-      - intent: inform_vacation_plan
-      - action: utter_ask_travel_type
-      - intent: inform
-        entities:
-          - travel-type: local
-      - action: local_form
-      - active_loop: local_form
-      - slot_was_set:
-          - requested_slot: local_type
-      - slot_was_set:
-          - local_type: beach
-      - slot_was_set:
-          - requested_slot: budget_range
-      - slot_was_set:
-          - budget_range: budget 
-      - slot_was_set:
-          - requested_slot: null
-      - active_loop: null
-      - action: utter_top_deals
