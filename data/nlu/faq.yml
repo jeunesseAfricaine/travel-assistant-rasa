@@ -100,9 +100,9 @@ nlu:
       - Are there any added expenses associated with booking vacations via a virtual travel assistant?
 
       - Does it cost more to book my vacation with a virtual travel assistant?
-      
+
       - kuna any additional cost?
-      
+
       - mtanicharge tena for this?
   - intent: faq/ask_availability
     examples: >
@@ -391,3 +391,59 @@ nlu:
       - Can you guide me on the guidelines to follow before traveling?
       - Explain the pre-travel requirements set by the agency.
       - What are the travel guidelines I should be
+  - intent: faq/ask_restart_conversation
+    examples: >
+      - How can I restart the conversation with the travel assistant for a
+      new itinerary?
+
+      - What's the command to start a new conversation?
+
+      - Can I initiate a fresh interaction for a different itinerary?
+
+      - How do I begin a new chat with the travel assistant?
+
+      - Is there a way to reset the conversation for a new travel plan?
+
+      - What's the procedure to start a new session with the travel assistant?
+
+      - How do I clear the current conversation and start afresh?
+
+      - Can I initiate a new interaction with the travel assistant?
+  - intent: faq/ask_group_travel
+    examples: >
+      - Are there options for group travel in the travel assistant's
+      itineraries?
+
+      - Can the travel assistant help with planning group vacations?
+
+      - Tell me about group travel options in the itineraries.
+
+      - Does the travel assistant create itineraries for group trips?
+
+      - Are the travel plans suitable for group travelers?
+
+      - Can I get recommendations for group-friendly destinations?
+
+      - What group travel options are available in the itineraries?
+
+      - Does the travel assistant consider group preferences in planning?
+  - intent: faq/ask_user_privacy
+    examples: |
+      - Is my personal information secure when using the travel assistant?
+      - How does the travel assistant ensure the security of my data?
+      - Are there privacy measures in place for user information?
+      - Can I trust the travel assistant with my personal details?
+      - What steps are taken to protect user privacy in the assistant?
+      - Is the handling of personal data secure in the travel assistant?
+      - What privacy features are implemented in the travel assistant?
+      - Are there safeguards for user information in the travel assistant?
+  - intent: faq/ask_per_person_sharing
+    examples: |
+      - What does "per person sharing" mean?
+      - Can you explain the concept of per person sharing in travel terms?
+      - Provide a definition of per person sharing in travel packages.
+      - Explain how per person sharing works in travel accommodations.
+      - What's the meaning of per person sharing in travel pricing?
+      - Clarify the term per person sharing in the context of travel expenses.
+      - Can you define per person sharing as it relates to group travel costs?
+      - Tell me more about the pricing model of per person sharing in travel.
