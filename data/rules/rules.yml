@@ -30,4 +30,4 @@ rules:
   - rule: inquiry
     steps:
       - intent: inquire_travel_packages
-      - action: utter_ask_travel_experience
+      - action: utter_travel_experience
