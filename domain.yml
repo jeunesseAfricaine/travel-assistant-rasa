@@ -5,99 +5,35 @@ intents:
   - affirm
   - deny
   - stop
-  - start_booking
-  - inform_duration
-  - inform_vacation_plan
-  - inform_transport_mode
-  - inform_corporate
-  - inform_theme
-  - inform_local
-  - inform_safari
-  - inform_group_size
-  - inform_date
-  - inform_num_rooms
-  - inform_budget_range
   - goodbye
   - chitchat
   - thankyou
   - faq
   - nlu_fallback
+  - proceed_to_booking
+  - explore_other_options
   - inform
-  - inform_accomodation_type
+  - inform_vacation_plan
+  - inform_group_size
+  - inform_date
+  - inform_budget_range
+  - inquire_travel_packages
+  - inform_travel_destination
+  - inform_travel_experience
 responses:
   utter_greet:
     - text: Hello! Welcome to Voyage Companion! I am your AI travel virtual assistant.
-        How can I assist you with your travel plans today?😊
+        Are you looking for something specific, or would you like me to suggest
+        some options?
+  utter_ask_travel_experience:
+    - text: Tell me about your ideal travel experience.
       buttons:
-        - title: Explore destinations 🌍
-          payload: /inform_vacation_plan
-        - title: Book Now 🏨
-          payload: /start_booking
-      button_type: vertical
-  utter_ask_travel_type:
-    - text: Sure, naeza kusort. What specific package are you looking for?
-      image: https://www.andbeyond.com/wp-content/uploads/sites/5/guest-area-with-golden-sunrise-at-andbeyond-bateleur-camp-on-a-luxury-kenya-safari1.jpg
-      buttons:
-        - title: Safaris 🗺🦓
-          payload: /inform{{"travel-type":"safari"}}
-        - title: Themed 🎉
-          payload: /inform{{"travel-type":"themed"}}
-        - title: Corporate 🏢
-          payload: /inform{{"travel-type":"corporate"}}
-        - title: Local 🏞️
-          payload: /inform{{"travel-type":"local"}}
-      button_type: vertical
-  utter_ask_safari_type:
-    - text: Planning a safari is exciting! Here are some Safari options you might be
-        interested in
-      image: https://www.flightcentre.co.nz/sites/default/files/product-images/8807405223966-a0715d679ff86f60821264dde776e27c.jpg
-      buttons:
-        - title: Kenya🇰🇪
-          payload: /inform_safari{{"safari-type", "kenya"}}
-        - title: East Africa🌍
-          payload: /inform_safari{{"safari-type", "east-africa"}}
-        - title: South Africa🇿🇦
-          payload: /inform_safari{{"safari-type", "south-africa"}}
-      button_type: vertical
-  utter_ask_local_type:
-    - text: Planning a local adventure! Here are some packages you might be interested
-        in
-      image: https://www.safaritravelplus.com/wp-content/uploads/2018/08/kenya-Beach-holidays.jpg
-      buttons:
-        - title: Beach 🏖️
-          payload: /inform_local{{"local-type", "beach"}}
-        - title: Weekend 🌄
-          payload: /inform_local{{"local-type", "weekend"}}
-      button_type: vertical
-  utter_ask_theme_type:
-    - text: Please check out these options for themed packages?
-      image: https://i.pinimg.com/originals/40/1b/a6/401ba6c29f813068c505737ffdb8d33f.jpg
-      buttons:
-        - title: Valentines ❤️
-          payload: /inform_theme{{"theme-type", "valentines"}}
-        - title: Honeymoon 💑
-          payload: /inform_theme{{"theme-type", "honeymoon"}}
-        - title: Easter 🐰
-          payload: /inform_theme{{"theme-type", "easter"}}
-        - title: Madaraka 🇰🇪
-          payload: /inform_theme{{"theme-type", "madaraka"}}
-        - title: Mashujaa 🎖️
-          payload: /inform_theme{{"theme-type", "mashujaa"}}
-        - title: Jamhuri 🇰🇪
-          payload: /inform_theme{{"theme-type", "jamhuri"}}
-        - title: Christmas 🎄
-          payload: /inform_theme{{"theme-type", "christmas"}}
-      button_type: vertical
-  utter_ask_corporate:
-    - text: Please check out these options for corporate packages.
-      image: https://btttravel.com/wp-content/uploads/2015/01/Slider-4.jpg
-      buttons:
-        - title: Bleisure 🏢✈️
-          payload: /inform_corporate{{"corporate", "bleisure"}}
-        - title: Conferences 📚
-          payload: /inform_corporate{{"corporate", "conference"}}
-        - title: Trade Fair 🎪
-          payload: /inform_corporate{{"corporate", "trade-fair"}}
+        - title: Adventure 🌍
+          payload: /inform_travel_experience{{"travel-exp", "adventure"}}
+        - title: Relaxation 🏖
+          payload: /inform_travel_experience{{"travel-exp", "relaxation"}}
+        - title: Wildlife Safari 🦓
+          payload: /inform_travel_experience{{"travel-exp", "wildlife-safari"}}
       button_type: vertical
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip?💰
@@ -109,75 +45,20 @@ responses:
         - title: Luxury 💎
           payload: /inform_budget_range{{"budget-range", "luxury"}}
       button_type: vertical
-  utter_top_deals:
-    - text: I appreciate your interest in the {travel_type} package. Currently, it's
-        not available, but rest assured, we are working diligently to make it
-        accessible for you. May I assist you with any other travel preferences?
-      buttons:
-        - title: Other destinations 🏞️
-          payload: /inform_vacation_plan
-        - title: Quick Booking 🛎️
-          payload: /start_booking
-  utter_ask_transport_mode:
-    - text: How would you like to travel to your destination? Choose your preferred
-        mode of transport.
-      buttons:
-        - title: Self-Drive 🚗
-          payload: /inform_transport_mode{"mode-of-transport", "self-drive"}
-        - title: SGR 🚆
-          payload: /inform_transport_mode{"mode-of-transport", "sgr"}
-        - title: Flying ✈️
-          payload: /inform_transport_mode{"mode-of-transport", "flying"}
-        - title: Tour Van 🚐
-          payload: /inform_transport_mode{"mode-of-transport", "tour-van"}
-        - title: Cruiser 🚢
-          payload: /inform_transport_mode{"mode-of-transport", "cruiser"}
   utter_ask_name:
     - text: What is your full name?
   utter_ask_phone_num:
     - text: What is your phone number?
   utter_ask_check_in:
-    - text: When are you planning to check in? Say dates like 'tomorrow' or 'November
-        10th'
-  utter_ask_check_out:
-    - text: When are you planning to check out? Say dates like 'May 16' or 'next
-        Monday'
-  utter_ask_accom_type:
-    - text: Where would you like to stay?
-      image: https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-      buttons:
-        - title: Cottages 🏡
-          payload: /inform_accomodation_type{"accommodation-type", "cottages"}
-        - title: Villas 🏰
-          payload: /inform_accomodation_type{"accommodation-type", "villas"}
-        - title: Resorts 🏝
-          payload: inform_accomodation_type{"accommodation-type", "resorts"}
-        - title: Hotels 🏨
-          payload: inform_accomodation_type{"accommodation-type", "hotels"}
-        - title: Lodges 🏡
-          payload: inform_accomodation_type{"accommodation-type", "lodges"}
-        - title: Tents ⛺
-          payload: inform_accomodation_type{"accommodation-type", "tents"}
-      button_type: vertical
-  utter_ask_duration:
-    - text: How long are you planning to stay at the {accom_type}?
-      buttons:
-        - title: Short Stay (1-3 nights)
-          payload: /inform_duration{"duration-type", "short-stay"}
-        - title: Medium Stay (4-7 nights)
-          payload: /inform_duration{"duration-type", "medium-stay"}
-        - title: Extended Stay (8+ nights)
-          payload: /inform_duration{"duration-type", "extended-stay"}
-      button_type: vertical
+    - text: When are you planning to check in? Say dates like 'November 10th'
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_default:
-    - text: I'm sorry, I can't help you. We're working hard to bring you personalized
-        and tailored travel experiences. In the meantime, I'd be delighted to
-        assist you with any FAQs like, 'Does it cost more to book my vacation
-        with a virtual travel assistant?'
+    - text: Oops! It seems we've taken a detour!. No worries, we're working hard to
+        bring you personalized and seamless experiences. Feel free to ask about
+        destinations or choose to restart the conversation.
       buttons:
-        - title: Start Over 🔄
+        - title: Restart ✨
           payload: /restart
   utter_goodbye:
     - text: Thank you for using our services! Should you need assistance in the
@@ -192,17 +73,10 @@ responses:
     - text: I'd love to understand better. Can you elaborate?
     - text: Sijakuget. Hebu nishow tena...
   utter_anything_else:
-    - text: Please reach out if you have any further question.
+    - text: Feel like exploring more? I'm here to help with travel suggestions or any
+        inquiries you may have. Let's make your journey unforgettable! 🌟
   utter_confirm_booking:
-    - text: All set {name}! Confirming your booking details; {accom_type}
-        Accommodation for {num_people} Guests 🧑‍🤝‍🧑, 📅 Staying for
-        {duration}, ☎️ {phone_num}.
-  utter_check_options:
-    - text: Thank you for your interest in {travel_type} travel! Currently, our
-        {travel_type} travel feature is still in development. We're working hard
-        to bring you personalized and tailored travel experiences. In the
-        meantime, I'd be delighted to assist you with any FAQs like, 'Does it
-        cost more to book my vacation with a virtual travel assistant?'
+    - text: All set!
   utter_youarewelcome:
     - text: You're most welcome! Safe travels, and feel free to reach out if you need
         anything else. Bon voyage!😊
@@ -210,28 +84,22 @@ responses:
         Safari njema!😊
     - text: Anytime maze! Unaeza nitext in case u need anything else. Safiri salama!😊
 entities:
-  - number
-  - budget-range
   - time
-  - amount-of-money
-  - travel-type
-  - mode-of-transport
-  - safari-type
-  - theme-type
-  - corporate
+  - LOC
   - PERSON
-  - phoneNo
-  - local-type
-  - accommodation-type
+  - number
   - date
-  - duration
-  - duration-type
+  - phoneNo
   - phone-number
-  - ordinal
-  - short-stay
-  - medium-stay
-  - extended-stay
+  - amount-of-money
+  - budget-range
+  - travel-exp
 slots:
+  destination:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: LOC
   name:
     type: any
     mappings:
@@ -253,22 +121,6 @@ slots:
         intent: inform_group_size
         value: couples
         not_intent: inform
-  accom_type:
-    influence_conversation: false
-    type: categorical
-    values:
-      - Hotels
-      - Resorts
-      - Lodges
-      - Villas
-      - Cottages
-      - Tents
-    mappings:
-      - type: from_entity
-        entity: accommodation-type
-      - type: from_intent
-        intent: inform_accomodation_type
-        value: for camping
   check_in:
     type: any
     mappings:
@@ -276,107 +128,9 @@ slots:
         entity: time
       - type: from_entity
         entity: date
-      - type: from_entity
-        entity: ordinal
       - type: from_intent
         intent: inform_date
         value: November 15th
-        not_intent: inform_group_size
-  duration_type:
-    influence_conversation: false
-    type: categorical
-    values:
-      - short-stay
-      - medium-stay
-      - extended-stay
-    mappings:
-      - type: from_entity
-        entity: duration
-      - type: from_intent
-        intent: inform_duration
-        value: one week staycation
-        not_intent: inform_group_size
-  mode_of_transport:
-    influence_conversation: false
-    type: categorical
-    values:
-      - Self-Drive
-      - SGR
-      - Flying
-      - Tour Van
-      - Cruiser
-    mappings:
-      - type: from_entity
-        entity: mode-of-transport
-      - type: from_intent
-        intent: inform_transport_mode
-        value: plane
-  travel_type:
-    influence_conversation: true
-    type: categorical
-    values:
-      - safari
-      - themed
-      - corporate
-      - local
-    mappings:
-      - type: from_entity
-        entity: travel-type
-  safari_type:
-    influence_conversation: true
-    type: categorical
-    values:
-      - kenya
-      - east-africa
-      - south-africa
-    mappings:
-      - type: from_entity
-        entity: safari-type
-      - type: from_intent
-        intent: inform_safari
-        value: wildlife
-  theme_type:
-    influence_conversation: true
-    type: categorical
-    values:
-      - valentines
-      - honeymoon
-      - easter
-      - madaraka
-      - mashujaa
-      - jamhuri
-      - christmas
-    mappings:
-      - type: from_entity
-        entity: theme-type
-      - type: from_intent
-        intent: inform_theme
-        value: holiday getaways
-  local_type:
-    influence_conversation: true
-    type: categorical
-    values:
-      - beach
-      - weekend
-    mappings:
-      - type: from_entity
-        entity: local-type
-      - type: from_intent
-        intent: inform_local
-        value: visit nearby
-  corporate:
-    influence_conversation: true
-    type: categorical
-    values:
-      - bleisure
-      - conference
-      - trade-fair
-    mappings:
-      - type: from_entity
-        entity: corporate
-      - type: from_intent
-        intent: inform_corporate
-        value: team-building event
   budget_range:
     influence_conversation: true
     type: categorical
@@ -392,32 +146,28 @@ slots:
       - type: from_intent
         intent: inform_budget_range
         value: GBP 1200
+  travel_experience:
+    influence_conversation: true
+    type: categorical
+    values:
+      - adventure
+      - relaxation
+      - wildlife-safari
+    mappings:
+      - type: from_entity
+        entity: travel-exp
+      - type: from_text
+        intent: inform_travel_experience
 forms:
   booking_form:
     required_slots:
       - name
       - phone_num
-      - accom_type
       - check_in
-      - duration_type
       - num_people
-      - mode_of_transport
-  safari_form:
-    required_slots:
-      - safari_type
-      - budget_range
-  themed_form:
-    required_slots:
-      - theme_type
-      - budget_range
-  corporate_form:
-    required_slots:
-      - corporate
-      - budget_range
-  local_form:
-    required_slots:
-      - local_type
-      - budget_range
+actions:
+  - action_provide_package_options
+  - action_provide_destination_details
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
