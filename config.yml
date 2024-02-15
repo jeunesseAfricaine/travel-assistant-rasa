@@ -2,11 +2,12 @@
 recipe: default.v1
 language: en
 pipeline:
-  - name: "SpacyNLP"
-    model: "en_core_web_md"
-    case_sensitive: False
-  - name: SpacyTokenizer
-  - name: SpacyFeaturizer
+  #- name: "SpacyNLP"
+  #  model: "en_core_web_md"
+  #  case_sensitive: False
+  #- name: SpacyTokenizer
+  #- name: SpacyFeaturizer
+  - name: WhitespaceTokenizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -14,8 +15,8 @@ pipeline:
     analyzer: "char_wb"
     min_ngram: 1
     max_ngram: 4
-  - name: "SpacyEntityExtractor"
-    dimensions: ["PERSON", "LOC"]
+ # - name: "SpacyEntityExtractor"
+    #dimensions: ["PERSON", "LOC"]
   - name: DIETClassifier
     epochs: 300
     ranking_length: 5
