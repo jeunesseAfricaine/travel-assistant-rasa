@@ -51,9 +51,9 @@ policies:
   - name: AugmentedMemoizationPolicy
     max_history: 6
   - name: TEDPolicy
-    max_history: 5
+    max_history: 6
     constrain_similarities: true
-    epochs: 200
+    epochs: 300
     batch_size: 50
     max_training_samples: 300
   - name: RulePolicy
