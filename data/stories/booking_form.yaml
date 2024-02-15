@@ -3,13 +3,13 @@ version: "3.1"
 stories:
   - story: get specific destination
     steps:
-      - intent: inform_travel_destination
+      - user: I want to visit [Bali](LOC) for my next vacation.
         entities:
           - LOC: Bali
       - action: action_provide_destination_details
   - story: recommend destination AND/OR explore_other_options
     steps:
-      - intent: inquire_travel_packages
+      - user: What are the available travel packages?
       - action: utter_travel_experience
       - intent: inform_travel_experience
         entities:
