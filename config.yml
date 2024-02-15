@@ -11,7 +11,7 @@ pipeline:
   - name: LexicalSyntacticFeaturizer
   - name: LanguageModelFeaturizer
     model_name: "xlnet"
-    model_weights: "xlnet-base-uncased"
+    model_weights: "xlnet-base-cased"
     cache_dir: null
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
