@@ -58,11 +58,6 @@ responses:
         systems (airlines, cruise lines, hotels), you will also be able to
         retrieve your information on their unique client sites, many of which
         offer a wealth of information to help you prepare for the trip ahead..
-  utter_faq/ask_explain_recommendation:
-    - text: Our travel experts and AI engineers work on the right APIs and data for
-        personalized recommendations, taking into account local culture,
-        weather, and your preferences. We can suggest the best sightseeing spots
-        and tour guides tailored just for you!
   utter_faq/ask_turn_around:
     - text: Once you've shared your preferences and budget, we'll promptly handle all
         arrangements, including accommodations and detailed itineraries, to
@@ -71,10 +66,6 @@ responses:
     - text: Our itineraries are meticulously planned, covering every aspect of your
         trip. Just provide us with your preferences, and we'll craft a detailed
         itinerary to ensure you have a memorable journey!
-  utter_faq/ask_get_to_destination:
-    - text: Many international airlines operate in and out of these destinations. To
-        name a few, Kenya Airways, KLM, Virgin Atlantic, Emirates, and Qatar
-        Airways.
   utter_faq/ask_visa:
     - text: Yes, most of these destinations will require a visa for international
         travelers. It can be obtained on arrival at the airport with a visa fee
@@ -102,14 +93,6 @@ responses:
   utter_faq/ask_money_exchange:
     - text: Yes, but it is not the best rate. It is advisable to go to the bank or a
         forex bureau.
-  utter_faq/ask_safari_vehicle:
-    - text: We use both safari tour vans and four-wheel drive Landcruisers. The tour
-        vans are just as comfortable while being a little cheaper. Landcruisers
-        are useful for locations that may experience muddy roads if it rains.
-        Both vehicles have game viewing roofs, radio calls, and comfortable
-        seats with seat belts. Everything is done to assure your comfort while
-        traveling. Special cooler boxes for cold drinks are part of the standard
-        equipment.
   utter_faq/ask_payment_options:
     - text: You may pay by mobile money, credit card or by direct bank transfer.
         Credit cards attract a 4% bank fee while a bank transfer attracts a flat
@@ -123,11 +106,6 @@ responses:
   utter_faq/ask_refund_timeframe:
     - text: Once a refund is initiated the refund process can take 5-7 working days,
         We will update the traveler once the refund is received.
-  utter_faq/ask_travel_guidelines:
-    - text: Ensure your Visa and Passport is valid for travel . Check rules and
-        restrictions set by the country you are travelling to or transiting,
-        PCR, Vaccination requirements. Where possible check-in online and plan
-        to reach the airport in good time.
   utter_faq/ask_restart_conversation:
     - text: You can restart the conversation and explore new travel itineraries by
         using a command like '/session_restart.'
