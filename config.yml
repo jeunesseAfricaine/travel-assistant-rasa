@@ -10,8 +10,8 @@ pipeline:
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: LanguageModelFeaturizer
-    model_name: "distilbert"
-    model_weights: "distilbert-base-uncased"
+    model_name: "xlnet"
+    model_weights: "xlnet-base-uncased"
     cache_dir: null
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
