@@ -177,19 +177,6 @@ nlu:
       - What are the steps to find my itinerary after confirming my trip?
       - I've booked my trip. Where should I check for my itinerary details?
       - Where can I find my itinerary once my trip is booked?
-  - intent: faq/ask_explain_recommendation
-    examples: |
-      - How do you make recommendations for sightseeing and tours?
-      - How do you suggest sightseeing spots and tours?
-      - Can you guide me on selecting sightseeing places and tours?
-      - What's your process for recommending sightseeing and tour options?
-      - How do you provide suggestions for sightseeing and tours? 
-      - What's your approach to suggesting sightseeing and tour activities?
-      - Can you assist with recommendations for sightseeing and tours?
-      - How do you help with choosing sightseeing locations and tours?
-      - What methods do you use to recommend sightseeing spots and tours? 
-      - Can you give advice on sightseeing and tours at my destination?
-      - How do you tailor sightseeing and tour recommendations for travelers?
   - intent: faq/ask_turn_around
     examples: >
       - How quickly can you arrange accommodations once I share my
@@ -227,20 +214,6 @@ nlu:
       - What's the depth of detail in the itineraries you prepare?
       - Do your itineraries include extensive details?
       - How detailed can I expect your itineraries to be?
-  - intent: faq/ask_get_to_destination
-    examples: |
-      - How do I get to my destination.
-      - Can you guide me on reaching my destination?
-      - What's the best way to get to my intended location?
-      - Explain the transportation options to reach my destination.
-      - What transportation methods are available for reaching my destination?
-      - Tell me about the routes to get to my destination.
-      - How do I navigate to my destination?
-      - Provide information on reaching my destination.
-      - What are the transportation choices for reaching my destination?
-      - Can you assist me in reaching my destination?
-      - nafika aje huko?
-      - ntafikaje?
   - intent: faq/ask_visa
     examples: |
       - do i need a visa?
@@ -264,14 +237,12 @@ nlu:
     examples: |
       - what kind of cloth should i wear?
       - Can you guide me on what to wear during my travel?
-      - Tell me about the recommended wardrobe for my journey.
-      - Provide advice on dressing appropriately for my destination.
+      - Provide advice on dressing appropriately
       - What clothing should I pack for my travel?
-      - Explain the dress code for the location I'm visiting.
-      - Any recommendations on what clothes to bring?
+      - Explain the dress code 
       - Tell me about the appropriate attire for my journey.
-      - What kind of wardrobe is suitable for my travel plans?
-      - Provide information on dressing for the destination.
+      - What kind of wardrobe is suitable
+      - Provide information on dressing
       - what should i pack?
       - i want to pack
       - how should plan for packing
@@ -332,18 +303,6 @@ nlu:
       - Provide information on currency exchange at the airport.
       - What are the options for exchanging money at the airport?
       - Can you guide me on currency exchange facilities at the airport?
-  - intent: faq/ask_safari_vehicle
-    examples: |
-      - what type of vehicle is used on safari?
-      - Can you describe the safari vehicles used for tours?
-      - Provide information on the vehicles used during safari trips.
-      - Tell me about the safari transportation options.
-      - What kind of vehicles are typically used for safari adventures?
-      - Explain the safari vehicle options available.
-      - Can you guide me on the safari vehicle choices?
-      - Describe the vehicles used for safaris.
-      - What should I know about safari transportation?
-      - Tell me about the vehicles provided for safari tours.
   - intent: faq/ask_payment_options
     examples: |
       - is there a place to change money at the airport?
@@ -380,17 +339,6 @@ nlu:
       - Explain the typical duration for travel agency refunds.
       - What should I expect in terms of the refund timeframe?
       - Tell me about the usual time it takes to process a refund.
-  - intent: faq/ask_travel_guidelines
-    examples: |
-      - Before travelling what all are the travel any guidelines?
-      - Can you provide information on the pre-travel guidelines?
-      - What guidelines should I follow before embarking on my journey?
-      - Explain the travel agency's recommendations before travel.
-      - Tell me about the guidelines for travelers before departure.
-      - Provide details on the pre-travel instructions from the agency.
-      - Can you guide me on the guidelines to follow before traveling?
-      - Explain the pre-travel requirements set by the agency.
-      - What are the travel guidelines I should be
   - intent: faq/ask_restart_conversation
     examples: >
       - How can I restart the conversation with the travel assistant for a
