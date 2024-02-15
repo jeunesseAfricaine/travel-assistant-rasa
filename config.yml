@@ -9,6 +9,10 @@ pipeline:
   - name: SpacyFeaturizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
+  - name: LanguageModelFeaturizer
+    model_name: "distilbert"
+    model_weights: "distilbert-base-uncased"
+    cache_dir: null
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"
@@ -17,7 +21,7 @@ pipeline:
   - name: "SpacyEntityExtractor"
     dimensions: ["PERSON", "LOC"]
   - name: DIETClassifier
-    epochs: 350
+    epochs: 200
     ranking_length: 5
     batch_strategy: sequence
   - name: DucklingEntityExtractor
@@ -31,7 +35,7 @@ pipeline:
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 350
+    epochs: 200
     constrain_similarities: true
     batch_strategy: sequence
   - name: EntitySynonymMapper
@@ -46,14 +50,14 @@ pipeline:
     ambiguity_threshold: 0.1
 policies:
   - name: UnexpecTEDIntentPolicy
-    epochs: 300
+    epochs: 100
     max_history: 5
   - name: AugmentedMemoizationPolicy
     max_history: 6
   - name: TEDPolicy
-    max_history: 6
+    max_history: 8
     constrain_similarities: true
-    epochs: 400
+    epochs: 300
     batch_size: 50
     max_training_samples: 300
   - name: RulePolicy
