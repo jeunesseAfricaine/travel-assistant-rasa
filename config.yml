@@ -6,10 +6,10 @@ pipeline:
     #model: "en_core_web_md"
     #case_sensitive: False
   - name: WhitespaceTokenizer
-  - name: HFTransformersNLP
-    model_name: "bert"
-    model_weights: "rasa/LaBSE"
-    cache_dir: null
+  #- name: HFTransformersNLP
+    #model_name: "bert"
+    #model_weights: "rasa/LaBSE"
+    #cache_dir: null
   #- name: SpacyTokenizer
   #- name: SpacyFeaturizer
   - name: RegexFeaturizer
