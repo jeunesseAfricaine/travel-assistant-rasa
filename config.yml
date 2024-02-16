@@ -15,7 +15,7 @@ pipeline:
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: LanguageModelFeaturizer
-    model_name: "google-bert"
+    model_name: "bert"
     model_weights: "bert-large-uncased"
     cache_dir: null
   - name: CountVectorsFeaturizer
