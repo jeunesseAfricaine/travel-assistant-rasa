@@ -15,8 +15,8 @@ pipeline:
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: LanguageModelFeaturizer
-    model_name: "gpt2"
-    model_weights: "gpt2"
+    model_name: "xlnet"
+    model_weights: "xlnet-base-cased"
     cache_dir: null
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
