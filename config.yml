@@ -14,10 +14,10 @@ pipeline:
   #- name: SpacyFeaturizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
-  - name: LanguageModelFeaturizer
-    model_name: "bert"
-    model_weights: "rasa/LaBSE"
-    cache_dir: null
+  #- name: LanguageModelFeaturizer
+    #model_name: "bert"
+    #model_weights: "rasa/LaBSE"
+    #cache_dir: null
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"
