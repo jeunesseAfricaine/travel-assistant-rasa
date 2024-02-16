@@ -3,11 +3,10 @@ recipe: default.v1
 language: en
 pipeline:
   - name: "SpacyNLP"
-    model: "en_core_web_sm"
+    model: "en_core_web_md"
     case_sensitive: False
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
-  - name: WhitespaceTokenizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -22,17 +21,10 @@ pipeline:
     ranking_length: 5
     batch_strategy: sequence
   - name: DucklingEntityExtractor
-    url: http://localhost:8000
-    dimensions:
-      - time
-      - phone-number
-      - number
-      - amount-of-money
-    locale: de_DE
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 300
+    epochs: 200
     constrain_similarities: true
     batch_strategy: sequence
   - name: EntitySynonymMapper
@@ -50,11 +42,11 @@ policies:
     epochs: 100
     max_history: 5
   - name: AugmentedMemoizationPolicy
-    max_history: 6
+    max_history: 5
   - name: TEDPolicy
-    max_history: 6
+    max_history: 5
     constrain_similarities: true
-    epochs: 300
+    epochs: 400
     batch_size: 50
     max_training_samples: 300
   - name: RulePolicy
