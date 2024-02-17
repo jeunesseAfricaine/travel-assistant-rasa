@@ -5,11 +5,11 @@ pipeline:
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
-  - name: "ConveRTFeaturizer"
-  "model_url": None
+  - name: ConveRTFeaturizer
+    model_url: None
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
-    analyzer: "char_wb"
+    analyzer: char_wb
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
@@ -48,6 +48,6 @@ policies:
     epochs: 300
   - name: RulePolicy
     core_fallback_threshold: 0.3
-    enable_fallback_prediction: True
+    enable_fallback_prediction: true
     core_fallback_action_name: action_default_fallback
 assistant_id: 20230723-171301-honest-limo
