@@ -30,9 +30,6 @@ pipeline:
   - name: ResponseSelector
     epochs: 200
     retrieval_intent: faq
-  - name: FallbackClassifier
-    threshold: 0.3
-    ambiguity_threshold: 0.1
 policies:
   - name: UnexpecTEDIntentPolicy
   - name: AugmentedMemoizationPolicy
