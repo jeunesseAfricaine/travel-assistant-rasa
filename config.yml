@@ -1,42 +1,29 @@
----
-recipe: default.v1
+version: "3.1"
 language: en
 pipeline:
-  #- name: "SpacyNLP"
-    #model: "en_core_web_md"
-    #case_sensitive: False
   - name: WhitespaceTokenizer
-  #- name: HFTransformersNLP
-    #model_name: "bert"
-    #model_weights: "rasa/LaBSE"
-    #cache_dir: null
-  #- name: SpacyTokenizer
-  #- name: SpacyFeaturizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
-  - name: LanguageModelFeaturizer
-    model_name: "xlnet"
-    model_weights: "xlnet-base-cased"
-    cache_dir: null
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"
     min_ngram: 1
     max_ngram: 4
-  #- name: "SpacyEntityExtractor"
-    #dimensions: ["PERSON", "LOC"]
   - name: DIETClassifier
-    epochs: 300
-    ranking_length: 5
-    batch_strategy: sequence
+    epochs: 100
+  - name: FallbackClassifier
+    threshold: 0.7
   - name: DucklingEntityExtractor
-    timezone: Europe/Berlin
-    timeout: 3
-  - name: DIETClassifier
-    epochs: 350
-    constrain_similarities: true
-    batch_strategy: sequence
-  - name: EntitySynonymMapper
+    url: http://localhost:8000
+    dimensions:
+    - amount-of-money
+    - time
+    - number
+  - name: SpacyNLP
+    model: "en_core_web_md"
+    case_sensitive: false
+  - name: "SpacyEntityExtractor"
+    dimensions: ["PERSON", "LOC"]
   - name: ResponseSelector
     epochs: 200
     retrieval_intent: chitchat
@@ -48,16 +35,10 @@ pipeline:
     ambiguity_threshold: 0.1
 policies:
   - name: UnexpecTEDIntentPolicy
-    epochs: 100
-    max_history: 5
   - name: AugmentedMemoizationPolicy
-    max_history: 5
   - name: TEDPolicy
-    max_history: 5
     constrain_similarities: true
-    epochs: 400
-    batch_size: 50
-    max_training_samples: 300
+    epochs: 200
   - name: RulePolicy
     core_fallback_threshold: 0.3
     enable_fallback_prediction: True
