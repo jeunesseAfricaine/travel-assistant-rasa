@@ -1,17 +1,12 @@
-version: "3.1"
+---
+recipe: default.v1
 language: en
 pipeline:
   - name: "SpacyNLP"
-  # language model to load
-    model: "en_core_web_sm"
-
-  # when retrieving word vectors, this will decide if the casing
-  # of the word is relevant. E.g. `hello` and `Hello` will
-  # retrieve the same vector, if set to `False`. For some
-  # applications and models it makes sense to differentiate
-  # between these two words, therefore setting this to `True`.
+    model: "en_core_web_md"
     case_sensitive: False
-  - name: WhitespaceTokenizer
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -19,30 +14,46 @@ pipeline:
     analyzer: "char_wb"
     min_ngram: 1
     max_ngram: 4
+  - name: "SpacyEntityExtractor"
+    dimensions: ["PERSON", "LOC"]
   - name: DIETClassifier
-    epochs: 100
-  - name: FallbackClassifier
-    threshold: 0.7
+    epochs: 200
+    ranking_length: 5
+    batch_strategy: sequence
   - name: DucklingEntityExtractor
     url: http://localhost:8000
     dimensions:
-    - amount-of-money
-    - time
-    - number
-  - name: "SpacyEntityExtractor"
-    dimensions: ["PERSON", "LOC"]
-  - name: ResponseSelector
+      - time
+      - phone-number
+      - number
+      - amount-of-money
+    locale: de_DE
+    timezone: Europe/Berlin
+    timeout: 3
+  - name: DIETClassifier
     epochs: 200
+    constrain_similarities: true
+    batch_strategy: sequence
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 300
     retrieval_intent: chitchat
   - name: ResponseSelector
-    epochs: 200
+    epochs: 300
     retrieval_intent: faq
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
 policies:
   - name: UnexpecTEDIntentPolicy
   - name: AugmentedMemoizationPolicy
+    max_history: 6
   - name: TEDPolicy
+    max_history: 5
     constrain_similarities: true
-    epochs: 200
+    epochs: 500
+    batch_size: 50
+    max_training_samples: 300
   - name: RulePolicy
     core_fallback_threshold: 0.3
     enable_fallback_prediction: True
