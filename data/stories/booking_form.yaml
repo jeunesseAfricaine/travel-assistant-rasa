@@ -3,13 +3,13 @@ version: "3.1"
 stories:
   - story: get specific destination
     steps:
-      - user: inform_travel_destination
+      - intent: inform_travel_destination
         entities:
           - LOC: Bali
       - action: action_provide_destination_details
   - story: recommend destination AND/OR explore_other_options
     steps:
-      - user: inquire_packages
+      - intent: inquire_packages
       - action: utter_travel_experience
       - intent: inform_travel_experience
         entities:
