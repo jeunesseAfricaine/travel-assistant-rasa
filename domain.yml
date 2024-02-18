@@ -22,7 +22,7 @@ intents:
   - inform_travel_experience
 responses:
   utter_greet:
-    - text: Hello! Welcome to Voyage Companion! I am your travel virtual assistant powered by AI. Are you looking for something specific, or would you like me to suggest some options?
+    - text: Hello! Welcome to Voyage Companion! I am your virtual travel assistant powered by AI. How can I assist you?
   utter_travel_experience:
     - text: Tell me about your ideal travel experience. 
       buttons:
