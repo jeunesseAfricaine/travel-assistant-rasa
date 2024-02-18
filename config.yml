@@ -11,7 +11,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 200
+    epochs: 300
     ranking_length: 5
     batch_strategy: balanced
   - name: DucklingEntityExtractor
@@ -25,18 +25,18 @@ pipeline:
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 200
+    epochs: 300
     constrain_similarities: true
     batch_strategy: balanced
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 200
+    epochs: 300
     retrieval_intent: chitchat
   - name: ResponseSelector
-    epochs: 200
+    epochs: 300
     retrieval_intent: faq
   - name: FallbackClassifier
-    threshold: 0.3
+    threshold: 0.6
     ambiguity_threshold: 0.1
 policies:
   - name: UnexpecTEDIntentPolicy
@@ -45,7 +45,7 @@ policies:
     constrain_similarities: true
     epochs: 300
   - name: RulePolicy
-    core_fallback_threshold: 0.3
+    core_fallback_threshold: 0.4
     enable_fallback_prediction: true
     core_fallback_action_name: action_default_fallback
 assistant_id: 20230723-171301-honest-limo
