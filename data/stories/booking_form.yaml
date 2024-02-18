@@ -9,7 +9,7 @@ stories:
       - action: action_provide_destination_details
   - story: recommend destination AND/OR explore_other_options
     steps:
-      - intent: inquire_packages
+      - intent: inquire_travel_packages
       - action: utter_travel_experience
       - intent: inform_travel_experience
         entities:
