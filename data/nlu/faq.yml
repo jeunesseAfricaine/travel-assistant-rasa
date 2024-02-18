@@ -236,9 +236,9 @@ nlu:
   - intent: faq/ask_wadrobe
     examples: |
       - what kind of cloth should i wear?
-      - Can you guide me on what to wear during my travel?
+      - Can you guide me on what to wear 
       - Provide advice on dressing appropriately
-      - What clothing should I pack for my travel?
+      - What clothing should I pack 
       - Explain the dress code 
       - Tell me about the appropriate attire for my journey.
       - What kind of wardrobe is suitable
@@ -255,6 +255,7 @@ nlu:
       - packing?
       - clothes?
       - can i carry my sweat pant?
+      - napack nn
   - intent: faq/ask_security
     examples: |
       - what is security like? 
