@@ -16,3 +16,17 @@ rules:
           - requested_slot: null
       - action: utter_confirm_booking
     wait_for_user_input: false
+  - rule: activate travel_form
+    steps:
+      - intent: inform_date
+      - action: travel_form
+      - active_loop: travel_form
+  - rule: submit form
+    condition:
+      - active_loop: travel_form
+    steps:
+      - action: travel_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_provide_package_options
