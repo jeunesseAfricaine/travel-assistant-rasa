@@ -170,6 +170,10 @@ forms:
     required_slots:
       - travel_experience
       - travel_date
+  destination_form:
+    required_slots:
+      - budget_range
+      - travel_date
 actions:
   - action_provide_package_options
   - action_provide_destination_details
