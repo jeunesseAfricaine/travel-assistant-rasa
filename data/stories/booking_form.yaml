@@ -36,10 +36,6 @@ stories:
   - story: recommend destination AND/OR explore_other_options
     steps:
       - intent: inquire_travel_packages
-      - action: utter_travel_experience
-      - intent: inform_travel_experience
-        entities:
-          - travel-exp: relaxation
       - action: travel_form
       - active_loop: travel_form
       - slot_was_set:
