@@ -121,7 +121,7 @@ slots:
     - type: from_text
       intent: inform_group_size
       not_intent: inform
-  check_in:
+  travel_date:
     type: any
     mappings:
     - type: from_entity
