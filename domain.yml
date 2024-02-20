@@ -99,67 +99,67 @@ slots:
   destination:
     type: any
     mappings:
-      - type: from_entity
-        entity: LOC
+    - type: from_entity
+      entity: LOC
+    - type: from_text
+      intent: inform_travel_destination
   name:
     type: any
     mappings:
-      - type: from_entity
-        entity: PERSON
+    - type: from_entity
+      entity: PERSON
   phone_num:
     type: any
     mappings:
-      - type: from_entity
-        entity: phoneNo
+    - type: from_entity
+      entity: phoneNo
   num_people:
     type: any
     mappings:
-      - type: from_entity
-        entity: number
-      - type: from_intent
-        intent: inform_group_size
-        value: couples
-        not_intent: inform
+    - type: from_entity
+      entity: number
+    - type: from_text
+      intent: inform_group_size
+      not_intent: inform
   check_in:
     type: any
     mappings:
-      - type: from_entity
-        entity: time
-      - type: from_entity
-        entity: date
-      - type: from_intent
-        intent: inform_date
-        value: November 15th
-        not_intent: faq
+    - type: from_entity
+      entity: time
+    - type: from_entity
+      entity: date
+    - type: from_text
+      intent: inform_date
+      not_intent: faq
   budget_range:
     influence_conversation: true
     type: categorical
     values:
-      - budget
-      - mid-range
-      - luxury
+    - budget
+    - mid-range
+    - luxury
     mappings:
-      - type: from_entity
-        entity: amount-of-money
-      - type: from_entity
-        entity: budget-range
-      - type: from_intent
-        intent: inform_budget_range
-        value: GBP 1200
-        not_intent: faq
+    - type: from_entity
+      entity: amount-of-money
+    - type: from_entity
+      entity: budget-range
+    - type: from_text
+      intent: inform_budget_range
+      not_intent: faq
   travel_experience:
     influence_conversation: true
     type: categorical
     values:
-      - adventure
-      - relaxation
-      - safari
-      - theme
+    - adventure
+    - relaxation
+    - safari
+    - theme
     mappings:
-      - type: from_entity
-        entity: travel-exp
-      - type: from_text
-        intent: inform_travel_experience
+    - type: from_entity
+      entity: travel-exp
+    - type: from_text
+      intent: inform_travel_experience
+      not_intent: faq
 forms:
   booking_form:
     required_slots:
