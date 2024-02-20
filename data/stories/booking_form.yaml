@@ -48,9 +48,9 @@ stories:
       - slot_was_set:
           - travel_experience: adventure
       - slot_was_set:
-          - requested_slot: check_in
+          - requested_slot: travel_date
       - slot_was_set:
-          - check_in: Jan 18th
+          - travel_date: Jan 18th
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
