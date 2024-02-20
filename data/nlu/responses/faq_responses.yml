@@ -5,12 +5,6 @@ responses:
     - text: Baggage allowances vary between airlines and ticket classes. It's
         advisable to check directly with your airline for specific baggage
         allowances and any associated fees or restrictions.
-  utter_faq/ask_check_in_process:
-    - text: You can usually check in for your flight through the airline's website,
-        mobile app, or at the airport's check-in counters. Online check-in is
-        available in most cases, starting 24 hours before the departure time.
-        For more specific details, I suggest visiting the airline's website or
-        contacting their customer service.
   utter_faq/ask_travel_insurance:
     - text: Travel insurance is not typically included in the ticket price. However,
         it can often be purchased separately during the booking process. It's
@@ -62,10 +56,6 @@ responses:
     - text: Once you've shared your preferences and budget, we'll promptly handle all
         arrangements, including accommodations and detailed itineraries, to
         ensure your comfort and satisfaction.
-  utter_faq/ask_itinerary_detail:
-    - text: Our itineraries are meticulously planned, covering every aspect of your
-        trip. Just provide us with your preferences, and we'll craft a detailed
-        itinerary to ensure you have a memorable journey!
   utter_faq/ask_visa:
     - text: Yes, most of these destinations will require a visa for international
         travelers. It can be obtained on arrival at the airport with a visa fee
