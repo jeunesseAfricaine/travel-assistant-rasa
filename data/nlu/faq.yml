@@ -32,18 +32,6 @@ nlu:
       - What is the significance of top-flight insurance companies in travel insurance?
 
       - Do I need Travel Insurance?
-  - intent: faq/ask_check_in_process
-    examples: |
-      - How does the check-in process work?
-      - Can you guide me through the check-in procedure?
-      - What are the steps involved in the check-in process?
-      - Explain the check-in process for my travel.
-      - Tell me about the check-in requirements.
-      - How can I check in for my upcoming trip?
-      - Provide information on the check-in procedures.
-      - What do I need to do for the check-in?
-      - Can you clarify the steps for the check-in process?
-      - Tell me about the check-in options available.
   - intent: faq/ask_emergency
     examples: >
       - If my flight gets canceled, how quickly can a travel agent resolve
@@ -201,19 +189,6 @@ nlu:
       - When I give my preferences, what's the timeframe for arranging accommodations?
 
       - How rapidly can you book accommodations after I share my preferences?
-  - intent: faq/ask_itinerary_detail
-    examples: |
-      - How detailed are the itineraries you create? 
-      - What level of detail do your itineraries usually have?
-      - How comprehensive are the itineraries you make?
-      - Are the itineraries you create very detailed?
-      - How thorough are the itineraries you typically provide?
-      - What's the extent of detail in the itineraries you create?
-      - How elaborate are the itineraries you usually craft?
-      - Are your itineraries quite detailed and specific?
-      - What's the depth of detail in the itineraries you prepare?
-      - Do your itineraries include extensive details?
-      - How detailed can I expect your itineraries to be?
   - intent: faq/ask_visa
     examples: |
       - do i need a visa?
@@ -233,6 +208,21 @@ nlu:
       - nadai kubeba visa
       - viza?
       - do i need viza
+      - do I require a visa?
+      - Share details about the visa requirements for my trip.
+      - What's the visa policy for the destination country?
+      - Is a visa mandatory for my travel plans?
+      - Explain the visa regulations applicable to my journey.
+      - Should I obtain a visa before traveling?
+      - Provide insights into the visa process for my chosen destination.
+      - What specific visa requirements apply to my trip?
+      - Confirm if a visa is essential for my travel.
+      - Guide me through the visa application procedure for my journey.
+      - What's the process for obtaining a visa?
+      - I'm inquiring about the visa requirements.
+      - Is a visa necessary for my journey?
+      - Tell me about visa regulations.
+      - I need information about obtaining a visa.
   - intent: faq/ask_wadrobe
     examples: |
       - what kind of cloth should i wear?
@@ -256,6 +246,26 @@ nlu:
       - clothes?
       - can i carry my sweat pant?
       - napack nn
+      - What attire for my trip?
+      - Share insights on appropriate clothing
+      - Guide me on packing and dressing appropriately.
+      - what to wear during my travel?
+      - How should I plan my wardrobe?
+      - Any advice on the dress code?
+      - Help me decide what clothes to pack.
+      - Tell me about suitable attire 
+      - What kind of wardrobe is ideal
+      - Provide information on dressing for my travel experience.
+      - Can you assist with my packing, especially clothing?
+      - Share tips on what clothes I should carry.
+      - Nibebe nguo gani kwa safari?
+      - Naeza vaa nini kwenye safari?
+      - Naeza beba mini skirt?
+      - Can I wear a hoodie 
+      - I need guidance on packing my clothes.
+      - What should I include in my packing list?
+      - Can I carry my sweatpants in my luggage?
+      - Nimepak nn kwenye safari?
   - intent: faq/ask_security
     examples: |
       - what is security like? 
@@ -269,17 +279,56 @@ nlu:
       - Can you share details on the security arrangements at my destination?
       - Explain the security protocols for travelers.
   - intent: faq/ask_spoken_language
-    examples: |
+    examples: >
       - what are the most used languages in Kenya?
+
       - an you tell me about the primary languages in Kenya?
+
       - Provide information on the most used languages in Kenya.
+
       - What are the dominant languages in Kenya?
+
       - Tell me about the spoken languages in the region I'm visiting.
+
       - Which languages should I be aware of while in Kenya?
+
       - Explain the language scenario in the area I'm traveling to.
+
       - What are the common languages spoken at my destination?
+
       - Can you guide me on the prevalent languages in Kenya?
+
       - Tell me about the linguistic diversity in Kenya.
+
+      - What languages are commonly spoken in Kenya?
+
+      - Provide details about the primary languages used in Kenya.
+
+      - Can you list the most used languages in Kenya for me?
+
+      - Inform me about the dominant languages in Kenya, please.
+
+      - What languages should I be familiar with in Kenya?
+
+      - Explain the linguistic landscape in the region I plan to visit.
+
+      - Share information about the spoken languages at my destination.
+
+      - Guide me on the prevalent languages in Kenya.
+
+      - Which languages are commonly used in the area I'm traveling to?
+
+      - Give me insights into the linguistic diversity of Kenya.
+
+      - What are the main languages spoken in Kenya?
+
+      - Tell me about the commonly used languages in Kenyan communities.
+
+      - Share details about the linguistic scenario in Kenya.
+
+      - Which languages are commonly used by locals in Kenya?
+
+      - Can you provide information on the languages spoken in the region I'm visiting?
   - intent: faq/ask_phone_usage
     examples: |
       - how do i use my phone in Kenya?
