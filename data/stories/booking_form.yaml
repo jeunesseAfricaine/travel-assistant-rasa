@@ -40,7 +40,6 @@ stories:
       - intent: inform_travel_experience
         entities:
           - travel-exp: relaxation
-      - intent: inform_date
       - action: travel_form
       - active_loop: travel_form
       - slot_was_set:
