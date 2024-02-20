@@ -354,7 +354,8 @@ nlu:
       vacation to immerse myself in nature na tranquility. - Exploring the idea
       ya planning a vacation to explore historic sites. - I've decided ni time
       for a vacation to explore different climates. - Thinking about kuandaa
-      vacation to discover vibrant city life. - Surprise Me - suggest some options
+      vacation to discover vibrant city life. - Surprise Me - suggest some
+      options
   - intent: inform_travel_destination
     examples: >
       - I want to visit [Bali](LOC) for my next vacation. - Can you provide
@@ -405,7 +406,7 @@ nlu:
 
       - [Relaxation 🏖]{"entity": "travel-exp", "value": "relaxation"}
 
-      - [Wildlife Safari 🦓]{"entity": "travel-exp", "value": "wildlife-safari"}
+      - [Wildlife Safari 🦓]{"entity": "travel-exp", "value": "safari"}
 
       - I'm searching for [adventure]{"entity": "travel-exp", "value": "adventure"} destinations.
 
@@ -449,27 +450,27 @@ nlu:
 
       - I'm specifically seeking [relaxing]{"entity": "travel-exp", "value": "relaxation"} options for my trip.
 
-      - I'm interested in [wildlife-safari]{"entity": "travel-exp", "value": "wildlife-safari"} destinations.
+      - I'm interested in [safari]{"entity": "travel-exp", "value": "safari"} destinations.
 
-      - My perfect trip involves [wildlife-safari]{"entity": "travel-exp", "value": "wildlife-safari"} activities.
+      - My perfect trip involves [safari]{"entity": "travel-exp", "value": "safari"} activities.
 
-      - Can you suggest an itinerary focused on [wildlife-safari]{"entity": "travel-exp", "value": "wildlife-safari"}?
+      - Can you suggest an itinerary focused on [safari]{"entity": "travel-exp", "value": "safari"}?
 
-      - I'm leaning towards the [wildlife-safari]{"entity": "travel-exp", "value": "wildlife-safari"} theme for my travels.
+      - I'm leaning towards the [safari]{"entity": "travel-exp", "value": "safari"} theme for my travels.
 
-      - [wildlife-safari]{"entity": "travel-exp", "value": "wildlife-safari"} is the kind of experience I'm seeking.
+      - [safari]{"entity": "travel-exp", "value": "safari"} is the kind of experience I'm seeking.
 
-      - Sign me up for a [wildlife-safari]{"entity": "travel-exp", "value": "wildlife-safari"} adventure!
+      - Sign me up for a [safari]{"entity": "travel-exp", "value": "safari"} adventure!
 
-      - I'm specifically looking for [wildlife-safari]{"entity": "travel-exp", "value": "wildlife-safari"} options.
+      - I'm specifically looking for [safari]{"entity": "travel-exp", "value": "safari"} options.
 
-      - Consider me interested in [wildlife-safari]{"entity": "travel-exp", "value": "wildlife-safari"} travel.
+      - Consider me interested in [safari]{"entity": "travel-exp", "value": "safari"} travel.
 
-      - My heart is set on [wildlife-safari]{"entity": "travel-exp", "value": "wildlife-safari"} for this journey.
+      - My heart is set on [safari]{"entity": "travel-exp", "value": "safari"} for this journey.
 
-      - [wildlife-safari]{"entity": "travel-exp", "value": "wildlife-safari"} is the top priority for my travel agenda.
+      - [safari]{"entity": "travel-exp", "value": "safari"} is the top priority for my travel agenda.
 
-      - Can you tailor the itinerary to focus on [wildlife-safari]{"entity": "travel-exp", "value": "wildlife-safari"}?
+      - Can you tailor the itinerary to focus on [safari]{"entity": "travel-exp", "value": "safari"}?
 
       - I'm searching for [exciting]{"entity": "travel-exp", "value": "adventure"} destinations.
 
@@ -551,40 +552,632 @@ nlu:
 
       - I'm specifically seeking [calm]{"entity": "travel-exp", "value": "relaxation"} options for my trip.
 
-      - I'm interested in [wildlife adventures]{"entity": "travel-exp", "value": "wildlife-safari"} destinations.
+      - I'm interested in [wildlife adventures]{"entity": "travel-exp", "value": "safari"} destinations.
 
-      - My perfect trip involves [safari experiences]{"entity": "travel-exp", "value": "wildlife-safari"} activities.
+      - My perfect trip involves [safari experiences]{"entity": "travel-exp", "value": "safari"} activities.
 
-      - Can you suggest an itinerary focused on [wildlife exploration]{"entity": "travel-exp", "value": "wildlife-safari"}?
+      - Can you suggest an itinerary focused on [wildlife exploration]{"entity": "travel-exp", "value": "safari"}?
 
-      - I'm leaning towards the [wildlife adventure]{"entity": "travel-exp", "value": "wildlife-safari"} theme for my travels.
+      - I'm leaning towards the [wildlife adventure]{"entity": "travel-exp", "value": "safari"} theme for my travels.
 
-      - [Thrilling wildlife encounters]{"entity": "travel-exp", "value": "wildlife-safari"} is the kind of experience I'm seeking.
+      - [Thrilling wildlife encounters]{"entity": "travel-exp", "value": "safari"} is the kind of experience I'm seeking.
 
-      - Sign me up for a [wildlife safari]{"entity": "travel-exp", "value": "wildlife-safari"} adventure!
+      - Sign me up for a [wildlife safari]{"entity": "travel-exp", "value": "safari"} adventure!
 
-      - I'm specifically looking for [safari]{"entity": "travel-exp", "value": "wildlife-safari"} options.
+      - I'm specifically looking for [safari]{"entity": "travel-exp", "value": "safari"} options.
 
-      - Consider me interested in [wildlife exploration]{"entity": "travel-exp", "value": "wildlife-safari"} travel.
+      - Consider me interested in [wildlife exploration]{"entity": "travel-exp", "value": "safari"} travel.
 
-      - My heart is set on [exciting wildlife adventures]{"entity": "travel-exp", "value": "wildlife-safari"} for this journey.
+      - My heart is set on [exciting wildlife adventures]{"entity": "travel-exp", "value": "safari"} for this journey.
 
-      - [Wildlife expedition]{"entity": "travel-exp", "value": "wildlife-safari"} is the top priority for my travel agenda.
+      - [Wildlife expedition]{"entity": "travel-exp", "value": "safari"} is the top priority for my travel agenda.
 
-      - Can you tailor the itinerary to focus on [safari experiences]{"entity": "travel-exp", "value": "wildlife-safari"}?
+      - Can you tailor the itinerary to focus on [safari experiences]{"entity": "travel-exp", "value": "safari"}?
 
-      - I'm drawn to the excitement of [wildlife safari]{"entity": "travel-exp", "value": "wildlife-safari"}.
+      - I'm drawn to the excitement of [wildlife safari]{"entity": "travel-exp", "value": "safari"}.
 
-      - [Exciting wildlife safaris]{"entity": "travel-exp", "value": "wildlife-safari"} is my preferred travel style.
+      - [Exciting wildlife safaris]{"entity": "travel-exp", "value": "safari"} is my preferred travel style.
 
-      - Include plenty of [thrilling wildlife encounters]{"entity": "travel-exp", "value": "wildlife-safari"} in my itinerary.
+      - Include plenty of [thrilling wildlife encounters]{"entity": "travel-exp", "value": "safari"} in my itinerary.
 
-      - Let's make it a memorable [wildlife adventure]{"entity": "travel-exp", "value": "wildlife-safari"}!
+      - Let's make it a memorable [wildlife adventure]{"entity": "travel-exp", "value": "safari"}!
 
-      - Wildlife adventure is the essence of my desired [safari experiences]{"entity": "travel-exp", "value": "wildlife-safari"}.
+      - Wildlife adventure is the essence of my desired [safari experiences]{"entity": "travel-exp", "value": "safari"}.
 
-      - [Safari-themed]{"entity": "travel-exp", "value": "wildlife-safarii"} activities are what I'm looking forward to.
+      - [Safari-themed]{"entity": "travel-exp", "value": "safarii"} activities are what I'm looking forward to.
 
-      - Craft the itinerary with an emphasis on [wildlife exploration]{"entity": "travel-exp", "value": "wildlife-safari"}.
+      - Craft the itinerary with an emphasis on [wildlife exploration]{"entity": "travel-exp", "value": "safari"}.
 
-      - I'm specifically seeking [thrilling wildlife adventures]{"entity": "travel-exp", "value": "wildlife-safari"} options for my trip.
+      - I'm specifically seeking [thrilling wildlife adventures]{"entity": "travel-exp", "value": "safari"} options for my trip.
+
+      - [Valentine's 💖]{"entity": "travel-exp", "value": "theme"} - [Easter 🐣]{"entity": "travel-exp", "value": "theme"} - [Diwali 🪔]{"entity": "travel-exp", "value": "theme"} - [Eid 🌙]{"entity": "travel-exp", "value": "theme"} - [Mashujaa Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Madaraka Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Labour Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Jamhuri Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Eid ul-Fitr 🌙]{"entity": "travel-exp", "value": "theme"} - [Christmas 🎄]{"entity": "travel-exp", "value": "theme"} - [Boxing Day 🎁]{"entity": "travel-exp", "value": "theme"} - [New Year's Day 🎉]{"entity": "travel-exp", "value": "theme"} - [Good Friday 🌼]{"entity": "travel-exp", "value": "theme"} - [Jamhuri Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Labour Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Madaraka Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Eid ul-Adha 🌙]{"entity": "travel-exp", "value": "theme"} - [Moi Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Christmas Day 🎄]{"entity": "travel-exp", "value": "theme"} - [Boxing Day 🎁]{"entity": "travel-exp", "value": "theme"}
+  - intent: proceed_to_booking
+    examples: |
+      - Proceed to Booking
+      - proceed to booking
+      - proceed book
+      - Book Now 🏨
+      - I want to make a booking.
+      - Start the booking process.
+      - Can I book a trip?
+      - Let's begin the booking.
+      - I'm ready to book.
+      - Begin the reservation.
+      - How can I make a booking?
+      - Start the booking form.
+      - Let's initiate the booking process.
+      - I'd like to book a package.
+      - Can I start the booking?
+      - I want to make a booking.
+      - Anza mchakato wa kubook.
+      - How can I book a safari?
+      - Nianzishe mchakato wa kubook.
+      - Let's start the reservation.
+      - Tuanzishe mchakato wa booking.
+      - I'm ready to book my trip.
+      - Nataka kuanza booking yangu.
+      - Can I initiate the booking process?
+      - Je, naweza kuanzisha mchakato wa kubook?
+  - intent: explore_other_options
+    examples: |
+      - Explore More Destinations
+      - I want to see more options.
+      - Can you show me other choices?
+      - explore other options
+      - Explore different packages for me.
+      - What else do you have to offer?
+      - Show me more destinations, please.
+      - I'm interested in exploring alternative options.
+      - Are there other travel experiences available?
+      - Give me more choices for my trip.
+      - I'd like to explore different vacation packages.
+      - What other destinations can you suggest?
+      - Show me more experiences.
+      - other options for my trip?
+      - I want to see a variety 
+      - Explore more vacation choices for me.
+      - Are there alternative I can check out?
+      - Show me additional travel itineraries.
+      - I'm open to exploring different options.
+      - Can you provide more options for my vacation?
+      - Explore other possibilities for me.
+  - intent: inform_group_size
+    examples: |
+      - We are a group of 4 people.
+      - Find destinations for a group of 10.
+      - Find destinations for couples
+      - Suggest options for large group travel.
+      - We are 2 friends looking for a vacation.
+      - Show me options for a small group trip.
+      - I want to travel with a family of 5
+      - Find destinations suitable for solo travel
+      - List options for a group of friends vacation.
+      - I'm planning for a couple's getaway.
+      - we are a group of four.
+      - tuko watu wawili
+      - I'm traveling with a group of 5 people
+      - Our group size is 10 members
+      - I have 3 friends joining me.
+      - We are a group of 6 individuals
+      - There are 8 of us planning the trip.
+      - Our group consists of 12 participants
+      - I'll be traveling with 7 companions
+      - The group size is 4 travelers
+      - We have 9 members in our group.
+      - Our group consists of 15 people
+      - I'm planning for a group of 20 individuals
+      - There will be 2 of us on the trip.
+      - Our group size is 18 participants
+      - I have 5 friends joining me.
+      - We are a group of 14 travelers
+      - There are 3 of us planning the trip.
+      - Our group consists of 11 companions
+      - I'll be traveling with 6 participants
+      - The group size is 8 friends
+      - We are a group of 4 people.
+      - Find destinations for a group of 10.
+      - Find destinations for couples.
+      - Suggest options for large group travel.
+      - We are 2 friends looking for a vacation.
+      - Show me options for a small group trip.
+      - I want to travel with a family of 5.
+      - Find destinations suitable for solo travel.
+      - List options for a group of friends vacation.
+      - I'm planning for a couple's getaway.
+      - We are a group of four.
+      - Tuko watu wawili.
+      - I'm traveling with a group of 5 people.
+      - Our group size is 10 members.
+      - I have 3 friends joining me.
+      - We are a group of 6 individuals.
+      - There are 8 of us planning the trip.
+      - Our group consists of 12 participants.
+      - I'll be traveling with 7 companions.     
+      - The group size is 4 travelers.
+  - intent: inform_date
+    examples: >
+      - Can you arrange my check-in for [next Monday]{"entity": "date",
+      "value": "next Monday"}?
+
+      - Is it possible to check in on [the first day of next month]{"entity": "date", "value": "the first day of next month"}?
+
+      - Arrange my check-in in [the next week]{"entity": "date", "value": "the next week"}.
+
+      - I want to check in tomorrow
+
+      - Is it possible to check in [next Friday]{"entity": "date", "value": "next Friday"}?
+
+      - I'd like to check in [next year]{"entity": "date", "value": "next year"}.
+
+      - Is it possible to check in in [the next month]{"entity": "date", "value": "the next month"}?
+
+      - Arrange my check-in [this weekend]{"entity": "date", "value": "this weekend"}.
+
+      - I want to check in [next Tuesday]{"entity": "date", "value": "next Tuesday"}.
+
+      - Is it possible to check in on the [last day of this month]{"entity": "date", "value": "last day of this month"}?
+
+      - Arrange my check-in [next Thursday]{"entity": "date", "value": "next Thursday"}.
+
+      - Please schedule my arrival [next weekend]{"entity": "date", "value": "next weekend"}.
+
+      - Is it possible to check in in [the next quarter]{"entity": "date", "value": "the next quarter"}?
+
+      - Arrange my check-in [next month on the 20th]{"entity": "date", "value": "next month on the 20th"}.
+
+      - I want to check in in [the next year]{"entity": "date", "value": "the next year"}.
+
+      - Can you arrange my check-in on [March 5th]{"entity": "date", "value": "March 5th"}?
+
+      - Can you arrange my check-in on [Mar 16th]{"entity": "date", "value": "Mar 16th"}?
+
+      - I'd like to check in on the [10th of June]{"entity": "date", "value": "10th of June"}.
+
+      - Please schedule my arrival for [July 15th]{"entity": "date", "value": "July 15th"}.
+
+      - Is it possible to check in on [August 1st]{"entity": "date", "value": "August 1st"}?
+
+      - I want to start my stay on [September 10th]{"entity": "date", "value": "September 10th"}.
+
+      - I want to start my stay on [Sep 20th]{"entity": "date", "value": "Sep 20th"}.
+
+      - Arrange my check-in for [October 25th]{"entity": "date", "value": "October 25th"}, please.
+
+      - Arrange my check-in for [Oct 8th]{"entity": "date", "value": "Oct 8th"}, please.
+
+      - Can you book my arrival on [November 8th]{"entity": "date", "value": "November 8th"}?
+
+      - [Nov 8th]{"entity": "date", "value": "Nov 8th"}?
+
+      - I'd like to check in on [December 3rd]{"entity": "date", "value": "December 3rd"}.
+
+      - check in on [Dec 2nd]{"entity": "date", "value": "Dec 2nd"}.
+
+      - Schedule my arrival for [January 12th]{"entity": "date", "value": "January 12th"}.
+
+      - [Jan 8th]{"entity": "date", "value": "Jan 8th"}.
+
+      - Please arrange my check-in on [February 18th]{"entity": "date", "value": "February 18th"}.
+
+      - I want to start my stay on [March 21st]{"entity": "date", "value": "March 21st"}.
+
+      - Can you check me in on [April 7th]{"entity": "date", "value": "April 7th"}?
+
+      - I'd like to arrive on [May 30th]{"entity": "date", "value": "May 30th"}.
+
+      - Schedule my check-in for [June 12th]{"entity": "date", "value": "June 12th"}, if possible.
+
+      - Is there availability for check-in on [July 3rd]{"entity": "date", "value": "July 3rd"}?
+
+      - I plan to check out on [March 10th]{"entity": "date", "value": "March 10th"}.
+
+      - Can I check out on the [15th of June]{"entity": "date", "value": "15th of June"}?
+
+      - My stay ends on [July 25th]{"entity": "date", "value": "July 25th"}, so arrange check-out.
+
+      - Please schedule my departure for [August 5th]{"entity": "date", "value": "August 5th"}.
+
+      - I want to end my stay on [September 18th]{"entity": "date", "value": "September 18th"}.
+
+      - Arrange my check-out on [October 30th]{"entity": "date", "value": "October 30th"}, please.
+
+      - Can I check out on [November 15th]{"entity": "date", "value": "November 15th"}?
+
+      - I'd like to end my stay on [December 8th]{"entity": "date", "value": "December 8th"}.
+
+      - Schedule my departure for [January 20th]{"entity": "date", "value": "January 20th"}.
+
+      - Please arrange check-out on [February 28th]{"entity": "date", "value": "February 28th"}.
+
+      - I plan to check out on [March 10th]{"entity": "date", "value": "March 10th"}.
+
+      - next Monday - Please schedule my arrival on March 5th - next Thursday - Can you book my arrival on April 10th - Check in on May 20th would be preferable. - Arrange my check-in for next Sunday. - Can you arrange my check-in on June 8th? - Book July 3rd if there's availability. - Is it possible to check in on August 15th - I'd like to start my stay on September 25th - Please schedule for October 10th. - Can you arrange check-in on November 5th - Nov 5th - I want to check in next week if possible. - Schedule my arrival for December 20th - I plan to check out on January 8th{"entity": "date", "role": "check-out"}. - on Feb 15th? - My stay starts on March 1st 
+  - intent: inform
+    examples: >
+      - My name is [John Doe]{"entity": "PERSON", "value": "John Doe"}. - My
+      colleague is [Mary Wanjiru]{"entity": "PERSON", "value": "Mary
+      Wanjiru"}.  - Phone number [+2541234567890]{"entity": "phoneNo", "value":
+      "+2541234567890"}.  - [+2559876543210]{"entity": "phoneNo", "value":
+      "+2559876543210"}. - I'm [David Ochieng]{"entity": "PERSON", "value":
+      "David Ochieng"}. - I'm with [Sara Njeri]{"entity": "PERSON", "value":
+      "Sara Njeri"}.  - You can contact me at [+2545557890"]{"entity":
+      "phoneNo", "value": "+2545557890"}. - [+2558765432]{"entity": "phoneNo",
+      "value": "+2558765432"}. - [Kwame Agyei]{"entity": "PERSON", "value":
+      "Kwame Agyei"}. - [Aisha Kamau]{"entity": "PERSON", "value": "Aisha
+      Kamau"}. - Reach Kwame at [+2562345678]{"entity": "phoneNo", "value":
+      "+2562345678"}. - Aisha at [+2549871234]{"entity": "phoneNo", "value":
+      "+2549871234"}. - [James Mwangi]{"entity": "PERSON", "value": "James
+      Mwangi"}. - [Grace Nyambura]{"entity": "PERSON", "value": "Grace
+      Nyambura"}. - Number is [+2558765432]{"entity": "phoneNo", "value":
+      "+2558765432"}. - [Michael Onyango]{"entity": "PERSON", "value": "Michael
+      Onyango"}. - [Lilian Auma]{"entity": "PERSON", "value": "Lilian Auma"} at
+      [+2549876543210]{"entity": "phoneNo", "value": "+2549876543210"}. -
+      [Daniel Kamau]{"entity": "PERSON", "value": "Daniel Kamau"}. - [Samantha
+      Akinyi]{"entity": "PERSON", "value": "Samantha Akinyi"}. - [Ngozi
+      Eze]{"entity": "PERSON", "value": "Ngozi Eze"}. - [Kwesi Asante]{"entity":
+      "PERSON", "value": "Kwesi Asante"}. - [Wangari Maina]{"entity": "PERSON",
+      "value": "Wangari Maina"}. - [Oluwafemi Ojo]{"entity": "PERSON", "value":
+      "Oluwafemi Ojo"}. - [Fatima Bello]{"entity": "PERSON", "value": "Fatima
+      Bello"}. - [Jacob Mugo]{"entity": "PERSON", "value": "Jacob Mugo"} at
+      [+2549876543211]{"entity": "phoneNo", "value": "+2549876543211"}. -
+      [Naledi Moloi]{"entity": "PERSON", "value": "Naledi Moloi"}. - [Felix
+      Kiplagat]{"entity": "PERSON", "value": "Felix Kiplagat"}. - [Abena
+      Owusu]{"entity": "PERSON", "value": "Abena Owusu"}. - [Simba
+      Ndlovu]{"entity": "PERSON", "value": "Simba Ndlovu"} at
+      [+2549876543212]{"entity": "phoneNo", "value": "+2549876543212"}. -
+      [Chioma Obi]{"entity": "PERSON", "value": "Chioma Obi"}. - [Kwabena
+      Osei]{"entity": "PERSON", "value": "Kwabena Osei"}. - [Amina
+      Ibrahim]{"entity": "PERSON", "value": "Amina Ibrahim"}. - [Brian
+      Kimani]{"entity": "PERSON", "value": "Brian Kimani"} at
+      [0776543213]{"entity": "phoneNo", "value": "0776543213"}. - [Chinwe
+      Onuoha]{"entity": "PERSON", "value": "Chinwe Onuoha"}. - [Juma
+      Musa]{"entity": "PERSON", "value": "Juma Musa"}. - [Tariro
+      Chuma]{"entity": "PERSON", "value": "Tariro Chuma"}. - [Malik
+      Ndiaye]{"entity": "PERSON", "value": "Malik Ndiaye"} at
+      [0776543214]{"entity": "phoneNo", "value": "0776543214"}. - [Sadia
+      Abdi]{"entity": "PERSON", "value": "Sadia Abdi"}. - [Musa Kamau]{"entity":
+      "PERSON", "value": "Musa Kamau"}.
+  - intent: inform_budget_range
+    examples: >
+      - [On-budget 💸]{"entity":"budget-range", "value": "budget"} -
+      [Mid-range 💳]{"entity":"budget-range", "value": "mid-range"} - [Luxury
+      💎]{"entity":"budget-range", "value": "luxury"}  - What are the options
+      for a [budget]{"entity":"budget-range", "value": "budget"} trip? 💸 - Show
+      me travel choices within the [mid-range]{"entity":"budget-range", "value":
+      "mid-range"} 💳 category. - Can you suggest options for a
+      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 vacation? -
+      Explore [budget]{"entity":"budget-range", "value": "budget"} 💸
+      possibilities for a family trip. - Tell me about
+      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳 vacation
+      packages. - I'm looking for [luxury]{"entity":"budget-range", "value":
+      "luxury"} 💎 travel experiences. - Show me deals within the
+      [budget]{"entity":"budget-range", "value": "budget"} 💸 range for solo
+      travel. - Any recommendations for [mid-range]{"entity":"budget-range",
+      "value": "mid-range"} 💳 group vacations? - What are the
+      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 options for a
+      honeymoon? - I want information on [budget]{"entity":"budget-range",
+      "value": "budget"} 💸 travel packages. - Can you suggest a
+      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳 holiday for
+      couples? - Show me [luxury]{"entity":"budget-range", "value": "luxury"} 💎
+      deals for luxury getaways. - I'm interested in
+      [budget]{"entity":"budget-range", "value": "budget"} 💸 solo travel
+      options. - Tell me about [mid-range]{"entity":"budget-range", "value":
+      "mid-range"} 💳 family-friendly vacations. - Explore
+      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 packages for
+      anniversary trips. - What [budget]{"entity":"budget-range", "value":
+      "budget"} 💸 choices do you have for group travel? - Any
+      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳
+      recommendations for a weekend getaway? - I'm looking for
+      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 experiences for
+      special occasions. - Show me [budget]{"entity":"budget-range", "value":
+      "budget"} 💸 options for adventure travel. - Can you suggest
+      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳 travel plans
+      for friends? - My budget for the trip is USD 1000 - I'm looking for
+      options within EUR 800. - Can you suggest packages around GBP 1200? - I
+      have a budget of AUD 1500 for the trip. - Show me deals for a budget of
+      CAD 2000. - I'm considering options with a budget of INR 70000. - What
+      packages do you have for a budget of JPY 90000? - My budget range is CNY
+      6000 for the trip. - Explore options within AED 2500 for me. - Can you
+      recommend packages around CHF 1100? - I'm looking for deals within NZD
+      1300. - Show me options for a budget of SEK 9500. - What packages do you
+      have for a budget of SGD 1800? - I have a budget range of HKD 7500 for the
+      trip. - Explore deals within NOK 8500 for me. - Can you suggest options
+      around BRL 3200? - My budget for the trip is ZAR 14000. - Show me packages
+      for a budget of RUB 55000. - I'm considering options with a budget of TRY
+      950.
+  - intent: inquire_travel_packages
+    examples: >
+      - What are the available travel packages? - Can you tell me about the
+      travel packages you offer? - I want information about your travel
+      packages. - What types of travel packages do you have? - Tell me more
+      about your vacation options. - Can you provide details about your holiday
+      packages? - Give me an overview of your travel deals. - I'm interested in
+      learning about your travel offers. - What kind of trips do you organize? -
+      Provide information on your travel experiences. - Tell me about the
+      different holiday packages available. - What are the options for booking a
+      trip with you? - Share details about your travel and accommodation
+      packages. - I'm looking for details on your travel services. - Inform me
+      about your available vacation packages. - What destinations are covered in
+      your travel packages? - Explain your offerings in travel and
+      accommodation. - Can you give me a list of your travel destinations? - I'd
+      like to know more about your travel experiences. - Tell me about the
+      various travel packages you provide. - Provide details about your travel
+      itineraries. - What kind of vacation packages do you offer? - Share
+      information on your travel and stay packages. - Can you give me insights
+      into your holiday deals? - Explain the different travel experiences you
+      provide. - Tell me about the destinations covered in your tours. - I'm
+      interested in your travel and accommodation options. - What are the
+      available options for booking a trip? - Share more about your travel
+      packages and prices. - I'd like to explore your offerings in vacation
+      packages. - Give me an overview of the travel adventures you organize. -
+      Tell me about your travel experiences and destinations. - Provide
+      information on the types of trips you arrange. - Can you give me a list of
+      your available travel deals? - I'm looking for details on your travel and
+      stay services. - Share details about the accommodations in your packages.
+      - What destinations can I choose from in your travel plans? - Explain the
+      process of booking a vacation with you. - Tell me about the pricing for
+      your different travel options. - I want to know more about your travel
+      package features. - I'm planning a vacation to explore some exotic
+      places.  - I've decided to go on a vacation and explore new
+      destinations.  - I'm organizing a holiday trip and seeking some
+      suggestions.  - Planning a getaway to relax and unwind from work.  - I
+      want to plan a vacation to a beautiful location. - Considering a vacation
+      to rejuvenate and experience new cultures.  - I've been thinking about
+      taking a break and planning a vacation.  - I'm looking to organize a
+      vacation to enjoy some time off.  - Interested in arranging a vacation to
+      visit some scenic spots.  - I want to schedule a holiday to discover some
+      picturesque places. - Nadai vacation to explore some beautiful
+      destinations. - Recently, nimekuwa nikifikiria kupanga likizo to unwind. -
+      Thinking about kuandaa likizo ya kugundua different landscapes. - I've got
+      the travel bug na nataka kuplan a vacation to satisfy it. - Exploring the
+      idea ya kuchukua vacation to discover hidden gems. - Ni time for a break,
+      na ninafikiria kuplan a vacation. - Considering vacation to escape na
+      kujitosa kwenye new surroundings. - I'm in the mood for a holiday; any
+      suggestions for a great vacation? - I want kuandaa vacation to create
+      unforgettable memories. - Exploring the possibility ya vacation to enjoy
+      some quality time. - Planning a getaway to explore diverse cultures and
+      cuisines. - I'm looking kuandaa vacation to experience new adventures. -
+      Interested in arranging vacation to unwind na recharge. - Dreaming ya
+      vacation to disconnect na relax by the beach. - Considering vacation to
+      capture breathtaking moments through travel. - I want kuschedule a holiday
+      to visit some off-the-beaten-path destinations. - I'm yearning for a
+      vacation to immerse myself in nature na tranquility. - Exploring the idea
+      ya planning a vacation to explore historic sites. - I've decided ni time
+      for a vacation to explore different climates. - Thinking about kuandaa
+      vacation to discover vibrant city life. - Surprise Me - suggest some
+      options
+  - intent: inform_travel_destination
+    examples: >
+      - I want to visit [Bali](LOC) for my next vacation. - Can you provide
+      details about your packages for [Paris](LOC)? - Tell me about the travel
+      options for a trip to [the Maldives](LOC). - Share information about your
+      adventure tours in [New Zealand](LOC). - I'm interested in exploring the
+      beaches of [Phuket](LOC). Tell me more. - What are the attractions in
+      [Tokyo](LOC) for your travel packages? - Inform me about your travel
+      offerings for a safari in [Kenya](LOC). - I'd like to know about your
+      cultural experiences in [Rome](LOC). - Can you provide details about your
+      vacation packages to [Santorini](LOC)? - Tell me about the accommodation
+      options in [the Swiss Alps](LOC). - What travel experiences do you offer
+      in [the Caribbean](LOC)? - Share insights into your travel packages for a
+      cruise in [Alaska](LOC). - I'm curious about your historical tours in
+      [Istanbul](LOC). - Provide information on your travel options for a visit
+      to [Machu Picchu](LOC). - Tell me about the activities included in your
+      trips to [the Amazon rainforest](LOC). - I want to know more about your
+      eco-friendly travel options in [Costa Rica](LOC). - Share details about
+      your winter vacation packages in [Aspen](LOC). - Can you provide
+      information about your luxury tours in [Dubai](LOC)? - Tell me about the
+      nightlife experiences in [Las Vegas](LOC). - I'm interested in your travel
+      options for a cultural tour of [India](LOC). - I'm planning a trip to
+      [Cape Town](LOC). What packages do you offer? - Share details about your
+      safari tours in [Maasai Mara](LOC), please. - I want to explore the
+      pyramids in [Cairo](LOC). Tell me about your Egypt tours. - Can you
+      provide information about your travel options for [Victoria Falls](LOC)? -
+      Tell me about your cultural tours in [Marrakech](LOC). - I'm interested in
+      your packages for a visit to [Zanzibar](LOC). What can you offer? - What
+      travel experiences do you have for a trip to [Kruger National Park](LOC)?
+      - I'm considering a vacation in [Seychelles](LOC). Share details about
+      your offerings. - Can you provide insights into your adventure tours in
+      [Mount Kilimanjaro](LOC)? - Tell me about your historical tours in [Cape
+      Coast](LOC), Ghana. - Share information about your travel packages for a
+      visit to [Nairobi](LOC). - I'd like to explore the Serengeti in
+      [Tanzania](LOC). What options are available? - What are your
+      recommendations for a trip to [Lagos](LOC), Nigeria? - Tell me about your
+      eco-friendly travel options in [Madagascar](LOC). - Share details about
+      your luxury tours in [Mauritius](LOC). - I want to experience the local
+      cuisine in [Johannesburg](LOC). What can you offer? - Can you provide
+      information about your beach vacation packages in [Seychelles](LOC)? -
+      Tell me about your wildlife tours in [Botswana](LOC). - I'm interested in
+      your travel options for a cultural tour of [Addis Ababa](LOC), Ethiopia. -
+      Share insights into your travel packages for a visit to [Congo
+      Basin](LOC).
+  - intent: inform_travel_experience
+    examples: >
+      - [Adventure 🌍]{"entity": "travel-exp", "value": "adventure"}
+
+      - [Relaxation 🏖]{"entity": "travel-exp", "value": "relaxation"}
+
+      - [Wildlife Safari 🦓]{"entity": "travel-exp", "value": "safari"}
+
+      - I'm searching for [adventure]{"entity": "travel-exp", "value": "adventure"} destinations.
+
+      - My ideal trip involves [adventure]{"entity": "travel-exp", "value": "adventure"} activities.
+
+      - Could you suggest an itinerary with [adventure]{"entity": "travel-exp", "value": "adventure"} in mind?
+
+      - I'm inclined towards the [adventure]{"entity": "travel-exp", "value": "adventure"} theme for my travels.
+
+      - [adventure]{"entity": "travel-exp", "value": "adventure"} is the kind of experience I'm aiming for.
+
+      - Sign me up for an [adventure]{"entity": "travel-exp", "value": "adventure"} escapade!
+
+      - I'm specifically looking for [adventure]{"entity": "travel-exp", "value": "adventure"} options.
+
+      - Consider me interested in [adventure]{"entity": "travel-exp", "value": "adventure"} travel.
+
+      - My heart is set on [adventure]{"entity": "travel-exp", "value": "adventure"} for this journey.
+
+      - [adventure]{"entity": "travel-exp", "value": "adventure"} is the top priority for my travel agenda.
+
+      - I'm specifically seeking [adventure]{"entity": "travel-exp", "value": "adventure"} options for my trip.
+
+      - I'm looking for [relaxation]{"entity": "travel-exp", "value": "relaxation"} destinations to unwind.
+
+      - My perfect trip involves [relaxation]{"entity": "travel-exp", "value": "relaxation"} activities.
+
+      - Can you suggest an itinerary focused on [relaxation]{"entity": "travel-exp", "value": "relaxation"}?
+
+      - I'm leaning towards the [relaxation]{"entity": "travel-exp", "value": "relaxation"} theme for my travels.
+
+      - [relaxation]{"entity": "travel-exp", "value": "relaxation"} is the kind of experience I'm seeking.
+
+      - Sign me up for a [relaxing]{"entity": "travel-exp", "value": "relaxation"} escape!
+
+      - I'm specifically looking for [relaxing]{"entity": "travel-exp", "value": "relaxation"} options.
+
+      - Consider me interested in [relaxation]{"entity": "travel-exp", "value": "relaxation"} travel.
+
+      - My heart is set on [relaxing]{"entity": "travel-exp", "value": "relaxation"} for this journey.
+
+      - I'm specifically seeking [relaxing]{"entity": "travel-exp", "value": "relaxation"} options for my trip.
+
+      - I'm interested in [safari]{"entity": "travel-exp", "value": "safari"} destinations.
+
+      - My perfect trip involves [safari]{"entity": "travel-exp", "value": "safari"} activities.
+
+      - Can you suggest an itinerary focused on [safari]{"entity": "travel-exp", "value": "safari"}?
+
+      - I'm leaning towards the [safari]{"entity": "travel-exp", "value": "safari"} theme for my travels.
+
+      - [safari]{"entity": "travel-exp", "value": "safari"} is the kind of experience I'm seeking.
+
+      - Sign me up for a [safari]{"entity": "travel-exp", "value": "safari"} adventure!
+
+      - I'm specifically looking for [safari]{"entity": "travel-exp", "value": "safari"} options.
+
+      - Consider me interested in [safari]{"entity": "travel-exp", "value": "safari"} travel.
+
+      - My heart is set on [safari]{"entity": "travel-exp", "value": "safari"} for this journey.
+
+      - [safari]{"entity": "travel-exp", "value": "safari"} is the top priority for my travel agenda.
+
+      - Can you tailor the itinerary to focus on [safari]{"entity": "travel-exp", "value": "safari"}?
+
+      - I'm searching for [exciting]{"entity": "travel-exp", "value": "adventure"} destinations.
+
+      - My ideal trip involves [thrilling]{"entity": "travel-exp", "value": "adventure"} activities.
+
+      - Could you suggest an itinerary with [adventurous]{"entity": "travel-exp", "value": "adventure"} in mind?
+
+      - I'm inclined towards the [adventure-filled]{"entity": "travel-exp", "value": "adventure"} theme for my travels.
+
+      - [Adventurous exploration]{"entity": "travel-exp", "value": "adventure"} is the kind of experience I'm aiming for.
+
+      - Sign me up for an [exciting]{"entity": "travel-exp", "value": "adventure"} escapade!
+
+      - I'm specifically looking for [adventure-packed]{"entity": "travel-exp", "value": "adventure"} options.
+
+      - Consider me interested in [adventurous]{"entity": "travel-exp", "value": "adventure"} travel.
+
+      - My heart is set on [exciting]{"entity": "travel-exp", "value": "adventure"} for this journey.
+
+      - [Thrilling exploration]{"entity": "travel-exp", "value": "adventure"} is the top priority for my travel agenda.
+
+      - Can you tailor the itinerary to focus on [adventurous]{"entity": "travel-exp", "value": "adventure"}?
+
+      - I'm drawn to the excitement of [adventure]{"entity": "travel-exp", "value": "adventure"}.
+
+      - [Exciting escapades]{"entity": "travel-exp", "value": "adventure"} is my preferred travel style.
+
+      - Include plenty of [thrilling]{"entity": "travel-exp", "value": "adventure"} elements in my itinerary.
+
+      - Let's make it a memorable [adventure-filled]{"entity": "travel-exp", "value": "adventure"} experience!
+
+      - Adventure is the essence of my desired [adventure]{"entity": "travel-exp", "value": "adventure"}.
+
+      - [Adventure-packed]{"entity": "travel-exp", "value": "adventure"} activities are what I'm looking forward to.
+
+      - Craft the itinerary with an emphasis on [adventurous]{"entity": "travel-exp", "value": "adventure"}.
+
+      - Adventure-themed travel is what I'm after.
+
+      - I'm specifically seeking [exciting]{"entity": "travel-exp", "value": "adventure"} options for my trip.
+
+      - I'm looking for [calming]{"entity": "travel-exp", "value": "relaxation"} destinations to unwind.
+
+      - My perfect trip involves [restful]{"entity": "travel-exp", "value": "relaxation"} activities.
+
+      - Can you suggest an itinerary focused on [peaceful]{"entity": "travel-exp", "value": "relaxation"}?
+
+      - I'm leaning towards the [relaxing]{"entity": "travel-exp", "value": "relaxation"} theme for my travels.
+
+      - [Relaxing retreats]{"entity": "travel-exp", "value": "relaxation"} is the kind of experience I'm seeking.
+
+      - Sign me up for a [tranquil]{"entity": "travel-exp", "value": "relaxation"} escape!
+
+      - I'm specifically looking for [serene]{"entity": "travel-exp", "value": "relaxation"} options.
+
+      - Consider me interested in [peaceful]{"entity": "travel-exp", "value": "relaxation"} travel.
+
+      - My heart is set on [calming]{"entity": "travel-exp", "value": "relaxation"} for this journey.
+
+      - [Restful exploration]{"entity": "travel-exp", "value": "relaxation"} is the top priority for my travel agenda.
+
+      - Can you tailor the itinerary to focus on [serene]{"entity": "travel-exp", "value": "relaxation"}?
+
+      - I'm drawn to the tranquility of [relaxation]{"entity": "travel-exp", "value": "relaxation"}.
+
+      - [Calm getaways]{"entity": "travel-exp", "value": "relaxation"} is my preferred travel style.
+
+      - Include plenty of [tranquil]{"entity": "travel-exp", "value": "relaxation"} elements in my itinerary.
+
+      - Let's make it a calming [relaxing]{"entity": "travel-exp", "value": "relaxation"} experience!
+
+      - Relaxation is the essence of my desired [serene]{"entity": "travel-exp", "value": "relaxation"}.
+
+      - [Peaceful retreats]{"entity": "travel-exp", "value": "relaxation"} activities are what I'm looking forward to.
+
+      - Craft the itinerary with an emphasis on [calming]{"entity": "travel-exp", "value": "relaxation"}.
+
+      - Relaxation-themed travel is what I'm after.
+
+      - I'm specifically seeking [calm]{"entity": "travel-exp", "value": "relaxation"} options for my trip.
+
+      - I'm interested in [wildlife adventures]{"entity": "travel-exp", "value": "safari"} destinations.
+
+      - My perfect trip involves [safari experiences]{"entity": "travel-exp", "value": "safari"} activities.
+
+      - Can you suggest an itinerary focused on [wildlife exploration]{"entity": "travel-exp", "value": "safari"}?
+
+      - I'm leaning towards the [wildlife adventure]{"entity": "travel-exp", "value": "safari"} theme for my travels.
+
+      - [Thrilling wildlife encounters]{"entity": "travel-exp", "value": "safari"} is the kind of experience I'm seeking.
+
+      - Sign me up for a [wildlife safari]{"entity": "travel-exp", "value": "safari"} adventure!
+
+      - I'm specifically looking for [safari]{"entity": "travel-exp", "value": "safari"} options.
+
+      - Consider me interested in [wildlife exploration]{"entity": "travel-exp", "value": "safari"} travel.
+
+      - My heart is set on [exciting wildlife adventures]{"entity": "travel-exp", "value": "safari"} for this journey.
+
+      - [Wildlife expedition]{"entity": "travel-exp", "value": "safari"} is the top priority for my travel agenda.
+
+      - Can you tailor the itinerary to focus on [safari experiences]{"entity": "travel-exp", "value": "safari"}?
+
+      - I'm drawn to the excitement of [wildlife safari]{"entity": "travel-exp", "value": "safari"}.
+
+      - [Exciting wildlife safaris]{"entity": "travel-exp", "value": "safari"} is my preferred travel style.
+
+      - Include plenty of [thrilling wildlife encounters]{"entity": "travel-exp", "value": "safari"} in my itinerary.
+
+      - Let's make it a memorable [wildlife adventure]{"entity": "travel-exp", "value": "safari"}!
+
+      - Wildlife adventure is the essence of my desired [safari experiences]{"entity": "travel-exp", "value": "safari"}.
+
+      - [Safari-themed]{"entity": "travel-exp", "value": "safarii"} activities are what I'm looking forward to.
+
+      - Craft the itinerary with an emphasis on [wildlife exploration]{"entity": "travel-exp", "value": "safari"}.
+
+      - I'm specifically seeking [thrilling wildlife adventures]{"entity": "travel-exp", "value": "safari"} options for my trip.
+
+      - [Valentine's 💖]{"entity": "travel-exp", "value": "theme"} - [Easter 🐣]{"entity": "travel-exp", "value": "theme"} - [Diwali 🪔]{"entity": "travel-exp", "value": "theme"} - [Eid 🌙]{"entity": "travel-exp", "value": "theme"} - [Mashujaa Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Madaraka Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Labour Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Jamhuri Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Eid ul-Fitr 🌙]{"entity": "travel-exp", "value": "theme"} - [Christmas 🎄]{"entity": "travel-exp", "value": "theme"} - [Boxing Day 🎁]{"entity": "travel-exp", "value": "theme"} - [New Year's Day 🎉]{"entity": "travel-exp", "value": "theme"} - [Good Friday 🌼]{"entity": "travel-exp", "value": "theme"} - [Jamhuri Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Labour Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Madaraka Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Eid ul-Adha 🌙]{"entity": "travel-exp", "value": "theme"} - [Moi Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Christmas Day 🎄]{"entity": "travel-exp", "value": "theme"} - [Boxing Day 🎁]{"entity": "travel-exp", "value": "theme"}
