@@ -1,11 +1,5 @@
-#models:
-#  default: "/app/models"
+action_endpoint:
+  url: http://localhost:5055/webhook
 
-# Event broker which all conversation events should be streamed to.
-# https://rasa.com/docs/rasa/api/event-brokers/
-
-#event_broker:
-#  url: localhost
-#  username: username
-#  password: password
-#  queue: queue
+#nlg:
+#  url: http://localhost:5056/nlg
