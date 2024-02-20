@@ -1,16 +1,6 @@
 ---
 version: "3.1"
 stories:
-  - story: get specific destination
-    steps:
-      - intent: inform_travel_destination
-        entities:
-          - LOC: Bali
-      - action: utter_ask_budget_range
-      - intent: inform_budget_range
-        entities:
-          - budget-range: mid-range
-      - action: action_provide_destination_details
   - story: proceed to booking
     steps:
       - intent: proceed_to_booking
@@ -33,6 +23,25 @@ stories:
       - active_loop: null
       - action: utter_confirm_booking
       - action: utter_anything_else
+  - story: get specific destination 
+    steps:
+      - intent: inform_travel_destination
+        entities:
+          - LOC: Mombasa
+      - action: destination_form
+      - active_loop: destination_form
+      - slot_was_set:
+          - requested_slot: budget_range
+      - slot_was_set:
+          - budget_range: mid-range
+      - slot_was_set:
+          - requested_slot: travel_date
+      - slot_was_set:
+          - travel_date: November 18th
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: action_provide_destination_details
   - story: recommend destination AND/OR explore_other_options
     steps:
       - intent: inquire_travel_packages
