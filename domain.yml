@@ -23,18 +23,18 @@ intents:
 responses:
   utter_greet:
     - text: Hi! Welcome to Voyage Companion, your AI travel assistant! Explore personalized travel packages with ease. How can I assist you?
-  utter_travel_experience:
-    - text: Tell me about your ideal travel experience.
-      buttons:
-        - title: Adventure 🌍
-          payload: /inform_travel_experience{{"travel-exp":"adventure"}}
-        - title: Relaxation 🏖
-          payload: /inform_travel_experience{{"travel-exp":"relaxation"}}
-        - title: Wildlife Safari 🦓
-          payload: /inform_travel_experience{{"travel-exp":"safari"}}
-        - title: Theme
-          payload: /inform_travel_experience{{"travel-exp":"theme"}}
-      button_type: vertical
+  utter_ask_travel_experience:
+  - text: Tell me about your ideal travel experience.
+    buttons:
+    - title: Adventure 🌍
+      payload: /inform_travel_experience{{"travel-exp":"adventure"}}
+    - title: Relaxation 🏖
+      payload: /inform_travel_experience{{"travel-exp":"relaxation"}}
+    - title: Wildlife Safari 🦓
+      payload: /inform_travel_experience{{"travel-exp":"safari"}}
+    - title: Theme
+      payload: /inform_travel_experience{{"travel-exp":"theme"}}
+    button_type: vertical
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip?💰
       buttons:
@@ -169,7 +169,7 @@ forms:
   travel_form:
     required_slots:
       - travel_experience
-      - check_in
+      - travel_date
 actions:
   - action_provide_package_options
   - action_provide_destination_details
