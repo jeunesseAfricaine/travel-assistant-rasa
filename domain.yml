@@ -131,7 +131,7 @@ slots:
         intent: inform_date
         value: November 15th
         not_intent: faq
-  budget:
+  budget_range:
     influence_conversation: true
     type: categorical
     values:
