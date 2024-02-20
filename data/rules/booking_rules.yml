@@ -18,9 +18,7 @@ rules:
     wait_for_user_input: false
   - rule: activate travel_form
     steps:
-      - intent: inform_travel_experience
-        entities:
-          - travel-exp: relaxation
+      - intent: inquire_travel_packages
       - action: travel_form
       - active_loop: travel_form
   - rule: submit form
@@ -32,3 +30,17 @@ rules:
       - slot_was_set:
           - requested_slot: null
       - action: action_provide_package_options
+  - rule: activate travel_form
+    steps:
+      - intent: inform_travel_destination
+      - action: destination_form
+      - active_loop: destination_form
+  - rule: submit form
+    condition:
+      - active_loop: destination_form
+    steps:
+      - action: destination_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_provide_destination_details
