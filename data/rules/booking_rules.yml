@@ -30,7 +30,7 @@ rules:
       - slot_was_set:
           - requested_slot: null
       - action: action_provide_package_options
-  - rule: activate travel_form
+  - rule: activate destination_form
     steps:
       - intent: inform_travel_destination
       - action: destination_form
