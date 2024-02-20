@@ -22,16 +22,18 @@ intents:
   - inform_travel_experience
 responses:
   utter_greet:
-    - text: Hello! Welcome to Voyage Companion! I am your virtual travel assistant powered by AI. How can I assist you?
+    - text: Hi! Welcome to Voyage Companion, your AI travel assistant! Explore personalized travel packages with ease. How can I assist you?
   utter_travel_experience:
-    - text: Tell me about your ideal travel experience. 
+    - text: Tell me about your ideal travel experience.
       buttons:
         - title: Adventure 🌍
-          payload: /inform_travel_experience{{"travel-exp", "adventure"}}
+          payload: /inform_travel_experience{{"travel-exp":"adventure"}}
         - title: Relaxation 🏖
-          payload: /inform_travel_experience{{"travel-exp", "relaxation"}}
+          payload: /inform_travel_experience{{"travel-exp":"relaxation"}}
         - title: Wildlife Safari 🦓
-          payload: /inform_travel_experience{{"travel-exp", "wildlife-safari"}}
+          payload: /inform_travel_experience{{"travel-exp":"safari"}}
+        - title: Theme
+          payload: /inform_travel_experience{{"travel-exp":"theme"}}
       button_type: vertical
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip?💰
@@ -48,8 +50,8 @@ responses:
   utter_ask_phone_num:
     - text: What is your phone number?
   utter_ask_check_in:
-    - text: When are you planning to check in? Say dates like 'November
-        10th'
+    - text: Could you please provide me with your preferred travel date? Say dates
+        like 'November 10th' or 'November'
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_default:
@@ -93,7 +95,6 @@ entities:
   - amount-of-money
   - budget-range
   - travel-exp
-
 slots:
   destination:
     type: any
@@ -110,8 +111,6 @@ slots:
     mappings:
       - type: from_entity
         entity: phoneNo
-      - type: from_entity
-        entity: phone-number
   num_people:
     type: any
     mappings:
@@ -131,6 +130,7 @@ slots:
       - type: from_intent
         intent: inform_date
         value: November 15th
+        not_intent: faq
   budget_range:
     influence_conversation: true
     type: categorical
@@ -146,13 +146,15 @@ slots:
       - type: from_intent
         intent: inform_budget_range
         value: GBP 1200
+        not_intent: faq
   travel_experience:
     influence_conversation: true
     type: categorical
     values:
       - adventure
       - relaxation
-      - wildlife-safari
+      - safari
+      - theme
     mappings:
       - type: from_entity
         entity: travel-exp
@@ -163,12 +165,14 @@ forms:
     required_slots:
       - name
       - phone_num
-      - check_in
       - num_people
+  travel_form:
+    required_slots:
+      - travel_experience
+      - check_in
 actions:
   - action_provide_package_options
   - action_provide_destination_details
-  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
