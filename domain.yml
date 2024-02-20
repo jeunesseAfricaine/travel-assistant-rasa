@@ -173,6 +173,7 @@ forms:
 actions:
   - action_provide_package_options
   - action_provide_destination_details
+  - validate_travel_form
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
