@@ -6,7 +6,7 @@ rules:
       - intent: nlu_fallback
       - action: action_two_stage_fallback
       - active_loop: action_two_stage_fallback
-  - rule: greet 
+  - rule: greet
     conversation_start: true
     steps:
       - intent: start
@@ -27,7 +27,7 @@ rules:
     steps:
       - intent: faq
       - action: utter_faq
-  - rule: inquiry
+  - rule: budget + custom action
     steps:
-      - intent: inquire_travel_packages
-      - action: utter_travel_experience
+      - intent: inform_budget_range
+      - action: action_provide_destination_details
