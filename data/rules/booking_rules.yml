@@ -18,7 +18,9 @@ rules:
     wait_for_user_input: false
   - rule: activate travel_form
     steps:
-      - intent: inform_date
+      - intent: inform_travel_experience
+        entities:
+          - travel-exp: relaxation
       - action: travel_form
       - active_loop: travel_form
   - rule: submit form
