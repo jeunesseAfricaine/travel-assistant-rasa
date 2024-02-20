@@ -6,15 +6,11 @@ stories:
       - intent: inform_travel_destination
         entities:
           - LOC: Bali
-      - action: action_provide_destination_details
-  - story: recommend destination AND/OR explore_other_options
-    steps:
-      - intent: inquire_travel_packages
-      - action: utter_travel_experience
-      - intent: inform_travel_experience
+      - action: utter_ask_budget_range
+      - intent: inform_budget_range
         entities:
-          - travel-exp: relaxation
-      - action: action_provide_package_options
+          - budget-range: mid-range
+      - action: action_provide_destination_details
   - story: proceed to booking
     steps:
       - intent: proceed_to_booking
@@ -29,10 +25,6 @@ stories:
       - slot_was_set:
           - phone_num: 723456798
       - slot_was_set:
-          - requested_slot: check_in
-      - slot_was_set:
-          - check_in: Jan 18th
-      - slot_was_set:
           - requested_slot: num_people
       - slot_was_set:
           - num_people: 6 travelers
@@ -41,3 +33,25 @@ stories:
       - active_loop: null
       - action: utter_confirm_booking
       - action: utter_anything_else
+  - story: recommend destination AND/OR explore_other_options
+    steps:
+      - intent: inquire_travel_packages
+      - action: utter_travel_experience
+      - intent: inform_travel_experience
+        entities:
+          - travel-exp: relaxation
+      - intent: inform_date
+      - action: travel_form
+      - active_loop: travel_form
+      - slot_was_set:
+          - requested_slot: travel_experience
+      - slot_was_set:
+          - travel_experience: adventure
+      - slot_was_set:
+          - requested_slot: check_in
+      - slot_was_set:
+          - check_in: Jan 18th
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: action_provide_package_options
