@@ -49,7 +49,7 @@ responses:
     - text: What is your full name?
   utter_ask_phone_num:
     - text: What is your phone number?
-  utter_ask_check_in:
+  utter_ask_travel_date:
     - text: Could you please provide me with your preferred travel date? Say dates
         like 'November 10th' or 'November'
   utter_ask_num_people:
