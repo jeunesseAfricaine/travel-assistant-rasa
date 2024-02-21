@@ -121,8 +121,7 @@ nlu:
 
       - Is it possible to check in in [the next month]{"entity": "date", "value": "the next month"}?
 
-      - Arrange my check-in this weekend
-      - I want to check in next Tuesday
+      - Arrange my check-in this weekend - I want to check in next Tuesday
 
       - Is it possible to check in on the [last day of this month]{"entity": "date", "value": "last day of this month"}?
 
@@ -168,8 +167,7 @@ nlu:
 
       - Please arrange my check-in on February 18th
 
-      - I want to start my stay on March 21st
-      - Can you check me in on April 7th
+      - I want to start my stay on March 21st - Can you check me in on April 7th
 
       - I'd like to arrive on May 30th
 
@@ -202,30 +200,23 @@ nlu:
       - next Monday - Please schedule my arrival on March 5th - next Thursday - Can you book my arrival on April 10th - Check in on May 20th would be preferable. - Arrange my check-in for next Sunday. - Can you arrange my check-in on June 8th? - Book July 3rd if there's availability. - Is it possible to check in on August 15th - I'd like to start my stay on September 25th - Please schedule for October 10th. - Can you arrange check-in on November 5th - Nov 5th - I want to check in next week if possible. - Schedule my arrival for December 20th - I plan to check out on January 8th{"entity": "date", "role": "check-out"}. - on Feb 15th? - My stay starts on March 1st 
   - intent: inform
     examples: >
-      - My name is [John Doe]{"entity": "PERSON", "value": "John Doe"}. - My
-      colleague is [Mary Wanjiru]{"entity": "PERSON", "value": "Mary
-      Wanjiru"}.  - Phone number [+2541234567890]{"entity": "phoneNo", "value":
-      "+2541234567890"}.  - [+2559876543210]{"entity": "phoneNo", "value":
-      "+2559876543210"}. - I'm [David Ochieng]{"entity": "PERSON", "value":
-      "David Ochieng"}. - I'm with [Sara Njeri]{"entity": "PERSON", "value":
-      "Sara Njeri"}.  - You can contact me at [+2545557890"]{"entity":
-      "phoneNo", "value": "+2545557890"}. - [+2558765432]{"entity": "phoneNo",
-      "value": "+2558765432"}. - [Kwame Agyei]{"entity": "PERSON", "value":
-      "Kwame Agyei"}. - [Aisha Kamau]{"entity": "PERSON", "value": "Aisha
-      Kamau"}. - Reach Kwame at [+2562345678]{"entity": "phoneNo", "value":
-      "+2562345678"}. - Aisha at [+2549871234]{"entity": "phoneNo", "value":
-      "+2549871234"}. - [James Mwangi]{"entity": "PERSON", "value": "James
-      Mwangi"}. - [Grace Nyambura]{"entity": "PERSON", "value": "Grace
-      Nyambura"}. - Number is [+2558765432]{"entity": "phoneNo", "value":
-      "+2558765432"}. - [Michael Onyango]{"entity": "PERSON", "value": "Michael
-      Onyango"}. - [Lilian Auma]{"entity": "PERSON", "value": "Lilian Auma"} at
-      [+2549876543210]{"entity": "phoneNo", "value": "+2549876543210"}. -
-      [Daniel Kamau]{"entity": "PERSON", "value": "Daniel Kamau"}. - [Samantha
-      Akinyi]{"entity": "PERSON", "value": "Samantha Akinyi"}. - [Ngozi
-      Eze]{"entity": "PERSON", "value": "Ngozi Eze"}. - [Kwesi Asante]{"entity":
-      "PERSON", "value": "Kwesi Asante"}. - [Wangari Maina]{"entity": "PERSON",
-      "value": "Wangari Maina"}. - [Oluwafemi Ojo]{"entity": "PERSON", "value":
-      "Oluwafemi Ojo"}. - [Fatima Bello]{"entity": "PERSON", "value": "Fatima
+      - My name is John Doe. - My colleague is Mary Wanjiru.  - Phone number
+      +2541234567890.  - +2559876543210. - I'm David Ochieng. - I'm with [Sara
+      Njeri]{"entity": "PERSON", "value": "Sara Njeri"}.  - You can contact me
+      at [+2545557890"]{"entity": "phoneNo", "value": "+2545557890"}. -
+      [+2558765432]{"entity": "phoneNo", "value": "+2558765432"}. - [Kwame
+      Agyei]{"entity": "PERSON", "value": "Kwame Agyei"}. - [Aisha
+      Kamau]{"entity": "PERSON", "value": "Aisha Kamau"}. - Reach Kwame at
+      [+2562345678]{"entity": "phoneNo", "value": "+2562345678"}. - Aisha at
+      [+2549871234]{"entity": "phoneNo", "value": "+2549871234"}. - [James
+      Mwangi]{"entity": "PERSON", "value": "James Mwangi"}. - [Grace
+      Nyambura]{"entity": "PERSON", "value": "Grace Nyambura"}. - Number is
+      [+2558765432]{"entity": "phoneNo", "value": "+2558765432"}. - [Michael
+      Onyango]{"entity": "PERSON", "value": "Michael Onyango"}. - [Lilian
+      Auma]{"entity": "PERSON", "value": "Lilian Auma"} at
+      [+2549876543210]{"entity": "phoneNo", "value": "+2549876543210"}. - Daniel
+      Kamau. - Samantha Akinyi - Ngozi Eze. - Kwesi Asante. - Wangari Maina -
+      Oluwafemi Ojo. - [Fatima Bello]{"entity": "PERSON", "value": "Fatima
       Bello"}. - [Jacob Mugo]{"entity": "PERSON", "value": "Jacob Mugo"} at
       [+2549876543211]{"entity": "phoneNo", "value": "+2549876543211"}. -
       [Naledi Moloi]{"entity": "PERSON", "value": "Naledi Moloi"}. - [Felix
@@ -243,8 +234,7 @@ nlu:
       Chuma]{"entity": "PERSON", "value": "Tariro Chuma"}. - [Malik
       Ndiaye]{"entity": "PERSON", "value": "Malik Ndiaye"} at
       [0776543214]{"entity": "phoneNo", "value": "0776543214"}. - [Sadia
-      Abdi]{"entity": "PERSON", "value": "Sadia Abdi"}. - [Musa Kamau]{"entity":
-      "PERSON", "value": "Musa Kamau"}.
+      Abdi]{"entity": "PERSON", "value": "Sadia Abdi"}. - Musa Kamau.
   - intent: inform_budget_range
     examples: >
       - [On-budget 💸]{"entity":"budget-range", "value": "budget"} -
@@ -356,48 +346,43 @@ nlu:
       options
   - intent: inform_travel_destination
     examples: >
-      - I want to visit [Bali](LOC) for my next vacation. - Can you provide
-      details about your packages for [Paris](LOC)? - Tell me about the travel
-      options for a trip to [the Maldives](LOC). - Share information about your
-      adventure tours in [New Zealand](LOC). - I'm interested in exploring the
-      beaches of [Phuket](LOC). Tell me more. - What are the attractions in
-      [Tokyo](LOC) for your travel packages? - Inform me about your travel
-      offerings for a safari in [Kenya](LOC). - I'd like to know about your
-      cultural experiences in [Rome](LOC). - Can you provide details about your
-      vacation packages to [Santorini](LOC)? - Tell me about the accommodation
-      options in [the Swiss Alps](LOC). - What travel experiences do you offer
-      in [the Caribbean](LOC)? - Share insights into your travel packages for a
-      cruise in [Alaska](LOC). - I'm curious about your historical tours in
-      [Istanbul](LOC). - Provide information on your travel options for a visit
-      to [Machu Picchu](LOC). - Tell me about the activities included in your
-      trips to [the Amazon rainforest](LOC). - I want to know more about your
-      eco-friendly travel options in [Costa Rica](LOC). - Share details about
-      your winter vacation packages in [Aspen](LOC). - Can you provide
-      information about your luxury tours in [Dubai](LOC)? - Tell me about the
-      nightlife experiences in [Las Vegas](LOC). - I'm interested in your travel
-      options for a cultural tour of [India](LOC). - I'm planning a trip to
-      [Cape Town](LOC). What packages do you offer? - Share details about your
-      safari tours in [Maasai Mara](LOC), please. - I want to explore the
-      pyramids in [Cairo](LOC). Tell me about your Egypt tours. - Can you
-      provide information about your travel options for [Victoria Falls](LOC)? -
-      Tell me about your cultural tours in [Marrakech](LOC). - I'm interested in
-      your packages for a visit to [Zanzibar](LOC). What can you offer? - What
-      travel experiences do you have for a trip to [Kruger National Park](LOC)?
-      - I'm considering a vacation in [Seychelles](LOC). Share details about
-      your offerings. - Can you provide insights into your adventure tours in
-      [Mount Kilimanjaro](LOC)? - Tell me about your historical tours in [Cape
-      Coast](LOC), Ghana. - Share information about your travel packages for a
-      visit to [Nairobi](LOC). - I'd like to explore the Serengeti in
-      [Tanzania](LOC). What options are available? - What are your
-      recommendations for a trip to [Lagos](LOC), Nigeria? - Tell me about your
-      eco-friendly travel options in [Madagascar](LOC). - Share details about
-      your luxury tours in [Mauritius](LOC). - I want to experience the local
-      cuisine in [Johannesburg](LOC). What can you offer? - Can you provide
-      information about your beach vacation packages in [Seychelles](LOC)? -
-      Tell me about your wildlife tours in [Botswana](LOC). - I'm interested in
-      your travel options for a cultural tour of [Addis Ababa](LOC), Ethiopia. -
-      Share insights into your travel packages for a visit to [Congo
-      Basin](LOC).
+      - I want to visit Bali for my next vacation. - Can you provide details
+      about your packages for Paris? - Tell me about the travel options for a
+      trip to the Maldives. - Share information about your adventure tours in
+      New Zealand. - I'm interested in exploring the beaches of Phuket. Tell me
+      more. - What are the attractions in Tokyo for your travel packages? -
+      Inform me about your travel offerings for a safari in Kenya. - I'd like to
+      know about your cultural experiences in Rome. - Can you provide details
+      about your vacation packages to Santorini? - Tell me about the
+      accommodation options in the Swiss Alps. - What travel experiences do you
+      offer in the Caribbean? - Share insights into your travel packages for a
+      cruise in Alaska. - I'm curious about your historical tours in Istanbul. -
+      Provide information on your travel options for a visit to Machu Picchu. -
+      Tell me about the activities included in your trips to the Amazon
+      rainforest. - I want to know more about your eco-friendly travel options
+      in Costa Rica. - Share details about your winter vacation packages in
+      Aspen. - Can you provide information about your luxury tours in Dubai? -
+      Tell me about the nightlife experiences in Las Vegas. - I'm interested in
+      your travel options for a cultural tour of India. - I'm planning a trip to
+      Cape Town What packages do you offer? - Share details about your safari
+      tours in Maasai Mara, please. - I want to explore the pyramids in Cairo.
+      Tell me about your Egypt tours. - Can you provide information about your
+      travel options for Victoria Falls? - Tell me about your cultural tours in
+      Marrakech. - I'm interested in your packages for a visit to Zanzibar. What
+      can you offer? - What travel experiences do you have for a trip to Kruger
+      National Park? - I'm considering a vacation in Seychelles. Share details
+      about your offerings. - Can you provide insights into your adventure tours
+      in Mount Kilimanjaro? - Tell me about your historical tours in Cape Coast,
+      Ghana. - Share information about your travel packages for a visit to
+      Nairobi. - I'd like to explore the Serengeti in Tanzania. What options are
+      available? - What are your recommendations for a trip to Lagos, Nigeria? -
+      Tell me about your eco-friendly travel options in Madagascar. - Share
+      details about your luxury tours in Mauritius. - I want to experience the
+      local cuisine in Johannesburg. What can you offer? - Can you provide
+      information about your beach vacation packages in Seychelles? - Tell me
+      about your wildlife tours in Botswana. - I'm interested in your travel
+      options for a cultural tour of Addis Ababa, Ethiopia. - Share insights
+      into your travel packages for a visit to Congo Basin.
   - intent: inform_travel_experience
     examples: >
       - [Adventure 🌍]{"entity": "travel-exp", "value": "adventure"}
