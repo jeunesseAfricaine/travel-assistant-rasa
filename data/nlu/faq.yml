@@ -152,43 +152,7 @@ nlu:
       - mbona nitumie ai?
       - nitumie ai ndio why?
       - y ai?
-  - intent: faq/ask_itinerary
-    examples: |
-      - How can I access my itinerary once I've confirmed my trip?
-      - I've booked my trip. Where do I locate my itinerary details?
-      - Once the trip is booked, where do I find the itinerary details?
-      - Where do I retrieve my itinerary after confirming my trip booking?
-      - After booking, how do I access my trip itinerary?
-      - What is the process to view my itinerary post-booking?
-      - How can I view my itinerary once my trip is confirmed?
-      - Once the trip is finalized, where can I find my itinerary?
-      - What are the steps to find my itinerary after confirming my trip?
-      - I've booked my trip. Where should I check for my itinerary details?
-      - Where can I find my itinerary once my trip is booked?
-  - intent: faq/ask_turn_around
-    examples: >
-      - How quickly can you arrange accommodations once I share my
-      preferences?  
 
-      - Once I give my preferences, how fast can you organize accommodations?
-
-      - How long does it take to arrange after I provide my preferences?
-
-      - What's the turnaround time once I share my choices?
-
-      - How soon can you set up lthe reservations? 
-
-      - After I share my preferences, how quickly can you arrange my stay?
-
-      - Once I provide my preferences, how fast can you secure accommodation?
-
-      - What's the speed of arranging accommodations once I share my preferences?
-
-      - How prompt are you in organizing my reservations after I provide my preferences?
-
-      - When I give my preferences, what's the timeframe for arranging accommodations?
-
-      - How rapidly can you book accommodations after I share my preferences?
   - intent: faq/ask_visa
     examples: |
       - do i need a visa?
@@ -223,49 +187,7 @@ nlu:
       - Is a visa necessary for my journey?
       - Tell me about visa regulations.
       - I need information about obtaining a visa.
-  - intent: faq/ask_wadrobe
-    examples: |
-      - what kind of cloth should i wear?
-      - Can you guide me on what to wear 
-      - Provide advice on dressing appropriately
-      - What clothing should I pack 
-      - Explain the dress code 
-      - Tell me about the appropriate attire for my journey.
-      - What kind of wardrobe is suitable
-      - Provide information on dressing
-      - what should i pack?
-      - i want to pack
-      - how should plan for packing
-      - what clothes should i carry
-      - nibebe nini
-      - naeza vaa nguo gani huko
-      - naeza beba mini
-      - naeza vaa hoodie?
-      - i need to pack
-      - packing?
-      - clothes?
-      - can i carry my sweat pant?
-      - napack nn
-      - What attire for my trip?
-      - Share insights on appropriate clothing
-      - Guide me on packing and dressing appropriately.
-      - what to wear during my travel?
-      - How should I plan my wardrobe?
-      - Any advice on the dress code?
-      - Help me decide what clothes to pack.
-      - Tell me about suitable attire 
-      - What kind of wardrobe is ideal
-      - Provide information on dressing for my travel experience.
-      - Can you assist with my packing, especially clothing?
-      - Share tips on what clothes I should carry.
-      - Nibebe nguo gani kwa safari?
-      - Naeza vaa nini kwenye safari?
-      - Naeza beba mini skirt?
-      - Can I wear a hoodie 
-      - I need guidance on packing my clothes.
-      - What should I include in my packing list?
-      - Can I carry my sweatpants in my luggage?
-      - Nimepak nn kwenye safari?
+
   - intent: faq/ask_security
     examples: |
       - what is security like? 
@@ -359,22 +281,22 @@ nlu:
       - Can you provide details on the payment methods accepted?
       - Explain the payment choices for booking travel services.
       - Tell me about the accepted payment options for your services.
-      - What payment methods do you support for bookings?
+      - What payment methods do you support
       - Provide information on the available payment options.
       - Can you guide me on the payment options for reservations?
       - Explain the payment procedures and accepted forms.
-      - What are the payment options for booking with your agency?
-      - Tell me about the payment methods for travel bookings.
+      - What are the payment options for 
+      - Tell me about the payment methods 
   - intent: faq/ask_refund_procedure
     examples: |
-      - What is the travel agency refund procedure?
+      - What is the refund procedure?
       - Can you explain the process for requesting a refund?
-      - Provide details on the refund policy of the travel agency.
+      - Provide details on the refund policy 
       - Tell me about the steps to follow for a refund.
       - What is the procedure for obtaining a refund?
-      - Explain how refunds are handled by the travel agency.
-      - Can you guide me on the refund process for bookings?
-      - Provide information on the agency's refund guidelines.
+      - Explain how refunds are handled by the 
+      - Can you guide me on the refund process 
+      - Provide information on refund guidelines.
       - What should I know about the refund procedure?
       - Tell me about the steps involved in requesting a refund.
   - intent: faq/ask_refund_timeframe
@@ -407,6 +329,10 @@ nlu:
       - How do I clear the current conversation and start afresh?
 
       - Can I initiate a new interaction with the travel assistant?
+      
+      - i need help
+      - help
+      - please help
   - intent: faq/ask_group_travel
     examples: >
       - Are there options for group travel in the travel assistant's
