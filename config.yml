@@ -37,7 +37,7 @@ pipeline:
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 200
+    epochs: 400
     constrain_similarities: true
     batch_strategy: sequence
   - name: EntitySynonymMapper
@@ -53,11 +53,15 @@ pipeline:
 policies:
   - name: UnexpecTEDIntentPolicy
   - name: AugmentedMemoizationPolicy
+    max_history: 6
   - name: TEDPolicy
     constrain_similarities: true
-    epochs: 200
+    epochs: 400
+    max_history: 8
+    batch_size: 50
+    max_training_samples: 300
   - name: RulePolicy
-    core_fallback_threshold: 0.4
+    core_fallback_threshold: 0.3
     enable_fallback_prediction: true
     core_fallback_action_name: action_default_fallback
 assistant_id: 20230723-171301-honest-limo
