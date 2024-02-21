@@ -89,7 +89,6 @@ entities:
   - LOC
   - PERSON
   - number
-  - date
   - phoneNo
   - phone-number
   - amount-of-money
@@ -130,8 +129,6 @@ slots:
     - luxury
     mappings:
     - type: from_entity
-      entity: amount-of-money
-    - type: from_entity
       entity: budget-range
   travel_experience:
     influence_conversation: true
@@ -144,6 +141,11 @@ slots:
     mappings:
     - type: from_entity
       entity: travel-exp
+  amount_of_money:
+      type: text
+      mappings:
+      - type: from_entity
+        entity: amount-of-money
 forms:
   booking_form:
     required_slots:
