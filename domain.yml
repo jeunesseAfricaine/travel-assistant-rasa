@@ -101,8 +101,6 @@ slots:
     mappings:
     - type: from_entity
       entity: LOC
-    - type: from_text
-      intent: inform_travel_destination
   name:
     type: any
     mappings:
@@ -113,14 +111,13 @@ slots:
     mappings:
     - type: from_entity
       entity: phoneNo
+    - type: from_entity
+      entity: phone-number
   num_people:
     type: any
     mappings:
     - type: from_entity
       entity: number
-    - type: from_text
-      intent: inform_group_size
-      not_intent: inform
   travel_date:
     type: any
     mappings:
@@ -128,9 +125,6 @@ slots:
       entity: time
     - type: from_entity
       entity: date
-    - type: from_text
-      intent: inform_date
-      not_intent: faq
   budget_range:
     influence_conversation: true
     type: categorical
@@ -143,9 +137,6 @@ slots:
       entity: amount-of-money
     - type: from_entity
       entity: budget-range
-    - type: from_text
-      intent: inform_budget_range
-      not_intent: faq
   travel_experience:
     influence_conversation: true
     type: categorical
@@ -157,9 +148,6 @@ slots:
     mappings:
     - type: from_entity
       entity: travel-exp
-    - type: from_text
-      intent: inform_travel_experience
-      not_intent: faq
 forms:
   booking_form:
     required_slots:
