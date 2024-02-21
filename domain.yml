@@ -110,8 +110,6 @@ slots:
     type: any
     mappings:
     - type: from_entity
-      entity: phoneNo
-    - type: from_entity
       entity: phone-number
   num_people:
     type: any
@@ -123,8 +121,6 @@ slots:
     mappings:
     - type: from_entity
       entity: time
-    - type: from_entity
-      entity: date
   budget_range:
     influence_conversation: true
     type: categorical
