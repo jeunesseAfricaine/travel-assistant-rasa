@@ -134,51 +134,101 @@ nlu:
       starts on March 1st.
   - intent: inform
     examples: >
-      - My name is John Doe. - My colleague is Mary Wanjiru.  - Phone number
-      +2541234567890.  - +2559876543210. - I'm David Ochieng. - I'm with [Sara
-      Njeri]{"entity": "PERSON", "value": "Sara Njeri"}.  - You can contact me
-      at [+2545557890"]{"entity": "phoneNo", "value": "+2545557890"}. -
-      [+2558765432]{"entity": "phoneNo", "value": "+2558765432"}. - [Kwame
-      Agyei]{"entity": "PERSON", "value": "Kwame Agyei"}. - [Aisha
-      Kamau]{"entity": "PERSON", "value": "Aisha Kamau"}. - Reach Kwame at
-      [+2562345678]{"entity": "phoneNo", "value": "+2562345678"}. - Aisha at
-      [+2549871234]{"entity": "phoneNo", "value": "+2549871234"}. - [James
-      Mwangi]{"entity": "PERSON", "value": "James Mwangi"}. - [Grace
-      Nyambura]{"entity": "PERSON", "value": "Grace Nyambura"}. - Number is
-      [+2558765432]{"entity": "phoneNo", "value": "+2558765432"}. - [Michael
-      Onyango]{"entity": "PERSON", "value": "Michael Onyango"}. - [Lilian
-      Auma]{"entity": "PERSON", "value": "Lilian Auma"} at
-      [+2549876543210]{"entity": "phoneNo", "value": "+2549876543210"}. - Daniel
-      Kamau. - Samantha Akinyi - Ngozi Eze. - Kwesi Asante. - Wangari Maina -
-      Oluwafemi Ojo. - [Fatima Bello]{"entity": "PERSON", "value": "Fatima
-      Bello"}. - [Jacob Mugo]{"entity": "PERSON", "value": "Jacob Mugo"} at
-      [+2549876543211]{"entity": "phoneNo", "value": "+2549876543211"}. -
-      [Naledi Moloi]{"entity": "PERSON", "value": "Naledi Moloi"}. - [Felix
-      Kiplagat]{"entity": "PERSON", "value": "Felix Kiplagat"}. - [Abena
-      Owusu]{"entity": "PERSON", "value": "Abena Owusu"}. - [Simba
-      Ndlovu]{"entity": "PERSON", "value": "Simba Ndlovu"} at
-      [+2549876543212]{"entity": "phoneNo", "value": "+2549876543212"}. -
-      [Chioma Obi]{"entity": "PERSON", "value": "Chioma Obi"}. - [Kwabena
-      Osei]{"entity": "PERSON", "value": "Kwabena Osei"}. - [Amina
-      Ibrahim]{"entity": "PERSON", "value": "Amina Ibrahim"}. - [Brian
-      Kimani]{"entity": "PERSON", "value": "Brian Kimani"} at
-      [0776543213]{"entity": "phoneNo", "value": "0776543213"}. - [Chinwe
-      Onuoha]{"entity": "PERSON", "value": "Chinwe Onuoha"}. - [Juma
-      Musa]{"entity": "PERSON", "value": "Juma Musa"}. - [Tariro
-      Chuma]{"entity": "PERSON", "value": "Tariro Chuma"}. - [Malik
-      Ndiaye]{"entity": "PERSON", "value": "Malik Ndiaye"} at
-      [0776543214]{"entity": "phoneNo", "value": "0776543214"}. - [Sadia
-      Abdi]{"entity": "PERSON", "value": "Sadia Abdi"}. - Musa Kamau. - My name
-      is David Ochieng. - I'm with Sara Njeri. - You can contact me at
-      +2545557890. - Kwame Agyei. - Aisha Kamau. - Reach Kwame at +2562345678. -
-      Aisha at +2549871234. - James Mwangi. - Grace Nyambura. - Number is
-      +2558765432. - Michael Onyango. - Lilian Auma at +2549876543210. - Daniel
-      Kamau. - Samantha Akinyi. - Ngozi Eze. - Kwesi Asante. - Wangari Maina. -
-      Oluwafemi Ojo. - Fatima Bello. - Jacob Mugo at +2549876543211. - Naledi
-      Moloi. - Felix Kiplagat. - Abena Owusu. - Simba Ndlovu at +2549876543212.
-      - Chioma Obi. - Kwabena Osei. - Amina Ibrahim. - Brian Kimani at
-      0776543213. - Chinwe Onuoha. - Juma Musa. - Tariro Chuma. - Malik Ndiaye
-      at 0776543214. - Sadia Abdi. - Musa Kamau.
+      - My name is Jennifer Akoth.
+      - I'm with Daniel Waweru.
+      - You can contact me at +254711223344.
+      - +256770112233.
+      - My name is Peter Omondi.
+      - I'm with Sheila Kariuki.
+      - Reach Peter at +254722334455.
+      - Sheila at +254733445566.
+      - Dennis Ouma.
+      - Angela Kamau.
+      - Number is +254788990011.
+      - Janet Njoroge.
+      - Philip Kipchirchir at +254712345678.
+      - Sandra Anyango.
+      - Samuel Otieno.
+      - Alice Wambui.
+      - Eric Muthoni.
+      - Cindy Achieng.
+      - Paul Kiptoo at +254701112233.
+      - Rachel Kimani.
+      - Joseph Gitau.
+      - Beatrice Wangui.
+      - Brian Omollo at +254701234567.
+      - Sylvia Njeri.
+      - Anthony Oduor.
+      - Lucy Auma.
+      - Patrick Mutua.
+      - Christine Wanjiku at +254720987654.
+      - Kelvin Mwangi.
+      - Grace Nyambura.
+      - Evelyn Adhiambo.
+      - Kevin Kiprop.
+      - Brenda Chepkoech at +254705432109.
+      - Michael Otieno.
+      - Nancy Atieno.
+      - Brian Mutai.
+      - Alice Mumbi at +254712345678.
+      - David Njenga.
+      - Faith Wangari.
+      - George Odhiambo.
+      - Susan Achieng at +254732198765.
+      - Moses Kipruto.
+      - Esther Mwangi.
+      - Victor Omondi.
+      - Sheila Anyango at +254711223344.
+      - Richard Kariuki.
+      - Lucy Wanjiru.
+      - Martin Kimani.
+      - Linda Nekesa.
+      - Kelvin Kamau at +254721234567.
+      - My name is Sarah Karimi. You can contact me at 0719876543.
+      - I'm with James Wachira. Reach me at +255786543210.
+      - Collins Mwangi's number is 0708765432.
+      - Esther Achieng can be reached at 0732154678.
+      - Benson Kiptoo's number is 0701234567.
+      - Beatrice Anyango can be contacted at 0723456789.
+      - Alice Njeri's number is 0700987654.
+      - John Kibet can be reached at 0718765432.
+      - Mary Mutheu's number is 0710987654.
+      - Joseph Otieno can be contacted at 0705432109.
+      - Grace Njeri's number is 0712345678.
+      - David Karanja can be reached at 0700987654.
+      - Cindy Wangari's number is 0718765432.
+      - Pauline Akinyi can be contacted at 0705432109.
+      - Eric Njoroge's number is 0712345678.
+      - Sharon Nyambura can be reached at 0700987654.
+      - Daniel Oduor's number is 0718765432.
+      - Carol Njeri can be contacted at 0705432109.
+      - Kelvin Ochieng's number is 0712345678.
+      - Sheila Mueni can be reached at 0700987654.
+      - Anthony Ochieng's number is 0718765432.
+      - Lucy Wanjiku can be contacted at 0705432109.
+      - Patrick Maina's number is 0712345678.
+      - Christine Atieno can be reached at 0700987654.
+      - Andrew Kimani's number is 0718765432.
+      - Pamela Adhiambo can be contacted at 0705432109.
+      - Kevin Kiprop's number is 0712345678.
+      - Brenda Chepkoech can be reached at 0700987654.
+      - Michael Omondi's number is 0718765432.
+      - Nancy Akinyi can be contacted at 0705432109.
+      - Brian Mutai's number is 0712345678.
+      - Alice Mumbi can be reached at 0700987654.
+      - David Mwangi's number is 0718765432.
+      - Faith Wanjiru can be contacted at 0705432109.
+      - George Otieno's number is 0712345678.
+      - Susan Achieng can be reached at 0700987654.
+      - Moses Kipruto's number is 0718765432.
+      - Esther Mwangi can be contacted at 0705432109.
+      - Victor Omondi's number is 0712345678.
+      - Sheila Anyango can be reached at 0700987654.
+      - Richard Kariuki's number is 0718765432.
+      - Lucy Wanjiru can be contacted at 0705432109.
+      - Martin Kimani's number is 0712345678.
+      - Linda Nekesa can be reached at 0700987654.
+      - Kelvin Kamau's number is 0718765432.
   - intent: inform_budget_range
     examples: >
       - [On-budget 💸]{"entity":"budget-range", "value": "budget"} -
