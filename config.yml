@@ -9,7 +9,6 @@ pipeline:
     intent_tokenization_flag: false
     intent_split_symbol: _
     token_pattern: None
-  - name: WhitespaceTokenizer
   - name: SpacyFeaturizer
     pooling: mean
   - name: RegexFeaturizer
