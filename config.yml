@@ -20,12 +20,12 @@ pipeline:
       analyzer: char_wb
       min_ngram: 1
       max_ngram: 4
-    - name: "SpacyEntityExtractor"
-      dimensions: ["PERSON", "LOC"]
     - name: DIETClassifier
       epochs: 200
       ranking_length: 5
-      batch_strategy: balanced
+      batch_strategy: sequence
+    - name: "SpacyEntityExtractor"
+      dimensions: ["PERSON", "LOC"]
     - name: DucklingEntityExtractor
       url: http://localhost:8000
       dimensions:
@@ -39,7 +39,7 @@ pipeline:
     - name: DIETClassifier
       epochs: 200
       constrain_similarities: true
-      batch_strategy: balanced
+      batch_strategy: sequence
     - name: EntitySynonymMapper
     - name: ResponseSelector
       epochs: 300
