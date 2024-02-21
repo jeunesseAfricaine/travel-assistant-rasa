@@ -48,7 +48,7 @@ pipeline:
     epochs: 300
     retrieval_intent: faq
   - name: FallbackClassifier
-    threshold: 0.3
+    threshold: 0.5
     ambiguity_threshold: 0.1
 policies:
   - name: UnexpecTEDIntentPolicy
