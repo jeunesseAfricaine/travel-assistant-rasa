@@ -45,28 +45,10 @@ responses:
         managing all travel-related tasks without any additional cost. Our
         team's expertise, combined with insights from numerous travelers, offers
         valuable assistance for planning your trip
-  utter_faq/ask_itinerary:
-    - text: Your itinerary as booked by Voyage Companion is available on our
-        www.ai.voyagecompanion.online website with your specific reservation
-        code as the login. Since we are directly connected to vendors’ inventory
-        systems (airlines, cruise lines, hotels), you will also be able to
-        retrieve your information on their unique client sites, many of which
-        offer a wealth of information to help you prepare for the trip ahead..
-  utter_faq/ask_turn_around:
-    - text: Once you've shared your preferences and budget, we'll promptly handle all
-        arrangements, including accommodations and detailed itineraries, to
-        ensure your comfort and satisfaction.
   utter_faq/ask_visa:
     - text: Yes, most of these destinations will require a visa for international
         travelers. It can be obtained on arrival at the airport with a visa fee
         but it is advisable to check with the Embassy in your local country.
-  utter_faq/ask_wadrobe:
-    - text: 🌍 Kenya and Tanzania offer diverse climates! ️🌞 Coastal areas are
-        tropical; think loose cotton and sun protection. 🏞️ Eastern regions are
-        hot and dry; pack a hat, cotton pants, and long-sleeved shirts. 🏔️🌧️
-        In highlands (3000-5000ft), be ready for cool/hot days and cold nights;
-        bring a sweater and rain jacket. 🗻❄️ Mountainous regions (5000ft+) are
-        cooler; gloves, sturdy footwear, and heavy rain gear recommended.
   utter_faq/ask_security:
     - text: All the destinations are tourist-friendly. However, it is advisable to
         safely keep your important documents and valuables. Most hotels will
