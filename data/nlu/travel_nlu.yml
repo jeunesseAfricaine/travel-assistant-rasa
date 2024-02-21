@@ -106,98 +106,32 @@ nlu:
       - The group size is 4 travelers.
   - intent: inform_date
     examples: >
-      - Can you arrange my check-in for [next Monday]{"entity": "date",
-      "value": "next Monday"}?
-
-      - Is it possible to check in on [the first day of next month]{"entity": "date", "value": "the first day of next month"}?
-
-      - Arrange my check-in in [the next week]{"entity": "date", "value": "the next week"}.
-
-      - I want to check in tomorrow
-
-      - Is it possible to check in Friday
-
-      - I'd like to check in [next year]{"entity": "date", "value": "next year"}.
-
-      - Is it possible to check in in [the next month]{"entity": "date", "value": "the next month"}?
-
-      - Arrange my check-in this weekend - I want to check in next Tuesday
-
-      - Is it possible to check in on the [last day of this month]{"entity": "date", "value": "last day of this month"}?
-
-      - Arrange my check-in [next Thursday]{"entity": "date", "value": "next Thursday"}.
-
-      - Please schedule my arrival [next weekend]{"entity": "date", "value": "next weekend"}.
-
-      - Is it possible to check in in [the next quarter]{"entity": "date", "value": "the next quarter"}?
-
-      - Arrange my check-in [next month on the 20th]{"entity": "date", "value": "next month on the 20th"}.
-
-      - I want to check in in [the next year]{"entity": "date", "value": "the next year"}.
-
-      - Can you arrange my check-in on March 5th
-
-      - Can you arrange my check-in on Mar 16th
-
-      - I'd like to check in on the 10th of June
-
-      - Please schedule my arrival for July 15th
-
-      - Is it possible to check in on August 1st
-
-      - I want to start my stay on September 10th
-
-      - I want to start my stay on [Sep 20th]{"entity": "date", "value": "Sep 20th"}.
-
-      - Arrange my check-in for October 25th
-
-      - Arrange my check-in for [Oct 8th]{"entity": "date", "value": "Oct 8th"}, please.
-
-      - Can you book my arrival on November 8th
-
-      - [Nov 8th]{"entity": "date", "value": "Nov 8th"}?
-
-      - I'd like to check in on December 3rd
-
-      - check in on [Dec 2nd]{"entity": "date", "value": "Dec 2nd"}.
-
-      - Schedule my arrival for January 12th
-
-      - [Jan 8th]{"entity": "date", "value": "Jan 8th"}.
-
-      - Please arrange my check-in on February 18th
-
-      - I want to start my stay on March 21st - Can you check me in on April 7th
-
-      - I'd like to arrive on May 30th
-
-      - Schedule my check-in for June 12th if possible.
-
-      - Is there availability for check-in on July 3rd?
-
-      - I plan to check out on March 10th
-
-      - Can I check out on the 15th of June?
-
-      - My stay ends on July 25th, so arrange check-out.
-
-      - Please schedule my departure for August 5th.
-
-      - I want to end my stay on September 18th.
-
-      - Arrange my check-out on October 30th please.
-
-      - Can I check out on November 15th?
-
-      - I'd like to end my stay on December 8th.
-
-      - Schedule my departure for January 20th.
-
-      - Please arrange check-out on February 28th.
-
-      - I plan to check out on March 10th
-
-      - next Monday - Please schedule my arrival on March 5th - next Thursday - Can you book my arrival on April 10th - Check in on May 20th would be preferable. - Arrange my check-in for next Sunday. - Can you arrange my check-in on June 8th? - Book July 3rd if there's availability. - Is it possible to check in on August 15th - I'd like to start my stay on September 25th - Please schedule for October 10th. - Can you arrange check-in on November 5th - Nov 5th - I want to check in next week if possible. - Schedule my arrival for December 20th - I plan to check out on January 8th{"entity": "date", "role": "check-out"}. - on Feb 15th? - My stay starts on March 1st 
+      - Can you arrange my check-in tomorrow? - Is it possible to check in
+      on Friday? - I'd like to check in next Tuesday. - Arrange my check-in for
+      next Thursday. - Please schedule my arrival for next weekend. - Is it
+      possible to check in on the last day of this month? - Arrange my check-in
+      for next month on the 20th. - Can you arrange my check-in on March 5th? -
+      I'd like to check in on the 10th of June. - Please schedule my arrival for
+      July 15th. - Is it possible to check in on August 1st? - I want to start
+      my stay on September 10th. - Arrange my check-in for October 25th. - Can
+      you book my arrival on November 8th? - I'd like to check in on December
+      3rd. - Schedule my arrival for January 12th. - Please arrange my check-in
+      on February 18th. - I want to start my stay on March 21st. - Can you check
+      me in on April 7th? - I'd like to arrive on May 30th. - Schedule my
+      check-in for June 12th if possible. - Is there availability for check-in
+      on July 3rd? - Can I check out on the 15th of June? - My stay ends on July
+      25th, so arrange check-out. - Please schedule my departure for August 5th.
+      - I want to end my stay on September 18th. - Arrange my check-out on
+      October 30th, please. - Can I check out on November 15th? - I'd like to
+      end my stay on December 8th. - Schedule my departure for January 20th. -
+      Please arrange check-out on February 28th. - I plan to check out on March
+      10th. - Can you arrange my check-in on June 8th? - Book July 3rd if
+      there's availability. - Is it possible to check in on August 15th? - I'd
+      like to start my stay on September 25th. - Please schedule for October
+      10th. - Can you arrange check-in on November 5th? - I want to check in
+      next week if possible. - Schedule my arrival for December 20th. - I plan
+      to check out on January 8th. - Can I check out on February 15th? - My stay
+      starts on March 1st.
   - intent: inform
     examples: >
       - My name is John Doe. - My colleague is Mary Wanjiru.  - Phone number
@@ -234,7 +168,17 @@ nlu:
       Chuma]{"entity": "PERSON", "value": "Tariro Chuma"}. - [Malik
       Ndiaye]{"entity": "PERSON", "value": "Malik Ndiaye"} at
       [0776543214]{"entity": "phoneNo", "value": "0776543214"}. - [Sadia
-      Abdi]{"entity": "PERSON", "value": "Sadia Abdi"}. - Musa Kamau.
+      Abdi]{"entity": "PERSON", "value": "Sadia Abdi"}. - Musa Kamau. - My name
+      is David Ochieng. - I'm with Sara Njeri. - You can contact me at
+      +2545557890. - Kwame Agyei. - Aisha Kamau. - Reach Kwame at +2562345678. -
+      Aisha at +2549871234. - James Mwangi. - Grace Nyambura. - Number is
+      +2558765432. - Michael Onyango. - Lilian Auma at +2549876543210. - Daniel
+      Kamau. - Samantha Akinyi. - Ngozi Eze. - Kwesi Asante. - Wangari Maina. -
+      Oluwafemi Ojo. - Fatima Bello. - Jacob Mugo at +2549876543211. - Naledi
+      Moloi. - Felix Kiplagat. - Abena Owusu. - Simba Ndlovu at +2549876543212.
+      - Chioma Obi. - Kwabena Osei. - Amina Ibrahim. - Brian Kimani at
+      0776543213. - Chinwe Onuoha. - Juma Musa. - Tariro Chuma. - Malik Ndiaye
+      at 0776543214. - Sadia Abdi. - Musa Kamau.
   - intent: inform_budget_range
     examples: >
       - [On-budget 💸]{"entity":"budget-range", "value": "budget"} -
@@ -931,48 +875,75 @@ nlu:
       options
   - intent: inform_travel_destination
     examples: >
-      - I want to visit [Bali](LOC) for my next vacation. - Can you provide
-      details about your packages for [Paris](LOC)? - Tell me about the travel
-      options for a trip to [the Maldives](LOC). - Share information about your
-      adventure tours in [New Zealand](LOC). - I'm interested in exploring the
-      beaches of [Phuket](LOC). Tell me more. - What are the attractions in
-      [Tokyo](LOC) for your travel packages? - Inform me about your travel
-      offerings for a safari in [Kenya](LOC). - I'd like to know about your
-      cultural experiences in [Rome](LOC). - Can you provide details about your
-      vacation packages to [Santorini](LOC)? - Tell me about the accommodation
-      options in [the Swiss Alps](LOC). - What travel experiences do you offer
-      in [the Caribbean](LOC)? - Share insights into your travel packages for a
-      cruise in [Alaska](LOC). - I'm curious about your historical tours in
-      [Istanbul](LOC). - Provide information on your travel options for a visit
-      to [Machu Picchu](LOC). - Tell me about the activities included in your
-      trips to [the Amazon rainforest](LOC). - I want to know more about your
-      eco-friendly travel options in [Costa Rica](LOC). - Share details about
-      your winter vacation packages in [Aspen](LOC). - Can you provide
-      information about your luxury tours in [Dubai](LOC)? - Tell me about the
-      nightlife experiences in [Las Vegas](LOC). - I'm interested in your travel
-      options for a cultural tour of [India](LOC). - I'm planning a trip to
-      [Cape Town](LOC). What packages do you offer? - Share details about your
-      safari tours in [Maasai Mara](LOC), please. - I want to explore the
-      pyramids in [Cairo](LOC). Tell me about your Egypt tours. - Can you
-      provide information about your travel options for [Victoria Falls](LOC)? -
-      Tell me about your cultural tours in [Marrakech](LOC). - I'm interested in
-      your packages for a visit to [Zanzibar](LOC). What can you offer? - What
-      travel experiences do you have for a trip to [Kruger National Park](LOC)?
-      - I'm considering a vacation in [Seychelles](LOC). Share details about
-      your offerings. - Can you provide insights into your adventure tours in
-      [Mount Kilimanjaro](LOC)? - Tell me about your historical tours in [Cape
-      Coast](LOC), Ghana. - Share information about your travel packages for a
-      visit to [Nairobi](LOC). - I'd like to explore the Serengeti in
-      [Tanzania](LOC). What options are available? - What are your
-      recommendations for a trip to [Lagos](LOC), Nigeria? - Tell me about your
-      eco-friendly travel options in [Madagascar](LOC). - Share details about
-      your luxury tours in [Mauritius](LOC). - I want to experience the local
-      cuisine in [Johannesburg](LOC). What can you offer? - Can you provide
-      information about your beach vacation packages in [Seychelles](LOC)? -
-      Tell me about your wildlife tours in [Botswana](LOC). - I'm interested in
-      your travel options for a cultural tour of [Addis Ababa](LOC), Ethiopia. -
-      Share insights into your travel packages for a visit to [Congo
-      Basin](LOC).
+      - I'm planning a getaway to Barcelona. What travel options do you
+      have? - Tell me about your adventure tours in Patagonia. - I want to
+      explore the historical sites in Athens. What packages do you offer? -
+      Share details about your travel options for a visit to Bora Bora. - I'm
+      interested in your luxury tours in St. Lucia. What can you provide? - What
+      are your recommendations for a cultural tour of Kyoto? - I'd like to know
+      about your vacation packages to Cancun. - Can you provide information
+      about your beach vacation packages in Phuket? - Tell me about the wildlife
+      tours in Galapagos Islands. - I want to experience the local cuisine in
+      Lima. What can you offer? - Share details about your eco-friendly travel
+      options in Costa Rica. - I'm considering a vacation in Reykjavik. What
+      travel experiences do you have? - What are the attractions in Amsterdam
+      for your travel packages? - Provide information on your travel options for
+      a visit to Queenstown, New Zealand. - I want to explore the pyramids in
+      Giza. Tell me about your Egypt tours. - Can you provide insights into your
+      adventure tours in Swiss Alps? - Tell me about your cultural tours in
+      Marrakech. - I'm interested in your packages for a visit to Grand Canyon.
+      What can you offer? - What travel experiences do you offer in Dubrovnik? -
+      I'm planning a trip to Mumbai. What packages do you have? - Share details
+      about your winter vacation packages in Whistler. - Can you provide
+      information about your travel options for Great Barrier Reef? - Tell me
+      about the nightlife experiences in Ibiza. - I want to know more about your
+      eco-friendly travel options in Belize. - Share details about your
+      historical tours in Jerusalem. - I'm interested in your travel options for
+      a cultural tour of Cusco. - What are your recommendations for a trip to
+      Santorini? - Tell me about your wildlife tours in Kruger National Park. -
+      I'm considering a vacation in Queen Elizabeth National Park. What can you
+      provide? - Provide information on your travel options for a visit to
+      Yangon, Myanmar. - I want to experience the local culture in Luang
+      Prabang. What can you offer? - Share insights into your travel packages
+      for a visit to Victoria, Canada. - I'd like to explore the Serengeti in
+      Arusha, Tanzania. What options are available? - What are your
+      recommendations for a trip to Marrakech? - Tell me about your beach
+      vacation packages in Maui. - I'm interested in your luxury tours in
+      Monaco. What can you provide? - What travel experiences do you offer in
+      Bali? - I'm interested in exploring the Maasai Mara in Kenya. What travel
+      options do you have? - Tell me about your adventure tours in the
+      Serengeti, Tanzania. - I want to experience the cultural richness of
+      Zanzibar. What packages do you offer? - Share details about your wildlife
+      tours in Amboseli National Park, Kenya. - I'm planning a trip to Victoria
+      Falls. What travel experiences can you provide? - Mount Kilimanjaro in
+      Tanzania? - I'd like to explore the historical sites in Lamu, Kenya. Tell
+      me about your tours. - Can you provide insights into your adventure tours
+      in the Ngorongoro Crater, Tanzania? - Tell me about your beach vacation
+      packages on the Kenyan coast. - I'm interested in your luxury tours in
+      Seychelles. What can you offer? - What travel experiences do you provide
+      for a trip to Lake Nakuru, Kenya? - I'm considering a vacation in Kigali,
+      Rwanda. What options do you have? - Provide information on your travel
+      options for a visit to Bwindi Impenetrable Forest, Uganda. - I want to
+      know more about your eco-friendly travel options in the Rwenzori
+      Mountains. - Share details about your historical tours in Stone Town,
+      Zanzibar. - I'm interested in your packages for a visit to Nanyuki, Kenya.
+      What can you provide? - What travel experiences do you offer for a trip to
+      Jinja, Uganda? - I'm planning to explore the Great Rift Valley in Kenya.
+      What packages do you have? - Tell me about your wildlife tours in Akagera
+      National Park, Rwanda. - I'd like to experience the local culture in
+      Mombasa, Kenya. What can you offer? - What are your recommendations for a
+      visit to Kidepo Valley National Park, Uganda? - Tell me about your beach
+      vacation packages in Diani, Kenya. - I'm interested in your luxury tours
+      in Mauritius. What can you provide? - What travel experiences do you offer
+      for a trip to Lake Manyara, Tanzania? - I'm considering a vacation in
+      Entebbe, Uganda. What options do you have? - Provide information on your
+      travel options for a visit to Karamoja, Uganda. - I want to know more
+      about your eco-friendly travel options in the Maasai Steppe, Tanzania. -
+      Share details about your historical tours in Karen, Nairobi, Kenya. - I'm
+      interested in your packages for a visit to Lake Victoria, Uganda. What can
+      you provide? - What travel experiences do you offer for a trip to Kibale
+      National Park, Uganda? - I'm planning to explore the Chyulu Hills in
+      Kenya. What packages do you have?
   - intent: inform_travel_experience
     examples: >
       - [Adventure 🌍]{"entity": "travel-exp", "value": "adventure"}
@@ -1164,3 +1135,24 @@ nlu:
       - I'm specifically seeking [thrilling wildlife adventures]{"entity": "travel-exp", "value": "safari"} options for my trip.
 
       - [Valentine's 💖]{"entity": "travel-exp", "value": "theme"} - [Easter 🐣]{"entity": "travel-exp", "value": "theme"} - [Diwali 🪔]{"entity": "travel-exp", "value": "theme"} - [Eid 🌙]{"entity": "travel-exp", "value": "theme"} - [Mashujaa Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Madaraka Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Labour Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Jamhuri Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Eid ul-Fitr 🌙]{"entity": "travel-exp", "value": "theme"} - [Christmas 🎄]{"entity": "travel-exp", "value": "theme"} - [Boxing Day 🎁]{"entity": "travel-exp", "value": "theme"} - [New Year's Day 🎉]{"entity": "travel-exp", "value": "theme"} - [Good Friday 🌼]{"entity": "travel-exp", "value": "theme"} - [Jamhuri Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Labour Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Madaraka Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Eid ul-Adha 🌙]{"entity": "travel-exp", "value": "theme"} - [Moi Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Christmas Day 🎄]{"entity": "travel-exp", "value": "theme"} - [Boxing Day 🎁]{"entity": "travel-exp", "value": "theme"}
+  - synonym: December
+    examples: |
+      - Dec
+  - synonym: November
+    examples: |
+      - Nov
+  - synonym: October
+    examples: |
+      - oct
+  - synonym: September
+    examples: |
+      - sept
+  - synonym: August
+    examples: |
+      - Aug
+  - synonym: February
+    examples: |
+      - Feb
+  - synonym: January
+    examples: |
+      - Jan
