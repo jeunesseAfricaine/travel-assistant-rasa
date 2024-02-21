@@ -4,7 +4,7 @@ rules:
   - rule: Implementation of the Two-Stage-Fallback
     steps:
       - intent: nlu_fallback
-      - action: utter_please_rephrase
+      - action: utter_ask_rephrase
   - rule: greet
     conversation_start: true
     steps:
