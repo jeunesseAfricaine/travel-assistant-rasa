@@ -115,15 +115,14 @@ nlu:
 
       - I want to check in tomorrow
 
-      - Is it possible to check in [next Friday]{"entity": "date", "value": "next Friday"}?
+      - Is it possible to check in Friday
 
       - I'd like to check in [next year]{"entity": "date", "value": "next year"}.
 
       - Is it possible to check in in [the next month]{"entity": "date", "value": "the next month"}?
 
-      - Arrange my check-in [this weekend]{"entity": "date", "value": "this weekend"}.
-
-      - I want to check in [next Tuesday]{"entity": "date", "value": "next Tuesday"}.
+      - Arrange my check-in this weekend
+      - I want to check in next Tuesday
 
       - Is it possible to check in on the [last day of this month]{"entity": "date", "value": "last day of this month"}?
 
@@ -137,69 +136,68 @@ nlu:
 
       - I want to check in in [the next year]{"entity": "date", "value": "the next year"}.
 
-      - Can you arrange my check-in on [March 5th]{"entity": "date", "value": "March 5th"}?
+      - Can you arrange my check-in on March 5th
 
-      - Can you arrange my check-in on [Mar 16th]{"entity": "date", "value": "Mar 16th"}?
+      - Can you arrange my check-in on Mar 16th
 
-      - I'd like to check in on the [10th of June]{"entity": "date", "value": "10th of June"}.
+      - I'd like to check in on the 10th of June
 
-      - Please schedule my arrival for [July 15th]{"entity": "date", "value": "July 15th"}.
+      - Please schedule my arrival for July 15th
 
-      - Is it possible to check in on [August 1st]{"entity": "date", "value": "August 1st"}?
+      - Is it possible to check in on August 1st
 
-      - I want to start my stay on [September 10th]{"entity": "date", "value": "September 10th"}.
+      - I want to start my stay on September 10th
 
       - I want to start my stay on [Sep 20th]{"entity": "date", "value": "Sep 20th"}.
 
-      - Arrange my check-in for [October 25th]{"entity": "date", "value": "October 25th"}, please.
+      - Arrange my check-in for October 25th
 
       - Arrange my check-in for [Oct 8th]{"entity": "date", "value": "Oct 8th"}, please.
 
-      - Can you book my arrival on [November 8th]{"entity": "date", "value": "November 8th"}?
+      - Can you book my arrival on November 8th
 
       - [Nov 8th]{"entity": "date", "value": "Nov 8th"}?
 
-      - I'd like to check in on [December 3rd]{"entity": "date", "value": "December 3rd"}.
+      - I'd like to check in on December 3rd
 
       - check in on [Dec 2nd]{"entity": "date", "value": "Dec 2nd"}.
 
-      - Schedule my arrival for [January 12th]{"entity": "date", "value": "January 12th"}.
+      - Schedule my arrival for January 12th
 
       - [Jan 8th]{"entity": "date", "value": "Jan 8th"}.
 
-      - Please arrange my check-in on [February 18th]{"entity": "date", "value": "February 18th"}.
+      - Please arrange my check-in on February 18th
 
-      - I want to start my stay on [March 21st]{"entity": "date", "value": "March 21st"}.
+      - I want to start my stay on March 21st
+      - Can you check me in on April 7th
 
-      - Can you check me in on [April 7th]{"entity": "date", "value": "April 7th"}?
+      - I'd like to arrive on May 30th
 
-      - I'd like to arrive on [May 30th]{"entity": "date", "value": "May 30th"}.
+      - Schedule my check-in for June 12th if possible.
 
-      - Schedule my check-in for [June 12th]{"entity": "date", "value": "June 12th"}, if possible.
+      - Is there availability for check-in on July 3rd?
 
-      - Is there availability for check-in on [July 3rd]{"entity": "date", "value": "July 3rd"}?
+      - I plan to check out on March 10th
 
-      - I plan to check out on [March 10th]{"entity": "date", "value": "March 10th"}.
+      - Can I check out on the 15th of June?
 
-      - Can I check out on the [15th of June]{"entity": "date", "value": "15th of June"}?
+      - My stay ends on July 25th, so arrange check-out.
 
-      - My stay ends on [July 25th]{"entity": "date", "value": "July 25th"}, so arrange check-out.
+      - Please schedule my departure for August 5th.
 
-      - Please schedule my departure for [August 5th]{"entity": "date", "value": "August 5th"}.
+      - I want to end my stay on September 18th.
 
-      - I want to end my stay on [September 18th]{"entity": "date", "value": "September 18th"}.
+      - Arrange my check-out on October 30th please.
 
-      - Arrange my check-out on [October 30th]{"entity": "date", "value": "October 30th"}, please.
+      - Can I check out on November 15th?
 
-      - Can I check out on [November 15th]{"entity": "date", "value": "November 15th"}?
+      - I'd like to end my stay on December 8th.
 
-      - I'd like to end my stay on [December 8th]{"entity": "date", "value": "December 8th"}.
+      - Schedule my departure for January 20th.
 
-      - Schedule my departure for [January 20th]{"entity": "date", "value": "January 20th"}.
+      - Please arrange check-out on February 28th.
 
-      - Please arrange check-out on [February 28th]{"entity": "date", "value": "February 28th"}.
-
-      - I plan to check out on [March 10th]{"entity": "date", "value": "March 10th"}.
+      - I plan to check out on March 10th
 
       - next Monday - Please schedule my arrival on March 5th - next Thursday - Can you book my arrival on April 10th - Check in on May 20th would be preferable. - Arrange my check-in for next Sunday. - Can you arrange my check-in on June 8th? - Book July 3rd if there's availability. - Is it possible to check in on August 15th - I'd like to start my stay on September 25th - Please schedule for October 10th. - Can you arrange check-in on November 5th - Nov 5th - I want to check in next week if possible. - Schedule my arrival for December 20th - I plan to check out on January 8th{"entity": "date", "role": "check-out"}. - on Feb 15th? - My stay starts on March 1st 
   - intent: inform
