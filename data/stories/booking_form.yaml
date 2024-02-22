@@ -25,11 +25,13 @@ stories:
       - action: utter_anything_else
   - story: get specific destination 
     steps:
-      - intent: inform_travel_destination
-        entities:
-          - LOC: Mombasa
+      - intent: specific_travel_request
       - action: destination_form
       - active_loop: destination_form
+      - slot_was_set:
+          - requested_slot: destination
+      - slot_was_set:
+          - destination: Maldives
       - slot_was_set:
           - requested_slot: budget_range
       - slot_was_set:
