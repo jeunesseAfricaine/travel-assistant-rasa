@@ -86,8 +86,8 @@ responses:
         inquiries you may have. Let's make your journey unforgettable! 🌟
   utter_ask_destination:
     - text: What's the destination you have in mind for your trip?
-    - I'd love to help! Could you let me know the destination you're thinking of?
-    - To assist you better, could you specify the destination you have in mind?
+    - text: I'd love to help! Could you let me know the destination you're thinking of?
+    - text: To assist you better, could you specify the destination you have in mind?
   utter_confirm_booking:
     - text: All set!
   utter_youarewelcome:
