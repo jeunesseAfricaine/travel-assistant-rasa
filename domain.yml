@@ -20,9 +20,16 @@ intents:
   - inquire_travel_packages
   - inform_travel_destination
   - inform_travel_experience
+  - specific_travel_request
 responses:
   utter_greet:
     - text: Hi! Welcome to Voyage Companion, your AI travel assistant! Explore personalized travel packages with ease. How can I assist you?
+      buttons:
+        - title: Got something in mind! 🤔
+          payload: /specific_travel_request
+        - title: Surprise me! 🌍
+          payload: /inquire_travel_packages
+      button_type: vertical
   utter_ask_travel_experience:
   - text: Tell me about your ideal travel experience.
     buttons:
