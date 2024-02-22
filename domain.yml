@@ -165,6 +165,7 @@ forms:
       - travel_date
   destination_form:
     required_slots:
+      - destination
       - budget_range
       - travel_date
 actions:
