@@ -26,7 +26,3 @@ rules:
     steps:
       - intent: faq
       - action: utter_faq
-  - rule: budget + custom action
-    steps:
-      - intent: inform_budget_range
-      - action: action_provide_destination_details
