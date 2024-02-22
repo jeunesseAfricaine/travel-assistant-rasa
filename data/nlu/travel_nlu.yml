@@ -1,6 +1,32 @@
 ---
 version: "3.1"
 nlu:
+  - intent: specific_travel_request
+    examples: |
+      - specific travel request
+      - provide destination details
+      - i want to provide a specific request
+      - i have something on my mind
+      - I have a specific destination in mind, can you help?
+      - Looking for details about a particular place, can you provide information?
+      - I want to provide a specific request for my trip, where do I start?
+      - I've got something on my mind regarding travel, can we discuss it?
+      - Considering a trip, but I have a particular destination in mind.
+      - Can you assist with details about a specific travel experience I'm thinking of?
+      - I'm set on a particular place, could you give me some insights?
+      - Got a destination in mind, what recommendations do you have?
+      - Thinking about a unique travel experience, can you help plan it?
+      - I want to explore a specific location, what should I know?
+      - Exploring travel options, but I have a particular destination in mind.
+      - Contemplating a journey, and there's a specific destination on my radar.
+      - Thinking about a trip, and I've already set my sights on a particular place.
+      - Pondering a vacation, but I've already chosen a specific destination.
+      - Considering travel plans, but I'm fixed on a particular destination.
+      - Contemplating a getaway, and there's a specific destination I'm interested in.
+      - In the early stages of trip planning, with a specific destination in mind.
+      - Evaluating travel possibilities, but I have a particular destination in mind.
+      - Planning a vacation, and there's a specific destination I'm excited about.
+      - Weighing my travel options, but I already have a specific destination in mind.
   - intent: proceed_to_booking
     examples: |
       - Proceed to Booking
@@ -338,6 +364,15 @@ nlu:
       for a vacation to explore different climates. - Thinking about kuandaa
       vacation to discover vibrant city life. - Surprise Me - suggest some
       options
+      - Surprise me with some offbeat travel destinations!
+      - Show me popular travel packages for a luxury experience.
+      - Any unique travel experiences trending right now?
+      - Recommend budget-friendly travel options for a group vacation.
+      - Suggest destinations that are perfect for a relaxing spa retreat.
+      - I'm open to anything, show me a mix of cultural and scenic places.
+      - What travel packages are recommended for a solo traveler seeking social experiences?
+      - Curate a list of destinations with vibrant nightlife and entertainment.
+      - Surprise me with last-minute travel deals for a spontaneous trip!
   - intent: inform_travel_destination
     examples: >
       - I want to visit Bali for my next vacation. - Can you provide details
