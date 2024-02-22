@@ -32,7 +32,7 @@ rules:
       - action: action_provide_package_options
   - rule: activate destination_form
     steps:
-      - intent: inform_travel_destination
+      - intent: specific_travel_request
       - action: destination_form
       - active_loop: destination_form
   - rule: submit form
