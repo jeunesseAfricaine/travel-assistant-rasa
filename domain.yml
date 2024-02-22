@@ -23,7 +23,8 @@ intents:
   - specific_travel_request
 responses:
   utter_greet:
-    - text: Hi! Welcome to Voyage Companion, your AI travel assistant! Explore personalized travel packages with ease. How can I assist you?
+    - text: Hi! Welcome to Voyage Companion, your AI travel assistant! Explore
+        personalized travel packages with ease. How can I assist you?
       buttons:
         - title: Got something in mind! 🤔
           payload: /specific_travel_request
@@ -31,17 +32,17 @@ responses:
           payload: /inquire_travel_packages
       button_type: vertical
   utter_ask_travel_experience:
-  - text: Tell me about your ideal travel experience.
-    buttons:
-    - title: Adventure 🌍
-      payload: /inform_travel_experience{{"travel-exp":"adventure"}}
-    - title: Relaxation 🏖
-      payload: /inform_travel_experience{{"travel-exp":"relaxation"}}
-    - title: Wildlife Safari 🦓
-      payload: /inform_travel_experience{{"travel-exp":"safari"}}
-    - title: Theme
-      payload: /inform_travel_experience{{"travel-exp":"theme"}}
-    button_type: vertical
+    - text: Tell me about your ideal travel experience.
+      buttons:
+        - title: Adventure 🌍
+          payload: /inform_travel_experience{{"travel-exp":"adventure"}}
+        - title: Relaxation 🏖
+          payload: /inform_travel_experience{{"travel-exp":"relaxation"}}
+        - title: Wildlife Safari 🦓
+          payload: /inform_travel_experience{{"travel-exp":"safari"}}
+        - title: Theme
+          payload: /inform_travel_experience{{"travel-exp":"theme"}}
+      button_type: vertical
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip?💰
       buttons:
@@ -83,6 +84,10 @@ responses:
   utter_anything_else:
     - text: Feel like exploring more? I'm here to help with travel suggestions or any
         inquiries you may have. Let's make your journey unforgettable! 🌟
+  utter_ask_destination:
+    - text: What's the destination you have in mind for your trip?
+    - I'd love to help! Could you let me know the destination you're thinking of?
+    - To assist you better, could you specify the destination you have in mind?
   utter_confirm_booking:
     - text: All set!
   utter_youarewelcome:
@@ -105,52 +110,52 @@ slots:
   destination:
     type: any
     mappings:
-    - type: from_entity
-      entity: LOC
+      - type: from_entity
+        entity: LOC
   name:
     type: any
     mappings:
-    - type: from_entity
-      entity: PERSON
+      - type: from_entity
+        entity: PERSON
   phone_num:
     type: any
     mappings:
-    - type: from_entity
-      entity: phone-number
+      - type: from_entity
+        entity: phone-number
   num_people:
     type: any
     mappings:
-    - type: from_entity
-      entity: number
+      - type: from_entity
+        entity: number
   travel_date:
     type: any
     mappings:
-    - type: from_entity
-      entity: time
+      - type: from_entity
+        entity: time
   budget_range:
     influence_conversation: true
     type: categorical
     values:
-    - budget
-    - mid-range
-    - luxury
+      - budget
+      - mid-range
+      - luxury
     mappings:
-    - type: from_entity
-      entity: budget-range
+      - type: from_entity
+        entity: budget-range
   travel_experience:
     influence_conversation: true
     type: categorical
     values:
-    - adventure
-    - relaxation
-    - safari
-    - theme
+      - adventure
+      - relaxation
+      - safari
+      - theme
     mappings:
-    - type: from_entity
-      entity: travel-exp
+      - type: from_entity
+        entity: travel-exp
   amount_of_money:
-      type: text
-      mappings:
+    type: text
+    mappings:
       - type: from_entity
         entity: amount-of-money
 forms:
