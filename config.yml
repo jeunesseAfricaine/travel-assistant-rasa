@@ -19,7 +19,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 2
+    epochs: 100
     ranking_length: 5
     batch_strategy: sequence
   - name: SpacyEntityExtractor
@@ -37,15 +37,15 @@ pipeline:
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 2
+    epochs: 100
     constrain_similarities: true
     batch_strategy: sequence
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 2
+    epochs: 50
     retrieval_intent: chitchat
   - name: ResponseSelector
-    epochs: 2
+    epochs: 50
     retrieval_intent: faq
   - name: FallbackClassifier
     threshold: 0.5
@@ -56,7 +56,7 @@ policies:
     max_history: 6
   - name: TEDPolicy
     constrain_similarities: true
-    epochs: 2
+    epochs: 100
     max_history: 8
     batch_size: 50
     max_training_samples: 300
