@@ -19,7 +19,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 5
+    epochs: 50
     ranking_length: 5
     batch_strategy: sequence
   - name: SpacyEntityExtractor
@@ -37,31 +37,31 @@ pipeline:
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 5
+    epochs: 50
     constrain_similarities: true
     batch_strategy: sequence
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 5
+    epochs: 50
     retrieval_intent: chitchat
   - name: ResponseSelector
-    epochs: 5
+    epochs: 50
     retrieval_intent: faq
   - name: FallbackClassifier
-    threshold: 0.5
+    threshold: 0.7
     ambiguity_threshold: 0.1
 policies:
   - name: UnexpecTEDIntentPolicy
   - name: AugmentedMemoizationPolicy
-    max_history: 6
+    max_history: 5
   - name: TEDPolicy
     constrain_similarities: true
-    epochs: 10
+    epochs: 100
     max_history: 8
     batch_size: 5
     max_training_samples: 300
   - name: RulePolicy
-    core_fallback_threshold: 0.3
+    core_fallback_threshold: 0.5
     enable_fallback_prediction: true
     core_fallback_action_name: action_default_fallback
 assistant_id: 20230723-171301-honest-limo
