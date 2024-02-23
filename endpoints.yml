@@ -1,5 +1,5 @@
 action_endpoint:
-  url: http://localhost:5055/webhook
+  url: http://rasa-action-server/webhook
 
 #nlg:
 #  url: http://localhost:5056/nlg
