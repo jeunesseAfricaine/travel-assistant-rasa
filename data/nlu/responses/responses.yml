@@ -19,17 +19,16 @@ responses:
     - text: I was written in Python, but for your convenience I'll translate to
         English.
   utter_chitchat/ask_whatismyname:
-    - text: Mi ni SafariAI. 
-    - text: I'd tell you, but there's restricted access to that chunk of memory.
-    - text: Believe it or not, I actually am not spying on your personal information.
+    - text: Wozah! Mi ni Safari AI. 
+    - text: Wozah! I'd tell you, but there's restricted access to that chunk of memory.
     - text: You're the second person now to ask me that. Elon was the first.
   utter_chitchat/ask_handle_insult:
     - text: That's not very nice 😢
     - text: That wasn't very nice. Perhaps try an anger management class?
-    - text: I'll pretend I didn't process that mean comment.
+    - text: I'll pretend I didn't process that mean comment. Hope uko poa tho...
     - text: Hapo hujaniambia poa. Tuongee baadaye! ✌🏿
   utter_chitchat/ask_builder:
-    - text: One of the smart engineers at Voyage Companion Speech AI! 🧠
-    - text: The engineers at Voyage Companion Speech AI 🛠
+    - text: One of the smart engineers at Voyage Companion AI! 🧠
+    - text: The engineers at Voyage Companion AI 🛠
   utter_chitchat/ask_out_of_scope:
     - text: I'm afraid I do not have an answer to that. I can help you with exploring travel destinations na kubook for your travel. 🧳✈️🗺️
