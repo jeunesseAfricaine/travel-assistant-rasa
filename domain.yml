@@ -33,6 +33,7 @@ responses:
       button_type: vertical
   utter_ask_travel_experience:
     - text: Tell me about your ideal travel experience.
+      image: "https://wanderon.in/_next/image?url=https%3A%2F%2Fstatic.wanderon.in%2Fwp-content%2Fuploads%2F2023%2F10%2Fgondola-ride-in-autumn-in-kashmir-2023-10-18t174214.790-min.png&w=3840&q=75"
       buttons:
         - title: Adventure 🌍
           payload: /inform_travel_experience{{"travel-exp":"adventure"}}
