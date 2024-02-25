@@ -936,7 +936,7 @@ nlu:
       interested in your packages for a visit to Lake Victoria, Uganda. What can
       you provide? - What travel experiences do you offer for a trip to Kibale
       National Park, Uganda? - I'm planning to explore the Chyulu Hills in
-      Kenya. What packages do you have?
+      Kenya. What packages do you have? - Diani - Nairobi - Mombasa - Masai Mara - Turkana
   - intent: inform_travel_experience
     examples: >
       - [Adventure 🌍]{"entity": "travel-exp", "value": "adventure"}
@@ -1044,8 +1044,6 @@ nlu:
       - [Adventure-packed]{"entity": "travel-exp", "value": "adventure"} activities are what I'm looking forward to.
 
       - Craft the itinerary with an emphasis on [adventurous]{"entity": "travel-exp", "value": "adventure"}.
-
-      - Adventure-themed travel is what I'm after.
 
       - I'm specifically seeking [exciting]{"entity": "travel-exp", "value": "adventure"} options for my trip.
 
