@@ -2,30 +2,53 @@
 version: "3.1"
 nlu:
   - intent: specific_travel_request
-    examples: |
+    examples: >
       - specific travel request
+
       - provide destination details
+
       - i want to provide a specific request
+
       - i have something on my mind
+
       - I have a specific destination in mind, can you help?
+
       - Looking for details about a particular place, can you provide information?
+
       - I want to provide a specific request for my trip, where do I start?
+
       - I've got something on my mind regarding travel, can we discuss it?
+
       - Considering a trip, but I have a particular destination in mind.
+
       - Can you assist with details about a specific travel experience I'm thinking of?
+
       - I'm set on a particular place, could you give me some insights?
+
       - Got a destination in mind, what recommendations do you have?
+
       - Thinking about a unique travel experience, can you help plan it?
+
       - I want to explore a specific location, what should I know?
+
       - Exploring travel options, but I have a particular destination in mind.
+
       - Contemplating a journey, and there's a specific destination on my radar.
+
       - Thinking about a trip, and I've already set my sights on a particular place.
+
       - Pondering a vacation, but I've already chosen a specific destination.
+
       - Considering travel plans, but I'm fixed on a particular destination.
+
       - Contemplating a getaway, and there's a specific destination I'm interested in.
+
       - In the early stages of trip planning, with a specific destination in mind.
+
       - Evaluating travel possibilities, but I have a particular destination in mind.
+
       - Planning a vacation, and there's a specific destination I'm excited about.
+
       - Weighing my travel options, but I already have a specific destination in mind.
   - intent: proceed_to_booking
     examples: |
@@ -130,131 +153,52 @@ nlu:
       - Our group consists of 12 participants.
       - I'll be traveling with 7 companions.     
       - The group size is 4 travelers.
-  - intent: inform_date
-    examples: >
-      - Can you arrange my check-in tomorrow? - Is it possible to check in
-      on Friday? - I'd like to check in next Tuesday. - Arrange my check-in for
-      next Thursday. - Please schedule my arrival for next weekend. - Is it
-      possible to check in on the last day of this month? - Arrange my check-in
-      for next month on the 20th. - Can you arrange my check-in on March 5th? -
-      I'd like to check in on the 10th of June. - Please schedule my arrival for
-      July 15th. - Is it possible to check in on August 1st? - I want to start
-      my stay on September 10th. - Arrange my check-in for October 25th. - Can
-      you book my arrival on November 8th? - I'd like to check in on December
-      3rd. - Schedule my arrival for January 12th. - Please arrange my check-in
-      on February 18th. - I want to start my stay on March 21st. - Can you check
-      me in on April 7th? - I'd like to arrive on May 30th. - Schedule my
-      check-in for June 12th if possible. - Is there availability for check-in
-      on July 3rd? - Can I check out on the 15th of June? - My stay ends on July
-      25th, so arrange check-out. - Please schedule my departure for August 5th.
-      - I want to end my stay on September 18th. - Arrange my check-out on
-      October 30th, please. - Can I check out on November 15th? - I'd like to
-      end my stay on December 8th. - Schedule my departure for January 20th. -
-      Please arrange check-out on February 28th. - I plan to check out on March
-      10th. - Can you arrange my check-in on June 8th? - Book July 3rd if
-      there's availability. - Is it possible to check in on August 15th? - I'd
-      like to start my stay on September 25th. - Please schedule for October
-      10th. - Can you arrange check-in on November 5th? - I want to check in
-      next week if possible. - Schedule my arrival for December 20th. - I plan
-      to check out on January 8th. - Can I check out on February 15th? - My stay
-      starts on March 1st.
   - intent: inform
     examples: >
-      - My name is Jennifer Akoth.
-      - I'm with Daniel Waweru.
-      - You can contact me at +254711223344.
-      - +256770112233.
-      - My name is Peter Omondi.
-      - I'm with Sheila Kariuki.
-      - Reach Peter at +254722334455.
-      - Sheila at +254733445566.
-      - Dennis Ouma.
-      - Angela Kamau.
-      - Number is +254788990011.
-      - Janet Njoroge.
-      - Philip Kipchirchir at +254712345678.
-      - Sandra Anyango.
-      - Samuel Otieno.
-      - Alice Wambui.
-      - Eric Muthoni.
-      - Cindy Achieng.
-      - Paul Kiptoo at +254701112233.
-      - Rachel Kimani.
-      - Joseph Gitau.
-      - Beatrice Wangui.
-      - Brian Omollo at +254701234567.
-      - Sylvia Njeri.
-      - Anthony Oduor.
-      - Lucy Auma.
-      - Patrick Mutua.
-      - Christine Wanjiku at +254720987654.
-      - Kelvin Mwangi.
-      - Grace Nyambura.
-      - Evelyn Adhiambo.
-      - Kevin Kiprop.
-      - Brenda Chepkoech at +254705432109.
-      - Michael Otieno.
-      - Nancy Atieno.
-      - Brian Mutai.
-      - Alice Mumbi at +254712345678.
-      - David Njenga.
-      - Faith Wangari.
-      - George Odhiambo.
-      - Susan Achieng at +254732198765.
-      - Moses Kipruto.
-      - Esther Mwangi.
-      - Victor Omondi.
-      - Sheila Anyango at +254711223344.
-      - Richard Kariuki.
-      - Lucy Wanjiru.
-      - Martin Kimani.
-      - Linda Nekesa.
-      - Kelvin Kamau at +254721234567.
-      - My name is Sarah Karimi. You can contact me at 0719876543.
-      - I'm with James Wachira. Reach me at +255786543210.
-      - Collins Mwangi's number is 0708765432.
-      - Esther Achieng can be reached at 0732154678.
-      - Benson Kiptoo's number is 0701234567.
-      - Beatrice Anyango can be contacted at 0723456789.
-      - Alice Njeri's number is 0700987654.
-      - John Kibet can be reached at 0718765432.
-      - Mary Mutheu's number is 0710987654.
-      - Joseph Otieno can be contacted at 0705432109.
-      - Grace Njeri's number is 0712345678.
-      - David Karanja can be reached at 0700987654.
-      - Cindy Wangari's number is 0718765432.
-      - Pauline Akinyi can be contacted at 0705432109.
-      - Eric Njoroge's number is 0712345678.
-      - Sharon Nyambura can be reached at 0700987654.
-      - Daniel Oduor's number is 0718765432.
-      - Carol Njeri can be contacted at 0705432109.
-      - Kelvin Ochieng's number is 0712345678.
-      - Sheila Mueni can be reached at 0700987654.
-      - Anthony Ochieng's number is 0718765432.
-      - Lucy Wanjiku can be contacted at 0705432109.
-      - Patrick Maina's number is 0712345678.
-      - Christine Atieno can be reached at 0700987654.
-      - Andrew Kimani's number is 0718765432.
-      - Pamela Adhiambo can be contacted at 0705432109.
-      - Kevin Kiprop's number is 0712345678.
-      - Brenda Chepkoech can be reached at 0700987654.
-      - Michael Omondi's number is 0718765432.
-      - Nancy Akinyi can be contacted at 0705432109.
-      - Brian Mutai's number is 0712345678.
-      - Alice Mumbi can be reached at 0700987654.
-      - David Mwangi's number is 0718765432.
-      - Faith Wanjiru can be contacted at 0705432109.
-      - George Otieno's number is 0712345678.
-      - Susan Achieng can be reached at 0700987654.
-      - Moses Kipruto's number is 0718765432.
-      - Esther Mwangi can be contacted at 0705432109.
-      - Victor Omondi's number is 0712345678.
-      - Sheila Anyango can be reached at 0700987654.
-      - Richard Kariuki's number is 0718765432.
-      - Lucy Wanjiru can be contacted at 0705432109.
-      - Martin Kimani's number is 0712345678.
-      - Linda Nekesa can be reached at 0700987654.
-      - Kelvin Kamau's number is 0718765432.
+      - My name is Jennifer Akoth. - I'm with Daniel Waweru. - You can
+      contact me at +254711223344. - +256770112233. - My name is Peter Omondi. -
+      I'm with Sheila Kariuki. - Reach Peter at +254722334455. - Sheila at
+      +254733445566. - Dennis Ouma. - Angela Kamau. - Number is +254788990011. -
+      Janet Njoroge. - Philip Kipchirchir at +254712345678. - Sandra Anyango. -
+      Samuel Otieno. - Alice Wambui. - Eric Muthoni. - Cindy Achieng. - Paul
+      Kiptoo at +254701112233. - Rachel Kimani. - Joseph Gitau. - Beatrice
+      Wangui. - Brian Omollo at +254701234567. - Sylvia Njeri. - Anthony Oduor.
+      - Lucy Auma. - Patrick Mutua. - Christine Wanjiku at +254720987654. -
+      Kelvin Mwangi. - Grace Nyambura. - Evelyn Adhiambo. - Kevin Kiprop. -
+      Brenda Chepkoech at +254705432109. - Michael Otieno. - Nancy Atieno. -
+      Brian Mutai. - Alice Mumbi at +254712345678. - David Njenga. - Faith
+      Wangari. - George Odhiambo. - Susan Achieng at +254732198765. - Moses
+      Kipruto. - Esther Mwangi. - Victor Omondi. - Sheila Anyango at
+      +254711223344. - Richard Kariuki. - Lucy Wanjiru. - Martin Kimani. - Linda
+      Nekesa. - Kelvin Kamau at +254721234567. - My name is Sarah Karimi. You
+      can contact me at 0719876543. - I'm with James Wachira. Reach me at
+      +255786543210. - Collins Mwangi's number is 0708765432. - Esther Achieng
+      can be reached at 0732154678. - Benson Kiptoo's number is 0701234567. -
+      Beatrice Anyango can be contacted at 0723456789. - Alice Njeri's number is
+      0700987654. - John Kibet can be reached at 0718765432. - Mary Mutheu's
+      number is 0710987654. - Joseph Otieno can be contacted at 0705432109. -
+      Grace Njeri's number is 0712345678. - David Karanja can be reached at
+      0700987654. - Cindy Wangari's number is 0718765432. - Pauline Akinyi can
+      be contacted at 0705432109. - Eric Njoroge's number is 0712345678. -
+      Sharon Nyambura can be reached at 0700987654. - Daniel Oduor's number is
+      0718765432. - Carol Njeri can be contacted at 0705432109. - Kelvin
+      Ochieng's number is 0712345678. - Sheila Mueni can be reached at
+      0700987654. - Anthony Ochieng's number is 0718765432. - Lucy Wanjiku can
+      be contacted at 0705432109. - Patrick Maina's number is 0712345678. -
+      Christine Atieno can be reached at 0700987654. - Andrew Kimani's number is
+      0718765432. - Pamela Adhiambo can be contacted at 0705432109. - Kevin
+      Kiprop's number is 0712345678. - Brenda Chepkoech can be reached at
+      0700987654. - Michael Omondi's number is 0718765432. - Nancy Akinyi can be
+      contacted at 0705432109. - Brian Mutai's number is 0712345678. - Alice
+      Mumbi can be reached at 0700987654. - David Mwangi's number is 0718765432.
+      - Faith Wanjiru can be contacted at 0705432109. - George Otieno's number
+      is 0712345678. - Susan Achieng can be reached at 0700987654. - Moses
+      Kipruto's number is 0718765432. - Esther Mwangi can be contacted at
+      0705432109. - Victor Omondi's number is 0712345678. - Sheila Anyango can
+      be reached at 0700987654. - Richard Kariuki's number is 0718765432. - Lucy
+      Wanjiru can be contacted at 0705432109. - Martin Kimani's number is
+      0712345678. - Linda Nekesa can be reached at 0700987654. - Kelvin Kamau's
+      number is 0718765432.
   - intent: inform_budget_range
     examples: >
       - [On-budget 💸]{"entity":"budget-range", "value": "budget"} -
@@ -363,16 +307,15 @@ nlu:
       ya planning a vacation to explore historic sites. - I've decided ni time
       for a vacation to explore different climates. - Thinking about kuandaa
       vacation to discover vibrant city life. - Surprise Me - suggest some
-      options
-      - Surprise me with some offbeat travel destinations!
-      - Show me popular travel packages for a luxury experience.
-      - Any unique travel experiences trending right now?
-      - Recommend budget-friendly travel options for a group vacation.
-      - Suggest destinations that are perfect for a relaxing spa retreat.
-      - I'm open to anything, show me a mix of cultural and scenic places.
-      - What travel packages are recommended for a solo traveler seeking social experiences?
-      - Curate a list of destinations with vibrant nightlife and entertainment.
-      - Surprise me with last-minute travel deals for a spontaneous trip!
+      options - Surprise me with some offbeat travel destinations! - Show me
+      popular travel packages for a luxury experience. - Any unique travel
+      experiences trending right now? - Recommend budget-friendly travel options
+      for a group vacation. - Suggest destinations that are perfect for a
+      relaxing spa retreat. - I'm open to anything, show me a mix of cultural
+      and scenic places. - What travel packages are recommended for a solo
+      traveler seeking social experiences? - Curate a list of destinations with
+      vibrant nightlife and entertainment. - Surprise me with last-minute travel
+      deals for a spontaneous trip!
   - intent: inform_travel_destination
     examples: >
       - I want to visit Bali for my next vacation. - Can you provide details
@@ -708,102 +651,67 @@ nlu:
       - The group size is 4 travelers.
   - intent: inform_date
     examples: >
-      - Can you arrange my check-in for [next Monday]{"entity": "date",
-      "value": "next Monday"}?
-
-      - Is it possible to check in on [the first day of next month]{"entity": "date", "value": "the first day of next month"}?
-
-      - Arrange my check-in in [the next week]{"entity": "date", "value": "the next week"}.
-
-      - I want to check in tomorrow
-
-      - Is it possible to check in [next Friday]{"entity": "date", "value": "next Friday"}?
-
-      - I'd like to check in [next year]{"entity": "date", "value": "next year"}.
-
-      - Is it possible to check in in [the next month]{"entity": "date", "value": "the next month"}?
-
-      - Arrange my check-in [this weekend]{"entity": "date", "value": "this weekend"}.
-
-      - I want to check in [next Tuesday]{"entity": "date", "value": "next Tuesday"}.
-
-      - Is it possible to check in on the [last day of this month]{"entity": "date", "value": "last day of this month"}?
-
-      - Arrange my check-in [next Thursday]{"entity": "date", "value": "next Thursday"}.
-
-      - Please schedule my arrival [next weekend]{"entity": "date", "value": "next weekend"}.
-
-      - Is it possible to check in in [the next quarter]{"entity": "date", "value": "the next quarter"}?
-
-      - Arrange my check-in [next month on the 20th]{"entity": "date", "value": "next month on the 20th"}.
-
-      - I want to check in in [the next year]{"entity": "date", "value": "the next year"}.
-
-      - Can you arrange my check-in on [March 5th]{"entity": "date", "value": "March 5th"}?
-
-      - Can you arrange my check-in on [Mar 16th]{"entity": "date", "value": "Mar 16th"}?
-
-      - I'd like to check in on the [10th of June]{"entity": "date", "value": "10th of June"}.
-
-      - Please schedule my arrival for [July 15th]{"entity": "date", "value": "July 15th"}.
-
-      - Is it possible to check in on [August 1st]{"entity": "date", "value": "August 1st"}?
-
-      - I want to start my stay on [September 10th]{"entity": "date", "value": "September 10th"}.
-
-      - I want to start my stay on [Sep 20th]{"entity": "date", "value": "Sep 20th"}.
-
-      - Arrange my check-in for [October 25th]{"entity": "date", "value": "October 25th"}, please.
-
-      - Arrange my check-in for [Oct 8th]{"entity": "date", "value": "Oct 8th"}, please.
-
-      - Can you book my arrival on [November 8th]{"entity": "date", "value": "November 8th"}?
-
-      - [Nov 8th]{"entity": "date", "value": "Nov 8th"}?
-
-      - I'd like to check in on [December 3rd]{"entity": "date", "value": "December 3rd"}.
-
-      - check in on [Dec 2nd]{"entity": "date", "value": "Dec 2nd"}.
-
-      - Schedule my arrival for [January 12th]{"entity": "date", "value": "January 12th"}.
-
-      - [Jan 8th]{"entity": "date", "value": "Jan 8th"}.
-
-      - Please arrange my check-in on [February 18th]{"entity": "date", "value": "February 18th"}.
-
-      - I want to start my stay on [March 21st]{"entity": "date", "value": "March 21st"}.
-
-      - Can you check me in on [April 7th]{"entity": "date", "value": "April 7th"}?
-
-      - I'd like to arrive on [May 30th]{"entity": "date", "value": "May 30th"}.
-
-      - Schedule my check-in for [June 12th]{"entity": "date", "value": "June 12th"}, if possible.
-
-      - Is there availability for check-in on [July 3rd]{"entity": "date", "value": "July 3rd"}?
-
-      - I plan to check out on [March 10th]{"entity": "date", "value": "March 10th"}.
-
-      - Can I check out on the [15th of June]{"entity": "date", "value": "15th of June"}?
-
-      - My stay ends on [July 25th]{"entity": "date", "value": "July 25th"}, so arrange check-out.
-
-      - Please schedule my departure for [August 5th]{"entity": "date", "value": "August 5th"}.
-
-      - I want to end my stay on [September 18th]{"entity": "date", "value": "September 18th"}.
-
-      - Arrange my check-out on [October 30th]{"entity": "date", "value": "October 30th"}, please.
-
-      - Can I check out on [November 15th]{"entity": "date", "value": "November 15th"}?
-
-      - I'd like to end my stay on [December 8th]{"entity": "date", "value": "December 8th"}.
-
-      - Schedule my departure for [January 20th]{"entity": "date", "value": "January 20th"}.
-
-      - Please arrange check-out on [February 28th]{"entity": "date", "value": "February 28th"}.
-
-      - I plan to check out on [March 10th]{"entity": "date", "value": "March 10th"}.
-
-      - next Monday - Please schedule my arrival on March 5th - next Thursday - Can you book my arrival on April 10th - Check in on May 20th would be preferable. - Arrange my check-in for next Sunday. - Can you arrange my check-in on June 8th? - Book July 3rd if there's availability. - Is it possible to check in on August 15th - I'd like to start my stay on September 25th - Please schedule for October 10th. - Can you arrange check-in on November 5th - Nov 5th - I want to check in next week if possible. - Schedule my arrival for December 20th - I plan to check out on January 8th{"entity": "date", "role": "check-out"}. - on Feb 15th? - My stay starts on March 1st 
+      - Can you arrange my check-in for next Monday? - Is it possible to
+      check in on the first day of next month? - Arrange my check-in in the next
+      week. - I want to check in tomorrow. - Is it possible to check in next
+      Friday? - I'd like to check in next year. - Is it possible to check in in
+      the next month? - Arrange my check-in this weekend. - I want to check in
+      next Tuesday. - Is it possible to check in on the last day of this month?
+      - Arrange my check-in next Thursday. - Please schedule my arrival next
+      weekend. - Is it possible to check in in the next quarter? - Arrange my
+      check-in next month on the 20th. - I want to check in in the next year. -
+      Can you arrange my check-in on March 5th? - Can you arrange my check-in on
+      Mar 16th? - I'd like to check in on the 10th of June. - Please schedule my
+      arrival for July 15th. - Is it possible to check in on August 1st? - I
+      want to start my stay on September 10th. - I want to start my stay on Sep
+      20th. - Arrange my check-in for October 25th, please. - Arrange my
+      check-in for Oct 8th, please. - Can you book my arrival on November 8th? -
+      Nov 8th? - I'd like to check in on December 3rd. - Check in on Dec 2nd. -
+      Schedule my arrival for January 12th. - Jan 8th. - Please arrange my
+      check-in on February 18th. - I want to start my stay on March 21st. - Can
+      you check me in on April 7th? - I'd like to arrive on May 30th. - Schedule
+      my check-in for June 12th, if possible. - Is there availability for
+      check-in on July 3rd? - I plan to check out on March 10th. - Can I check
+      out on the 15th of June? - My stay ends on July 25th, so arrange
+      check-out. - Please schedule my departure for August 5th. - I want to end
+      my stay on September 18th. - Arrange my check-out on October 30th, please.
+      - Can I check out on November 15th? - I'd like to end my stay on December
+      8th. - Schedule my departure for January 20th. - Please arrange check-out
+      on February 28th. - I plan to check out on March 10th. - Can you arrange
+      my check-in tomorrow? - Is it possible to check in on Friday? - I'd like
+      to check in next Tuesday. - Arrange my check-in for next Thursday. -
+      Please schedule my arrival for next weekend. - Is it possible to check in
+      on the last day of this month? - Arrange my check-in for next month on the
+      20th. - Can you arrange my check-in on March 5th? - I'd like to check in
+      on the 10th of June. - Please schedule my arrival for July 15th. - Is it
+      possible to check in on August 1st? - I want to start my stay on September
+      10th. - Arrange my check-in for October 25th. - Can you book my arrival on
+      November 8th? - I'd like to check in on December 3rd. - Schedule my
+      arrival for January 12th. - Please arrange my check-in on February 18th. -
+      I want to start my stay on March 21st. - Can you check me in on April 7th?
+      - I'd like to arrive on May 30th. - Schedule my check-in for June 12th if
+      possible. - Is there availability for check-in on July 3rd? - Can I check
+      out on the 15th of June? - My stay ends on July 25th, so arrange
+      check-out. - Please schedule my departure for August 5th. - I want to end
+      my stay on September 18th. - Arrange my check-out on October 30th, please.
+      - Can I check out on November 15th? - I'd like to end my stay on December
+      8th. - Schedule my departure for January 20th. - Please arrange check-out
+      on February 28th. - I plan to check out on March 10th. - Can you arrange
+      my check-in on June 8th? - Book July 3rd if there's availability. - Is it
+      possible to check in on August 15th? - I'd like to start my stay on
+      September 25th. - Please schedule for October 10th. - Can you arrange
+      check-in on November 5th? - I want to check in next week if possible. -
+      Schedule my arrival for December 20th. - I plan to check out on January
+      8th. - Can I check out on February 15th? - My stay starts on March 1st. -
+      Next Monday - Please schedule my arrival on March 5th - Next Thursday -
+      Can you book my arrival on April 10th - Check in on May 20th would be
+      preferable. - Arrange my check-in for next Sunday. - Can you arrange my
+      check-in on June 8th? - Book July 3rd if there's availability. - Is it
+      possible to check in on August 15th - I'd like to start my stay on
+      September 25th - Please schedule for October 10th. - Can you arrange
+      check-in on November 5th - Nov 5th - I want to check in next week if
+      possible. - Schedule my arrival for December 20th - I plan to check out on
+      January 8th - On Feb 15th? - My stay starts on March 1st.
   - intent: inform
     examples: >
       - My name is [John Doe]{"entity": "PERSON", "value": "John Doe"}. - My
