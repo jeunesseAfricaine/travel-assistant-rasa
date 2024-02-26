@@ -26,10 +26,11 @@ pipeline:
     dimensions:
       - PERSON
       - LOC
+      - GPE
+      - DATE
   - name: DucklingEntityExtractor
     url: http://localhost:8000
     dimensions:
-      - time
       - phone-number
       - number
       - amount-of-money
