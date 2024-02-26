@@ -28,6 +28,7 @@ pipeline:
       - FAC
       - GPE
       - DATE
+      - MONEY
   - name: DucklingEntityExtractor
     url: http://localhost:8000
     dimensions:
