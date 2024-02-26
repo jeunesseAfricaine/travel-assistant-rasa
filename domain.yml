@@ -54,6 +54,14 @@ responses:
         - title: Luxury 💎
           payload: /inform_budget_range{{"budget-range", "luxury"}}
       button_type: vertical
+  utter_booking_process:
+    - text: Would you like to continue with the booking process?
+      buttons:
+        - title: Quick Book 🛎
+          payload: /proceed_to_booking
+        - title: Start New Conversation
+          payload: /restart
+      button_type: vertical
   utter_ask_name:
     - text: What is your full name?
   utter_ask_phone_num:
@@ -182,6 +190,7 @@ forms:
 actions:
   - action_provide_package_options
   - action_provide_destination_details
+  - action_session_start
   - validate_travel_form
   - validate_destination_form
 session_config:
