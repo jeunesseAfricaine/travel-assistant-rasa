@@ -76,8 +76,8 @@ responses:
         bring you personalized and seamless experiences. Feel free to ask about
         destinations or choose to restart the conversation.
       buttons:
-        - title: Restart ✨
-          payload: /restart
+        - title: Let's Dive In Again! 🌊 
+          payload: /action_session_start
   utter_goodbye:
     - text: Thank you for using our services! Should you need assistance in the
         future, I'll be here. Take care!
