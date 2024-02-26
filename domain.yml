@@ -103,7 +103,7 @@ entities:
   - GPE
   - FAC
   - number
-  - phoneNo
+  - MONEY
   - phone-number
   - amount-of-money
   - budget-range
@@ -146,6 +146,8 @@ slots:
     mappings:
       - type: from_entity
         entity: budget-range
+      - type: from_entity
+        entity: MONEY
   travel_experience:
     influence_conversation: true
     type: categorical
