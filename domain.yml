@@ -57,7 +57,7 @@ responses:
   utter_ask_name:
     - text: What is your full name?
   utter_ask_phone_num:
-    - text: What is your phone number?
+    - text: What is your phone number? Please make sure to include the country code eg. +254
   utter_ask_travel_date:
     - text: Could you please provide me with your preferred travel date? Say dates
         like 'November 10th' or 'November'
