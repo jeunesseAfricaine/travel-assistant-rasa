@@ -190,6 +190,7 @@ forms:
 actions:
   - action_provide_package_options
   - action_provide_destination_details
+  - action_default_fallback
   - action_session_start
   - validate_travel_form
   - validate_destination_form
