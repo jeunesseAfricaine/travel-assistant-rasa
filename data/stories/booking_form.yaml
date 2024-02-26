@@ -9,11 +9,11 @@ stories:
       - slot_was_set:
           - requested_slot: name
       - slot_was_set:
-          - name: Bookeem Woodbine
+          - name: Kimani Ichungwa
       - slot_was_set:
           - requested_slot: phone_num
       - slot_was_set:
-          - phone_num: 723456798
+          - phone_num: +254712345678
       - slot_was_set:
           - requested_slot: num_people
       - slot_was_set:
@@ -39,7 +39,7 @@ stories:
       - slot_was_set:
           - requested_slot: travel_date
       - slot_was_set:
-          - travel_date: November 18th
+          - travel_date: tomorrow
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
@@ -56,7 +56,7 @@ stories:
       - slot_was_set:
           - requested_slot: travel_date
       - slot_was_set:
-          - travel_date: Jan 18th
+          - travel_date: November 10th
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
