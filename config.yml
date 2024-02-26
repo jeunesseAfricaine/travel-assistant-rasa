@@ -25,7 +25,7 @@ pipeline:
   - name: SpacyEntityExtractor
     dimensions:
       - PERSON
-      - LOC
+      - FAC
       - GPE
       - DATE
   - name: DucklingEntityExtractor
