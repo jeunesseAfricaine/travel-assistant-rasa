@@ -98,9 +98,10 @@ responses:
         Safari njema!😊
     - text: Anytime maze! Unaeza nitext in case u need anything else. Safiri salama!😊
 entities:
-  - time
-  - LOC
   - PERSON
+  - DATE
+  - GPE
+  - FAC
   - number
   - phoneNo
   - phone-number
@@ -112,7 +113,9 @@ slots:
     type: any
     mappings:
       - type: from_entity
-        entity: LOC
+        entity: GPE
+      - type: from_entity
+        entity: FAC
   name:
     type: any
     mappings:
@@ -132,7 +135,7 @@ slots:
     type: any
     mappings:
       - type: from_entity
-        entity: time
+        entity: DATE
   budget_range:
     influence_conversation: true
     type: categorical
