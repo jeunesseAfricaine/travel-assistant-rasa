@@ -60,7 +60,7 @@ responses:
         - title: Quick Book 🛎
           payload: /proceed_to_booking
         - title: Start New Conversation
-          payload: /restart
+          payload: /action_session_start
       button_type: vertical
   utter_ask_name:
     - text: What is your full name?
