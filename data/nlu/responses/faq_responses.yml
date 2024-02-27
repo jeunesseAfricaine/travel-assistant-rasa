@@ -80,7 +80,7 @@ responses:
         We will update the traveler once the refund is received.
   utter_faq/ask_restart_conversation:
     - text: You can restart the conversation and explore new travel itineraries by
-        using a command like '/session_restart.'
+        using a command like '/restart.'
   utter_faq/ask_group_travel:
     - text: Certainly! The travel assistant can create itineraries for solo travelers,
         couples, families, or groups. Just let us know your preferences!
