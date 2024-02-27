@@ -19,7 +19,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 250
+    epochs: 150
     ranking_length: 5
     batch_strategy: sequence
   - name: SpacyEntityExtractor
@@ -39,7 +39,7 @@ pipeline:
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 250
+    epochs: 150
     constrain_similarities: true
     batch_strategy: sequence
   - name: EntitySynonymMapper
@@ -63,7 +63,7 @@ policies:
     batch_size: 5
     max_training_samples: 300
   - name: RulePolicy
-    core_fallback_threshold: 0.4
+    core_fallback_threshold: 0.5
     enable_fallback_prediction: true
     core_fallback_action_name: action_default_fallback
 assistant_id: 20230723-171301-honest-limo
