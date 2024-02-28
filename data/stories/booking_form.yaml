@@ -39,7 +39,7 @@ stories:
       - slot_was_set:
           - requested_slot: travel_date
       - slot_was_set:
-          - travel_date: tomorrow
+          - travel_date: November 18th
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
@@ -56,7 +56,7 @@ stories:
       - slot_was_set:
           - requested_slot: travel_date
       - slot_was_set:
-          - travel_date: November 10th
+          - travel_date: Jan 18th
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
