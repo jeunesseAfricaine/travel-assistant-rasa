@@ -45,7 +45,7 @@ responses:
           payload: /inform_travel_experience{{"travel-exp":"theme"}}
       button_type: vertical
   utter_ask_budget_range:
-    - text: Could you let me know your budget range for the trip?💰
+    - text: Could you let me know your budget range for the trip? If you have a specific budget amount in mind, please provide the amount along with the currency (e.g., $1000, €800)💰
       buttons:
         - title: On-budget 💸
           payload: /inform_budget_range{{"budget-range", "budget"}}
