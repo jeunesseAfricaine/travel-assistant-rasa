@@ -354,7 +354,7 @@ nlu:
       information about your beach vacation packages in Seychelles? - Tell me
       about your wildlife tours in Botswana. - I'm interested in your travel
       options for a cultural tour of Addis Ababa, Ethiopia. - Share insights
-      into your travel packages for a visit to Congo Basin.
+      into your travel packages for a visit to Congo Basin. - Zanzibar. - Mombasa. - Diani. - Turkana.
   - intent: inform_travel_experience
     examples: >
       - [Adventure 🌍]{"entity": "travel-exp", "value": "adventure"}
