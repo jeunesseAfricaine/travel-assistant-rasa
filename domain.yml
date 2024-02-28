@@ -153,9 +153,9 @@ slots:
       - luxury
     mappings:
       - type: from_entity
-        entity: budget-range
-      - type: from_entity
         entity: MONEY
+      - type: from_entity
+        entity: budget-range
   travel_experience:
     influence_conversation: true
     type: categorical
