@@ -204,5 +204,5 @@ actions:
   - validate_destination_form
   - validate_booking_form
 session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  session_expiration_time: 5
+  carry_over_slots_to_new_session: false
