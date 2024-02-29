@@ -99,7 +99,7 @@ responses:
     - text: Anytime maze! Unaeza nitext in case u need anything else. Safiri salama!😊
 entities:
   - PERSON
-  - DATE
+  - time
   - GPE
   - FAC
   - number
@@ -115,6 +115,8 @@ slots:
         entity: GPE
       - type: from_entity
         entity: FAC
+      - type: from_entity
+        entity: LOC
   name:
     type: any
     mappings:
