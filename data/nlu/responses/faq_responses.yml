@@ -1,10 +1,6 @@
 ---
 version: "3.1"
 responses:
-  utter_faq/ask_baggage_allowance:
-    - text: Baggage allowances vary between airlines and ticket classes. It's
-        advisable to check directly with your airline for specific baggage
-        allowances and any associated fees or restrictions.
   utter_faq/ask_travel_insurance:
     - text: Travel insurance is not typically included in the ticket price. However,
         it can often be purchased separately during the booking process. It's
@@ -56,28 +52,12 @@ responses:
   utter_faq/ask_spoken_language:
     - text: Swahili & English is widely spoken in almost  all destinations. Sheng is
         widely spoken in urban areas.
-  utter_faq/ask_phone_usage:
-    - text: The main telecommunication modes are fairly reliable and include the
-        internet and mobile communication. The most reliable is the mobile
-        phone, which is widely used for mobile transactions and cheap to buy.
-        Internet communication is also largely available in most major towns and
-        cities and is quite efficient in addition to being cheap.
-  utter_faq/ask_money_exchange:
-    - text: Yes, but it is not the best rate. It is advisable to go to the bank or a
-        forex bureau.
   utter_faq/ask_payment_options:
     - text: You may pay by mobile money, credit card or by direct bank transfer.
         Credit cards attract a 4% bank fee while a bank transfer attracts a flat
         USD 50-70 fee depending on where you remit the money from – these are
         bank costs. Before booking the travel, you will also receive the
         cancellation and general Terms and Conditions.
-  utter_faq/ask_refund_procedure:
-    - text: Refund process is not automated and cannot be done online. I can escalate
-        this process to the travel agency for assistance. Currently, this
-        feature is under development.
-  utter_faq/ask_refund_timeframe:
-    - text: Once a refund is initiated the refund process can take 5-7 working days,
-        We will update the traveler once the refund is received.
   utter_faq/ask_restart_conversation:
     - text: You can restart the conversation and explore new travel itineraries by
         using a command like '/restart.'
