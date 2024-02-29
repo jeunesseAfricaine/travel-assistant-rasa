@@ -12,7 +12,10 @@ intents:
   - nlu_fallback
   - proceed_to_booking
   - explore_other_options
-  - inform
+  - inform:
+      use_entities:
+        - PERSON
+        - phone-number
   - inform_vacation_plan
   - inform_group_size:
       use_entities: []
