@@ -199,54 +199,6 @@ nlu:
       Wanjiru can be contacted at 0705432109. - Martin Kimani's number is
       0712345678. - Linda Nekesa can be reached at 0700987654. - Kelvin Kamau's
       number is 0718765432.
-  - intent: inform_budget_range
-    examples: >
-      - [On-budget 💸]{"entity":"budget-range", "value": "budget"} -
-      [Mid-range 💳]{"entity":"budget-range", "value": "mid-range"} - [Luxury
-      💎]{"entity":"budget-range", "value": "luxury"}  - What are the options
-      for a [budget]{"entity":"budget-range", "value": "budget"} trip? 💸 - Show
-      me travel choices within the [mid-range]{"entity":"budget-range", "value":
-      "mid-range"} 💳 category. - Can you suggest options for a
-      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 vacation? -
-      Explore [budget]{"entity":"budget-range", "value": "budget"} 💸
-      possibilities for a family trip. - Tell me about
-      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳 vacation
-      packages. - I'm looking for [luxury]{"entity":"budget-range", "value":
-      "luxury"} 💎 travel experiences. - Show me deals within the
-      [budget]{"entity":"budget-range", "value": "budget"} 💸 range for solo
-      travel. - Any recommendations for [mid-range]{"entity":"budget-range",
-      "value": "mid-range"} 💳 group vacations? - What are the
-      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 options for a
-      honeymoon? - I want information on [budget]{"entity":"budget-range",
-      "value": "budget"} 💸 travel packages. - Can you suggest a
-      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳 holiday for
-      couples? - Show me [luxury]{"entity":"budget-range", "value": "luxury"} 💎
-      deals for luxury getaways. - I'm interested in
-      [budget]{"entity":"budget-range", "value": "budget"} 💸 solo travel
-      options. - Tell me about [mid-range]{"entity":"budget-range", "value":
-      "mid-range"} 💳 family-friendly vacations. - Explore
-      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 packages for
-      anniversary trips. - What [budget]{"entity":"budget-range", "value":
-      "budget"} 💸 choices do you have for group travel? - Any
-      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳
-      recommendations for a weekend getaway? - I'm looking for
-      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 experiences for
-      special occasions. - Show me [budget]{"entity":"budget-range", "value":
-      "budget"} 💸 options for adventure travel. - Can you suggest
-      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳 travel plans
-      for friends? - My budget for the trip is USD 1000 - I'm looking for
-      options within EUR 800. - Can you suggest packages around GBP 1200? - I
-      have a budget of AUD 1500 for the trip. - Show me deals for a budget of
-      CAD 2000. - I'm considering options with a budget of INR 70000. - What
-      packages do you have for a budget of JPY 90000? - My budget range is CNY
-      6000 for the trip. - Explore options within AED 2500 for me. - Can you
-      recommend packages around CHF 1100? - I'm looking for deals within NZD
-      1300. - Show me options for a budget of SEK 9500. - What packages do you
-      have for a budget of SGD 1800? - I have a budget range of HKD 7500 for the
-      trip. - Explore deals within NOK 8500 for me. - Can you suggest options
-      around BRL 3200? - My budget for the trip is ZAR 14000. - Show me packages
-      for a budget of RUB 55000. - I'm considering options with a budget of TRY
-      950.
   - intent: inquire_travel_packages
     examples: >
       - What are the available travel packages? - Can you tell me about the
@@ -714,7 +666,7 @@ nlu:
       January 8th - On Feb 15th? - My stay starts on March 1st.
   - intent: inform_budget_range
     examples: >
-      -  I can spend $500 for the trip.
+      - I can spend $500 for the trip.
       - My budget is €800.
       - Let's keep it within £600.
       - I'm planning to spend ¥70,000.
@@ -732,7 +684,47 @@ nlu:
       - My budget is in Kenyan Shillings, KES 30,000.
       - Let's stick to South African Rand, not exceeding ZAR 8000.
       - I have around CFA 50,000 to spend (West African CFA franc).
-      - My budget is in Egyptian Pounds, around EGP 4000.- I'm looking at spending XOF 60,000 (West African CFA franc).
+      - My budget is in Egyptian Pounds, around EGP 4000.
+      - I'm looking at spending XOF 60,000 (West African CFA franc).
+      - My budget is around $1200.
+      - I can spend €500 for the trip.
+      - Let's keep it within £700.
+      - I'm planning to spend ¥50,000.
+      - My budget is in USD, about $800.
+      - I can afford approximately €2500.
+      - Let's stick to GBP, not exceeding £1000.
+      - I'm looking at a budget of ZAR 15,000.
+      - My budget is in Nigerian Naira, around NGN 40,000.
+      - I have around AUD 800 to spend.
+      - I can manage with CAD 600.
+      - My budget is in Swiss Francs, about CHF 1000.
+      - Let's keep it in Indian Rupees, around INR 70,000.
+      - I'm thinking of spending AED 3000.
+      - I can afford around SGD 1200.
+      - My budget is in Kenyan Shillings, KES 25,000.
+      - Let's stick to South African Rand, not exceeding ZAR 9000.
+      - I have around CFA 40,000 to spend (West African CFA franc).
+      - My budget is in Egyptian Pounds, around EGP 3500.
+      - I'm looking at spending XOF 50,000 (West African CFA franc).
+      - My budget is in Tanzanian Shillings, around TZS 2,000,000.
+      - I can spend in Ugandan Shillings, about UGX 500,000.
+      - Let's stick to Kenyan Shillings, not exceeding KES 50,000.
+      - I'm planning to spend in Rwandan Francs, around RWF 80,000.
+      - My budget is in Burundian Francs, approximately BIF 50,000.
+      - I have around Ethiopian Birr 3,000 for the trip.
+      - I can manage with Sudanese Pounds, SDG 2,000.
+      - My budget is in Djiboutian Francs, about DJF 30,000.
+      - Let's keep it in Eritrean Nakfa, not exceeding ERN 1,500
+      - I'm thinking of spending in South Sudanese Pound, SSP 5,000.
+      - My budget is in Somalian Shilling, around SOS 200,000.
+      - I can afford in Seychellois Rupees, SCR 10,000.
+      - Let's stick to Mauritian Rupees, not exceeding MUR 15,000.
+      - I have around Comorian Francs, KMF 50,000 to spend.
+      - My budget is in Malagasy Ariary, approximately MGA 500,000.
+      - I'm looking at spending in Mauritanian Ouguiya, MRU 10,000.
+      - I can manage with Comorian Francs, KMF 30,000.
+      - My budget is in Eritrean Nakfa, around ERN 2,500.
+      - Let's keep it in Seychellois Rupees, not exceeding SCR 5,000.
 
   - intent: inquire_travel_packages
     examples: >
