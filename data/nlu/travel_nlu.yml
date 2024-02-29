@@ -712,99 +712,28 @@ nlu:
       check-in on November 5th - Nov 5th - I want to check in next week if
       possible. - Schedule my arrival for December 20th - I plan to check out on
       January 8th - On Feb 15th? - My stay starts on March 1st.
-  - intent: inform
-    examples: >
-      - My name is [John Doe]{"entity": "PERSON", "value": "John Doe"}. - My
-      colleague is [Mary Wanjiru]{"entity": "PERSON", "value": "Mary
-      Wanjiru"}.  - Phone number [+2541234567890]{"entity": "phoneNo", "value":
-      "+2541234567890"}.  - [+2559876543210]{"entity": "phoneNo", "value":
-      "+2559876543210"}. - I'm [David Ochieng]{"entity": "PERSON", "value":
-      "David Ochieng"}. - I'm with [Sara Njeri]{"entity": "PERSON", "value":
-      "Sara Njeri"}.  - You can contact me at [+2545557890"]{"entity":
-      "phoneNo", "value": "+2545557890"}. - [+2558765432]{"entity": "phoneNo",
-      "value": "+2558765432"}. - [Kwame Agyei]{"entity": "PERSON", "value":
-      "Kwame Agyei"}. - [Aisha Kamau]{"entity": "PERSON", "value": "Aisha
-      Kamau"}. - Reach Kwame at [+2562345678]{"entity": "phoneNo", "value":
-      "+2562345678"}. - Aisha at [+2549871234]{"entity": "phoneNo", "value":
-      "+2549871234"}. - [James Mwangi]{"entity": "PERSON", "value": "James
-      Mwangi"}. - [Grace Nyambura]{"entity": "PERSON", "value": "Grace
-      Nyambura"}. - Number is [+2558765432]{"entity": "phoneNo", "value":
-      "+2558765432"}. - [Michael Onyango]{"entity": "PERSON", "value": "Michael
-      Onyango"}. - [Lilian Auma]{"entity": "PERSON", "value": "Lilian Auma"} at
-      [+2549876543210]{"entity": "phoneNo", "value": "+2549876543210"}. -
-      [Daniel Kamau]{"entity": "PERSON", "value": "Daniel Kamau"}. - [Samantha
-      Akinyi]{"entity": "PERSON", "value": "Samantha Akinyi"}. - [Ngozi
-      Eze]{"entity": "PERSON", "value": "Ngozi Eze"}. - [Kwesi Asante]{"entity":
-      "PERSON", "value": "Kwesi Asante"}. - [Wangari Maina]{"entity": "PERSON",
-      "value": "Wangari Maina"}. - [Oluwafemi Ojo]{"entity": "PERSON", "value":
-      "Oluwafemi Ojo"}. - [Fatima Bello]{"entity": "PERSON", "value": "Fatima
-      Bello"}. - [Jacob Mugo]{"entity": "PERSON", "value": "Jacob Mugo"} at
-      [+2549876543211]{"entity": "phoneNo", "value": "+2549876543211"}. -
-      [Naledi Moloi]{"entity": "PERSON", "value": "Naledi Moloi"}. - [Felix
-      Kiplagat]{"entity": "PERSON", "value": "Felix Kiplagat"}. - [Abena
-      Owusu]{"entity": "PERSON", "value": "Abena Owusu"}. - [Simba
-      Ndlovu]{"entity": "PERSON", "value": "Simba Ndlovu"} at
-      [+2549876543212]{"entity": "phoneNo", "value": "+2549876543212"}. -
-      [Chioma Obi]{"entity": "PERSON", "value": "Chioma Obi"}. - [Kwabena
-      Osei]{"entity": "PERSON", "value": "Kwabena Osei"}. - [Amina
-      Ibrahim]{"entity": "PERSON", "value": "Amina Ibrahim"}. - [Brian
-      Kimani]{"entity": "PERSON", "value": "Brian Kimani"} at
-      [0776543213]{"entity": "phoneNo", "value": "0776543213"}. - [Chinwe
-      Onuoha]{"entity": "PERSON", "value": "Chinwe Onuoha"}. - [Juma
-      Musa]{"entity": "PERSON", "value": "Juma Musa"}. - [Tariro
-      Chuma]{"entity": "PERSON", "value": "Tariro Chuma"}. - [Malik
-      Ndiaye]{"entity": "PERSON", "value": "Malik Ndiaye"} at
-      [0776543214]{"entity": "phoneNo", "value": "0776543214"}. - [Sadia
-      Abdi]{"entity": "PERSON", "value": "Sadia Abdi"}. - [Musa Kamau]{"entity":
-      "PERSON", "value": "Musa Kamau"}.
   - intent: inform_budget_range
     examples: >
-      - [On-budget 💸]{"entity":"budget-range", "value": "budget"} -
-      [Mid-range 💳]{"entity":"budget-range", "value": "mid-range"} - [Luxury
-      💎]{"entity":"budget-range", "value": "luxury"}  - What are the options
-      for a [budget]{"entity":"budget-range", "value": "budget"} trip? 💸 - Show
-      me travel choices within the [mid-range]{"entity":"budget-range", "value":
-      "mid-range"} 💳 category. - Can you suggest options for a
-      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 vacation? -
-      Explore [budget]{"entity":"budget-range", "value": "budget"} 💸
-      possibilities for a family trip. - Tell me about
-      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳 vacation
-      packages. - I'm looking for [luxury]{"entity":"budget-range", "value":
-      "luxury"} 💎 travel experiences. - Show me deals within the
-      [budget]{"entity":"budget-range", "value": "budget"} 💸 range for solo
-      travel. - Any recommendations for [mid-range]{"entity":"budget-range",
-      "value": "mid-range"} 💳 group vacations? - What are the
-      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 options for a
-      honeymoon? - I want information on [budget]{"entity":"budget-range",
-      "value": "budget"} 💸 travel packages. - Can you suggest a
-      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳 holiday for
-      couples? - Show me [luxury]{"entity":"budget-range", "value": "luxury"} 💎
-      deals for luxury getaways. - I'm interested in
-      [budget]{"entity":"budget-range", "value": "budget"} 💸 solo travel
-      options. - Tell me about [mid-range]{"entity":"budget-range", "value":
-      "mid-range"} 💳 family-friendly vacations. - Explore
-      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 packages for
-      anniversary trips. - What [budget]{"entity":"budget-range", "value":
-      "budget"} 💸 choices do you have for group travel? - Any
-      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳
-      recommendations for a weekend getaway? - I'm looking for
-      [luxury]{"entity":"budget-range", "value": "luxury"} 💎 experiences for
-      special occasions. - Show me [budget]{"entity":"budget-range", "value":
-      "budget"} 💸 options for adventure travel. - Can you suggest
-      [mid-range]{"entity":"budget-range", "value": "mid-range"} 💳 travel plans
-      for friends? - My budget for the trip is USD 1000 - I'm looking for
-      options within EUR 800. - Can you suggest packages around GBP 1200? - I
-      have a budget of AUD 1500 for the trip. - Show me deals for a budget of
-      CAD 2000. - I'm considering options with a budget of INR 70000. - What
-      packages do you have for a budget of JPY 90000? - My budget range is CNY
-      6000 for the trip. - Explore options within AED 2500 for me. - Can you
-      recommend packages around CHF 1100? - I'm looking for deals within NZD
-      1300. - Show me options for a budget of SEK 9500. - What packages do you
-      have for a budget of SGD 1800? - I have a budget range of HKD 7500 for the
-      trip. - Explore deals within NOK 8500 for me. - Can you suggest options
-      around BRL 3200? - My budget for the trip is ZAR 14000. - Show me packages
-      for a budget of RUB 55000. - I'm considering options with a budget of TRY
-      950.
+      -  I can spend $500 for the trip.
+      - My budget is €800.
+      - Let's keep it within £600.
+      - I'm planning to spend ¥70,000.
+      - My budget is in USD, around $1000.
+      - I can afford approximately €4000.
+      - Let's stick to GBP, not exceeding £900.
+      - I'm looking at a budget of ZAR 10,000.
+      - My budget is in Nigerian Naira, around NGN 50,000.
+      - I have around AUD 1200 to spend.
+      - I can manage with CAD 700.
+      - My budget is in Swiss Francs, about CHF 800.
+      - Let's keep it in Indian Rupees, around INR 60,000.
+      - I'm thinking of spending AED 2500.
+      - I can afford around SGD 1500.
+      - My budget is in Kenyan Shillings, KES 30,000.
+      - Let's stick to South African Rand, not exceeding ZAR 8000.
+      - I have around CFA 50,000 to spend (West African CFA franc).
+      - My budget is in Egyptian Pounds, around EGP 4000.- I'm looking at spending XOF 60,000 (West African CFA franc).
+
   - intent: inquire_travel_packages
     examples: >
       - What are the available travel packages? - Can you tell me about the
