@@ -14,13 +14,17 @@ intents:
   - explore_other_options
   - inform
   - inform_vacation_plan
-  - inform_group_size
-  - inform_date
+  - inform_group_size:
+      use_entities: []
+  - inform_date:
+      use_entities: []
   - inform_budget_range
   - inquire_travel_packages
   - inform_travel_destination
-  - inform_travel_experience
-  - specific_travel_request
+  - inform_travel_experience:
+      use_entities: []
+  - specific_travel_request:
+      use_entities: []
 responses:
   utter_greet:
     - text: Hi! Welcome to Voyage Companion, your AI travel assistant! Explore
@@ -33,7 +37,7 @@ responses:
       button_type: vertical
   utter_ask_travel_experience:
     - text: Tell me about your ideal travel experience.
-      image: "https://wanderon.in/_next/image?url=https%3A%2F%2Fstatic.wanderon.in%2Fwp-content%2Fuploads%2F2023%2F10%2Fgondola-ride-in-autumn-in-kashmir-2023-10-18t174214.790-min.png&w=3840&q=75"
+      image: https://wanderon.in/_next/image?url=https%3A%2F%2Fstatic.wanderon.in%2Fwp-content%2Fuploads%2F2023%2F10%2Fgondola-ride-in-autumn-in-kashmir-2023-10-18t174214.790-min.png&w=3840&q=75
       buttons:
         - title: Adventure 🌍
           payload: /inform_travel_experience{{"travel-exp":"adventure"}}
@@ -45,7 +49,9 @@ responses:
           payload: /inform_travel_experience{{"travel-exp":"theme"}}
       button_type: vertical
   utter_ask_budget_range:
-    - text: Could you let me know your budget range for the trip? Please provide a specific budget amount along with the currency (e.g., $1000, USD1000, 1000 Dollars)💰
+    - text: Could you let me know your budget range for the trip? Please provide a
+        specific budget amount along with the currency (e.g., $1000, USD1000,
+        1000 Dollars)💰
   utter_booking_process:
     - text: Would you like to continue with the booking process?
       buttons:
@@ -57,7 +63,8 @@ responses:
   utter_ask_name:
     - text: What is your full name?
   utter_ask_phone_num:
-    - text: What is your phone number? Please make sure to include the country code eg. +254
+    - text: What is your phone number? Please make sure to include the country code
+        eg. +254
   utter_ask_travel_date:
     - text: Could you please provide me with your preferred travel date? Say dates
         like 'November 10th' or 'November'
@@ -68,7 +75,7 @@ responses:
         bring you personalized and seamless experiences. Feel free to ask about
         destinations or choose to restart the conversation.
       buttons:
-        - title: Let's Dive In Again! 🌊 
+        - title: Let's Dive In Again! 🌊
           payload: /action_session_start
   utter_goodbye:
     - text: Thank you for using our services! Should you need assistance in the
@@ -87,7 +94,8 @@ responses:
         inquiries you may have. Let's make your journey unforgettable! 🌟
   utter_ask_destination:
     - text: What's the destination you have in mind for your trip?
-    - text: I'd love to help! Could you let me know the destination you're thinking of?
+    - text: I'd love to help! Could you let me know the destination you're thinking
+        of?
     - text: To assist you better, could you specify the destination you have in mind?
   utter_confirm_booking:
     - text: All set!
@@ -117,21 +125,33 @@ slots:
         entity: FAC
       - type: from_entity
         entity: LOC
+        conditions:
+          - active_loop: destination_form
+            requested_slot: destination
   name:
     type: any
     mappings:
       - type: from_entity
         entity: PERSON
+        conditions:
+          - active_loop: book_form
+            requested_slot: name
   phone_num:
     type: any
     mappings:
       - type: from_entity
         entity: phone-number
+        conditions:
+          - active_loop: book_form
+            requested_slot: phone_num
   num_people:
     type: any
     mappings:
       - type: from_entity
         entity: number
+        conditions:
+          - active_loop: book_form
+            requested_slot: num_people
   travel_date:
     type: any
     mappings:
@@ -142,6 +162,9 @@ slots:
     mappings:
       - type: from_entity
         entity: amount-of-money
+        conditions:
+          - active_loop: destination_form
+            requested_slot: budget_range
   travel_experience:
     influence_conversation: true
     type: categorical
@@ -153,6 +176,9 @@ slots:
     mappings:
       - type: from_entity
         entity: travel-exp
+        conditions:
+          - active_loop: travel_form
+            requested_slot: travel_experience
 forms:
   booking_form:
     required_slots:
