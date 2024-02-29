@@ -35,7 +35,7 @@ stories:
       - slot_was_set:
           - requested_slot: budget_range
       - slot_was_set:
-          - budget_range: mid-range
+          - budget_range: USD 100000
       - slot_was_set:
           - requested_slot: travel_date
       - slot_was_set:
