@@ -45,15 +45,7 @@ responses:
           payload: /inform_travel_experience{{"travel-exp":"theme"}}
       button_type: vertical
   utter_ask_budget_range:
-    - text: Could you let me know your budget range for the trip? If you have a specific budget amount in mind, please provide the amount along with the currency (e.g., $1000, €800)💰
-      buttons:
-        - title: On-budget 💸
-          payload: /inform_budget_range{{"budget-range", "budget"}}
-        - title: Mid-range 💳
-          payload: /inform_budget_range{{"budget-range", "mid-range"}}
-        - title: Luxury 💎
-          payload: /inform_budget_range{{"budget-range", "luxury"}}
-      button_type: vertical
+    - text: Could you let me know your budget range for the trip? Please provide a specific budget amount along with the currency (e.g., $1000, USD1000, 1000 Dollars)💰
   utter_booking_process:
     - text: Would you like to continue with the booking process?
       buttons:
@@ -111,10 +103,9 @@ entities:
   - GPE
   - FAC
   - number
-  - MONEY
+  - LOC
   - phone-number
   - amount-of-money
-  - budget-range
   - travel-exp
 slots:
   destination:
@@ -143,19 +134,12 @@ slots:
     type: any
     mappings:
       - type: from_entity
-        entity: DATE
+        entity: time
   budget_range:
-    influence_conversation: true
-    type: categorical
-    values:
-      - budget
-      - mid-range
-      - luxury
+    type: any
     mappings:
       - type: from_entity
-        entity: MONEY
-      - type: from_entity
-        entity: budget-range
+        entity: amount-of-money
   travel_experience:
     influence_conversation: true
     type: categorical
