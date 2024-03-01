@@ -19,7 +19,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 300
+    epochs: 200
     ranking_length: 5
     batch_strategy: sequence
   - name: SpacyEntityExtractor
@@ -44,10 +44,10 @@ pipeline:
     batch_strategy: sequence
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 150
+    epochs: 100
     retrieval_intent: chitchat
   - name: ResponseSelector
-    epochs: 150
+    epochs: 100
     retrieval_intent: faq
   - name: FallbackClassifier
     threshold: 0.7
@@ -57,7 +57,7 @@ policies:
     max_history: 5
   - name: TEDPolicy
     constrain_similarities: true
-    epochs: 400
+    epochs: 300
     max_history: 8
     batch_size: 5
     max_training_samples: 300
