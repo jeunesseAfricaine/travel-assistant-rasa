@@ -137,7 +137,7 @@ slots:
       - type: from_entity
         entity: PERSON
         conditions:
-          - active_loop: book_form
+          - active_loop: booking_form
             requested_slot: name
   phone_num:
     type: any
@@ -145,7 +145,7 @@ slots:
       - type: from_entity
         entity: phone-number
         conditions:
-          - active_loop: book_form
+          - active_loop: booking_form
             requested_slot: phone_num
   num_people:
     type: any
@@ -153,7 +153,7 @@ slots:
       - type: from_entity
         entity: number
         conditions:
-          - active_loop: book_form
+          - active_loop: booking_form
             requested_slot: num_people
   travel_date:
     type: any
