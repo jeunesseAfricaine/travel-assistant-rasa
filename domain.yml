@@ -110,13 +110,13 @@ responses:
     - text: Anytime maze! Unaeza nitext in case u need anything else. Safiri salama!😊
 entities:
   - PERSON
-  - time
   - GPE
   - FAC
-  - number
+  - DATE
+  - MONEY
   - LOC
+  - number
   - phone-number
-  - amount-of-money
   - travel-exp
 slots:
   destination:
@@ -159,12 +159,12 @@ slots:
     type: any
     mappings:
       - type: from_entity
-        entity: time
+        entity: DATE
   budget_range:
     type: any
     mappings:
       - type: from_entity
-        entity: amount-of-money
+        entity: MONEY
         conditions:
           - active_loop: destination_form
             requested_slot: budget_range
