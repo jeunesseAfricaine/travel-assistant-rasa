@@ -165,9 +165,6 @@ slots:
     mappings:
       - type: from_entity
         entity: MONEY
-        conditions:
-          - active_loop: destination_form
-            requested_slot: budget_range
   travel_experience:
     influence_conversation: true
     type: categorical
