@@ -184,15 +184,24 @@ slots:
             requested_slot: travel_experience
 forms:
   booking_form:
+    ignored_intents:
+      - chitchat
+      - faq
     required_slots:
       - name
       - phone_num
       - num_people
   travel_form:
+    ignored_intents:
+      - chitchat
+      - faq
     required_slots:
       - travel_experience
       - travel_date
   destination_form:
+    ignored_intents:
+      - chitchat
+      - faq
     required_slots:
       - destination
       - budget_range
