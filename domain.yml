@@ -21,7 +21,8 @@ intents:
       use_entities: []
   - inform_date:
       use_entities: []
-  - inform_budget_range
+  - inform_budget_range:
+      use_entities: []
   - inquire_travel_packages
   - inform_travel_destination
   - inform_travel_experience:
@@ -61,16 +62,14 @@ responses:
         - title: Quick Book 🛎
           payload: /proceed_to_booking
         - title: Start New Conversation
-          payload: /action_session_start
+          payload: /session_start
       button_type: vertical
   utter_ask_name:
     - text: What is your full name?
   utter_ask_phone_num:
-    - text: What is your phone number? Please make sure to include the country code
-        eg. +254
+    - text: What is your phone number?
   utter_ask_travel_date:
-    - text: Could you please provide me with your preferred travel date? Say dates
-        like 'November 10th' or 'November'
+    - text: Could you please provide me with your preferred travel date?
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
   utter_default:
@@ -79,7 +78,7 @@ responses:
         destinations or choose to restart the conversation.
       buttons:
         - title: Let's Dive In Again! 🌊
-          payload: /action_session_start
+          payload: /session_start
   utter_goodbye:
     - text: Thank you for using our services! Should you need assistance in the
         future, I'll be here. Take care!
@@ -113,7 +112,7 @@ entities:
   - GPE
   - FAC
   - DATE
-  - MONEY
+  - amount-of-money
   - LOC
   - number
   - phone-number
@@ -164,7 +163,10 @@ slots:
     type: any
     mappings:
       - type: from_entity
-        entity: MONEY
+        entity: amount-of-money
+        conditions:
+          - active_loop: destination_form
+            requested_slot: budget_range
   travel_experience:
     influence_conversation: true
     type: categorical
