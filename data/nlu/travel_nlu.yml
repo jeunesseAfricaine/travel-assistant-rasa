@@ -518,109 +518,6 @@ nlu:
       - I'm specifically seeking [thrilling wildlife adventures]{"entity": "travel-exp", "value": "safari"} options for my trip.
 
       - [Valentine's 💖]{"entity": "travel-exp", "value": "theme"} - [Easter 🐣]{"entity": "travel-exp", "value": "theme"} - [Diwali 🪔]{"entity": "travel-exp", "value": "theme"} - [Eid 🌙]{"entity": "travel-exp", "value": "theme"} - [Mashujaa Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Madaraka Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Labour Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Jamhuri Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Eid ul-Fitr 🌙]{"entity": "travel-exp", "value": "theme"} - [Christmas 🎄]{"entity": "travel-exp", "value": "theme"} - [Boxing Day 🎁]{"entity": "travel-exp", "value": "theme"} - [New Year's Day 🎉]{"entity": "travel-exp", "value": "theme"} - [Good Friday 🌼]{"entity": "travel-exp", "value": "theme"} - [Jamhuri Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Labour Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Madaraka Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Eid ul-Adha 🌙]{"entity": "travel-exp", "value": "theme"} - [Moi Day 🇰🇪]{"entity": "travel-exp", "value": "theme"} - [Christmas Day 🎄]{"entity": "travel-exp", "value": "theme"} - [Boxing Day 🎁]{"entity": "travel-exp", "value": "theme"}
-  - intent: proceed_to_booking
-    examples: |
-      - Proceed to Booking
-      - proceed to booking
-      - proceed book
-      - Book Now 🏨
-      - I want to make a booking.
-      - Start the booking process.
-      - Can I book a trip?
-      - Let's begin the booking.
-      - I'm ready to book.
-      - Begin the reservation.
-      - How can I make a booking?
-      - Start the booking form.
-      - Let's initiate the booking process.
-      - I'd like to book a package.
-      - Can I start the booking?
-      - I want to make a booking.
-      - Anza mchakato wa kubook.
-      - How can I book a safari?
-      - Nianzishe mchakato wa kubook.
-      - Let's start the reservation.
-      - Tuanzishe mchakato wa booking.
-      - I'm ready to book my trip.
-      - Nataka kuanza booking yangu.
-      - Can I initiate the booking process?
-      - Je, naweza kuanzisha mchakato wa kubook?
-  - intent: explore_other_options
-    examples: |
-      - Explore More Destinations
-      - I want to see more options.
-      - Can you show me other choices?
-      - explore other options
-      - Explore different packages for me.
-      - What else do you have to offer?
-      - Show me more destinations, please.
-      - I'm interested in exploring alternative options.
-      - Are there other travel experiences available?
-      - Give me more choices for my trip.
-      - I'd like to explore different vacation packages.
-      - What other destinations can you suggest?
-      - Show me more experiences.
-      - other options for my trip?
-      - I want to see a variety 
-      - Explore more vacation choices for me.
-      - Are there alternative I can check out?
-      - Show me additional travel itineraries.
-      - I'm open to exploring different options.
-      - Can you provide more options for my vacation?
-      - Explore other possibilities for me.
-  - intent: inform_group_size
-    examples: |
-      - We are a group of 4 people.
-      - Find destinations for a group of 10.
-      - Find destinations for couples
-      - Suggest options for large group travel.
-      - We are 2 friends looking for a vacation.
-      - Show me options for a small group trip.
-      - I want to travel with a family of 5
-      - Find destinations suitable for solo travel
-      - List options for a group of friends vacation.
-      - I'm planning for a couple's getaway.
-      - we are a group of four.
-      - tuko watu wawili
-      - I'm traveling with a group of 5 people
-      - Our group size is 10 members
-      - I have 3 friends joining me.
-      - We are a group of 6 individuals
-      - There are 8 of us planning the trip.
-      - Our group consists of 12 participants
-      - I'll be traveling with 7 companions
-      - The group size is 4 travelers
-      - We have 9 members in our group.
-      - Our group consists of 15 people
-      - I'm planning for a group of 20 individuals
-      - There will be 2 of us on the trip.
-      - Our group size is 18 participants
-      - I have 5 friends joining me.
-      - We are a group of 14 travelers
-      - There are 3 of us planning the trip.
-      - Our group consists of 11 companions
-      - I'll be traveling with 6 participants
-      - The group size is 8 friends
-      - We are a group of 4 people.
-      - Find destinations for a group of 10.
-      - Find destinations for couples.
-      - Suggest options for large group travel.
-      - We are 2 friends looking for a vacation.
-      - Show me options for a small group trip.
-      - I want to travel with a family of 5.
-      - Find destinations suitable for solo travel.
-      - List options for a group of friends vacation.
-      - I'm planning for a couple's getaway.
-      - We are a group of four.
-      - Tuko watu wawili.
-      - I'm traveling with a group of 5 people.
-      - Our group size is 10 members.
-      - I have 3 friends joining me.
-      - We are a group of 6 individuals.
-      - There are 8 of us planning the trip.
-      - Our group consists of 12 participants.
-      - I'll be traveling with 7 companions.     
-      - The group size is 4 travelers.
   - intent: inform_date
     examples: >
       - Can you arrange my check-in for next Monday? - Is it possible to
@@ -680,10 +577,10 @@ nlu:
       preferable. - Arrange my check-in for next Sunday. - Can you arrange my
       check-in on June 8th? - Book July 3rd if there's availability. - Is it
       possible to check in on August 15th - I'd like to start my stay on
-      September 25th - Please schedule for Oct 10th. - Can you arrange
-      check-in on November 5th - Nov 5th - I want to check in next week if
-      possible. - Schedule my arrival for December 20th - I plan to check out on
-      January 8th - On Feb 15th? - My stay starts on March 1st. - sep 10th
+      September 25th - Please schedule for Oct 10th. - Can you arrange check-in
+      on November 5th - Nov 5th - I want to check in next week if possible. -
+      Schedule my arrival for December 20th - I plan to check out on January 8th
+      - On Feb 15th? - My stay starts on March 1st. - sep 10th
   - intent: inform_budget_range
     examples: >
       - I can spend $500 for the trip. - My budget is €800. - Let's keep it
@@ -724,38 +621,26 @@ nlu:
       approximately MGA 500,000. - I'm looking at spending in Mauritanian
       Ouguiya, MRU 10,000. - I can manage with Comorian Francs, KMF 30,000. - My
       budget is in Eritrean Nakfa, around ERN 2,500. - Let's keep it in
-      Seychellois Rupees, not exceeding SCR 5,000.
-      - I can spend 25,000 KES for the trip.
-      - My budget is Ksh 30,000.
-      - Let's keep it within 40,000 Kenyan Shillings.
-      - I have a budget of 35,000 KES for the journey.
-      - My spending limit is 28,000 Ksh.
-      - I'm planning to spend around 45,000 KES.
-      - I'm looking at spending 32,000 KES or less.
-      - I can allocate 50,000 Kenyan Shillings for the trip.
-      - My budget is flexible, but ideally not more than 60,000 KES.
-      - Let's plan within the range of 55,000 KES to 65,000 KES.
-      - I can spend 25,000 KES for the trip.
-      - My budget is Ksh 30,000.
-      - Let's keep it within 40,000 Kenyan Shillings.
-      - I have a budget of 35,000 KES for the journey.
-      - My spending limit is 28,000 Ksh.
-      - I'm planning to spend around 45,000 KES.
-      - I'm looking at spending 32,000 KES or less.
-      - I can allocate 50,000 Kenyan Shillings for the trip.
-      - My budget is flexible, but ideally not more than 60,000 KES.
-      - Let's plan within the range of 55,000 KES to 65,000 KES.
-      - I can spend 350,000 TZS for the trip.
-      - My budget is Tsh 400,000.
-      - Let's keep it within 550,000 Tanzanian Shillings.
-      - I have a budget of 480,000 TZS for the journey.
-      - My spending limit is 320,000 Tsh.
-      - I'm planning to spend around 600,000 TZS.
-      - I'm looking at spending 420,000 TZS or less.
-      - I can allocate 700,000 Tanzanian Shillings for the trip.
-      - My budget is flexible, but ideally not more than 800,000 TZS.
-      - Let's plan within the range of 750,000 TZS to 900,000 TZS.
-
+      Seychellois Rupees, not exceeding SCR 5,000. - I can spend 25,000 KES for
+      the trip. - My budget is Ksh 30,000. - Let's keep it within 40,000 Kenyan
+      Shillings. - I have a budget of 35,000 KES for the journey. - My spending
+      limit is 28,000 Ksh. - I'm planning to spend around 45,000 KES. - I'm
+      looking at spending 32,000 KES or less. - I can allocate 50,000 Kenyan
+      Shillings for the trip. - My budget is flexible, but ideally not more than
+      60,000 KES. - Let's plan within the range of 55,000 KES to 65,000 KES. - I
+      can spend 25,000 KES for the trip. - My budget is Ksh 30,000. - Let's keep
+      it within 40,000 Kenyan Shillings. - I have a budget of 35,000 KES for the
+      journey. - My spending limit is 28,000 Ksh. - I'm planning to spend around
+      45,000 KES. - I'm looking at spending 32,000 KES or less. - I can allocate
+      50,000 Kenyan Shillings for the trip. - My budget is flexible, but ideally
+      not more than 60,000 KES. - Let's plan within the range of 55,000 KES to
+      65,000 KES. - I can spend 350,000 TZS for the trip. - My budget is Tsh
+      400,000. - Let's keep it within 550,000 Tanzanian Shillings. - I have a
+      budget of 480,000 TZS for the journey. - My spending limit is 320,000 Tsh.
+      - I'm planning to spend around 600,000 TZS. - I'm looking at spending
+      420,000 TZS or less. - I can allocate 700,000 Tanzanian Shillings for the
+      trip. - My budget is flexible, but ideally not more than 800,000 TZS. -
+      Let's plan within the range of 750,000 TZS to 900,000 TZS.
   - synonym: December
     examples: |
       - Dec
@@ -773,8 +658,7 @@ nlu:
       - Aug
   - synonym: February
     examples: |
-      - Feb
+      - Feb 
   - synonym: January
     examples: |
       - Jan
-
