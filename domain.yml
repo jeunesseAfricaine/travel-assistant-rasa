@@ -203,8 +203,8 @@ forms:
       - faq
     required_slots:
       - destination
-      - budget_range
       - travel_date
+      - budget_range
 actions:
   - action_provide_package_options
   - action_provide_destination_details
