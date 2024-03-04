@@ -19,7 +19,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 200
+    epochs: 400
     ranking_length: 5
     batch_strategy: sequence
   - name: SpacyEntityExtractor
@@ -34,12 +34,12 @@ pipeline:
     dimensions:
       - phone-number
       - number
-      - amount-of-
+      - amount-of-money
     locale: de_DE
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 150
+    epochs: 300
     constrain_similarities: true
     batch_strategy: sequence
   - name: EntitySynonymMapper
