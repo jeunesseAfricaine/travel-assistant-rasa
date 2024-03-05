@@ -78,7 +78,7 @@ responses:
         destinations or choose to restart the conversation.
       buttons:
         - title: Let's Dive In Again! 🌊
-          payload: /session_start
+          payload: /restart
   utter_goodbye:
     - text: Thank you for using our services! Should you need assistance in the
         future, I'll be here. Take care!
@@ -112,6 +112,8 @@ entities:
   - GPE
   - FAC
   - DATE
+  - MONEY
+  - ORG
   - amount-of-money
   - LOC
   - number
@@ -127,6 +129,8 @@ slots:
         entity: FAC
       - type: from_entity
         entity: LOC
+      - type: from_entity
+        entity: ORG
         conditions:
           - active_loop: destination_form
             requested_slot: destination
@@ -163,10 +167,15 @@ slots:
     type: any
     mappings:
       - type: from_entity
-        entity: amount-of-money
+        entity: MONEY
         conditions:
           - active_loop: destination_form
             requested_slot: budget_range
+  amount_of_money:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: amount-of-money
   travel_experience:
     influence_conversation: true
     type: categorical
