@@ -36,6 +36,7 @@ pipeline:
     dimensions:
       - phone-number
       - number
+      - amount-of-money
     locale: de_DE
     timezone: Europe/Berlin
     timeout: 3
