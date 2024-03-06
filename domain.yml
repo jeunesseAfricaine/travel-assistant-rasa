@@ -1,70 +1,225 @@
----
-recipe: default.v1
-language: en
-pipeline:
-  - name: SpacyNLP
-    model: en_core_web_md
-    case_sensitive: false
-  - name: SpacyTokenizer
-    intent_tokenization_flag: false
-    intent_split_symbol: _
-    token_pattern: None
-  - name: SpacyFeaturizer
-    pooling: mean
-  - name: RegexFeaturizer
-  - name: LexicalSyntacticFeaturizer
-  - name: CountVectorsFeaturizer
-  - name: CountVectorsFeaturizer
-    analyzer: char_wb
-    min_ngram: 1
-    max_ngram: 4
-  - name: DIETClassifier
-    epochs: 150
-    ranking_length: 5
-    batch_strategy: sequence
-  - name: SpacyEntityExtractor
-    dimensions:
-      - PERSON
-      - FAC
-      - GPE
-      - LOC
-      - DATE
-      - ORG
-      - MONEY
-  - name: DucklingEntityExtractor
-    url: http://localhost:8000
-    dimensions:
-      - phone-number
-      - number
-      - amount-of-money
-    locale: de_DE
-    timezone: Europe/Berlin
-    timeout: 3
-  - name: DIETClassifier
-    epochs: 100
-    constrain_similarities: true
-    batch_strategy: sequence
-  - name: EntitySynonymMapper
-  - name: ResponseSelector
-    epochs: 200
-    retrieval_intent: chitchat
-  - name: ResponseSelector
-    epochs: 200
-    retrieval_intent: faq
-  - name: FallbackClassifier
-    threshold: 0.7
-    ambiguity_threshold: 0.1
-policies:
-  - name: AugmentedMemoizationPolicy
-    max_history: 5
-  - name: TEDPolicy
-    constrain_similarities: true
-    epochs: 350
-    max_history: 8
-    batch_size: 5
-    max_training_samples: 300
-  - name: RulePolicy
-    core_fallback_threshold: 0.4
-    enable_fallback_prediction: true
-    core_fallback_action_name: action_default_fallback
-assistant_id: 20230723-171301-honest-limo
+--
+version: "3.1"
+intents:
+  - start
+  - affirm
+  - deny
+  - stop
+  - goodbye
+  - chitchat
+  - thankyou
+  - faq
+  - nlu_fallback
+  - proceed_to_booking
+  - explore_other_options
+  - inform:
+      use_entities:
+        - PERSON
+        - phone-number
+  - inform_vacation_plan
+  - inform_group_size:
+      use_entities: []
+  - inform_date:
+      use_entities: []
+  - inform_budget_range:
+      use_entities: []
+  - inquire_travel_packages
+  - inform_travel_destination
+  - inform_travel_experience:
+      use_entities: []
+  - specific_travel_request:
+      use_entities: []
+responses:
+  utter_greet:
+    - text: Hi! Welcome to Voyage Companion, your AI travel assistant! Explore
+        personalized travel packages with ease. How can I assist you?
+      buttons:
+        - title: Got something in mind! 🤔
+          payload: /specific_travel_request
+        - title: Surprise me! 🌍
+          payload: /inquire_travel_packages
+      button_type: vertical
+  utter_ask_travel_experience:
+    - text: Tell me about your ideal travel experience.
+      image: https://wanderon.in/_next/image?url=https%3A%2F%2Fstatic.wanderon.in%2Fwp-content%2Fuploads%2F2023%2F10%2Fgondola-ride-in-autumn-in-kashmir-2023-10-18t174214.790-min.png&w=3840&q=75
+      buttons:
+        - title: Adventure 🌍
+          payload: /inform_travel_experience{{"travel-exp":"adventure"}}
+        - title: Relaxation 🏖
+          payload: /inform_travel_experience{{"travel-exp":"relaxation"}}
+        - title: Wildlife Safari 🦓
+          payload: /inform_travel_experience{{"travel-exp":"safari"}}
+        - title: Theme
+          payload: /inform_travel_experience{{"travel-exp":"theme"}}
+      button_type: vertical
+  utter_ask_budget_range:
+    - text: Could you let me know your budget range for the trip? Please provide a
+        specific budget amount along with the currency (e.g., $1000, USD1000,
+        1000 Dollars)💰
+  utter_booking_process:
+    - text: Would you like to continue with the booking process?
+      buttons:
+        - title: Quick Book 🛎
+          payload: /proceed_to_booking
+        - title: Start New Conversation
+          payload: /session_start
+      button_type: vertical
+  utter_ask_name:
+    - text: What is your full name?
+  utter_ask_phone_num:
+    - text: What is your phone number?
+  utter_ask_travel_date:
+    - text: Could you please provide me with your preferred travel date?
+  utter_ask_num_people:
+    - text: How many people are traveling with you?👥
+  utter_default:
+    - text: Oops! It seems we've taken a detour!. No worries, we're working hard to
+        bring you personalized and seamless experiences. Feel free to ask about
+        destinations or choose to restart the conversation.
+      buttons:
+        - title: Let's Dive In Again! 🌊
+          payload: /restart
+  utter_goodbye:
+    - text: Thank you for using our services! Should you need assistance in the
+        future, I'll be here. Take care!
+    - text: Your travel plans matter! If there's anything else I can do, I'm just a
+        message away. Goodbye for now!
+    - text: It's been great helping you today! If there's anything else you need, just
+        ask. Bye for now!
+    - text: Bye for now.
+  utter_ask_rephrase:
+    - text: Could you please provide more details?
+    - text: I'd love to understand better. Can you elaborate?
+    - text: Sijakuget. Hebu nishow tena...
+  utter_anything_else:
+    - text: Feel like exploring more? I'm here to help with travel suggestions or any
+        inquiries you may have. Let's make your journey unforgettable! 🌟
+  utter_ask_destination:
+    - text: What's the destination you have in mind for your trip?
+    - text: I'd love to help! Could you let me know the destination you're thinking
+        of?
+    - text: To assist you better, could you specify the destination you have in mind?
+  utter_confirm_booking:
+    - text: All set!
+  utter_youarewelcome:
+    - text: You're most welcome! Safe travels, and feel free to reach out if you need
+        anything else. Bon voyage!😊
+    - text: Karibu! Safe travels, and feel free kureach out if you need anything else.
+        Safari njema!😊
+    - text: Anytime maze! Unaeza nitext in case u need anything else. Safiri salama!😊
+entities:
+  - PERSON
+  - GPE
+  - FAC
+  - DATE
+  - MONEY
+  - ORG
+  - amount-of-money
+  - LOC
+  - number
+  - phone-number
+  - travel-exp
+slots:
+  destination:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: GPE
+      - type: from_entity
+        entity: FAC
+      - type: from_entity
+        entity: LOC
+      - type: from_entity
+        entity: ORG
+        conditions:
+          - active_loop: destination_form
+            requested_slot: destination
+  name:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: PERSON
+        conditions:
+          - active_loop: booking_form
+            requested_slot: name
+  phone_num:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: phone-number
+        conditions:
+          - active_loop: booking_form
+            requested_slot: phone_num
+  num_people:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: number
+        conditions:
+          - active_loop: booking_form
+            requested_slot: num_people
+  travel_date:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: DATE
+  budget_range:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: MONEY
+        conditions:
+          - active_loop: destination_form
+            requested_slot: budget_range
+  amount_of_money:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: amount-of-money
+  travel_experience:
+    influence_conversation: true
+    type: categorical
+    values:
+      - adventure
+      - relaxation
+      - safari
+      - theme
+    mappings:
+      - type: from_entity
+        entity: travel-exp
+        conditions:
+          - active_loop: travel_form
+            requested_slot: travel_experience
+forms:
+  booking_form:
+    ignored_intents:
+      - chitchat
+      - faq
+    required_slots:
+      - name
+      - phone_num
+      - num_people
+  travel_form:
+    ignored_intents:
+      - chitchat
+      - faq
+    required_slots:
+      - travel_experience
+      - travel_date
+  destination_form:
+    ignored_intents:
+      - chitchat
+      - faq
+    required_slots:
+      - destination
+      - travel_date
+      - budget_range
+actions:
+  - action_provide_package_options
+  - action_provide_destination_details
+  - validate_travel_form
+  - validate_destination_form
+  - validate_booking_form
+session_config:
+  session_expiration_time: 5
+  carry_over_slots_to_new_session: false
