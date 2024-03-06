@@ -29,6 +29,8 @@ pipeline:
       - GPE
       - LOC
       - DATE
+      - ORG
+      - MONEY
   - name: DucklingEntityExtractor
     url: http://localhost:8000
     dimensions:
@@ -62,7 +64,7 @@ policies:
     batch_size: 5
     max_training_samples: 300
   - name: RulePolicy
-    core_fallback_threshold: 0.3
+    core_fallback_threshold: 0.4
     enable_fallback_prediction: true
     core_fallback_action_name: action_default_fallback
 assistant_id: 20230723-171301-honest-limo
