@@ -24,7 +24,8 @@ intents:
   - inform_budget_range:
       use_entities: []
   - inquire_travel_packages
-  - inform_travel_destination
+  - inform_travel_destination:
+      use_entities: []
   - inform_travel_experience:
       use_entities: []
   - specific_travel_request:
@@ -62,7 +63,7 @@ responses:
         - title: Quick Book 🛎
           payload: /proceed_to_booking
         - title: Start New Conversation
-          payload: /session_start
+          payload: /restart
       button_type: vertical
   utter_ask_name:
     - text: What is your full name?
@@ -168,14 +169,11 @@ slots:
     mappings:
       - type: from_entity
         entity: MONEY
+      - type: from_entity
+        entity: amount-of-money
         conditions:
           - active_loop: destination_form
             requested_slot: budget_range
-  amount_of_money:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: amount-of-money
   travel_experience:
     influence_conversation: true
     type: categorical
