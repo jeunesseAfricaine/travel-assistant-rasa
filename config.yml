@@ -41,7 +41,7 @@ pipeline:
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 200
+    epochs: 100
     constrain_similarities: true
     batch_strategy: sequence
   - name: EntitySynonymMapper
@@ -59,8 +59,8 @@ policies:
     max_history: 5
   - name: TEDPolicy
     constrain_similarities: true
-    epochs: 400
-    max_history: 8
+    epochs: 300
+    max_history: 6
     batch_size: 5
     max_training_samples: 300
   - name: RulePolicy
