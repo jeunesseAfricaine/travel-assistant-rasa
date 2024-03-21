@@ -32,7 +32,7 @@ intents:
       use_entities: []
 responses:
   utter_greet:
-    - text: Hi! Welcome to Voyage Companion, your AI travel assistant! Explore
+    - text: Hi! Welcome to Voyage Companion. Explore
         personalized travel packages with ease. How can I assist you?
       buttons:
         - title: Got something in mind! 🤔
@@ -55,8 +55,8 @@ responses:
       button_type: vertical
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip? Please provide a
-        specific budget amount along with the currency (e.g., $1000, USD1000,
-        1000 Dollars)💰
+        specific budget amount along with the currency💰 (e.g., $1000, USD1000,
+        1000 Dollars)
   utter_booking_process:
     - text: Would you like to continue with the booking process?
       buttons:
@@ -169,6 +169,11 @@ slots:
     mappings:
       - type: from_entity
         entity: MONEY
+      - type: from_entity
+        entity: amount-of-money
+        conditions:
+          - active_loop: destination_form
+            requested_slot: budget_range
   travel_experience:
     influence_conversation: true
     type: categorical
