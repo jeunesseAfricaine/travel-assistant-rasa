@@ -59,7 +59,7 @@ policies:
     max_history: 5
   - name: TEDPolicy
     constrain_similarities: true
-    epochs: 300
+    epochs: 30
     max_history: 6
     batch_size: 5
     max_training_samples: 30
