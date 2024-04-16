@@ -641,6 +641,43 @@ nlu:
       420,000 TZS or less. - I can allocate 700,000 Tanzanian Shillings for the
       trip. - My budget is flexible, but ideally not more than 800,000 TZS. -
       Let's plan within the range of 750,000 TZS to 900,000 TZS.
+  - intent: inform_payment
+    examples: |
+      - [Google Pay]{"entity": "payment-method", "value": "google_pay"}
+      - I want to use [Google Pay]{"entity": "payment-method", "value": "google_pay"} for payment.
+      - Can I pay using [Google Pay]{"entity": "payment-method", "value": "google_pay"}?
+      - I prefer [Google Pay]{"entity": "payment-method", "value": "google_pay"} as my payment method.
+      - Is [Google Pay]{"entity": "payment-method", "value": "google_pay"} supported for payment?
+      - Can I select [Google Pay]{"entity": "payment-method", "value": "google_pay"} for payment?
+      - I'd like to pay with [Google Pay]{"entity": "payment-method", "value": "google_pay"}.
+      - Do you accept [Google Pay]{"entity": "payment-method", "value": "google_pay"}?
+      - I choose [Google Pay]{"entity": "payment-method", "value": "google_pay"} for payment.
+      - [Google Pay]{"entity": "payment-method", "value": "google_pay"} is my preferred payment option.
+      - How can I use [Google Pay]{"entity": "payment-method", "value": "google_pay"} for payment?
+      - [Google Pay]{"entity": "payment-method", "value": "google_pay"} is my payment preference.
+      - I want to pay through [Google Pay]{"entity": "payment-method", "value": "google_pay"}.
+      - Is [Google Pay]{"entity": "payment-method", "value": "google_pay"} available for payment?
+      - Can I pay using my [Google Pay account]]{"entity": "payment-method", "value": "google_pay"}?
+      - [Google Pay]{"entity": "payment-method", "value": "google_pay"} for payment.
+      - [Mobile Money]{"entity": "payment-method", "value": "mobile"}
+      - [Mpesa]{"entity": "payment-method", "value": "mobile"}
+      - [MPESA]{"entity": "payment-method", "value": "mobile"}
+      - [Msape]{"entity": "payment-method", "value": "mobile"}
+      - I want to use [mobile money]{"entity": "payment-method", "value": "mobile"} for payment.
+      - Can I pay using [mobile money]{"entity": "payment-method", "value": "mobile"}?
+      - I prefer [mobile money]{"entity": "payment-method", "value": "mobile"} as my payment method.
+      - Is [mobile money]{"entity": "payment-method", "value": "mobile"} supported for payment?
+      - Can I select [mobile money]{"entity": "payment-method", "value": "mobile"} for payment?
+      - I'd like to pay with [mobile money]{"entity": "payment-method", "value": "mobile"}.
+      - Do you accept [mobile money]{"entity": "payment-method", "value": "mobile"}?
+      - I choose [mobile money]{"entity": "payment-method", "value": "mobile"} for payment.
+      - [Mobile money]{"entity": "payment-method", "value": "mobile"} is my preferred payment option.
+      - How can I use [mobile money]{"entity": "payment-method", "value": "mobile"} for payment?
+      - [Mobile money]{"entity": "payment-method", "value": "mobile"} is my payment preference.
+      - I want to pay through [mobile money]{"entity": "payment-method", "value": "mobile"}.
+      - Is [airtel]{"entity": "payment-method", "value": "mobile"} available for payment?
+      - Can I pay using [Mpesa account]{"entity": "payment-method", "value": "mobile"}?
+      - I trust [airtel]{"entity": "payment-method", "value": "mobile"} for payment.    
   - synonym: December
     examples: |
       - Dec

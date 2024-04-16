@@ -14,7 +14,7 @@ rules:
       - active_loop: null
       - slot_was_set:
           - requested_slot: null
-      - action: utter_confirm_booking
+      - action: action_make_payment
     wait_for_user_input: false
   - rule: activate travel_form
     steps:

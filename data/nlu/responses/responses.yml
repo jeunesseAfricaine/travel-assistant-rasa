@@ -29,4 +29,4 @@ responses:
     - text: One of the smart engineers at Voyage Companion AI! 🧠
     - text: The engineers at Voyage Companion AI 🛠
   utter_chitchat/ask_out_of_scope:
-    - text: I'm afraid I do not have an answer to that. 
+    - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance. 

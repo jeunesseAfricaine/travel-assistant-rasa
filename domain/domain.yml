@@ -2,47 +2,137 @@
 version: "3.1"
 intents:
   - start
-  - search_flight
   - affirm
   - deny
   - stop
-  - inform_flight_type
-  - inform_destination_preference
-  - inform_vacation_plan
-  - inform_cabin
-  - inform_group_size
-  - inform_date
-  - inform_budget_range
   - goodbye
   - chitchat
   - thankyou
   - faq
   - nlu_fallback
+  - proceed_to_booking
+  - explore_other_options
+  - session_start
+  - restart
+  - trigger_handoff
+  - handoff
+  - human_handoff
+  - help
+  - check_human
+  - select_google_pay
+  - select_mobile_money
+  - inform:
+      use_entities:
+        - PERSON
+        - phone-number
+  - inform_vacation_plan
+  - inform_group_size:
+      use_entities: []
+  - inform_date:
+      use_entities: []
+  - inform_budget_range:
+      use_entities: []
+  - inquire_travel_packages
+  - inform_travel_destination:
+      use_entities: []
+  - inform_travel_experience:
+      use_entities: []
+  - specific_travel_request:
+      use_entities: []
+  - inform_payment:
+      use_entities: []
 responses:
+  utter_ask_booking_form_AA_CONTINUE_FORM:
+    - text: Would you like to continue with your booking?
+      buttons:
+        - payload: /affirm
+          title: Yes
+        - payload: /deny
+          title: No, cancel the booking
+  utter_ask_travel_form_AA_CONTINUE_FORM:
+    - text: Would you like to continue planning your travel?
+      buttons:
+        - payload: /affirm
+          title: Yes
+        - payload: /deny
+          title: No, cancel the travel plan
+  utter_ask_destination_form_AA_CONTINUE_FORM:
+    - text: Would you like to continue selecting your destination?
+      buttons:
+        - payload: /affirm
+          title: Yes
+        - payload: /deny
+          title: No, cancel the destination selection
   utter_greet:
-    - text: Hi! I'm your flight-booking companion. Let's find the best flight options
-        together. What are you searching for?
-    - text: Hello! I'm here to simplify your flight bookings. How can I assist you
-        today?
-    - text: Hello! Welcome to Voyage Companion! I am your travel assistant. I’d be delighted to assist you in
-        booking your flight today. 😊
+    - text: Hi! Welcome to Voyage Companion. Explore personalized travel packages with
+        ease. How can I assist you?
+      buttons:
+        - title: Got something in mind! 🤔
+          payload: /specific_travel_request
+        - title: Surprise me! 🌍
+          payload: /inquire_travel_packages
+      button_type: vertical
+  utter_ask_travel_experience:
+    - text: Tell me about your ideal travel experience.
+      image: https://wanderon.in/_next/image?url=https%3A%2F%2Fstatic.wanderon.in%2Fwp-content%2Fuploads%2F2023%2F10%2Fgondola-ride-in-autumn-in-kashmir-2023-10-18t174214.790-min.png&w=3840&q=75
+      buttons:
+        - title: Adventure 🌍
+          payload: /inform_travel_experience{{"travel-exp":"adventure"}}
+        - title: Relaxation 🏖
+          payload: /inform_travel_experience{{"travel-exp":"relaxation"}}
+        - title: Wildlife Safari 🦓
+          payload: /inform_travel_experience{{"travel-exp":"safari"}}
+        - title: Theme
+          payload: /inform_travel_experience{{"travel-exp":"theme"}}
+      button_type: vertical
+  utter_ask_budget_range:
+    - text: Could you let me know your budget range for the trip? Please provide a
+        specific budget amount along with the currency💰 (e.g., $1000)
+  utter_booking_process:
+    - text: Would you like to continue with the booking process?
+      buttons:
+        - title: Quick Book 🛎
+          payload: /proceed_to_booking
+        - title: Start New Conversation
+          payload: /restart
+      button_type: vertical
+  utter_ask_name:
+    - text: What is your full name?
+  utter_ask_phone_num:
+    - text: What is your phone number?
+  utter_ask_travel_date:
+    - text: Could you please provide me with your preferred travel date?
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
-  utter_departure:
-    - text: Which city or town are you departing from?
-  utter_destination:
-    - text: Where would you like to fly to?🛫
-  utter_budget_range:
-    - text: Could you let me know your budget range for the trip?💰
-  utter_date:
-    - text: When would you like to start your journey?
-  utter_confirm:
-    - text: Do you need help with anything else?
-    - text: Just confirming, is there anything else I can assist you with?
-  utter_flight_type:
-    - text: What type of flight would you like to book?
+  utter_ask_handoff:
+    - text: It looks like you want to be transferred to a human agent.
+  utter_handoff:
+    - text: Alright, I'll try to transfer you.
+  utter_wouldve_handed_off:
+    - text: If you were talking to me via chatroom, I would have handed you off to
+        {handoffhost}.
+  utter_no_handoff:
+    - text: Since you haven't configured a host to hand off to, I can't send you
+        anywhere!
+  utter_ask_whatelse:
+    - text: What else can I help you with?
+  utter_ok:
+    - text: 👍
+  utter_help:
+    - text: |-
+        I can help you with your financial accounts. 
+        You can ask me things like: 
+        - What travel packages do you offer? 
+        - Do you have packages for Diani? 
+        - mbona nitumie ai? 
+        - Who built you?
   utter_default:
-    - text: I'm sorry, I can't help you.
+    - text: Oops! It seems we've taken a detour!. No worries, we're working hard to
+        bring you personalized and seamless experiences. Feel free to ask about
+        destinations or choose to restart the conversation.
+      buttons:
+        - title: Let's Dive In Again! 🌊
+          payload: /restart
   utter_goodbye:
     - text: Thank you for using our services! Should you need assistance in the
         future, I'll be here. Take care!
@@ -54,110 +144,213 @@ responses:
   utter_ask_rephrase:
     - text: Could you please provide more details?
     - text: I'd love to understand better. Can you elaborate?
-  utter_ask_continue:
-    - text: Do you wish to continue?
-  utter_submit:
-    - text: All done!
-  utter_slots_values:
-    - text: |-
-        I'm ready to search for your flight! Here's what I'll use:
-         - departure: {departure}
-         - destination: {destination}
-         - date: {date}
-         #- num_people: {num_people}
-         #- cabin: {cabin}
-         #- flight_type: {flight_type}
-         - budget_range: {budget_range}
-  utter_make_reservations:
-    - text: Well, let's make your reservations.
-    - text: I'll be happy to help you make a reservation.
+    - text: Sijakuget. Hebu nishow tena...
+  utter_anything_else:
+    - text: Feel like exploring more? I'm here to help with travel suggestions or any
+        inquiries you may have. Let's make your journey unforgettable! 🌟
+  utter_ask_destination:
+    - text: What's the destination you have in mind for your trip?
+    - text: I'd love to help! Could you let me know the destination you're thinking
+        of?
+    - text: To assist you better, could you specify the destination you have in mind?
+  utter_confirm_booking:
+    - text: All set!
   utter_youarewelcome:
-    - text: You're most welcome! Safe travels, and feel free to reach out if you need anything else. Bon voyage! ✈️
-    - text: Karibu! Safe travels, and feel free kureach out if you need anything else. Safari njema! ✈️
+    - text: You're most welcome! Safe travels, and feel free to reach out if you need
+        anything else. Bon voyage!😊
+    - text: Karibu! Safe travels, and feel free kureach out if you need anything else.
+        Safari njema!😊
+    - text: Anytime maze! Unaeza nitext in case u need anything else. Safiri salama!😊
 entities:
-  - cabin
-  - number
-  - LOC:
-      roles:
-        - departure
-        - destination
-  - flight_type
-  - budget_range
-  - time
+  - PERSON
+  - GPE
+  - FAC
+  - DATE
+  - MONEY
+  - ORG
   - amount-of-money
+  - LOC
+  - number
+  - phone-number
+  - travel-exp
+  - payment-method
 slots:
-  departure:
+  AA_CONTINUE_FORM:
     type: any
+    influence_conversation: false
+    mappings:
+      - intent: affirm
+        type: from_intent
+        value: yes
+        conditions:
+          - active_loop: travel_form
+            requested_slot: AA_CONTINUE_FORM
+          - active_loop: booking_form
+            requested_slot: AA_CONTINUE_FORM
+          - active_loop: destination_form
+            requested_slot: AA_CONTINUE_FORM
+      - intent: deny
+        type: from_intent
+        value: no
+        conditions:
+          - active_loop: travel_form
+            requested_slot: AA_CONTINUE_FORM
+          - active_loop: booking_form
+            requested_slot: AA_CONTINUE_FORM
+          - active_loop: destination_form
+            requested_slot: AA_CONTINUE_FORM
+      - intent:
+          - inform
+          - travel_form
+        type: from_text
+        conditions:
+          - active_loop: travel_form
+            requested_slot: AA_CONTINUE_FORM
+      - intent:
+          - inform
+          - booking_form
+        type: from_text
+        conditions:
+          - active_loop: booking_form
+            requested_slot: AA_CONTINUE_FORM
+      - intent:
+          - inform
+          - destination_form
+        type: from_text
+        conditions:
+          - active_loop: destination_form
+            requested_slot: AA_CONTINUE_FORM
+  handoff_to:
+    type: any
+    influence_conversation: false
     mappings:
       - type: from_entity
-        entity: LOC
-        role: departure
+        entity: handoff_to
+  repeated_validation_failures:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: custom
+  requested_slot:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: custom
   destination:
     type: any
     mappings:
       - type: from_entity
+        entity: GPE
+      - type: from_entity
+        entity: FAC
+      - type: from_entity
         entity: LOC
-        role: destination
+      - type: from_entity
+        entity: ORG
+        conditions:
+          - active_loop: destination_form
+            requested_slot: destination
+  name:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: PERSON
+        conditions:
+          - active_loop: booking_form
+            requested_slot: name
+  phone_num:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: phone-number
+        conditions:
+          - active_loop: booking_form
+            requested_slot: phone_num
   num_people:
     type: any
     mappings:
       - type: from_entity
         entity: number
-      - type: from_intent
-        intent: inform_group_size
-        value: 'couple'
-  date:
+        conditions:
+          - active_loop: booking_form
+            requested_slot: num_people
+  travel_date:
     type: any
     mappings:
       - type: from_entity
-        entity: time
-      - type: from_intent
-        intent: inform_date
-        value: 'tomorrow'
+        entity: DATE
   budget_range:
     type: any
     mappings:
       - type: from_entity
-        entity: budget_range
+        entity: MONEY
       - type: from_entity
         entity: amount-of-money
-      - type: from_intent
-        intent: inform_budget_range
-        value: 'emirates'
-  cabin:
-    type: any
+        conditions:
+          - active_loop: destination_form
+            requested_slot: budget_range
+  travel_experience:
+    influence_conversation: true
+    type: categorical
+    values:
+      - adventure
+      - relaxation
+      - safari
+      - theme
     mappings:
       - type: from_entity
-        entity: cabin
-      - type: from_intent
-        intent: inform_cabin
-        value: 'economy'
-  flight_type:
-    type: any
+        entity: travel-exp
+        conditions:
+          - active_loop: travel_form
+            requested_slot: travel_experience
+  payment_method:
+    influence_conversation: true
+    type: categorical
+    values:
+      - google_pay
+      - mobile
     mappings:
       - type: from_entity
-        entity: flight_type
+        entity: payment-method
       - type: from_intent
-        intent: inform_flight_type
-        value: 'round trip'
-actions:
-- validate_flight_search_form
-- action_check_warm_destinations
-- action_check_cold_destinations
-
+        entity: inform_payment
 forms:
-  flight_booking_form:
+  booking_form:
     ignored_intents:
       - chitchat
       - faq
     required_slots:
+      - AA_CONTINUE_FORM
+      - phone_num
+      - num_people
+  travel_form:
+    ignored_intents:
+      - chitchat
+      - faq
+    required_slots:
+      - AA_CONTINUE_FORM
+      - travel_experience
+      - travel_date
+  destination_form:
+    ignored_intents:
+      - chitchat
+      - faq
+    required_slots:
+      - AA_CONTINUE_FORM
       - destination
-      - departure
-      - date
-      #- num_people
-      #- cabin
-      #- flight_type
+      - travel_date
       - budget_range
+actions:
+  - action_session_start
+  - action_restart
+  - action_handoff
+  - action_handoff_options
+  - action_provide_package_options
+  - action_provide_destination_details
+  - action_make_payment
+  - validate_travel_form
+  - validate_destination_form
+  - validate_booking_form
 session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  session_expiration_time: 5
+  carry_over_slots_to_new_session: false

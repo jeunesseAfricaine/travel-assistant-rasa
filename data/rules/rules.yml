@@ -26,3 +26,7 @@ rules:
     steps:
       - intent: faq
       - action: utter_faq
+  - rule: help
+    steps:
+      - intent: help
+      - action: utter_help

@@ -13,7 +13,7 @@ stories:
       - slot_was_set:
           - requested_slot: phone_num
       - slot_was_set:
-          - phone_num: +254712345678
+          - phone_num: 254712345678
       - slot_was_set:
           - requested_slot: num_people
       - slot_was_set:
@@ -21,9 +21,9 @@ stories:
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
-      - action: utter_confirm_booking
+      - action: action_make_payment
       - action: utter_anything_else
-  - story: get specific destination 
+  - story: get specific destination
     steps:
       - intent: specific_travel_request
       - action: destination_form
@@ -31,11 +31,11 @@ stories:
       - slot_was_set:
           - requested_slot: destination
       - slot_was_set:
-          - destination: Maldives
+          - destination: Diani
       - slot_was_set:
           - requested_slot: budget_range
       - slot_was_set:
-          - budget_range: USD 100000
+          - budget_range: $100000
       - slot_was_set:
           - requested_slot: travel_date
       - slot_was_set:

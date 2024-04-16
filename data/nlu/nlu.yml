@@ -248,3 +248,77 @@ nlu:
       - when will you stop?
       - will you just stop
       - wil u jst stop!
+
+  - intent: human_handoff
+    examples: |
+      - handoff
+      - operator
+      - I want a human
+      - can I speak to an agent
+      - real agent please
+      - real human
+      - chat with a live agent
+      - give me a person please
+      - i want to talk to a human
+      - transfer to a human
+      - Please give me to a human
+      - can I talk to human?
+      - can I talk to human
+      - talk to human
+      - i want human :(
+      - can i talk to human
+      - i want to talk to a human
+      - i want to speak to human
+      - can i talk to a real person?
+      - connect me to a real person
+      - I need a real person
+      - can i took with a real person
+      - let me speak to a real person
+      - let me speak to a real person please
+      - i want to talk to a real person
+      
+  - intent: help
+    examples: |
+      - help
+      - what can you do?
+      - what can I ask you?
+      - what do you do?
+      - what can you help me with?
+      - help me
+      - help, what do you do
+      - how do I use this
+      - how can you help me
+      - What are the things that you can do?
+      - What else can you help me with?
+      - can you do anything else?
+      - can you help me?
+      - come back
+      - cool! can I do something else here?
+      - hello what can you do for me
+      - help
+      - help me
+      - help please
+      - help pls
+      - help?
+      - hep me
+      
+  - intent: check_human
+    examples: |
+      - are you a bot?
+      - am i speaking to an ai?
+      - are you a human or a bot?
+      - are you real? 
+      - are you virtual? 
+      - are you an ai?
+      - aren't you a bot
+      - are you a chatbot
+      - are you a rasa bot?
+      - are you a real bot?
+      - are you a robot
+      - are you ai
+      - are you artificial
+      - are you artificial intelligence
+      - are you real
+      - are you really a bot
+      - are you robot
+      - are you sure that you're a bot?

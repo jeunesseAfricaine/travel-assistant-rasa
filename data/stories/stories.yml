@@ -21,3 +21,8 @@ stories:
     steps:
       - intent: faq
       - action: utter_faq
+  - story: say ok when user affirms after utter_help
+    steps:
+      - action: utter_help
+      - intent: affirm
+      - action: utter_ok
