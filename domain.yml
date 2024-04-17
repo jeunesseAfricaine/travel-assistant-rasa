@@ -318,7 +318,7 @@ forms:
       - chitchat
       - faq
     required_slots:
-      - AA_CONTINUE_FORM
+      #- AA_CONTINUE_FORM
       - name
       - phone_num
       - num_people
@@ -327,7 +327,7 @@ forms:
       - chitchat
       - faq
     required_slots:
-      - AA_CONTINUE_FORM
+     # - AA_CONTINUE_FORM
       - travel_experience
       - travel_date
   destination_form:
@@ -335,7 +335,7 @@ forms:
       - chitchat
       - faq
     required_slots:
-      - AA_CONTINUE_FORM
+     # - AA_CONTINUE_FORM
       - destination
       - travel_date
       - budget_range
