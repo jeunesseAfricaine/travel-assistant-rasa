@@ -268,6 +268,8 @@ actions:
   - validate_travel_form
   - validate_destination_form
   - validate_booking_form
+  - action_handoff
+  - action_handoff_options
 session_config:
   session_expiration_time: 5
   carry_over_slots_to_new_session: false
