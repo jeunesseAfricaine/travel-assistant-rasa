@@ -42,27 +42,6 @@ intents:
   - inform_payment:
       use_entities: []
 responses:
-  utter_ask_booking_form_AA_CONTINUE_FORM:
-    - text: Would you like to continue with your booking?
-      buttons:
-        - payload: /affirm
-          title: Yes
-        - payload: /deny
-          title: No, cancel the booking
-  utter_ask_travel_form_AA_CONTINUE_FORM:
-    - text: Would you like to continue planning your travel?
-      buttons:
-        - payload: /affirm
-          title: Yes
-        - payload: /deny
-          title: No, cancel the travel plan
-  utter_ask_destination_form_AA_CONTINUE_FORM:
-    - text: Would you like to continue selecting your destination?
-      buttons:
-        - payload: /affirm
-          title: Yes
-        - payload: /deny
-          title: No, cancel the destination selection
   utter_greet:
     - text: Hi! Welcome to Voyage Companion. Explore personalized travel packages with
         ease. How can I assist you?
@@ -175,67 +154,13 @@ entities:
   - travel-exp
   - payment-method
 slots:
-  AA_CONTINUE_FORM:
-    type: any
-    influence_conversation: false
-    mappings:
-      - intent: affirm
-        type: from_intent
-        value: yes
-        conditions:
-          - active_loop: travel_form
-            requested_slot: AA_CONTINUE_FORM
-          - active_loop: booking_form
-            requested_slot: AA_CONTINUE_FORM
-          - active_loop: destination_form
-            requested_slot: AA_CONTINUE_FORM
-      - intent: deny
-        type: from_intent
-        value: no
-        conditions:
-          - active_loop: travel_form
-            requested_slot: AA_CONTINUE_FORM
-          - active_loop: booking_form
-            requested_slot: AA_CONTINUE_FORM
-          - active_loop: destination_form
-            requested_slot: AA_CONTINUE_FORM
-      - intent:
-          - inform
-          - travel_form
-        type: from_text
-        conditions:
-          - active_loop: travel_form
-            requested_slot: AA_CONTINUE_FORM
-      - intent:
-          - inform
-          - booking_form
-        type: from_text
-        conditions:
-          - active_loop: booking_form
-            requested_slot: AA_CONTINUE_FORM
-      - intent:
-          - inform
-          - destination_form
-        type: from_text
-        conditions:
-          - active_loop: destination_form
-            requested_slot: AA_CONTINUE_FORM
+
   handoff_to:
     type: any
     influence_conversation: false
     mappings:
       - type: from_entity
         entity: handoff_to
-  repeated_validation_failures:
-    type: any
-    influence_conversation: false
-    mappings:
-      - type: custom
-  requested_slot:
-    type: any
-    influence_conversation: false
-    mappings:
-      - type: custom
   destination:
     type: any
     mappings:
@@ -318,7 +243,6 @@ forms:
       - chitchat
       - faq
     required_slots:
-      #- AA_CONTINUE_FORM
       - name
       - phone_num
       - num_people
@@ -327,7 +251,6 @@ forms:
       - chitchat
       - faq
     required_slots:
-     # - AA_CONTINUE_FORM
       - travel_experience
       - travel_date
   destination_form:
@@ -335,7 +258,6 @@ forms:
       - chitchat
       - faq
     required_slots:
-     # - AA_CONTINUE_FORM
       - destination
       - travel_date
       - budget_range
