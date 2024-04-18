@@ -262,10 +262,6 @@ forms:
       - travel_date
       - budget_range
 actions:
-  - action_session_start
-  - action_restart
-  - action_handoff
-  - action_handoff_options
   - action_provide_package_options
   - action_provide_destination_details
   - action_make_payment
