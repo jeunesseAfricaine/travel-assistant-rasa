@@ -294,9 +294,6 @@ nlu:
 
       - Can I initiate a new interaction with the travel assistant?
       
-      - i need help
-      - help
-      - please help
   - intent: faq/ask_group_travel
     examples: >
       - Are there options for group travel in the travel assistant's
