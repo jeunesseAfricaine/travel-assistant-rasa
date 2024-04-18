@@ -4,6 +4,9 @@ nlu:
   - intent: start
     examples: |
       - hey
+      - hey hey
+      - heeeeey
+      - hiiiiii
       - hello ☺️
       - hi 😊
       - hello there
