@@ -251,18 +251,7 @@ nlu:
       - Which languages are commonly used by locals in Kenya?
 
       - Can you provide information on the languages spoken in the region I'm visiting?
-  - intent: faq/ask_phone_usage
-    examples: |
-      - how do i use my phone in Kenya?
-      - Can you provide information on using phones in Kenya?
-      - What are the phone usage guidelines for travelers in Kenya?
-      - Explain the procedures for using my phone while in Kenya.
-      - How can I ensure seamless phone usage during my travel?
-      - Provide tips on using my phone in the region I'm visiting.
-      - Tell me about the phone services available in Kenya.
-      - What should I know about mobile phone usage in Kenya?
-      - Share details on using phones responsibly in Kenya.
-      - Can you guide me on using my phone abroad?
+
   - intent: faq/ask_payment_options
     examples: |
       - is there a place to change money at the airport?
