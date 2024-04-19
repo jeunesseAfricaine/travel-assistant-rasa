@@ -22,7 +22,6 @@ stories:
           - requested_slot: null
       - active_loop: null
       - action: action_make_payment
-      - action: utter_anything_else
   - story: get specific destination
     steps:
       - intent: specific_travel_request
