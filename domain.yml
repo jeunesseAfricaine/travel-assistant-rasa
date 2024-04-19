@@ -13,6 +13,7 @@ intents:
   - proceed_to_booking
   - explore_other_options
   - help
+  - human_handoff
   - select_google_pay
   - select_mobile_money
   - inform:
