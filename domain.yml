@@ -12,13 +12,7 @@ intents:
   - nlu_fallback
   - proceed_to_booking
   - explore_other_options
-  - session_start
-  - restart
-  - trigger_handoff
-  - handoff
-  - human_handoff
   - help
-  - check_human
   - select_google_pay
   - select_mobile_money
   - inform:
@@ -83,16 +77,6 @@ responses:
     - text: Could you please provide me with your preferred travel date?
   utter_ask_num_people:
     - text: How many people are traveling with you?👥
-  utter_ask_handoff:
-    - text: It looks like you want to be transferred to a human agent.
-  utter_handoff:
-    - text: Alright, I'll try to transfer you.
-  utter_wouldve_handed_off:
-    - text: If you were talking to me via chatroom, I would have handed you off to
-        {handoffhost}.
-  utter_no_handoff:
-    - text: Since you haven't configured a host to hand off to, I can't send you
-        anywhere!
   utter_ask_whatelse:
     - text: What else can I help you with?
   utter_ok:
@@ -154,13 +138,6 @@ entities:
   - travel-exp
   - payment-method
 slots:
-
-  handoff_to:
-    type: any
-    influence_conversation: false
-    mappings:
-      - type: from_entity
-        entity: handoff_to
   destination:
     type: any
     mappings:
