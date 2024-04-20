@@ -112,7 +112,7 @@ responses:
     - text: If you were talking to me via chatroom, I would have handed you off to
         {handoffhost}.
   utter_no_handoff:
-    - text: Since you haven't configured a host to hand off to, I can't send you
+    - text: Since we haven't configured a host to hand off to, I can't send you
         anywhere!
   utter_ask_whatelse:
     - text: What else can I help you with?
@@ -315,6 +315,7 @@ slots:
 forms:
   booking_form:
     ignored_intents:
+      - nlu_fallback
       - chitchat
       - faq
     required_slots:
@@ -324,6 +325,7 @@ forms:
       - num_people
   travel_form:
     ignored_intents:
+      - nlu_fallback
       - chitchat
       - faq
     required_slots:
@@ -332,6 +334,7 @@ forms:
       - travel_date
   destination_form:
     ignored_intents:
+      - nlu_fallback
       - chitchat
       - faq
     required_slots:
