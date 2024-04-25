@@ -338,7 +338,6 @@ forms:
       - AA_CONTINUE_FORM
       - destination
       - travel_date
-      - budget_range
 actions:
   - action_session_start
   - action_restart
@@ -347,9 +346,14 @@ actions:
   - action_provide_package_options
   - action_provide_destination_details
   - action_make_payment
+  - action_switch_forms_ask
+  - action_switch_forms_deny
+  - action_switch_forms_affirm
+  - action_switch_back_ask
   - validate_travel_form
   - validate_destination_form
   - validate_booking_form
+
 session_config:
   session_expiration_time: 5
   carry_over_slots_to_new_session: false
