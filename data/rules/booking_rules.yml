@@ -15,32 +15,46 @@ rules:
       - slot_was_set:
           - requested_slot: null
       - action: action_make_payment
-    wait_for_user_input: false
-  - rule: activate travel_form
+
+  - rule: Activate destination_form when no other form is active
+    condition:
+  # this condition allows stories to handle form switching
+      - active_loop: null
+    steps:
+      - intent: specific_travel_request
+    - action: destination_form
+    - active_loop: destination_form
+  
+  - rule: Activate travel_form when no other form is active
+    condition:
+  # this condition allows stories to handle form switching
+      - active_loop: null
     steps:
       - intent: inquire_travel_packages
       - action: travel_form
       - active_loop: travel_form
-  - rule: submit form
+  
+  - rule: Submit travel_form while not switched from previous form
     condition:
       - active_loop: travel_form
-    steps:
-      - action: travel_form
-      - active_loop: null
       - slot_was_set:
-          - requested_slot: null
-      - action: action_provide_package_options
-  - rule: activate destination_form
+          - previous_form_name: null
     steps:
-      - intent: specific_travel_request
-      - action: destination_form
-      - active_loop: destination_form
-  - rule: submit form
+    - action: travel_form
+    - active_loop: null
+    - slot_was_set:
+        - requested_slot: null
+    - action: action_provide_package_options
+  
+  - rule: Submit destination_form while not switched from previous form
     condition:
       - active_loop: destination_form
+      - slot_was_set:
+          - previous_form_name: null
     steps:
       - action: destination_form
       - active_loop: null
       - slot_was_set:
           - requested_slot: null
       - action: action_provide_destination_details
+  
