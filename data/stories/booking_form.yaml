@@ -22,6 +22,7 @@ stories:
           - requested_slot: null
       - active_loop: null
       - action: action_make_payment
+      - intent: inform_payment
   - story: get specific destination
     steps:
       - intent: specific_travel_request
@@ -31,10 +32,6 @@ stories:
           - requested_slot: destination
       - slot_was_set:
           - destination: Diani
-      - slot_was_set:
-          - requested_slot: budget_range
-      - slot_was_set:
-          - budget_range: $100000
       - slot_was_set:
           - requested_slot: travel_date
       - slot_was_set:
