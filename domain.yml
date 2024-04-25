@@ -231,6 +231,16 @@ slots:
     influence_conversation: false
     mappings:
       - type: custom
+  next_form_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+  previous_form_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
   requested_slot:
     type: any
     influence_conversation: false
