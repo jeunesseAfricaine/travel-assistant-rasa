@@ -1,0 +1,113 @@
+---
+version: "3.1"
+stories:
+  - story: inquire_travel_packages + specific_travel_request, affirm + switch back,
+      affirm
+    steps:
+      - intent: inquire_travel_packages
+      - action: travel_form
+      - active_loop: travel_form
+      - intent: specific_travel_request
+      - action: action_switch_forms_ask
+      - slot_was_set:
+          - next_form_name: destination_form
+      - intent: affirm
+      - action: action_switch_forms_affirm
+      - slot_was_set:
+          - next_form_name: null
+      - slot_was_set:
+          - previous_form_name: travel_form
+      - action: destination_form
+      - active_loop: destination_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_provide_destination_details
+      - action: action_switch_back_ask
+      - slot_was_set:
+          - previous_form_name: null
+      - intent: affirm
+      - action: travel_form
+      - active_loop: travel_form
+  - story: specific_travel_request, inquire_travel_packages + affirm + switch back,
+      affirm
+    steps:
+      - intent: specific_travel_request
+      - action: destination_form
+      - active_loop: destination_form
+      - intent: inquire_travel_packages
+      - action: action_switch_forms_ask
+      - slot_was_set:
+          - next_form_name: travel_form
+      - intent: affirm
+      - action: action_switch_forms_affirm
+      - slot_was_set:
+          - next_form_name: null
+      - slot_was_set:
+          - previous_form_name: destination_form
+      - action: travel_form
+      - active_loop: travel_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_provide_package_options
+      - action: action_switch_back_ask
+      - slot_was_set:
+          - previous_form_name: null
+      - intent: affirm
+      - action: destination_form
+      - active_loop: destination_form
+  - story: inquire_travel_packages + specific_travel_request, affirm + switch back,
+      deny
+    steps:
+      - intent: inquire_travel_packages
+      - action: travel_form
+      - active_loop: travel_form
+      - intent: specific_travel_request
+      - action: action_switch_forms_ask
+      - slot_was_set:
+          - next_form_name: destination_form
+      - intent: affirm
+      - action: action_switch_forms_affirm
+      - slot_was_set:
+          - next_form_name: null
+      - slot_was_set:
+          - previous_form_name: travel_form
+      - action: destination_form
+      - active_loop: destination_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_provide_destination_details
+      - action: action_switch_back_ask
+      - slot_was_set:
+          - previous_form_name: null
+      - intent: deny
+      - action: utter_anything_else
+  - story: specific_travel_request, inquire_travel_packages + affirm + switch back,
+      deny
+    steps:
+      - intent: specific_travel_request
+      - action: destination_form
+      - active_loop: destination_form
+      - intent: inquire_travel_packages
+      - action: action_switch_forms_ask
+      - slot_was_set:
+          - next_form_name: travel_form
+      - intent: affirm
+      - action: action_switch_forms_affirm
+      - slot_was_set:
+          - next_form_name: null
+      - slot_was_set:
+          - previous_form_name: destination_form
+      - action: travel_form
+      - active_loop: travel_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_provide_package_options
+      - action: action_switch_back_ask
+      - slot_was_set:
+          - previous_form_name: null
+      - intent: deny
+      - action: utter_anything_else
