@@ -29,4 +29,4 @@ rules:
   - rule: help
     steps:
       - intent: help
-      - action: utter_help
+      - action: action_help

@@ -64,16 +64,30 @@ responses:
         - payload: /deny
           title: No, cancel the destination selection
   utter_greet:
-    - text: Hi! Welcome to Voyage Companion. Explore personalized travel packages with
-        ease. How can I assist you?
+    - condition:
+        - type: slot
+          name: name
+          value: !any
+      text: Sasa {name}! Karibu Safari AI where you can explore curated travel packages with
+        ease. Naeza kusaidia vipi?
+    - text: Hi! Welcome to Safari AI, your personalized travel assistant. We're here
+        to help you find your perfect getaway. What's on your mind?
       buttons:
-        - title: Got something in mind! 🤔
+        - title: I have a destination in mind! 🤔
           payload: /specific_travel_request
-        - title: Surprise me! 🌍
+        - title: Show me some options! 🌍
           payload: /inquire_travel_packages
       button_type: vertical
+  utter_ask_payment_method:
+    - text: How would you like to pay? Please select your preferred payment method
+      buttons:
+        - title: MPESA 📱
+          payload: /inform_travel_experience{{"payment-method":"mobile"}}
+        - title: Google Pay 💸
+          payload: /inform_travel_experience{{"payment-method":"google_pay"}}
+      button_type: vertical
   utter_ask_travel_experience:
-    - text: Tell me about your ideal travel experience.
+    - text: What's your travel style?
       image: https://wanderon.in/_next/image?url=https%3A%2F%2Fstatic.wanderon.in%2Fwp-content%2Fuploads%2F2023%2F10%2Fgondola-ride-in-autumn-in-kashmir-2023-10-18t174214.790-min.png&w=3840&q=75
       buttons:
         - title: Adventure 🌍
@@ -156,10 +170,10 @@ responses:
   utter_confirm_booking:
     - text: All set!
   utter_youarewelcome:
-    - text: You're most welcome! Feel like exploring more? I'm here to help with travel suggestions or any
-        inquiries you may have. Let's make your journey unforgettable! 🌟
-    - text: Karibu! Feel free kureach out if you need anything else.
-        Safari njema!😊
+    - text: You're most welcome! Feel like exploring more? I'm here to help with
+        travel suggestions or any inquiries you may have. Let's make your
+        journey unforgettable! 🌟
+    - text: Karibu! Feel free kureach out if you need anything else. Safari njema!😊
     - text: Anytime maze! Unaeza nitext in case u need anything else. Safiri salama!😊
 entities:
   - PERSON
@@ -235,12 +249,12 @@ slots:
     type: text
     influence_conversation: true
     mappings:
-    - type: custom
+      - type: custom
   previous_form_name:
     type: text
     influence_conversation: true
     mappings:
-    - type: custom
+      - type: custom
   requested_slot:
     type: any
     influence_conversation: false
@@ -322,6 +336,9 @@ slots:
     mappings:
       - type: from_entity
         entity: payment-method
+        conditions:
+          - active_loop: booking_form
+            requested_slot: payment_method
 forms:
   booking_form:
     ignored_intents:
@@ -332,6 +349,7 @@ forms:
       - name
       - phone_num
       - num_people
+      - payment_method
   travel_form:
     ignored_intents:
       - chitchat
@@ -363,7 +381,6 @@ actions:
   - validate_travel_form
   - validate_destination_form
   - validate_booking_form
-
 session_config:
   session_expiration_time: 5
   carry_over_slots_to_new_session: false
