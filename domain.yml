@@ -369,6 +369,7 @@ forms:
 actions:
   - action_session_start
   - action_restart
+  - action_help
   - action_handoff
   - action_handoff_options
   - action_provide_package_options
