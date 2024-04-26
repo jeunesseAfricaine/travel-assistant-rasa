@@ -13,7 +13,7 @@ stories:
       - slot_was_set:
           - requested_slot: phone_num
       - slot_was_set:
-          - phone_num: 0712345678
+          - phone_num: 712345678
       - slot_was_set:
           - requested_slot: num_people
       - slot_was_set:
@@ -24,4 +24,4 @@ stories:
       - action: action_make_payment
       - intent: inform_payment
         entities:
-        - payment-method: "mobile"
+          - payment-method: mobile
