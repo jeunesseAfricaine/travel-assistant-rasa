@@ -67,7 +67,6 @@ responses:
     - condition:
         - type: slot
           name: name
-          value: !any
       text: Sasa {name}! Karibu Safari AI where you can explore curated travel packages with
         ease. Naeza kusaidia vipi?
     - text: Hi! Welcome to Safari AI, your personalized travel assistant. We're here
@@ -132,14 +131,6 @@ responses:
     - text: What else can I help you with?
   utter_ok:
     - text: 👍
-  utter_help:
-    - text: |-
-        I can help you with managing your itineraries. 
-        You can ask me things like: 
-        - What travel packages do you offer? 
-        - Do you have packages for Diani? 
-        - mbona nitumie ai? 
-        - Who built you?
   utter_default:
     - text: Oops! It seems we've taken a detour!. No worries, we're working hard to
         bring you personalized and seamless experiences. Feel free to ask about
@@ -310,9 +301,6 @@ slots:
         entity: MONEY
       - type: from_entity
         entity: amount-of-money
-        conditions:
-          - active_loop: destination_form
-            requested_slot: budget_range
   travel_experience:
     influence_conversation: true
     type: categorical
