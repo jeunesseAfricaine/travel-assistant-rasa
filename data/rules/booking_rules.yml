@@ -40,6 +40,7 @@ rules:
       - slot_was_set:
           - requested_slot: null
       - action: action_provide_package_options
+    wait_for_user_input: false
   - rule: Submit destination_form while not switched from previous form
     condition:
       - active_loop: destination_form
@@ -51,3 +52,4 @@ rules:
       - slot_was_set:
           - requested_slot: null
       - action: action_provide_destination_details
+    wait_for_user_input: false
