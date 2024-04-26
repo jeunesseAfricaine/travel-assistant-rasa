@@ -23,3 +23,5 @@ stories:
       - active_loop: null
       - action: action_make_payment
       - intent: inform_payment
+        entities:
+        - payment-method: "mobile"
