@@ -337,6 +337,7 @@ actions:
   - action_handoff_options
   - action_provide_package_options
   - action_provide_destination_details
+  - action_proceed_to_payment
   - action_make_payment
   - action_switch_forms_ask
   - action_switch_forms_deny
