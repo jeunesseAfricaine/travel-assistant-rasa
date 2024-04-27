@@ -19,11 +19,10 @@ stories:
       - slot_was_set:
           - num_people: 6 travelers
       - slot_was_set:
-          - requested_slot: payment_method
-      - slot_was_set:
-          - payment_method: mobile
-      - slot_was_set:
           - requested_slot: null
       - active_loop: null
+      - action: action_proceed_to_payment
+      - intent: inform_payment
+        entities:
+          - payment-method: mobile
       - action: action_make_payment
-
