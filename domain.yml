@@ -63,29 +63,6 @@ responses:
           title: Yes
         - payload: /deny
           title: No, cancel the destination selection
-  utter_greet:
-    - condition:
-        - type: slot
-          name: name
-          value: !any
-      text: Sasa {name}! Karibu Safari AI where you can explore curated travel packages with
-        ease. Naeza kusaidia vipi?
-    - text: Hi! Welcome to Safari AI, your personalized travel assistant. We're here
-        to help you find your perfect getaway. What's on your mind?
-      buttons:
-        - title: I have a destination in mind! 🤔
-          payload: /specific_travel_request
-        - title: Show me some options! 🌍
-          payload: /inquire_travel_packages
-      button_type: vertical
-  utter_ask_payment_method:
-    - text: How would you like to pay? Please select your preferred payment method
-      buttons:
-        - title: MPESA 📱
-          payload: /inform_travel_experience{{"payment-method":"mobile"}}
-        - title: Google Pay 💸
-          payload: /inform_travel_experience{{"payment-method":"google_pay"}}
-      button_type: vertical
   utter_ask_travel_experience:
     - text: What's your travel style?
       image: https://wanderon.in/_next/image?url=https%3A%2F%2Fstatic.wanderon.in%2Fwp-content%2Fuploads%2F2023%2F10%2Fgondola-ride-in-autumn-in-kashmir-2023-10-18t174214.790-min.png&w=3840&q=75
