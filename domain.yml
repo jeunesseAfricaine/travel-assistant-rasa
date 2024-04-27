@@ -278,12 +278,9 @@ slots:
     type: any
     mappings:
       - type: from_entity
-        entity: MONEY
-      - type: from_entity
         entity: amount-of-money
-        conditions:
-          - active_loop: destination_form
-            requested_slot: budget_range
+      - type: from_entity
+        entity: MONEY
   travel_experience:
     influence_conversation: true
     type: categorical
