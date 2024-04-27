@@ -41,7 +41,7 @@ pipeline:
     timezone: Europe/Berlin
     timeout: 3
   - name: DIETClassifier
-    epochs: 100
+    epochs: 50
     constrain_similarities: true
     batch_strategy: sequence
   - name: EntitySynonymMapper
