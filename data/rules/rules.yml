@@ -6,7 +6,6 @@ rules:
       - intent: nlu_fallback
       - action: utter_ask_rephrase
   - rule: greet
-    conversation_start: true
     steps:
       - intent: start
       - action: action_greet
