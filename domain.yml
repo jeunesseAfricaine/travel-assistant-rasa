@@ -74,6 +74,17 @@ responses:
         - title: Theme
           payload: /inform_travel_experience{{"travel-exp":"theme"}}
       button_type: vertical
+    - text: "What's your travel style?"
+      image: "https://wanderon.in/_next/image?url=https%3A%2F%2Fstatic.wanderon.in%2Fwp-content%2Fuploads%2F2023%2F10%2Fgondola-ride-in-autumn-in-kashmir-2023-10-18t174214.790-min.png&w=3840&q=75"
+      channel: "facebook"
+      buttons:
+        - title: "Relaxation 🏖"
+          payload: "/inform_travel_experience{'travel-exp':'relaxation'}"
+        - title: "Wildlife Safari 🦓"
+          payload: "/inform_travel_experience{'travel-exp':'safari'}"
+        - title: "Theme"
+          payload: "/inform_travel_experience{'travel-exp':'theme'}"
+      button_type: vertical
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip? Please provide a
         specific budget amount along with the currency💰 (e.g., $1000)
