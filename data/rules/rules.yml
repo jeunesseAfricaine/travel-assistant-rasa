@@ -9,7 +9,7 @@ rules:
     conversation_start: true
     steps:
       - intent: start
-      - action: utter_greet
+      - action: action_greet
   - rule: goodbye
     steps:
       - intent: goodbye
