@@ -131,15 +131,9 @@ responses:
   utter_ask_whatelse:
     - text: What else can I help you with?
   utter_ok:
-    - text: 👍
-  utter_help:
-    - text: |-
-        I can help you with managing your itineraries. 
-        You can ask me things like: 
-        - What travel packages do you offer? 
-        - Do you have packages for Diani? 
-        - mbona nitumie ai? 
-        - Who built you?
+    - text: 👍🏿👍🏿
+    - text: wazi 👍
+    
   utter_default:
     - text: Oops! It seems we've taken a detour!. No worries, we're working hard to
         bring you personalized and seamless experiences. Feel free to ask about
@@ -336,9 +330,6 @@ slots:
     mappings:
       - type: from_entity
         entity: payment-method
-        conditions:
-          - active_loop: booking_form
-            requested_slot: payment_method
 forms:
   booking_form:
     ignored_intents:
@@ -349,7 +340,6 @@ forms:
       - name
       - phone_num
       - num_people
-      - payment_method
   travel_form:
     ignored_intents:
       - chitchat
@@ -369,7 +359,6 @@ forms:
 actions:
   - action_session_start
   - action_restart
-  - action_help
   - action_handoff
   - action_handoff_options
   - action_provide_package_options
