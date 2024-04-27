@@ -19,8 +19,6 @@ intents:
   - human_handoff
   - help
   - check_human
-  - select_google_pay
-  - select_mobile_money
   - inform:
       use_entities:
         - PERSON
