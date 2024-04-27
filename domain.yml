@@ -332,6 +332,8 @@ actions:
   - action_session_start
   - action_restart
   - action_handoff
+  - action_help
+  - action_greet
   - action_handoff_options
   - action_provide_package_options
   - action_provide_destination_details
