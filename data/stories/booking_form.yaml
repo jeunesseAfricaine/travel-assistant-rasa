@@ -22,6 +22,9 @@ stories:
           - requested_slot: null
       - active_loop: null
       - action: action_proceed_to_payment
+
+  - story: proceed to payment
+    steps:
       - intent: inform_payment
         entities:
           - payment-method: mobile

@@ -53,3 +53,8 @@ rules:
           - requested_slot: null
       - action: action_provide_destination_details
     wait_for_user_input: false
+
+  - rule: Implementation of mobile payment
+    steps:
+      - intent: inform_payment
+      - action: action_make_payment
