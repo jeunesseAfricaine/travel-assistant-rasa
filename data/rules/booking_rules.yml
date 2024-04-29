@@ -14,7 +14,7 @@ rules:
       - active_loop: null
       - slot_was_set:
           - requested_slot: null
-      - action: action_proceed_to_payment
+      - action: utter_ask_payment_method
   - rule: Activate destination_form when no other form is active
     condition:
       - active_loop: null

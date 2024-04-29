@@ -77,7 +77,14 @@ responses:
   utter_ask_budget_range:
     - text: Could you let me know your budget range for the trip? Please provide a
         specific budget amount along with the currency💰 (e.g., $1000)
-  utter_booking_process:
+  utter_ask_payment_method:
+    - text: Thank you for providing your booking details. How would you like to pay?
+      buttons:
+        - title: 📱 M-PESA
+          payload: /inform_payment{{'payment-method':'mobile'}}
+        - title: 💳 Google Pay
+          payload: /inform_payment{{'payment-method':'google_pay'}}
+  utter_booking_process: 
     - text: Would you like to continue with the booking process?
       buttons:
         - title: Quick Book 🛎
@@ -302,6 +309,9 @@ slots:
     mappings:
       - type: from_entity
         entity: payment-method
+        conditions:
+          - active_loop: booking_form
+            requested_slot: payment_method
 forms:
   booking_form:
     ignored_intents:
@@ -312,6 +322,7 @@ forms:
       - name
       - phone_num
       - num_people
+      - payment_method
   travel_form:
     ignored_intents:
       - chitchat
@@ -337,7 +348,7 @@ actions:
   - action_handoff_options
   - action_provide_package_options
   - action_provide_destination_details
-  - action_proceed_to_payment
+  #- action_proceed_to_payment
   - action_make_payment
   - action_switch_forms_ask
   - action_switch_forms_deny

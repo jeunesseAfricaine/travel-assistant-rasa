@@ -21,7 +21,7 @@ stories:
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
-      - action: action_proceed_to_payment
+      - action: utter_ask_payment_method
 
   - story: proceed to payment
     steps:
