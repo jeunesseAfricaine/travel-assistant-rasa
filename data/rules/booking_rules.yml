@@ -14,7 +14,7 @@ rules:
       - active_loop: null
       - slot_was_set:
           - requested_slot: null
-      - action: utter_ask_payment_method
+      - action: action_make_payment
   - rule: Activate destination_form when no other form is active
     condition:
       - active_loop: null
@@ -53,8 +53,3 @@ rules:
           - requested_slot: null
       - action: action_provide_destination_details
     wait_for_user_input: false
-
-  - rule: Implementation of mobile payment
-    steps:
-      - intent: inform_payment
-      - action: action_make_payment
